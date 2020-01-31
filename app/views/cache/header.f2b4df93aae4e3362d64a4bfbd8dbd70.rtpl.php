@@ -4,12 +4,13 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Hcode Store</title>
+	<link rel="icon" href="/res/site/img/favicon.ico" type="image/x-icon">
+	<title>CPE</title>
 
 	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100' rel='stylesheet' type='text/css'>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,300,700,600' type='text/css'>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700,300' type='text/css'>
+	<link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Raleway:400,100' type='text/css'>
 
 	<!-- Bootstrap v3.2.0 -->
 	<link rel="stylesheet" href="/res/site/css/bootstrap.min.css">
@@ -34,70 +35,41 @@
 </head>
 <body>
 
-	<div class="header-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-4">
-					<div class="header-right">
-						<ul class="list-unstyled list-inline">
-							<li class="dropdown dropdown-small">
-								<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">moeda :</span><span class="value">BRL </span><b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">BRL</a></li>
-									<li><a href="#">USD</a></li>
-								</ul>
-							</li>
-
-							<li class="dropdown dropdown-small">
-								<a data-toggle="dropdown" data-hover="dropdown" class="dropdown-toggle" href="#"><span class="key">linguagem :</span><span class="value">Português </span><b class="caret"></b></a>
-								<ul class="dropdown-menu">
-									<li><a href="#">Português</a></li>
-									<li><a href="#">Inglês</a></li>
-									<li><a href="#">Espanhol</a></li>
-								</ul>
-							</li>
-						</ul>
+	<header class="section page-header">
+		<!--RD Navbar-->
+		<div class="rd-navbar-wrap">
+			<nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="170px" data-xl-stick-up-offset="170px" data-xxl-stick-up-offset="170px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+				<div class="rd-navbar-aside-outer">
+					<div class="rd-navbar-aside">
+						<!--RD Navbar Panel-->
+						<div class="rd-navbar-panel">
+							<!--RD Navbar Toggle-->
+							<button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+							<!--RD Navbar Brand-->
+							<div class="rd-navbar-brand">
+								<!--Brand--><a class="brand" href="/"><img class="brand-logo-dark" src="/res/site/img/logo.png" alt="" width="336" height="51"/></a>
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
-		</div>
-	</div> <!-- End header area -->
-
-	<div class="site-branding-area">
-		<div class="container">
-			<div class="row">
-				<div class="col-xs-6">
-					<div class="logo">
-						<h1><a href="#"><img src="/res/site/img/logo.png"></a></h1>
+				<div class="rd-navbar-main-outer">
+					<div class="rd-navbar-main">
+						<div class="rd-navbar-nav-wrap">
+							<ul class="rd-navbar-nav">
+								<li class="rd-nav-item active"><a class="rd-nav-link" href="/">Home</a></li>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/plans">Planos</a></li>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/payments">Pagamentos</a>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/statistics">Estatísticas</a>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/about">Sobre</a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</div>
+			</nav>
 		</div>
-	</div> <!-- End site branding area -->
+	</header>
 
-	<div class="mainmenu-area">
-		<div class="container">
-			<div class="row">
-				<div class="navbar-header">
-					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-						<span class="sr-only">Toggle navigation</span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</button>
-				</div>
-				<div class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="/">Home</a></li>
-						<li><a href="/plan">Planos</a></li>
-						<li><a href="/payments">Pagamentos</a></li>
-						<li><a href="/statistics">Estatísticas</a></li>
-						<li><a href="/about">Sobre</a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div> <!-- End mainmenu area -->
 
 <!--
 ####################################################################################################################

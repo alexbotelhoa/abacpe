@@ -76,6 +76,8 @@
             </div>
         </div> <!-- End footer bottom area -->
 
+
+
         <!-- Latest jQuery form server -->
         <script src="/res/site/js/jquery.min.js"></script>
 
@@ -95,5 +97,9 @@
         <!-- Slider -->
         <script type="text/javascript" src="/res/site/js/bxslider.min.js"></script>
         <script type="text/javascript" src="/res/site/js/script.slider.js"></script>
+
+        <!-- Distribuição da Versão do Theme -->
+        <script src="/res/site/js/core.min.js"></script>
+        <script src="/res/site/js/script.js"></script>
     </body>
 </html>
