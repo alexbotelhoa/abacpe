@@ -8,7 +8,7 @@ class Sql
     const HOSTNAME = "127.0.0.1";
     const USERNAME = "root";
     const PASSWORD = "";
-    const DBNAME = "db_(name)";
+    const DBNAME = "db_abacpe";
 
     private $conn;
 

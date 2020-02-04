@@ -11,7 +11,7 @@
 
                     <div class="col-sm-12">
                         <div class="footer-about-us">
-                            <h2 class="footer-wid-title">Hallyz Cia & Ltda</h2>
+                            <h2 class="footer-wid-title">Alex Botelho & Ltda</h2>
                             <p>Nos orgulhamos em possuir um time de consultores de alta maturidade, mentalidade e atitude necessárias para garantir resultados de forma ágil e assertiva.</p>
                             <div class="footer-social">
                                 <a href="/" target="_self"><i class="fa fa-globe"></i></a>

@@ -1,0 +1,127 @@
+<!--
+####################################################################################################################
+                                        ACIMA É O HEADER
+####################################################################################################################
+-->
+
+
+
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <section class="content">
+        <div class="row">
+
+            <!-- Content Header (Page header) -->
+            <section class="container">
+                <ol class="breadcrumb">
+                    <li><a href="/"><i class="fa fa-tachometer-alt"></i> Home</a></li>
+                    <li class="active"><a href="/plans">Planos</a></li>
+                </ol>
+            </section> <!-- /.content-header -->
+
+            <section class="container">
+                <h1>
+                    Planos
+                </h1>
+            </section> <!-- /.content-header -->
+
+
+
+
+
+
+
+
+
+            <!-- Main content -->
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary">
+                            <div class="box-header">
+                                <div class="col-xs-4">
+                                    <a href="/plans/create" class="btn btn-success">Cadastrar Plano</a>
+                                </div>
+
+                                {if="$error != ''"}
+                                <div class="col-xs-8">
+                                    <div class="box-header bg-red">
+                                        {$error}
+                                    </div>
+                                </div>
+                                {/if}
+
+                                {if="$success != ''"}
+                                <div class="col-xs-8">
+                                    <div class="box-header bg-green">
+                                        {$success}
+                                    </div>
+                                </div>
+                                {/if}
+                            </div> <!-- /.box-header -->
+
+                            <div class="box-body no-padding">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 10px"><a href="/order/plans/ordid">#</a></th>
+                                        <th><a href="/order/plans/ordplan">Nome Plano</a></th>
+                                        <th><a href="/order/plans/ordvlp">Valor Plano</a></th>
+                                        <th style="width: 140px">&nbsp;</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {loop="$plan"}
+                                    <tr>
+                                        <td>{$value.idplan}</td>
+                                        <td>{$value.desplan}</td>
+                                        <td>{function="formatPrice($value.vlplan)"}</td>
+                                        <td>
+                                            <a href="/plans/{$value.idplan}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a><a href="/plans/{$value.idplan}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                        </td>
+                                    </tr>
+                                    {/loop}
+                                    </tbody>
+                                </table>
+                            </div> <!-- /.box-body -->
+                        </div>
+
+                        <div class="product-pagination text-center">
+                            <nav>
+                                <ul class="pagination">
+
+                                    {loop="$pages"}
+                                    <li><a href="{$value.link}">{$value.page}</a></li>
+                                    {/loop}
+
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section> <!-- /.content -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        </div> <!-- /.row -->
+    </section> <!-- /.content -->
+</div>
+
+
+
+<!--
+####################################################################################################################
+                                        ABAIXO É O FOOTER
+####################################################################################################################
+-->
