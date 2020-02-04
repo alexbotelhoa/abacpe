@@ -134,7 +134,7 @@ $(function () {
   ];
   var pieOptions = {
     //Boolean - Whether we should show a stroke on each segment
-    segmentShowStroke: true,
+    segmentShowStroke: false,
     //String - The colour of each segment stroke
     segmentStrokeColor: "#fff",
     //Number - The width of each segment stroke
@@ -152,7 +152,7 @@ $(function () {
     //Boolean - whether to make the chart responsive to window resizing
     responsive: true,
     // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-    maintainAspectRatio: false,
+    maintainAspectRatio: true,
     //String - A legend template
     legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
     //String - A tooltip template
@@ -161,6 +161,7 @@ $(function () {
   //Create pie or douhnut chart
   // You can switch between pie and douhnut using the method below.
   pieChart.Doughnut(PieData, pieOptions);
+
   //-----------------
   //- END PIE CHART -
   //-----------------

@@ -8,14 +8,15 @@
             <div class="container">
                 <div class="row">
 
-                    <div class="col-sm-4">
+
+                    <div class="col-sm-12">
                         <div class="footer-about-us">
                             <h2 class="footer-wid-title">Hallyz Cia & Ltda</h2>
                             <p>Nos orgulhamos em possuir um time de consultores de alta maturidade, mentalidade e atitude necessárias para garantir resultados de forma ágil e assertiva.</p>
                             <div class="footer-social">
-                                <a href="#" target="_blank"><i class="fa fa-globe"></i></a>
+                                <a href="/" target="_self"><i class="fa fa-globe"></i></a>
                                 <a href="mailto:alexbotelho1@hotmail.com" target="_blank"><i class="fa fa-envelope"></i></a>
-                                <a href="45-98413-6611" target="_blank"><i class="fa fa-phone"></i></a>
+                                <a href="45-98413-6611" target="_self"><i class="fa fa-phone"></i></a>
                                 <a href="https://www.linkedin.com/in/alex-botelho-almeida/" target="_blank"><i class="fa fa-linkedin"></i></a>
                                 <a href="https://github.com/alexbotelhoa" target="_blank"><i class="fa fa-github"></i></a>
                                 <a href="https://www.facebook.com/alexbotelhoa" target="_blank"><i class="fa fa-facebook"></i></a>
@@ -25,20 +26,24 @@
                         </div>
                     </div>
 
+
+                    <!--
                     <div class="col-sm-4">
                         <div class="footer-menu">
                             <h2 class="footer-wid-title">Navegação</h2>
                             <ul>
                                 <li><a href="/">Home</a></li>
-                                <li><a href="/plan">Planos</a></li>
+                                <li><a href="/plans">Planos</a></li>
                                 <li><a href="/payments">Pagamentos</a></li>
                                 <li><a href="/statistics">Estatísticas</a></li>
                                 <li><a href="/about">Sobre</a></li>
                             </ul>
                         </div>
                     </div>
+                    -->
 
-                    <div class="col-sm-4">
+                    <!--
+                    <div class="col-sm-6">
                         <div class="footer-newsletter">
                             <h2 class="footer-wid-title">Newsletter</h2>
                             <p>Cadastre-se para receber os nosso conteúdos por email e seja um membro da nossa comunidade!</p>
@@ -50,6 +55,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
 
                 </div>
             </div>
@@ -57,21 +63,8 @@
 
         <div class="footer-bottom-area">
             <div class="container">
-                <div class="row">
-                    <div class="col-xs-6">
-                        <div class="copyright">
-                            <p>&copy; 2020 - By Alex Botelho - <a href="https://www.linkedin.com/in/alex-botelho-almeida/" target="_blank">alex-botelho-almeida</a> <i class="fab fa-linkedin-in"></i></p>
-                        </div>
-                    </div>
-
-                    <div class="col-xs-6">
-                        <div class="footer-card-icon">
-                            <i class="fa fa-cc-discover"></i>
-                            <i class="fa fa-cc-mastercard"></i>
-                            <i class="fa fa-cc-paypal"></i>
-                            <i class="fa fa-cc-visa"></i>
-                        </div>
-                    </div>
+                <div class="copyright">
+                    <p>&copy; 2020 - By Alex Botelho - <a href="https://www.linkedin.com/in/alex-botelho-almeida/" target="_blank">alex-botelho-almeida</a> <i class="fab fa-linkedin-in"></i></p>
                 </div>
             </div>
         </div> <!-- End footer bottom area -->
@@ -79,27 +72,39 @@
 
 
         <!-- Latest jQuery form server -->
-        <script src="/res/site/js/jquery.min.js"></script>
+        <!--<script src="/res/site/js/jquery.min.js"></script>-->
 
         <!-- Bootstrap JS form CDN -->
-        <script src="/res/site/js/bootstrap.min.js"></script>
+        <!--<script src="/res/site/js/bootstrap.min.js"></script>-->
 
         <!-- jQuery sticky menu -->
-        <script src="/res/site/js/owl.carousel.min.js"></script>
-        <script src="/res/site/js/jquery.sticky.js"></script>
+        <!--<script src="/res/site/js/owl.carousel.min.js"></script>-->
+        <!--<script src="/res/site/js/jquery.sticky.js"></script>-->
 
         <!-- jQuery easing -->
-        <script src="/res/site/js/jquery.easing.1.3.min.js"></script>
+        <!--<script src="/res/site/js/jquery.easing.1.3.min.js"></script>-->
 
         <!-- Main Script -->
-        <script src="/res/site/js/main.js"></script>
+        <!--<script src="/res/site/js/main.js"></script>-->
 
         <!-- Slider -->
-        <script type="text/javascript" src="/res/site/js/bxslider.min.js"></script>
-        <script type="text/javascript" src="/res/site/js/script.slider.js"></script>
+        <!--<script type="text/javascript" src="/res/site/js/bxslider.min.js"></script>-->
+        <!--<script type="text/javascript" src="/res/site/js/script.slider.js"></script>-->
+
+
+
 
         <!-- Distribuição da Versão do Theme -->
-        <script src="/res/site/js/core.min.js"></script>
+        <!--<script src="/res/site/js/core.min.js"></script>-->
         <script src="/res/site/js/script.js"></script>
+
+        <!-- ChartJS 1.0.1 -->
+        <!--<script src="/res/admin/plugins/chartjs/Chart.min.js"></script>-->
+
+        <!-- AdminLTE App -->
+        <script src="/res/admin/dist/js/app.min.js"></script>
+
+
+
     </body>
 </html>
