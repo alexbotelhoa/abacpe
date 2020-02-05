@@ -29,17 +29,13 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="idclient">Nome Cliente</label>
-                                        <input type="text" class="form-control" id="idclient" name="idclient" step="0.01" placeholder="Informe o ID do Cliente">
-
-                                        <!--
                                         <select class="form-control" name="idclient">
                                             {loop="$clients"}
-                                            <option value="{$value.idclient}">{$value.desclient}</option>
+                                            <option value="{$value.id}">{$value.nome}</option>
                                             {/loop}
                                         </select>
-                                        -->
-
                                     </div>
+
                                     <div class="form-group">
                                         <label for="idplan">Nome Plano</label>
                                         <select class="form-control" name="idplan">
@@ -48,6 +44,7 @@
                                             {/loop}
                                         </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label for="vlrecurrence">Recorrência</label>
                                         <select class="form-control" name="vlrecurrence">
@@ -56,6 +53,7 @@
                                             <option value="6">6 Meses</option>
                                         </select>
                                     </div>
+
                                     <div class="form-group">
                                         <label for="dtpayment">Data Pagamento</label>
                                         <input type="date" class="form-control" id="dtpayment" name="dtpayment" step="0.01" placeholder="dd/mm/yyyy">

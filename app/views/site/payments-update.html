@@ -29,15 +29,11 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="idclient">Nome Cliente</label>
-                                        <input type="text" class="form-control" id="idclient" name="idclient" step="0.01" placeholder="Informe o ID do Cliente">
-
-                                        <!--
                                         <select class="form-control" name="idclient">
                                             {loop="$clients"}
-                                            <option {if="$value.idclient == $payment.idclient"} selected="selected" {/if} value="{$value.idclient}">{$value.idclient}</option>
+                                            <option {if="$value.id == $payment.idclient"} selected="selected" {/if} value="{$value.id}">{$value.nome}</option>
                                             {/loop}
                                         </select>
-                                        -->
                                     </div>
 
                                     <div class="form-group">

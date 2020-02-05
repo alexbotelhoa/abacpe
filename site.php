@@ -157,6 +157,8 @@ $app->get("/plans/:idplan/update", function($idplan) {
 
     $plan->get((int)$idplan);
 
+    var_dump($plan->getValues()); exit;
+
     $page = new Page();
 
     $page->setTpl("plans-update", [
@@ -356,6 +358,7 @@ $app->get("/payments/:idclient/detail", function($idclient) {
         ]);
     }
 
+
     $page = new Page();
 
     $page->setTpl("payments-detail", [
@@ -373,7 +376,7 @@ $app->get("/payments/:idclient/create", function($idclient) {
     $page = new Page();
 
     $page->setTpl("payments-create", [
-        "clients" => [],
+        "clients" => $_SESSION['BASECLIENTES'],
         "error" => Message::getError(),
         "idclient" => $idclient,
         "plans" => Plan::listAll()
@@ -420,7 +423,7 @@ $app->get("/payments/:idpayment/update", function($idpayment) {
 
     $page->setTpl("payments-update", [
         "payment" => $payment->getValues(),
-        "clients" => [],
+        "clients" => $_SESSION['BASECLIENTES'],
         "plans" => Plan::listAll(),
         "error" => Message::getError()
     ]);

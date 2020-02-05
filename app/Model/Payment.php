@@ -19,6 +19,27 @@ class Payment extends Model
 
     }
 
+    public static function checkList($list)
+    {
+
+        foreach ($list as &$row) {
+
+            $p = new Payment();
+
+            $p->setData($row);
+
+            $desclient = $_SESSION['BASECLIENTES'][$p->getidclient()]['nome'];
+
+            $p->setdesclient($desclient);
+
+            $row = $p->getValues();
+
+        }
+
+        return $list;
+
+    }
+
 
 
   //************************************************************************************//
@@ -79,23 +100,6 @@ class Payment extends Model
     {
 
         return parent::getValues();
-
-    }
-
-    public static function checkList($list)
-    {
-
-        foreach ($list as &$row) {
-
-            $p = new Payment();
-
-            $p->setData($row);
-
-            $row = $p->getValues();
-
-        }
-
-        return $list;
 
     }
 

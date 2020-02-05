@@ -17,14 +17,6 @@
                 </h1>
             </section> <!-- /.content-header -->
 
-
-
-
-
-
-
-
-
             <!-- Main content -->
             <section class="container">
                 <div class="row">
@@ -84,19 +76,6 @@
                     </div>
                 </div>
             </section> <!-- /.content -->
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         </div> <!-- /.row -->
     </section> <!-- /.content -->

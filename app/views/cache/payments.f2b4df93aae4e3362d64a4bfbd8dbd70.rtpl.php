@@ -26,10 +26,6 @@
                 <?php } ?>
             </section> <!-- /.content-header -->
 
-
-
-
-
             <!-- Main content -->
             <section class="container">
                 <div class="row">
@@ -51,7 +47,7 @@
                                     <?php $counter1=-1;  if( isset($payment) && ( is_array($payment) || $payment instanceof Traversable ) && sizeof($payment) ) foreach( $payment as $key1 => $value1 ){ $counter1++; ?>
                                     <tr>
                                         <td><?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                                        <td><?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                        <td><?php echo htmlspecialchars( $value1["desclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td><?php echo htmlspecialchars( $value1["desplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td><?php echo htmlspecialchars( $value1["qtdpay"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td>
@@ -80,10 +76,6 @@
                     </div>
                 </div>
             </section> <!-- /.content -->
-
-
-
-
 
         </div> <!-- /.row -->
     </section> <!-- /.content -->

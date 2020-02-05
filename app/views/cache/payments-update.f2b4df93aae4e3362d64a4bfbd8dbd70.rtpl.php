@@ -3,9 +3,6 @@
     <section class="content">
         <div class="row">
 
-
-
-
             <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
@@ -32,17 +29,19 @@
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="idclient">Nome Cliente</label>
-                                        <input type="text" class="form-control" id="idclient" name="idclient" step="0.01" placeholder="Informe o ID do Cliente">
 
                                         <!--
+                                        <input type="text" class="form-control" id="idclient" name="idclient" step="0.01" placeholder="Informe o ID do Cliente">
+                                        -->
+
+
                                         <select class="form-control" name="idclient">
                                             <?php $counter1=-1;  if( isset($clients) && ( is_array($clients) || $clients instanceof Traversable ) && sizeof($clients) ) foreach( $clients as $key1 => $value1 ){ $counter1++; ?>
 
-                                            <option <?php if( $value1["idclient"] == $payment["idclient"] ){ ?> selected="selected" <?php } ?> value="<?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></option>
+                                            <option <?php if( $value1["id"] == $payment["idclient"] ){ ?> selected="selected" <?php } ?> value="<?php echo htmlspecialchars( $value1["id"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["nome"], ENT_COMPAT, 'UTF-8', FALSE ); ?></option>
                                             <?php } ?>
 
                                         </select>
-                                        -->
                                     </div>
 
                                     <div class="form-group">
@@ -92,11 +91,6 @@
                     </div>
                 </div>
             </section> <!-- /.content -->
-
-
-
-
-
 
         </div> <!-- /.row -->
     </section> <!-- /.content -->

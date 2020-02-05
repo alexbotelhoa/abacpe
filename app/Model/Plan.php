@@ -28,6 +28,23 @@ class Plan extends Model
 
     }
 
+    public static function checkList($list)
+    {
+
+        foreach ($list as &$row) {
+
+            $p = new Plan();
+
+            $p->setData($row);
+
+            $row = $p->getValues();
+
+        }
+
+        return $list;
+
+    }
+
 
 
   //************************************************************************************//
@@ -85,23 +102,6 @@ class Plan extends Model
     {
 
         return parent::getValues();
-
-    }
-
-    public static function checkList($list)
-    {
-
-        foreach ($list as &$row) {
-
-            $p = new Plan();
-
-            $p->setData($row);
-
-            $row = $p->getValues();
-
-        }
-
-        return $list;
 
     }
 
