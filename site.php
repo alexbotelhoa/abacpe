@@ -12,9 +12,6 @@ use ABA\Model\Statistic;
  * Páginas do Site - INICIO
  */
 
-
-
-
 $app->get("/", function() {
 
     $month = ["Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago"];
@@ -41,8 +38,6 @@ $app->get("/", function() {
 
     }
 
-    //var_dump($datachart); exit;
-
     $page = new Page();
 
     $page->setTpl("index", [
@@ -61,9 +56,19 @@ $app->get("/order/:page/:sort", function($page, $sort) {
 
 });
 
+$app->get("/order/:page/:id/:subpage/:sort", function($page, $id, $subpage, $sort) {
+
+    Order::getOrder($subpage, $sort);
+
+    header("Location: /$page/$id/$subpage");
+
+    exit;
+
+});
 
 
-  //////////////////////////////////////////////////////
+
+//////////////////////////////////////////////////////
  ///                     PLANOS                     ///
 //////////////////////////////////////////////////////
 
@@ -79,7 +84,7 @@ $app->get("/plans", function() {
 
     $plan = new Plan();
 
-    $pagination = $plan->getPlanPage($sort, $page);
+    $pagination = $plan->getPlanPage($sort, $page, $_SESSION['ItemsPerPageGeneral']);
 
     $pages = [];
 
@@ -94,7 +99,6 @@ $app->get("/plans", function() {
 
     $page->setTpl("plans", [
         "plan" => $pagination['data'],
-        "error" => Message::getError(),
         "success" => Message::getSuccess(),
         "pages" => $pages
     ]);
@@ -105,7 +109,9 @@ $app->get("/plans/create", function() {
 
     $page = new Page();
 
-    $page->setTpl("plans-create");
+    $page->setTpl("plans-create", [
+        "error" => Message::getError()
+    ]);
 
 });
 
@@ -114,6 +120,26 @@ $app->post("/plans/create", function() {
     $plan = new Plan();
 
     $plan->setData($_POST);
+
+    if ($_POST['desplan'] == '') {
+
+        Message::setError("Informe o NOME do plano!");
+
+        header("Location: /plans/create");
+
+        exit;
+
+    }
+
+    if ($_POST['vlplan'] == '') {
+
+        Message::setError("Informe o VALOR do plano!");
+
+        header("Location: /plans/create");
+
+        exit;
+
+    }
 
     $plan->save();
 
@@ -134,7 +160,8 @@ $app->get("/plans/:idplan/update", function($idplan) {
     $page = new Page();
 
     $page->setTpl("plans-update", [
-        "plan" => $plan->getValues()
+        "plan" => $plan->getValues(),
+        "error" => Message::getError()
     ]);
 
 });
@@ -146,6 +173,27 @@ $app->post("/plans/:idplan/update", function($idplan) {
     $plan->get((int)$idplan);
 
     $plan->setData($_POST);
+
+
+    if ($_POST['desplan'] == '') {
+
+        Message::setError("Informe o NOME do plano!");
+
+        header("Location: /plans/$idplan/update");
+
+        exit;
+
+    }
+
+    if ($_POST['vlplan'] == '') {
+
+        Message::setError("Informe o VALOR do plano!");
+
+        header("Location: /plans/$idplan/update");
+
+        exit;
+
+    }
 
     $plan->save();
 
@@ -159,9 +207,9 @@ $app->post("/plans/:idplan/update", function($idplan) {
 
 $app->get("/plans/:idplan/delete", function($idplan) {
 
-    $checkpayment = Plan::checkPayment($idplan);
+    $checkplan = Plan::checkPlan($idplan);
 
-    if (count($checkpayment) > 0) {
+    if (count($checkplan) > 0) {
 
         Message::setError("Existe pagamento(s) vinculado(s) a esse plano!");
 
@@ -187,24 +235,251 @@ $app->get("/plans/:idplan/delete", function($idplan) {
 
 
 
-
-
-
-
-
-
-
   //////////////////////////////////////////////////////
  ///                   PAGAMENTOS                   ///
 //////////////////////////////////////////////////////
 
 $app->get("/payments", function() {
 
+    (!isset($_SESSION['SortPaymentByField'])) ? $sort_field = $_SESSION['SortPaymentByField'] = "idpayment" : $sort_field = $_SESSION['SortPaymentByField'];
+
+    (!isset($_SESSION['SortPaymentByOrder'])) ? $sort_order = $_SESSION['SortPaymentByOrder'] = "ASC" : $sort_order = $_SESSION['SortPaymentByOrder'];
+
+    $sort = $sort_field . " " . $sort_order;
+
+    $page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+    $payment = new Payment();
+
+    $pagination = $payment->getPaymentPage($sort, $page, $_SESSION['ItemsPerPageGeneral']);
+
+    $pages = [];
+
+    if ($pagination['pages'] > 5) {
+
+            if ($page <= 3) {
+
+                $firstpages = 1;
+                $lastpages = 5;
+
+            } else {
+
+                if ($page <= $pagination['pages'] - 2) {
+
+                    $firstpages = $page - 2;
+                    $lastpages = $page + 2;
+
+                } else {
+
+                    $firstpages = $pagination['pages'] - 4;
+                    $lastpages = $pagination['pages'];
+
+                }
+
+            }
+
+    } else {
+
+        $firstpages = 1;
+        $lastpages = $pagination['pages'];
+
+    }
+
+    for ($i = $firstpages; $i <= $lastpages; $i++) {
+        array_push($pages, [
+            'link' => '/payments?page=' . $i,
+            'page' => $i
+        ]);
+    }
+
     $page = new Page();
 
     $page->setTpl("payments", [
-        "" => ''
+        "payment" => $pagination['data'],
+        "success" => Message::getSuccess(),
+        "pages" => $pages,
+        "lastpage" => (int)$pagination['pages']
     ]);
+
+});
+
+$app->get("/payments/:idclient/detail", function($idclient) {
+
+    (!isset($_SESSION['SortPayDetailByField'])) ? $sort_field = $_SESSION['SortPayDetailByField'] = "idpayment" : $sort_field = $_SESSION['SortPayDetailByField'];
+
+    (!isset($_SESSION['SortPayDetailByOrder'])) ? $sort_order = $_SESSION['SortPayDetailByOrder'] = "ASC" : $sort_order = $_SESSION['SortPayDetailByOrder'];
+
+    $sort = $sort_field . " " . $sort_order;
+
+    $page = (isset($_GET['page'])) ? (int)$_GET['page'] : 1;
+
+    $payment = new Payment();
+
+    $pagination = $payment->getPaymentClientPage($sort, $idclient, $page, $_SESSION['ItemsPerPagePayDetail']);
+
+    $pages = [];
+
+    if ($pagination['pages'] > 5) {
+
+        if ($page <= 3) {
+
+            $firstpages = 1;
+            $lastpages = 5;
+
+        } else {
+
+            if ($page <= $pagination['pages'] - 2) {
+
+                $firstpages = $page - 2;
+                $lastpages = $page + 2;
+
+            } else {
+
+                $firstpages = $pagination['pages'] - 4;
+                $lastpages = $pagination['pages'];
+
+            }
+
+        }
+
+    } else {
+
+        $firstpages = 1;
+        $lastpages = $pagination['pages'];
+
+    }
+
+    for ($i = $firstpages; $i <= $lastpages; $i++) {
+        array_push($pages, [
+            'link' => '/payments/'. $idclient .'/detail?page=' . $i,
+            'page' => $i
+        ]);
+    }
+
+    $page = new Page();
+
+    $page->setTpl("payments-detail", [
+        "payment" => $pagination['data'],
+        "success" => Message::getSuccess(),
+        "idclient" => $idclient,
+        "pages" => $pages,
+        "lastpage" => (int)$pagination['pages']
+    ]);
+
+});
+
+$app->get("/payments/:idclient/create", function($idclient) {
+
+    $page = new Page();
+
+    $page->setTpl("payments-create", [
+        "clients" => [],
+        "error" => Message::getError(),
+        "idclient" => $idclient,
+        "plans" => Plan::listAll()
+    ]);
+
+});
+
+$app->post("/payments/:idclient/create", function($idclient) {
+
+    $payment = new Payment();
+
+    $payment->setData($_POST);
+
+    if ($_POST['dtpayment'] == '') {
+
+        Message::setError("Informe a DATA do pagamento!");
+
+        header("Location: /payments/$idclient/create");
+
+        exit;
+
+    }
+
+    //$payment->save();
+
+    Message::setSuccess("Registro incluído com sucesso!");
+
+    $_SESSION['SortPayDetailByOrder'] = "DESC";
+    $_SESSION['SortPayDetailByField'] = "a.idpayment";
+
+    header("Location: /payments/$idclient/detail");
+
+    exit;
+
+});
+
+$app->get("/payments/:idpayment/update", function($idpayment) {
+
+    $payment = new Payment();
+
+    $payment->get((int)$idpayment);
+
+    $page = new Page();
+
+    $page->setTpl("payments-update", [
+        "payment" => $payment->getValues(),
+        "clients" => [],
+        "plans" => Plan::listAll(),
+        "error" => Message::getError()
+    ]);
+
+});
+
+$app->post("/payments/:idpayment/update", function($idpayment) {
+
+    $payment = new Payment();
+
+    $payment->get((int)$idpayment);
+
+    $payment->setData($_POST);
+
+    if ($_POST['dtpayment'] == '') {
+
+        Message::setError("Informe a DATA do pagamento!");
+
+        header("Location: /payments/$idpayment/update");
+
+        exit;
+
+    }
+
+    //$payment->save();
+
+    Message::setSuccess("Registro alterado com sucesso!");
+
+    header("Location: /payments/$_POST[idclient]/detail");
+
+    exit;
+
+});
+
+$app->get("/payments/:idpayment/delete", function($idpayment) {
+
+    $payment = new Payment();
+
+    $payment->get((int)$idpayment);
+
+    $idclient = $payment->getidclient();
+
+    //$payment->delete();
+
+    Message::setSuccess("Registro excluído com sucesso!");
+
+    $checkpayment = Payment::checkPayment($idclient);
+
+    if (count($checkpayment) > 0) {
+
+        header("Location: /payments/$idclient/detail");
+
+    } else {
+
+        header("Location: /payments");
+
+    }
+
+    exit;
 
 });
 

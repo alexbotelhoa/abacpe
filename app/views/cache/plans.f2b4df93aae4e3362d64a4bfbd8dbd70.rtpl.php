@@ -1,12 +1,4 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!--
-####################################################################################################################
-                                        ACIMA É O HEADER
-####################################################################################################################
--->
-
-
-
-<div class="maincontent-area">
+<?php if(!class_exists('Rain\Tpl')){exit;}?><div class="maincontent-area">
     <div class="zigzag-bottom"></div>
     <section class="content">
         <div class="row">
@@ -39,20 +31,11 @@
                     <div class="col-md-12">
                         <div class="box box-primary">
                             <div class="box-header">
-                                <div class="col-xs-4">
+                                <div class="col-md-8 col-xs-6">
                                     <a href="/plans/create" class="btn btn-success">Cadastrar Plano</a>
                                 </div>
-
-                                <?php if( $error != '' ){ ?>
-                                <div class="col-xs-8">
-                                    <div class="box-header bg-red">
-                                        <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
-                                    </div>
-                                </div>
-                                <?php } ?>
-
                                 <?php if( $success != '' ){ ?>
-                                <div class="col-xs-8">
+                                <div class="col-md-4 col-xs-6">
                                     <div class="box-header bg-green">
                                         <?php echo htmlspecialchars( $success, ENT_COMPAT, 'UTF-8', FALSE ); ?>
                                     </div>
@@ -77,7 +60,8 @@
                                         <td><?php echo htmlspecialchars( $value1["desplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td><?php echo formatPrice($value1["vlplan"]); ?></td>
                                         <td>
-                                            <a href="/plans/<?php echo htmlspecialchars( $value1["idplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a><a href="/plans/<?php echo htmlspecialchars( $value1["idplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                            <a href="/plans/<?php echo htmlspecialchars( $value1["idplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                                            <a href="/plans/<?php echo htmlspecialchars( $value1["idplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                                         </td>
                                     </tr>
                                     <?php } ?>
@@ -117,11 +101,3 @@
         </div> <!-- /.row -->
     </section> <!-- /.content -->
 </div>
-
-
-
-<!--
-####################################################################################################################
-                                        ABAIXO É O FOOTER
-####################################################################################################################
--->

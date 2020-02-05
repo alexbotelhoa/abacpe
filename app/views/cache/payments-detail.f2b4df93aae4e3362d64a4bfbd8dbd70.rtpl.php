@@ -8,22 +8,14 @@
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-tachometer-alt"></i> Home</a></li>
                     <li class="active"><a href="/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail">Detalhes</a></li>
                 </ol>
             </section> <!-- /.content-header -->
 
             <section class="container">
-                <div class="col-md-8 col-xs-6">
-                    <h1>
-                        Pagamentos
-                    </h1>
-                </div>
-                <?php if( $success != '' ){ ?>
-                <div class="col-md-4 col-xs-6">
-                    <div class="box-header bg-green">
-                        <?php echo htmlspecialchars( $success, ENT_COMPAT, 'UTF-8', FALSE ); ?>
-                    </div>
-                </div>
-                <?php } ?>
+                <h1>
+                    Detalhes
+                </h1>
             </section> <!-- /.content-header -->
 
 
@@ -36,26 +28,42 @@
                     <div class="col-md-12">
                         <div class="box box-primary">
 
+                            <div class="box-header">
+                                <div class="col-md-8 col-xs-6">
+                                    <a href="/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/create" class="btn btn-success">Cadastrar Pagamento</a>
+                                </div>
+                                <?php if( $success != '' ){ ?>
+                                <div class="col-md-4 col-xs-6">
+                                    <div class="box-header bg-green">
+                                        <?php echo htmlspecialchars( $success, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div> <!-- /.box-header -->
+
                             <div class="box-body no-padding">
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th style="width: 10px"><a href="/order/payments/ordid">#</a></th>
-                                        <th><a href="/order/payments/ordcli">Nome Cliente</a></th>
-                                        <th><a href="/order/payments/ordpla">Nome Plano</a></th>
-                                        <th><a href="/order/payments/ordqtd">Qtd</a></th>
+                                        <th style="width: 10px"><a href="/order/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail/ordid">#</a></th>
+                                        <th><a href="/order/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail/ordcli">Nome Cliente</a></th>
+                                        <th><a href="/order/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail/ordpla">Nome Plano</a></th>
+                                        <th><a href="/order/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail/ordrec">Recorrência</a></th>
+                                        <th><a href="/order/payments/<?php echo htmlspecialchars( $idclient, ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail/ordvlp">Valor Pagamento</a></th>
                                         <th style="width: 140px">&nbsp;</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <?php $counter1=-1;  if( isset($payment) && ( is_array($payment) || $payment instanceof Traversable ) && sizeof($payment) ) foreach( $payment as $key1 => $value1 ){ $counter1++; ?>
                                     <tr>
-                                        <td><?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                        <td><?php echo htmlspecialchars( $value1["idpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td><?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td><?php echo htmlspecialchars( $value1["desplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
-                                        <td><?php echo htmlspecialchars( $value1["qtdpay"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                        <td><?php echo htmlspecialchars( $value1["vlrecurrence"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
+                                        <td><?php echo htmlspecialchars( $value1["vlpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?></td>
                                         <td>
-                                            <a href="/payments/<?php echo htmlspecialchars( $value1["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail" class="btn btn-warning btn-xs"><i class="fa fa-search"></i> Detalhes</a>
+                                            <a href="/payments/<?php echo htmlspecialchars( $value1["idpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                                            <a href="/payments/<?php echo htmlspecialchars( $value1["idpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                                         </td>
                                     </tr>
                                     <?php } ?>
@@ -80,6 +88,7 @@
                     </div>
                 </div>
             </section> <!-- /.content -->
+
 
 
 

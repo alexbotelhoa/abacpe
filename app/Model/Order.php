@@ -40,90 +40,65 @@ class Order extends Model
 
         }
 
-        if ($local == "tasks") {
+        if ($local == "payments") {
 
-            if ($_SESSION['LastField'] == $sort && $_SESSION['SortTaskByOrder'] == "ASC") {
+            if ($_SESSION['LastField'] == $sort && $_SESSION['SortPaymentByOrder'] == "ASC") {
 
-                $_SESSION['SortTaskByOrder'] = "DESC";
+                $_SESSION['SortPaymentByOrder'] = "DESC";
 
             } else {
 
-                $_SESSION['SortTaskByOrder'] = "ASC";
+                $_SESSION['SortPaymentByOrder'] = "ASC";
 
             }
 
             switch ($sort) {
 
                 case "ordid":
-                    $_SESSION['SortTaskByField'] = "idtask";
+                    $_SESSION['SortPaymentByField'] = "a.idclient";
                     break;
-                case "ordtask":
-                    $_SESSION['SortTaskByField'] = "destask";
+                case "ordcli":
+                    $_SESSION['SortPaymentByField'] = "a.idclient";
                     break;
-                case "ordproj":
-                    $_SESSION['SortTaskByField'] = "desproject";
+                case "ordpla":
+                    $_SESSION['SortPaymentByField'] = "a.idplan";
                     break;
-                case "ordini":
-                    $_SESSION['SortTaskByField'] = "a.dtstart";
-                    break;
-                case "ordfim":
-                    $_SESSION['SortTaskByField'] = "a.dtfinish";
-                    break;
-                case "ordsit":
-                    $_SESSION['SortTaskByField'] = "sttask";
+                case "ordqtd":
+                    $_SESSION['SortPaymentByField'] = "qtdpay";
                     break;
 
             }
 
         }
 
-        if ($local == "status") {
+        if ($local == "detail") {
 
-            if ($_SESSION['LastField'] == $sort) {
+            if ($_SESSION['LastField'] == $sort && $_SESSION['SortPayDetailByOrder'] == "ASC") {
 
-                if ($_SESSION['LastField'][0] == 's') {
+                $_SESSION['SortPayDetailByOrder'] = "DESC";
 
-                    ($_SESSION['SortLateByOrder'] == "ASC") ? $_SESSION['SortLateByOrder'] = "DESC" : $_SESSION['SortLateByOrder'] = "ASC";
+            } else {
 
-                } else if ($_SESSION['LastField'][0] == 'n') {
+                $_SESSION['SortPayDetailByOrder'] = "ASC";
 
-                    ($_SESSION['SortNotLateByOrder'] == "ASC") ? $_SESSION['SortNotLateByOrder'] = "DESC" : $_SESSION['SortNotLateByOrder'] = "ASC";
-
-                };
-
-            };
+            }
 
             switch ($sort) {
 
-                case "sordid":
-                    $_SESSION['SortLateByField'] = "idproject";
+                case "ordid":
+                    $_SESSION['SortPayDetailByField'] = "a.idpayment";
                     break;
-                case "sordproj":
-                    $_SESSION['SortLateByField'] = "desproject";
+                case "ordcli":
+                    $_SESSION['SortPayDetailByField'] = "a.idclient";
                     break;
-                case "sordini":
-                    $_SESSION['SortLateByField'] = "dtstart";
+                case "ordpla":
+                    $_SESSION['SortPayDetailByField'] = "a.idplan";
                     break;
-                case "sordfim":
-                    $_SESSION['SortLateByField'] = "dtfinish";
+                case "ordrec":
+                    $_SESSION['SortPayDetailByField'] = "a.vlrecurrence";
                     break;
-                case "sordrate":
-                    $_SESSION['SortLateByField'] = "rtproject";
-                    break;
-                case "nordid":
-                    $_SESSION['SortNotLateByField'] = "idproject";
-                    break;
-                case "nordproj":
-                    $_SESSION['SortNotLateByField'] = "desproject";
-                    break;
-                case "nordini":
-                    $_SESSION['SortNotLateByField'] = "dtstart";
-                    break;
-                case "nordfim":
-                    $_SESSION['SortNotLateByField'] = "dtfinish";
-                    break;
-                case "nordrate":
-                    $_SESSION['SortNotLateByField'] = "rtproject";
+                case "ordvlp":
+                    $_SESSION['SortPayDetailByField'] = "a.vlpayment";
                     break;
 
             }

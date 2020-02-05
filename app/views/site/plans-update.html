@@ -1,25 +1,13 @@
-<!--
-####################################################################################################################
-                                        ABOVE IS THE HEADER
-####################################################################################################################
--->
-
-
-
-
 <div class="maincontent-area">
     <div class="zigzag-bottom"></div>
     <section class="content">
         <div class="row">
 
-
-
-
             <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fas fa-tachometer-alt"></i> Home</a></li>
-                    <li><a href="/plans">Plano</a></li>
+                    <li><a href="/plans">Planos</a></li>
                     <li class="active"><a href="/plans/{$plan.idplan}/update">Editar</a></li>
                 </ol>
             </section> <!-- /.content-header -->
@@ -50,8 +38,18 @@
                                                placeholder="0.00" value="{$plan.vlplan}">
                                     </div>
                                 </div> <!-- /.box-body -->
+
                                 <div class="box-footer">
-                                    <button type="submit" class="btn btn-primary">Salvar</button>
+                                    <div class="col-md-8 col-xs-6">
+                                        <button type="submit" class="btn btn-success">Salvar</button>
+                                    </div>
+                                    {if="$error != ''"}
+                                    <div class="col-md-4 col-xs-6">
+                                        <div class="box-header bg-red">
+                                            {$error}
+                                        </div>
+                                    </div>
+                                    {/if}
                                 </div>
                             </form>
 
@@ -60,22 +58,6 @@
                 </div>
             </section> <!-- /.content -->
 
-
-
-
-
-
         </div> <!-- /.row -->
     </section> <!-- /.content -->
 </div>
-
-
-
-
-
-
-<!--
-####################################################################################################################
-                                        BELOW IS THE FOOTER
-####################################################################################################################
--->

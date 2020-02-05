@@ -17,7 +17,7 @@ class Plan extends Model
 
     }
 
-    public static function checkPayment($idplan)
+    public static function checkPlan($idplan)
     {
 
         $sql = new Sql();
@@ -33,7 +33,6 @@ class Plan extends Model
   //************************************************************************************//
  //                                  FIM DOS STATICOS                                  //
 //************************************************************************************//
-
 
     public function save()
     {
@@ -106,7 +105,7 @@ class Plan extends Model
 
     }
 
-    public function getPlanPage($sort, $page = 1, $itemsPerPage = 6)
+    public function getPlanPage($sort, $page, $itemsPerPage)
     {
 
         $start = ($page - 1) * $itemsPerPage;
