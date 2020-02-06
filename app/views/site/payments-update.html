@@ -8,6 +8,7 @@
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fas fa-tachometer-alt"></i> Home</a></li>
                     <li><a href="/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/payments/{$payment.idclient}/detail">Cliente</a></li>
                     <li class="active"><a href="/payments/{$payment.idpayment}/update">Editar</a></li>
                 </ol>
             </section> <!-- /.content-header -->
@@ -28,7 +29,12 @@
                             <form role="form" action="/payments/{$payment.idpayment}/update" method="post" enctype="multipart/form-data">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="idclient">Nome Cliente</label>
+                                        <label for="idpayment">ID do Pagamento</label>
+                                        <input type="text" class="form-control" id="idpayment" readonly name="idpayment" step="0.01" placeholder="0.00" value="{$payment.idpayment}">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="idclient">Nome do Cliente</label>
                                         <select class="form-control" name="idclient">
                                             {loop="$clients"}
                                             <option {if="$value.id == $payment.idclient"} selected="selected" {/if} value="{$value.id}">{$value.nome}</option>
@@ -37,16 +43,16 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="idplan">Nome Plano</label>
+                                        <label for="idplan">Nome do Plano</label>
                                         <select class="form-control" name="idplan">
                                             {loop="$plans"}
-                                            <option {if="$value.idplan == $payment.idplan"} selected="selected" {/if} value="{$value.idplan}">{$value.desplan}</option>
+                                            <option {if="$value.idplan == $payment.idplan"} selected="selected" {/if} value="{$value.idplan}">{$value.desplan}  -  R$ {function="formatPrice($value.vlplan)"}</option>
                                             {/loop}
                                         </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="vlrecurrence">Recorrência</label>
+                                        <label for="vlrecurrence">Recorrência do Pagamento</label>
                                         <select class="form-control" name="vlrecurrence">
                                             <option {if="$payment.vlrecurrence == 1 "} selected="selected" {/if} value="1">1 Mês</option>
                                             <option {if="$payment.vlrecurrence == 3 "} selected="selected" {/if} value="3">3 Meses</option>
@@ -55,8 +61,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="dtpayment">Data Pagamento</label>
+                                        <label for="dtpayment">Data do Pagamento</label>
                                         <input type="date" class="form-control" id="dtpayment" name="dtpayment" step="0.01" placeholder="dd/mm/yyy" value="{$payment.dtpayment}">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="vlpayment">Valor do Pagamento</label>
+                                        <input type="text" class="form-control" id="vlpayment" readonly name="vlpayment" step="0.01" placeholder="0.00" value="R$ {function="formatPrice($payment.vlpayment)"}">
                                     </div>
                                 </div> <!-- /.box-body -->
 
@@ -66,7 +77,7 @@
                                     </div>
                                     {if="$error != ''"}
                                     <div class="col-md-4 col-xs-6">
-                                        <div class="box-header bg-red">
+                                        <div class="box-header bg-red" align="center">
                                             {$error}
                                         </div>
                                     </div>

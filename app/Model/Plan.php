@@ -8,12 +8,12 @@ use ABA\DB\Sql;
 class Plan extends Model
 {
 
-    public static function listAll()
+    public static function selectPlan()
     {
 
         $sql = new Sql();
 
-        return $sql->select("SELECT * FROM tb_plans ORDER BY desplan ASC");
+        return $sql->select("SELECT * FROM tb_plans ORDER BY idplan ASC");
 
     }
 
@@ -28,16 +28,16 @@ class Plan extends Model
 
     }
 
-    public static function checkList($list)
+    public static function listPlanPage($list)
     {
 
         foreach ($list as &$row) {
 
-            $p = new Plan();
+            $plans = new Plan();
 
-            $p->setData($row);
+            $plans->setData($row);
 
-            $row = $p->getValues();
+            $row = $plans->getValues();
 
         }
 
@@ -50,6 +50,13 @@ class Plan extends Model
   //************************************************************************************//
  //                                  FIM DOS STATICOS                                  //
 //************************************************************************************//
+
+    public function getValues()
+    {
+
+        return parent::getValues();
+
+    }
 
     public function save()
     {
@@ -98,13 +105,6 @@ class Plan extends Model
 
     }
 
-    public function getValues()
-    {
-
-        return parent::getValues();
-
-    }
-
     public function getPlanPage($sort, $page, $itemsPerPage)
     {
 
@@ -121,7 +121,7 @@ class Plan extends Model
         $resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
 
         return [
-            'data' => Plan::checkList($result),
+            'data' => Plan::listPlanPage($result),
             'total' => (int)$resultTotal[0]['nrtotal'],
             'pages' => ceil($resultTotal[0]['nrtotal'] / $itemsPerPage)
         ];

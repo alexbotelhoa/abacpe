@@ -8,7 +8,12 @@
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fas fa-tachometer-alt"></i> Home</a></li>
                     <li><a href="/payments">Pagamentos</a></li>
-                    <li class="active"><a href="/payments/{$idclient}/create">Cadastrar</a></li>
+                    {if="$idclient != ''"}
+                        <li class="active"><a href="/payments/{$idclient}/detail">Cliente</a></li>
+                        <li class="active"><a href="/payments/{$idclient}/create">Cadastrar</a></li>
+                    {else}
+                        <li class="active"><a href="/payments/create">Cadastrar</a></li>
+                    {/if}
                 </ol>
             </section> <!-- /.content-header -->
 
@@ -25,20 +30,31 @@
                         <div class="box box-success">
 
                             <!-- form start -->
-                            <form role="form" action="/payments/{$idclient}/create" method="post">
+                            <form role="form" action="/payments/{if="$idclient != ''"}{$idclient}/{/if}create" method="post">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="idclient">Nome Cliente</label>
+                                        <label for="idclient">Nome do Cliente</label>
+
                                         <select class="form-control" name="idclient">
-                                            {loop="$clients"}
-                                            <option value="{$value.id}">{$value.nome}</option>
-                                            {/loop}
+                                            {if="$idclient != ''"}
+                                                {loop="$clients"}
+                                                    {if="$value.id == $idclient"}
+                                                        <option selected value="{$value.id}">{$value.nome}</option>
+                                                    {/if}
+                                                {/loop}
+                                            {else}
+                                                <option selected value="">Selecione o cliente</option>
+                                                {loop="$clients"}
+                                                    <option value="{$value.id}">{$value.nome}</option>
+                                                {/loop}
+                                            {/if}
                                         </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="idplan">Nome Plano</label>
+                                        <label for="idplan">Nome do Plano</label>
                                         <select class="form-control" name="idplan">
+                                            <option selected value="">Selecione o plano</option>
                                             {loop="$plans"}
                                             <option value="{$value.idplan}">{$value.desplan}  -  R$ {function="formatPrice($value.vlplan)"}</option>
                                             {/loop}
@@ -46,8 +62,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="vlrecurrence">Recorrência</label>
+                                        <label for="vlrecurrence">Recorrência do Pagamento</label>
                                         <select class="form-control" name="vlrecurrence">
+                                            <option selected value="">Selecione a recorrência</option>
                                             <option value="1">1 Mês</option>
                                             <option value="3">3 Meses</option>
                                             <option value="6">6 Meses</option>
@@ -55,7 +72,7 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="dtpayment">Data Pagamento</label>
+                                        <label for="dtpayment">Data do Pagamento</label>
                                         <input type="date" class="form-control" id="dtpayment" name="dtpayment" step="0.01" placeholder="dd/mm/yyyy">
                                     </div>
                                 </div> <!-- /.box-body -->
@@ -66,7 +83,7 @@
                                     </div>
                                     {if="$error != ''"}
                                     <div class="col-md-4 col-xs-6">
-                                        <div class="box-header bg-red">
+                                        <div class="box-header bg-red" align="center">
                                             {$error}
                                         </div>
                                     </div>

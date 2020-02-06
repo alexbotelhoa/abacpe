@@ -19,7 +19,7 @@ class Payment extends Model
 
     }
 
-    public static function checkList($list)
+    public static function listPaymentPage($list)
     {
 
         foreach ($list as &$row) {
@@ -46,8 +46,21 @@ class Payment extends Model
  //                                  FIM DOS STATICOS                                  //
 //************************************************************************************//
 
+    public function getValues()
+    {
+
+        return parent::getValues();
+
+    }
+
     public function save()
     {
+
+        $plan = New Plan();
+
+        $plan->get((int)$this->getidplan());
+
+        $vlpayment = $this->getvlrecurrence() * $plan->getvlplan();
 
         $sql = new Sql();
 
@@ -57,7 +70,7 @@ class Payment extends Model
             ":dtpayment" => $this->getdtpayment(),
             ":idplan" => $this->getidplan(),
             ":vlrecurrence" => $this->getvlrecurrence(),
-            ":vlpayment" => $this->getvlpayment()
+            ":vlpayment" => $vlpayment
         ]);
 
         if (count($result) > 0) {
@@ -96,13 +109,6 @@ class Payment extends Model
 
     }
 
-    public function getValues()
-    {
-
-        return parent::getValues();
-
-    }
-
     public function getPaymentPage($sort, $page, $itemsPerPage)
     {
 
@@ -127,7 +133,7 @@ class Payment extends Model
         $resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
 
         return [
-            'data' => Payment::checkList($result),
+            'data' => Payment::listPaymentPage($result),
             'total' => (int)$resultTotal[0]['nrtotal'],
             'pages' => ceil($resultTotal[0]['nrtotal'] / $itemsPerPage)
         ];
@@ -153,7 +159,7 @@ class Payment extends Model
         $resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
 
         return [
-            'data' => Payment::checkList($result),
+            'data' => Payment::listPaymentPage($result),
             'total' => (int)$resultTotal[0]['nrtotal'],
             'pages' => ceil($resultTotal[0]['nrtotal'] / $itemsPerPage)
         ];

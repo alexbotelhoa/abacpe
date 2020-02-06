@@ -97,6 +97,9 @@ class Order extends Model
                 case "ordrec":
                     $_SESSION['SortPayDetailByField'] = "a.vlrecurrence";
                     break;
+                case "orddtp":
+                    $_SESSION['SortPayDetailByField'] = "a.dtpayment";
+                    break;
                 case "ordvlp":
                     $_SESSION['SortPayDetailByField'] = "a.vlpayment";
                     break;

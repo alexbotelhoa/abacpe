@@ -8,6 +8,7 @@
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fas fa-tachometer-alt"></i> Home</a></li>
                     <li><a href="/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/payments/<?php echo htmlspecialchars( $payment["idclient"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/detail">Cliente</a></li>
                     <li class="active"><a href="/payments/<?php echo htmlspecialchars( $payment["idpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/update">Editar</a></li>
                 </ol>
             </section> <!-- /.content-header -->
@@ -28,13 +29,12 @@
                             <form role="form" action="/payments/<?php echo htmlspecialchars( $payment["idpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?>/update" method="post" enctype="multipart/form-data">
                                 <div class="box-body">
                                     <div class="form-group">
-                                        <label for="idclient">Nome Cliente</label>
+                                        <label for="idpayment">ID do Pagamento</label>
+                                        <input type="text" class="form-control" id="idpayment" readonly name="idpayment" step="0.01" placeholder="0.00" value="<?php echo htmlspecialchars( $payment["idpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                                    </div>
 
-                                        <!--
-                                        <input type="text" class="form-control" id="idclient" name="idclient" step="0.01" placeholder="Informe o ID do Cliente">
-                                        -->
-
-
+                                    <div class="form-group">
+                                        <label for="idclient">Nome do Cliente</label>
                                         <select class="form-control" name="idclient">
                                             <?php $counter1=-1;  if( isset($clients) && ( is_array($clients) || $clients instanceof Traversable ) && sizeof($clients) ) foreach( $clients as $key1 => $value1 ){ $counter1++; ?>
 
@@ -45,18 +45,18 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="idplan">Nome Plano</label>
+                                        <label for="idplan">Nome do Plano</label>
                                         <select class="form-control" name="idplan">
                                             <?php $counter1=-1;  if( isset($plans) && ( is_array($plans) || $plans instanceof Traversable ) && sizeof($plans) ) foreach( $plans as $key1 => $value1 ){ $counter1++; ?>
 
-                                            <option <?php if( $value1["idplan"] == $payment["idplan"] ){ ?> selected="selected" <?php } ?> value="<?php echo htmlspecialchars( $value1["idplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["desplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?></option>
+                                            <option <?php if( $value1["idplan"] == $payment["idplan"] ){ ?> selected="selected" <?php } ?> value="<?php echo htmlspecialchars( $value1["idplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><?php echo htmlspecialchars( $value1["desplan"], ENT_COMPAT, 'UTF-8', FALSE ); ?>  -  R$ <?php echo formatPrice($value1["vlplan"]); ?></option>
                                             <?php } ?>
 
                                         </select>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="vlrecurrence">Recorrência</label>
+                                        <label for="vlrecurrence">Recorrência do Pagamento</label>
                                         <select class="form-control" name="vlrecurrence">
                                             <option <?php if( $payment["vlrecurrence"] == 1  ){ ?> selected="selected" <?php } ?> value="1">1 Mês</option>
                                             <option <?php if( $payment["vlrecurrence"] == 3  ){ ?> selected="selected" <?php } ?> value="3">3 Meses</option>
@@ -65,8 +65,13 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="dtpayment">Data Pagamento</label>
+                                        <label for="dtpayment">Data do Pagamento</label>
                                         <input type="date" class="form-control" id="dtpayment" name="dtpayment" step="0.01" placeholder="dd/mm/yyy" value="<?php echo htmlspecialchars( $payment["dtpayment"], ENT_COMPAT, 'UTF-8', FALSE ); ?>">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="vlpayment">Valor do Pagamento</label>
+                                        <input type="text" class="form-control" id="vlpayment" readonly name="vlpayment" step="0.01" placeholder="0.00" value="R$ <?php echo formatPrice($payment["vlpayment"]); ?>">
                                     </div>
                                 </div> <!-- /.box-body -->
 
@@ -77,7 +82,7 @@
                                     <?php if( $error != '' ){ ?>
 
                                     <div class="col-md-4 col-xs-6">
-                                        <div class="box-header bg-red">
+                                        <div class="box-header bg-red" align="center">
                                             <?php echo htmlspecialchars( $error, ENT_COMPAT, 'UTF-8', FALSE ); ?>
 
                                         </div>

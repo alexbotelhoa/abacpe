@@ -2,20 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877eb840-95bc-4689-ab78-81bb7a9b7a79" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Classes.php" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Order.php" afterPath="$PROJECT_DIR$/app/Model/Order.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Payment.php" afterPath="$PROJECT_DIR$/app/Model/Payment.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Plan.php" afterPath="$PROJECT_DIR$/app/Model/Plan.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/payments-create.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/payments-create.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/payments-detail.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/payments-detail.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/payments-update.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/payments-update.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/payments.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/payments.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/plans.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/plans.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/payments-create.html" afterPath="$PROJECT_DIR$/app/views/site/payments-create.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/payments-detail.html" afterPath="$PROJECT_DIR$/app/views/site/payments-detail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/payments-update.html" afterPath="$PROJECT_DIR$/app/views/site/payments-update.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/payments.html" afterPath="$PROJECT_DIR$/app/views/site/payments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site.php" afterPath="$PROJECT_DIR$/site.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -64,12 +62,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="site.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="site.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="485">
+              <caret line="588" column="0" lean-forward="true" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
+              <folding>
+                <element signature="e#7#20#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -77,79 +77,18 @@
       <file leaf-file-name="Payment.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="50" />
+            <state relative-caret-position="744">
+              <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
               <folding>
                 <element signature="e#29#43#0#PHP" expanded="true" />
-                <marker date="1580946210146" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
-                <marker date="1580946210146" expanded="true" signature="1648:1702" ph="SELECT * FRO... tb_payments" />
-                <marker date="1580946210146" expanded="true" signature="1937:1989" ph="DELETE FROM " />
-                <marker date="1580946210146" expanded="true" signature="2337:2809" ph="SELECT SQL_C... tb_payments" />
-                <marker date="1580946210146" expanded="true" signature="2438:2571" ph="SELECT idcli... tb_payments" />
-                <marker date="1580946210146" expanded="true" signature="3330:3497" ph="SELECT SQL_C... tb_payments" />
-                <marker date="1580946210146" expanded="true" signature="3330:3538" ph="SELECT SQL_C... tb_payments" />
+                <marker date="1580995625088" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
+                <marker date="1580995625088" expanded="true" signature="1870:1924" ph="SELECT * FRO... tb_payments" />
+                <marker date="1580995625088" expanded="true" signature="2159:2211" ph="DELETE FROM " />
+                <marker date="1580995625088" expanded="true" signature="2476:2948" ph="SELECT SQL_C... tb_payments" />
+                <marker date="1580995625088" expanded="true" signature="2577:2710" ph="SELECT idcli... tb_payments" />
+                <marker date="1580995625088" expanded="true" signature="3475:3642" ph="SELECT SQL_C... tb_payments" />
+                <marker date="1580995625088" expanded="true" signature="3475:3683" ph="SELECT SQL_C... tb_payments" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Plan.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Plan.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-              <folding>
-                <element signature="e#29#43#0#PHP" expanded="true" />
-                <marker date="1580946210136" expanded="true" signature="189:232" ph="SELECT * FRO... tb_plans" />
-                <marker date="1580946210136" expanded="true" signature="353:401" ph="SELECT * FRO... tb_payments" />
-                <marker date="1580946210136" expanded="true" signature="1445:1490" ph="SELECT * FRO... tb_plans" />
-                <marker date="1580946210136" expanded="true" signature="1719:1762" ph="DELETE FROM " />
-                <marker date="1580946210136" expanded="true" signature="2101:2220" ph="SELECT SQL_C... tb_plans" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payments.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/site/payments.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="833">
-              <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
-              <folding>
-                <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#1868#1874#1" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payments-detail.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="55" lean-forward="false" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payments-create.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/site/payments-create.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="payments-update.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/views/site/payments-update.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="527">
-              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -158,8 +97,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Chart</find>
-      <find>datasetLabel</find>
       <find>Chart.</find>
       <find>each</find>
       <find>foreah</find>
@@ -186,8 +123,10 @@
       <find>$clientes</find>
       <find>array_push</find>
       <find>update</find>
-      <find>//</find>
       <find>idclient</find>
+      <find>//</find>
+      <find>listAll</find>
+      <find>var_dump</find>
     </findStrings>
     <replaceStrings>
       <replace>javascript:void(0)</replace>
@@ -247,20 +186,20 @@
         <option value="$PROJECT_DIR$/app/views/site/index.html" />
         <option value="$PROJECT_DIR$/app/views/site/about.html" />
         <option value="$PROJECT_DIR$/app/views/site/statistics.html" />
-        <option value="$PROJECT_DIR$/app/Model/Order.php" />
         <option value="$PROJECT_DIR$/../abascp/app/views/site/tasks-update.html" />
         <option value="$PROJECT_DIR$/app/views/site/plans.html" />
         <option value="$PROJECT_DIR$/app/views/site/plans-create.html" />
         <option value="$PROJECT_DIR$/app/views/site/plans-update.html" />
         <option value="$PROJECT_DIR$/config.php" />
+        <option value="$PROJECT_DIR$/app/Model/Client.php" />
+        <option value="$PROJECT_DIR$/app/Model/Plan.php" />
+        <option value="$PROJECT_DIR$/app/Model/Order.php" />
         <option value="$PROJECT_DIR$/app/views/site/payments.html" />
         <option value="$PROJECT_DIR$/app/views/site/payments-detail.html" />
-        <option value="$PROJECT_DIR$/app/Model/Payment.php" />
-        <option value="$PROJECT_DIR$/app/Model/Plan.php" />
-        <option value="$PROJECT_DIR$/app/Model/Client.php" />
         <option value="$PROJECT_DIR$/app/views/site/payments-update.html" />
-        <option value="$PROJECT_DIR$/app/views/site/payments-create.html" />
         <option value="$PROJECT_DIR$/site.php" />
+        <option value="$PROJECT_DIR$/app/Model/Payment.php" />
+        <option value="$PROJECT_DIR$/app/views/site/payments-create.html" />
       </list>
     </option>
   </component>
@@ -351,7 +290,7 @@
       <workItem from="1580392564559" duration="24329000" />
       <workItem from="1580491107933" duration="21050000" />
       <workItem from="1580726475332" duration="76162000" />
-      <workItem from="1580920303195" duration="25202000" />
+      <workItem from="1580920303195" duration="34974000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste de Cabeçalho">
       <created>1580422131830</created>
@@ -388,11 +327,18 @@
       <option name="project" value="LOCAL" />
       <updated>1580938478029</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Atividades:&#10;- Feito o merge da API via JSON&#10;- Criado a seleção de &quot;usuários&quot; / Empresas">
+      <created>1580946859137</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1580946859137</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="187548000" />
+    <option name="totallyTimeSpent" value="197320000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="1432" height="1047" extended-state="0" />
@@ -448,7 +394,8 @@
     <MESSAGE value="Finalizado o Index" />
     <MESSAGE value="Finalizado:&#10;- Formulário Planos&#10;- Classe Planos&#10;- Classe Mensagem" />
     <MESSAGE value="Atividades:&#10;- Correções diversos&#10;- Criação dos formulários de Pagamento&#10;- Melhoria nas Mensagens de CRUD&#10;- Melhorias nas Ordenações&#10;- Melhorias nas permissões e nos bloqueios" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atividades:&#10;- Correções diversos&#10;- Criação dos formulários de Pagamento&#10;- Melhoria nas Mensagens de CRUD&#10;- Melhorias nas Ordenações&#10;- Melhorias nas permissões e nos bloqueios" />
+    <MESSAGE value="Atividades:&#10;- Feito o merge da API via JSON&#10;- Criado a seleção de &quot;usuários&quot; / Empresas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atividades:&#10;- Feito o merge da API via JSON&#10;- Criado a seleção de &quot;usuários&quot; / Empresas" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -457,30 +404,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Model/Message.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../abascp/app/Model/Project.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="473">
-          <caret line="172" column="35" lean-forward="true" selection-start-line="172" selection-start-column="35" selection-end-line="172" selection-end-column="35" />
-          <folding>
-            <element signature="e#29#44#0#PHP" expanded="true" />
-            <marker date="1580387632786" expanded="true" signature="192:241" ph="SELECT * FRO... tb_projects" />
-            <marker date="1580387632786" expanded="true" signature="378:433" ph="SELECT * FRO... tb_projects" />
-            <marker date="1580387632786" expanded="true" signature="587:642" ph="SELECT * FRO... tb_projects" />
-            <marker date="1580387632786" expanded="true" signature="778:835" ph="SELECT * FRO... tb_projects" />
-            <marker date="1580387632786" expanded="true" signature="959:1010" ph="SELECT * FRO... tb_tasks" />
-            <marker date="1580387632786" expanded="true" signature="4391:4513" ph="SELECT SQL_C... tb_projects" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/site/projects.html" />
     <entry file="file://$PROJECT_DIR$/../sistema/plano_body.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -591,14 +514,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="438">
-          <caret line="88" column="68" lean-forward="false" selection-start-line="88" selection-start-column="59" selection-end-line="88" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -851,21 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Plan.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="4" lean-forward="true" selection-start-line="10" selection-start-column="4" selection-end-line="17" selection-end-column="5" />
-          <folding>
-            <element signature="e#29#43#0#PHP" expanded="true" />
-            <marker date="1580946210136" expanded="true" signature="189:232" ph="SELECT * FRO... tb_plans" />
-            <marker date="1580946210136" expanded="true" signature="353:401" ph="SELECT * FRO... tb_payments" />
-            <marker date="1580946210136" expanded="true" signature="1445:1490" ph="SELECT * FRO... tb_plans" />
-            <marker date="1580946210136" expanded="true" signature="1719:1762" ph="DELETE FROM " />
-            <marker date="1580946210136" expanded="true" signature="2101:2220" ph="SELECT SQL_C... tb_plans" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Client.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -874,64 +774,105 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
+    <entry file="file://$PROJECT_DIR$/app/Model/Message.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="50" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Plan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="67" lean-forward="false" selection-start-line="15" selection-start-column="67" selection-end-line="15" selection-end-column="67" />
           <folding>
             <element signature="e#29#43#0#PHP" expanded="true" />
-            <marker date="1580946210146" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
-            <marker date="1580946210146" expanded="true" signature="1648:1702" ph="SELECT * FRO... tb_payments" />
-            <marker date="1580946210146" expanded="true" signature="1937:1989" ph="DELETE FROM " />
-            <marker date="1580946210146" expanded="true" signature="2337:2809" ph="SELECT SQL_C... tb_payments" />
-            <marker date="1580946210146" expanded="true" signature="2438:2571" ph="SELECT idcli... tb_payments" />
-            <marker date="1580946210146" expanded="true" signature="3330:3497" ph="SELECT SQL_C... tb_payments" />
-            <marker date="1580946210146" expanded="true" signature="3330:3538" ph="SELECT SQL_C... tb_payments" />
+            <marker date="1580987039870" expanded="true" signature="192:234" ph="SELECT * FRO... tb_plans" />
+            <marker date="1580987039870" expanded="true" signature="355:403" ph="SELECT * FRO... tb_payments" />
+            <marker date="1580987039870" expanded="true" signature="1545:1590" ph="SELECT * FRO... tb_plans" />
+            <marker date="1580987039870" expanded="true" signature="1819:1862" ph="DELETE FROM " />
+            <marker date="1580987039870" expanded="true" signature="2118:2237" ph="SELECT SQL_C... tb_plans" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/site.php">
+    <entry file="file://$PROJECT_DIR$/functions.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/payments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="55" lean-forward="false" selection-start-line="49" selection-start-column="55" selection-end-line="49" selection-end-column="55" />
-          <folding>
-            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#0;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#1868#1874#1" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="55" lean-forward="false" selection-start-line="55" selection-start-column="55" selection-end-line="55" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/payments-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="0" lean-forward="false" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/site/payments-update.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+        <state relative-caret-position="305">
+          <caret line="68" column="71" lean-forward="false" selection-start-line="68" selection-start-column="71" selection-end-line="68" selection-end-column="71" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="472">
+          <caret line="50" column="49" lean-forward="false" selection-start-line="50" selection-start-column="49" selection-end-line="50" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="117" lean-forward="false" selection-start-line="43" selection-start-column="117" selection-end-line="43" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="42" column="98" lean-forward="false" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#2163#2169#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1700">
+          <caret line="100" column="61" lean-forward="false" selection-start-line="100" selection-start-column="61" selection-end-line="100" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
+          <caret line="167" column="0" lean-forward="true" selection-start-line="167" selection-start-column="0" selection-end-line="167" selection-end-column="0" />
+          <folding>
+            <element signature="e#29#43#0#PHP" expanded="true" />
+            <marker date="1580995625088" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="1870:1924" ph="SELECT * FRO... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="2159:2211" ph="DELETE FROM " />
+            <marker date="1580995625088" expanded="true" signature="2476:2948" ph="SELECT SQL_C... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="2577:2710" ph="SELECT idcli... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="3475:3642" ph="SELECT SQL_C... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="3475:3683" ph="SELECT SQL_C... tb_payments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="485">
+          <caret line="588" column="0" lean-forward="true" selection-start-line="588" selection-start-column="0" selection-end-line="588" selection-end-column="0" />
+          <folding>
+            <element signature="e#7#20#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

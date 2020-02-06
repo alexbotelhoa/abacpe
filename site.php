@@ -157,8 +157,6 @@ $app->get("/plans/:idplan/update", function($idplan) {
 
     $plan->get((int)$idplan);
 
-    var_dump($plan->getValues()); exit;
-
     $page = new Page();
 
     $page->setTpl("plans-update", [
@@ -371,6 +369,75 @@ $app->get("/payments/:idclient/detail", function($idclient) {
 
 });
 
+$app->get("/payments/create", function() {
+
+    $page = new Page();
+
+    $page->setTpl("payments-create", [
+        "clients" => $_SESSION['BASECLIENTES'],
+        "error" => Message::getError(),
+        "idclient" => "",
+        "plans" => Plan::selectPlan()
+    ]);
+
+});
+
+$app->post("/payments/create", function() {
+
+    $payment = new Payment();
+
+    $payment->setData($_POST);
+
+    if ($_POST['idclient'] == '') {
+
+        Message::setError("Selecione o CLIENTE do pagamento!");
+
+        header("Location: /payments/create");
+
+        exit;
+
+    }
+
+    if ($_POST['idplan'] == '') {
+
+        Message::setError("Selecione o PLANO do pagamento!");
+
+        header("Location: /payments/create");
+
+        exit;
+
+    }
+
+    if ($_POST['vlrecurrence'] == '') {
+
+        Message::setError("Selecione a RECORRÊNCIA do pagamento!");
+
+        header("Location: /payments/create");
+
+        exit;
+
+    }
+
+    if ($_POST['dtpayment'] == '') {
+
+        Message::setError("Informe a DATA do pagamento!");
+
+        header("Location: /payments/create");
+
+        exit;
+
+    }
+
+    $payment->save();
+
+    Message::setSuccess("Registro incluído com sucesso!");
+
+    header("Location: /payments/create");
+
+    exit;
+
+});
+
 $app->get("/payments/:idclient/create", function($idclient) {
 
     $page = new Page();
@@ -379,7 +446,7 @@ $app->get("/payments/:idclient/create", function($idclient) {
         "clients" => $_SESSION['BASECLIENTES'],
         "error" => Message::getError(),
         "idclient" => $idclient,
-        "plans" => Plan::listAll()
+        "plans" => Plan::selectPlan()
     ]);
 
 });
@@ -389,6 +456,26 @@ $app->post("/payments/:idclient/create", function($idclient) {
     $payment = new Payment();
 
     $payment->setData($_POST);
+
+    if ($_POST['idplan'] == '') {
+
+        Message::setError("Selecione o PLANO do pagamento!");
+
+        header("Location: /payments/$idclient/create");
+
+        exit;
+
+    }
+
+    if ($_POST['vlrecurrence'] == '') {
+
+        Message::setError("Selecione a RECORRÊNCIA do pagamento!");
+
+        header("Location: /payments/$idclient/create");
+
+        exit;
+
+    }
 
     if ($_POST['dtpayment'] == '') {
 
@@ -400,7 +487,7 @@ $app->post("/payments/:idclient/create", function($idclient) {
 
     }
 
-    //$payment->save();
+    $payment->save();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -424,7 +511,7 @@ $app->get("/payments/:idpayment/update", function($idpayment) {
     $page->setTpl("payments-update", [
         "payment" => $payment->getValues(),
         "clients" => $_SESSION['BASECLIENTES'],
-        "plans" => Plan::listAll(),
+        "plans" => Plan::selectPlan(),
         "error" => Message::getError()
     ]);
 
@@ -448,7 +535,7 @@ $app->post("/payments/:idpayment/update", function($idpayment) {
 
     }
 
-    //$payment->save();
+    $payment->save();
 
     Message::setSuccess("Registro alterado com sucesso!");
 

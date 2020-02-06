@@ -12,18 +12,14 @@
             </section> <!-- /.content-header -->
 
             <section class="container">
-                <div class="col-md-8 col-xs-6">
+                <div class="col-xs-7">
                     <h1>
                         Pagamentos
                     </h1>
                 </div>
-                <?php if( $success != '' ){ ?>
-                <div class="col-md-4 col-xs-6">
-                    <div class="box-header bg-green">
-                        <?php echo htmlspecialchars( $success, ENT_COMPAT, 'UTF-8', FALSE ); ?>
-                    </div>
+                <div class="col-xs-5" align="right">
+                    <a href="/payments/create" class="btn btn-success">Cadastrar Pagamento</a>
                 </div>
-                <?php } ?>
             </section> <!-- /.content-header -->
 
             <!-- Main content -->
@@ -32,14 +28,22 @@
                     <div class="col-md-12">
                         <div class="box box-primary">
 
+                            <div class="box-header">
+                                <?php if( $success != '' ){ ?>
+                                    <div class="box-header bg-green" align="center">
+                                        <?php echo htmlspecialchars( $success, ENT_COMPAT, 'UTF-8', FALSE ); ?>
+                                    </div>
+                                <?php } ?>
+                            </div> <!-- /.box-header -->
+
                             <div class="box-body no-padding">
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th style="width: 10px"><a href="/order/payments/ordid">#</a></th>
-                                        <th><a href="/order/payments/ordcli">Nome Cliente</a></th>
-                                        <th><a href="/order/payments/ordpla">Nome Plano</a></th>
-                                        <th><a href="/order/payments/ordqtd">Qtd</a></th>
+                                        <th style="width: 10px"><a href="/order/payments/ordid">ID</a></th>
+                                        <th><a href="/order/payments/ordcli">Cliente</a></th>
+                                        <th><a href="/order/payments/ordpla">Plano</a></th>
+                                        <th><a href="/order/payments/ordqtd">Pagamentos</a></th>
                                         <th style="width: 140px">&nbsp;</th>
                                     </tr>
                                     </thead>
