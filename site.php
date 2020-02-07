@@ -38,6 +38,8 @@ $app->get("/", function() {
 
     }
 
+    //var_dump($datachart); exit;
+
     $page = new Page();
 
     $page->setTpl("index", [
@@ -553,7 +555,7 @@ $app->get("/payments/:idpayment/delete", function($idpayment) {
 
     $idclient = $payment->getidclient();
 
-    //$payment->delete();
+    $payment->delete();
 
     Message::setSuccess("Registro excluído com sucesso!");
 
@@ -581,10 +583,35 @@ $app->get("/payments/:idpayment/delete", function($idpayment) {
 
 $app->get("/statistics", function() {
 
+
+    $month = ["Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago"];
+    $bronzePlanoChart = [35, 20, 35, 20, 35, 30, 20];
+    $prataPlanoChart = [15, 35, 30, 15, 30, 20, 35];
+    $ouroPlanoChart = [20, 15, 20, 30, 20, 15, 30];
+    $platinaPlanoChart = [30, 20, 15, 35, 15, 35, 15];
+    $churnChart = [2.5, 1.2, 1.5, 3.5, 2.4, 1.3, 0.8];
+
+    $datachart = [];
+
+    for ($x = 0; $x < 7; $x++) {
+
+        array_push($datachart, [
+            "month" => $month[$x],
+            "bronzePlanoChart" => $bronzePlanoChart[$x],
+            "prataPlanoChart" => $prataPlanoChart[$x],
+            "ouroPlanoChart" => $ouroPlanoChart[$x],
+            "platinaPlanoChart" => $platinaPlanoChart[$x],
+            "churnChart" => $churnChart[$x]
+        ]);
+
+    }
+
+    //var_dump($datachart); exit;
+
     $page = new Page();
 
     $page->setTpl("statistics", [
-        "" => ''
+        "datachart" => $datachart
     ]);
 
 });

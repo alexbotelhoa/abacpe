@@ -6,16 +6,14 @@
             <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-tachometer-alt"></i> Home</a></li>
+                    <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
                     <li class="active"><a href="/plans">Planos</a></li>
                 </ol>
-            </section> <!-- /.content-header -->
+            </section>
 
             <section class="container">
-                <h1>
-                    Planos
-                </h1>
-            </section> <!-- /.content-header -->
+                <h2>Planos</h2>
+            </section>
 
             <!-- Main content -->
             <section class="container">

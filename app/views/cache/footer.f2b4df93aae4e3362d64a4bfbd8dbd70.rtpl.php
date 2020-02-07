@@ -1,8 +1,4 @@
-<?php if(!class_exists('Rain\Tpl')){exit;}?><!--
-####################################################################################################################
-                                        ACIMA É O INDEX
-####################################################################################################################
--->
+<?php if(!class_exists('Rain\Tpl')){exit;}?><!-- ##############################################     ABOVE BODY     ############################################# -->
 
         <div class="footer-top-area">
             <div class="container">
@@ -11,7 +7,7 @@
 
                     <div class="col-sm-12">
                         <div class="footer-about-us">
-                            <h2 class="footer-wid-title">Alex Botelho & Ltda</h2>
+                            <h3 class="footer-wid-title">Alex Botelho & Ltda</h3>
                             <p>Nos orgulhamos em possuir um time de consultores de alta maturidade, mentalidade e atitude necessárias para garantir resultados de forma ágil e assertiva.</p>
                             <div class="footer-social">
                                 <a href="/" target="_self"><i class="fa fa-globe"></i></a>
@@ -30,7 +26,7 @@
                     <!--
                     <div class="col-sm-4">
                         <div class="footer-menu">
-                            <h2 class="footer-wid-title">Navegação</h2>
+                            <h3 class="footer-wid-title">Navegação</h3>
                             <ul>
                                 <li><a href="/">Home</a></li>
                                 <li><a href="/plans">Planos</a></li>
@@ -45,7 +41,7 @@
                     <!--
                     <div class="col-sm-6">
                         <div class="footer-newsletter">
-                            <h2 class="footer-wid-title">Newsletter</h2>
+                            <h3 class="footer-wid-title">Newsletter</h3>
                             <p>Cadastre-se para receber os nosso conteúdos por email e seja um membro da nossa comunidade!</p>
                             <div class="newsletter-form">
                                 <form action="/newsletter">
@@ -67,44 +63,11 @@
                     <p>&copy; 2020 - By Alex Botelho - <a href="https://www.linkedin.com/in/alex-botelho-almeida/" target="_blank">alex-botelho-almeida</a> <i class="fab fa-linkedin-in"></i></p>
                 </div>
             </div>
-        </div> <!-- End footer bottom area -->
+        </div>
 
-
-
-        <!-- Latest jQuery form server -->
-        <!--<script src="/res/site/js/jquery.min.js"></script>-->
-
-        <!-- Bootstrap JS form CDN -->
-        <!--<script src="/res/site/js/bootstrap.min.js"></script>-->
-
-        <!-- jQuery sticky menu -->
-        <!--<script src="/res/site/js/owl.carousel.min.js"></script>-->
-        <!--<script src="/res/site/js/jquery.sticky.js"></script>-->
-
-        <!-- jQuery easing -->
-        <!--<script src="/res/site/js/jquery.easing.1.3.min.js"></script>-->
-
-        <!-- Main Script -->
-        <!--<script src="/res/site/js/main.js"></script>-->
-
-        <!-- Slider -->
-        <!--<script type="text/javascript" src="/res/site/js/bxslider.min.js"></script>-->
-        <!--<script type="text/javascript" src="/res/site/js/script.slider.js"></script>-->
-
-
-
-
-        <!-- Distribuição da Versão do Theme -->
-        <!--<script src="/res/site/js/core.min.js"></script>-->
+        <!-- Theme JS -->
         <script src="/res/site/js/script.js"></script>
-
-        <!-- ChartJS 1.0.1 -->
-        <!--<script src="/res/admin/plugins/chartjs/Chart.min.js"></script>-->
-
-        <!-- AdminLTE App -->
-        <script src="/res/admin/dist/js/app.min.js"></script>
-
-
+        <script src="/res/site/js/app.min.js"></script>
 
     </body>
 </html>

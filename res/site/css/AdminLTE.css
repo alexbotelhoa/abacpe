@@ -149,6 +149,15 @@ body.hold-transition .main-header .logo {
   padding-left: 15px;
   padding-right: 15px;
 }
+.content2 {
+  min-height: 250px;
+  padding: 15px;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
 /* H1 - H6 font */
 h1,
 h2,
@@ -1416,6 +1425,40 @@ a:focus {
 .table tr > td .progress {
   margin: 0;
 }
+
+.progress-bar-default {
+  background-color: #96a6bf;
+}
+
+.progress-bar-light-blue2 {
+  background-color: #3eb6e4;
+}
+
+.progress-bar-light-fuchsia2 {
+  background-color: #de28ff;
+}
+
+.progress-bar-warning2 {
+  background-color: #ffb411;
+}
+
+.progress-bar-danger2 {
+  background-color: #ff5742;
+}
+
+.progress-bar-light-fuchsia {
+  background-color: #bf28e0;
+}
+
+.progress-bar-fuchsia {
+  background-color: #8f26ae;
+}
+.progress-striped .progress-bar-fuchsia {
+  background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
 .progress-bar-light-blue,
 .progress-bar-primary {
   background-color: #3c8dbc;
@@ -1556,6 +1599,21 @@ a:focus {
   margin-bottom: 20px;
   width: 100%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+.box.box-bronze {
+  border-top-color: #894218;
+}
+.box.box-prata {
+  border-top-color: #c0c0c0;
+}
+.box.box-ouro {
+  border-top-color: #ffd700;
+}
+.box.box-platina {
+  border-top-color: #a0b2c6;
+}
+.box.box-fuchsia {
+  border-top-color: #8f26ae;
 }
 .box.box-primary {
   border-top-color: #3c8dbc;
@@ -1742,7 +1800,7 @@ a:focus {
 .box-header {
   color: #444;
   display: block;
-  padding: 10px;
+  padding: 5px;
   position: relative;
 }
 .box-header.with-border {
@@ -1798,7 +1856,7 @@ a:focus {
   border-top-right-radius: 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
-  padding: 10px;
+  padding: 5px;
 }
 .no-header .box-body {
   border-top-right-radius: 3px;
@@ -1808,7 +1866,7 @@ a:focus {
   margin-bottom: 0;
 }
 .box-body .fc {
-  margin-top: 5px;
+  margin-top: 1px;
 }
 .box-body .full-width-chart {
   margin: -19px;
@@ -1834,7 +1892,7 @@ a:focus {
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
   border-top: 1px solid #f4f4f4;
-  padding: 10px;
+  padding: 5px;
   background-color: #ffffff;
 }
 .chart-legend {

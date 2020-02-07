@@ -3,17 +3,18 @@
             <div class="zigzag-bottom"></div>
             <section class="content">
                 <div class="row">
-
                     <div class="col-md-6 col-sm-6">
-                        <!-- LINE CHART -->
+
+                        <!-- MRR -->
                         <div class="box box-primary">
-                            <div class="box-header with-border">
+                            <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp;<b>MRR:</b> Valor formado pela soma de todas as receitas de entrada da empresa.</li>
                                     <li class="divider"></li>
                                     <li>&nbsp;<b>Recorrência:</b> Valor formado pela soma de todas as receitas de entrada que não sofreram mudança de valores.</li>
                                 </ul>
+                                <i class="fa fa-bar-chart-o"></i>
                                 <h3 class="box-title">MRR</h3>
 
                                 <div class="box-tools pull-right">
@@ -23,21 +24,22 @@
                             </div>
                             <div class="box-body">
                                 <div class="chart">
-                                    <canvas id="lineChart" style="height:250px"></canvas>
+                                    <canvas id="mrrChart" style="height:250px"></canvas>
                                 </div>
-                            </div> <!-- /.box-body -->
-                        </div><!-- /.box -->
+                            </div>
+                        </div>
 
-                        <!-- BAR CHART -->
+                        <!-- TICKET MÉDIO -->
                         <div class="box box-info">
-                            <div class="box-header with-border">
+                            <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp;<b>Meta:</b> Valor traçado pelo empresa como meta de crescimento da emrpesa.</li>
                                     <li class="divider"></li>
                                     <li>&nbsp;<b>Ticket Médio:</b> Valor fomado pela divisão da MRR pela quantidade de pagamentos realizados.</li>
                                 </ul>
-                                <h3 class="box-title">Ticket Médio</h3>
+                                <i class="fa fa-bar-chart-o"></i>
+                                <h3 class="box-title">ARPU</h3>
 
                                 <div class="box-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -46,24 +48,25 @@
                             </div>
                             <div class="box-body">
                                 <div class="chart">
-                                    <canvas id="barChart" style="height:230px"></canvas>
+                                    <canvas id="tkmChart" style="height:230px"></canvas>
                                 </div>
-                            </div> <!-- /.box-body -->
-                        </div> <!-- /.box -->
-                    </div> <!-- /.col (RIGHT) -->
+                            </div>
+                        </div>
 
+                    </div>
                     <div class="col-md-6 col-sm-6">
-                        <!-- AREA CHART -->
+
+                        <!-- RECEITAS TOTAIS -->
                         <div class="box box-success">
-                            <div class="box-header with-border">
+                            <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp;<b>Entradas:</b> Valor formado pela soma de todas as MRRs dos tipos <u>New</u>, <u>Resurrected</u> e <u>Expansion</u>.</li>
                                     <li class="divider"></li>
                                     <li>&nbsp;<b>Saída:</b> Valor formado pela soma de todas as MRRs dos tipos <u>Contration</u> e <u>Cancelled</u>.</li>
                                 </ul>
-                                <h3 class="box-title">Receitas Totais</h3>
-
+                                <i class="fa fa-bar-chart-o"></i>
+                                <h3 class="box-title">Receitas</h3>
                                 <div class="box-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -71,16 +74,14 @@
                             </div>
                             <div class="box-body">
                                 <div class="chart">
-                                    <canvas id="areaChart" style="height:250px"></canvas>
+                                    <canvas id="recinoutChart" style="height:250px"></canvas>
                                 </div>
                             </div>
-                            <!-- /.box-body -->
                         </div>
-                        <!-- /.box -->
 
-                        <!-- DONUT CHART -->
+                        <!-- RECEITAS DETALHADAS -->
                         <div class="box box-warning">
-                            <div class="box-header with-border">
+                            <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp;<b>New:</b> Valor formado pela soma dos pagamentos das mensalidades de <u>NOVOS</u> clientes.</li>
@@ -93,7 +94,8 @@
                                     <li class="divider"></li>
                                     <li>&nbsp;<b>Cancelled:</b> Valor formado pela soma dos <u>NÃO PAGAMENTOS</u> das mensalidades de clientes.</li>
                                 </ul>
-                                <h3 class="box-title">Receitas Detalhadas</h3>
+                                <i class="fa fa-bar-chart-o"></i>
+                                <h3 class="box-title">Receitas Fatiada</h3>
 
                                 <div class="box-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -104,7 +106,7 @@
                                 <div class="row">
                                     <div class="col-md-9">
                                         <div class="chart-responsive">
-                                            <canvas id="pieChart" height="165"></canvas>
+                                            <canvas id="recdetChart" height="165"></canvas>
                                         </div>
                                     </div>
                                     <!-- /.col -->
@@ -112,43 +114,24 @@
                                         <div>
                                             <ul class="chart-legend clearfix">
                                                 <li><i class="fa fa-circle-o text-green"></i> New</li>
-                                                <li><i class="fa fa-circle-o text-light-blue"></i> Resurrected</li>
+                                                <li><i class="fa fa-circle-o text-fuchsia"></i> Resurrected</li>
                                                 <li><i class="fa fa-circle-o text-blue"></i> Expansion</li>
                                                 <li><i class="fa fa-circle-o text-yellow"></i> Contration</li>
                                                 <li><i class="fa fa-circle-o text-red"></i> Cancelled</li>
                                             </ul>
-                                        </div> <!-- /.box-body -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                        </div> <!-- /.box -->
-                    </div> <!-- /.col (LEFT) -->
-
-                </div> <!-- /.row -->
-            </section> <!-- /.content -->
+                    </div>
+                </div>
+            </section>
         </div>
 
-
-
-
-
-<!-- NÃO MEXER NESSA ORDEM -->
-
-        <!-- Distribuição da Versão do Theme -->
-        <!--<script src="/res/site/js/core.min.js"></script>-->
-        <!--<script src="/res/site/js/script.js"></script>-->
-
         <!-- ChartJS 1.0.1 -->
-        <script src="/res/admin/plugins/chartjs/Chart.min.js"></script>
-
-
-
-        <!-- AdminLTE App -->
-        <!--<script src="/res/admin/dist/js/app.min.js"></script>-->
-
-<!-- NÃO MEXER NESSA ORDEM -->
-
+        <script src="/res/site/js/Chart.min.js"></script>
 
         <!-- page script -->
         <script>
@@ -164,25 +147,25 @@
 
                 <?php $counter1=-1;  if( isset($datachart) && ( is_array($datachart) || $datachart instanceof Traversable ) && sizeof($datachart) ) foreach( $datachart as $key1 => $value1 ){ $counter1++; ?>
 
-                    $month.push("<?php echo htmlspecialchars( $value1["month"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
-                    $mrr.push("<?php echo htmlspecialchars( $value1["mrr"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
-                    $arpu.push("<?php echo htmlspecialchars( $value1["arpu"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
-                    $target.push("<?php echo htmlspecialchars( $value1["target"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
-                    $entradas.push("<?php echo htmlspecialchars( $value1["entradas"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
-                    $saidas.push("<?php echo htmlspecialchars( $value1["saidas"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
-                    $recdetails.push("<?php echo htmlspecialchars( $value1["recdetails"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $month.push("<?php echo htmlspecialchars( $value1["month"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $mrr.push("<?php echo htmlspecialchars( $value1["mrr"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $arpu.push("<?php echo htmlspecialchars( $value1["arpu"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $target.push("<?php echo htmlspecialchars( $value1["target"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $entradas.push("<?php echo htmlspecialchars( $value1["entradas"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $saidas.push("<?php echo htmlspecialchars( $value1["saidas"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
+                $recdetails.push("<?php echo htmlspecialchars( $value1["recdetails"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
 
                 <?php } ?>
 
-                var $recorrentes = [
-                    $mrr[0]-$entradas[0],
-                    $mrr[1]-$entradas[1],
-                    $mrr[2]-$entradas[2],
-                    $mrr[3]-$entradas[3],
-                    $mrr[4]-$entradas[4],
-                    $mrr[5]-$entradas[5],
-                    $mrr[6]-$entradas[6]
-                ]; // RECORRENTE[ Mês ] = MRR[ Mês ] - ENTRADAS[ Mês ]
+                    var $recorrentes = [
+                        $mrr[0] - $entradas[0],
+                        $mrr[1] - $entradas[1],
+                        $mrr[2] - $entradas[2],
+                        $mrr[3] - $entradas[3],
+                        $mrr[4] - $entradas[4],
+                        $mrr[5] - $entradas[5],
+                        $mrr[6] - $entradas[6]
+                    ]; // RECORRENTE[ Mês ] = MRR[ Mês ] - ENTRADAS[ Mês ]
 
 
                 //---------
@@ -190,36 +173,53 @@
                 //---------
 
 
-                var lineChartCanvas = $("#lineChart").get(0).getContext("2d");
-                var lineChart = new Chart(lineChartCanvas);
+                var mrrChartCanvas = $("#mrrChart").get(0).getContext("2d");
+                var mrrChart = new Chart(mrrChartCanvas);
 
-                var lineChartData = {
+                var mrrChartData = {
                     labels: $month,
                     datasets: [
                         {
                             label: "MRR",
-                            fillColor: "rgba(193, 199, 209, 0.9)",
-                            strokeColor: "rgba(193, 199, 209, 0.8)",
-                            pointColor: "rgba(193, 199, 209, 1)",
-                            pointStrokeColor: "#c1c7d1",
+                            fillColor: "rgba(204, 210, 220, 0.9)",
+                            strokeColor: "rgba(204, 210, 220, 0.8)",
+                            pointColor: "rgba(204, 210, 220, 1)",
+                            pointStrokeColor: "#ccd2dc",
                             pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(193, 199, 209, 1)",
+                            pointHighlightStroke: "rgba(204, 210, 220, 1)",
                             data: $mrr
                         },
                         {
                             label: "Recorrente",
-                            fillColor: "rgba(60, 141, 188, 1)",
-                            strokeColor: "rgba(60, 141, 188, 1)",
-                            pointColor: "#3c8dbc",
-                            pointStrokeColor: "rgba(60, 141, 188, 1)",
+                            fillColor: "rgba(57, 204, 204, 1)",
+                            strokeColor: "rgba(57, 204, 204, 1)",
+                            pointColor: "#39cccc",
+                            pointStrokeColor: "rgba(57, 204, 204, 1)",
                             pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(60, 141, 188, 1)",
+                            pointHighlightStroke: "rgba(57, 204, 204, 1)",
                             data: $recorrentes
                         }
                     ]
                 };
 
-                var lineChartOptions = {
+                    var formatter = new Intl.NumberFormat('en-US', {
+                        style: 'currency',
+                        currency: 'USD',
+                        minimumFractionDigits: 2,
+                    });
+
+                    //valor = '1234.56';
+                    //valor =  mrrChart.value;
+
+                    //valor = parseFloat(valor);
+                    //valor = valor.replace(".","");
+                    //valor = valor.replace(".",",");
+                    //valor = parseFloat(valor);
+
+                    //teste = valor;
+
+
+                    var mrrChartOptions = {
                     //Boolean - If we should show the scale at all
                     showScale: true,
                     //Boolean - Whether grid lines are shown across the chart
@@ -253,7 +253,8 @@
                     //String - A legend template
                     legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
                     //String - A tooltip template
-                    multiTooltipTemplate: "<%=datasetLabel %>: R$ <%=value %>",
+                    //multiTooltipTemplate: "<%=datasetLabel%>: R$ <%=value%>",
+                    multiTooltipTemplate: "<%=datasetLabel %>: R$ <%= value %>",
                     //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
                     maintainAspectRatio: true,
                     //Boolean - whether to make the chart responsive to window resizing
@@ -261,27 +262,27 @@
                 };
 
                 //Create the line chart
-                lineChart.Line(lineChartData, lineChartOptions);
+                mrrChart.Line(mrrChartData, mrrChartOptions);
 
 
                 //------------------
                 //-  TICKET MÉDIO  -
                 //------------------
 
-                var barChartCanvas = $("#barChart").get(0).getContext("2d");
-                var barChart = new Chart(barChartCanvas);
+                var tkmChartCanvas = $("#tkmChart").get(0).getContext("2d");
+                var tkmChart = new Chart(tkmChartCanvas);
 
-                var barChartData = {
+                var tkmChartData = {
                     labels: $month,
                     datasets: [
                         {
                             label: "Meta",
-                            fillColor: "rgba(193, 199, 209, 0.9)",
-                            strokeColor: "rgba(193, 199, 209, 0.8)",
-                            pointColor: "#c1c7d1",
-                            pointStrokeColor: "rgba(193, 199, 209, 1)",
+                            fillColor: "rgba(204, 210, 220, 0.9)",
+                            strokeColor: "rgba(204, 210, 220, 0.8)",
+                            pointColor: "#ccd2dc",
+                            pointStrokeColor: "rgba(204, 210, 220, 1)",
                             pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(193, 199, 209, 1)",
+                            pointHighlightStroke: "rgba(204, 210, 220, 1)",
                             data: $target
                         },
                         {
@@ -289,7 +290,7 @@
                             fillColor: "rgba(0, 192, 239 , 1)",
                             strokeColor: "rgba(0, 192, 239 , 1)",
                             pointColor: "rgba(0, 192, 239 , 1)",
-                            pointStrokeColor: "#00c0ef",
+                            pointStrokeColor: "#39CCCC",
                             pointHighlightFill: "#fff",
                             pointHighlightStroke: "rgba(0, 192, 239 , 1)",
                             data: $arpu
@@ -297,7 +298,7 @@
                     ]
                 };
 
-                var barChartOptions = {
+                var tkmChartOptions = {
                     //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
                     scaleBeginAtZero: true,
                     //Boolean - Whether grid lines are shown across the chart
@@ -327,8 +328,8 @@
                     maintainAspectRatio: true
                 };
 
-                barChartOptions.datasetFill = false;
-                barChart.Line(barChartData, barChartOptions);
+                tkmChartOptions.datasetFill = false;
+                tkmChart.Line(tkmChartData, tkmChartOptions);
 
 
 
@@ -336,10 +337,10 @@
                 //-  RECEITAS TOTAIS  -
                 //---------------------
 
-                var areaChartCanvas = $("#areaChart").get(0).getContext("2d");
-                var areaChart = new Chart(areaChartCanvas);
+                var recinoutChartCanvas = $("#recinoutChart").get(0).getContext("2d");
+                var recinoutChart = new Chart(recinoutChartCanvas);
 
-                var areaChartData = {
+                var recinoutChartData = {
                     labels: $month,
                     datasets: [
                         {
@@ -359,7 +360,7 @@
                     ]
                 };
 
-                var areaChartOptions = {
+                var recinoutChartOptions = {
                     //Boolean - If we should show the scale at all
                     showScale: true,
                     //Boolean - Whether grid lines are shown across the chart
@@ -401,7 +402,7 @@
                 };
 
                 //Create the line chart
-                areaChart.Line(areaChartData, areaChartOptions);
+                recinoutChart.Line(recinoutChartData, recinoutChartOptions);
 
 
 
@@ -409,10 +410,10 @@
                 //-  RECEITAS DETALHADAS  -
                 //-------------------------
 
-                var pieChartCanvas = $("#pieChart").get(0).getContext("2d");
-                var pieChart = new Chart(pieChartCanvas);
+                var recdetChartCanvas = $("#recdetChart").get(0).getContext("2d");
+                var recdetChart = new Chart(recdetChartCanvas);
 
-                var PieData = [
+                var recdetChartData = [
                     {
                         value: $recdetails[0],
                         color: "#00a65a",
@@ -421,8 +422,8 @@
                     },
                     {
                         value: $recdetails[1],
-                        color: "#00c0ef",
-                        highlight: "#09daff",
+                        color: "#8f26ae",
+                        highlight: "#d627f5",
                         label: "Expansion"
                     },
                     {
@@ -439,13 +440,13 @@
                     },
                     {
                         value: $recdetails[4],
-                        color: "#dd4b39",
+                        color: "#d54b39",
                         highlight: "#ff503b",
                         label: "Cancelled"
                     }
                 ];
 
-                var pieOptions = {
+                var recdetChartOptions = {
                     //Boolean - Whether we should show a stroke on each segment
                     segmentShowStroke: true,
                     //String - The colour of each segment stroke
@@ -473,7 +474,7 @@
                 };
 
                 //Create pie or douhnut chart
-                pieChart.Doughnut(PieData, pieOptions);
+                recdetChart.Doughnut(recdetChartData, recdetChartOptions);
 
 
             });

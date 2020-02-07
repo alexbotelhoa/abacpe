@@ -6,21 +6,19 @@
             <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-tachometer-alt"></i> Home</a></li>
+                    <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
                     <li class="active"><a href="/payments">Pagamentos</a></li>
                 </ol>
-            </section> <!-- /.content-header -->
+            </section>
 
             <section class="container">
                 <div class="col-xs-7">
-                    <h1>
-                        Pagamentos
-                    </h1>
+                    <h2>Pagamentos</h2>
                 </div>
                 <div class="col-xs-5" align="right">
                     <a href="/payments/create" class="btn btn-success">Cadastrar Pagamento</a>
                 </div>
-            </section> <!-- /.content-header -->
+            </section>
 
             <!-- Main content -->
             <section class="container">
