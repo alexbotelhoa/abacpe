@@ -10,9 +10,9 @@
                             <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>&nbsp;<b>MRR:</b> Valor formado pela soma de todas as receitas de entrada da empresa.</li>
+                                    <li>&nbsp;<b>MRR:</b> Valor formado pela soma de todas as Receitas de Entrada seja as Variáveis e as Fixas.</li>
                                     <li class="divider"></li>
-                                    <li>&nbsp;<b>Recorrência:</b> Valor formado pela soma de todas as receitas de entrada que não sofreram mudança de valores.</li>
+                                    <li>&nbsp;<b>Fixas:</b> Valor formado pela soma de todas as Receitas de Entrada que não sofreram mudança de valores.</li>
                                 </ul>
                                 <i class="fa fa-bar-chart-o"></i>
                                 <h3 class="box-title">MRR</h3>
@@ -56,7 +56,7 @@
                     </div>
                     <div class="col-md-6 col-sm-6">
 
-                        <!-- RECEITAS TOTAIS -->
+                        <!-- RECEITAS VARIÁVEIS -->
                         <div class="box box-success">
                             <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
@@ -66,7 +66,7 @@
                                     <li>&nbsp;<b>Saída:</b> Valor formado pela soma de todas as MRRs dos tipos <u>Contration</u> e <u>Cancelled</u>.</li>
                                 </ul>
                                 <i class="fa fa-bar-chart-o"></i>
-                                <h3 class="box-title">Receitas</h3>
+                                <h3 class="box-title">Receitas Variáveis</h3>
                                 <div class="box-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                     <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
@@ -163,8 +163,7 @@
                         $mrr[2] - $entradas[2],
                         $mrr[3] - $entradas[3],
                         $mrr[4] - $entradas[4],
-                        $mrr[5] - $entradas[5],
-                        $mrr[6] - $entradas[6]
+                        $mrr[5] - $entradas[5]
                     ]; // RECORRENTE[ Mês ] = MRR[ Mês ] - ENTRADAS[ Mês ]
 
 
@@ -207,16 +206,6 @@
                         currency: 'USD',
                         minimumFractionDigits: 2,
                     });
-
-                    //valor = '1234.56';
-                    //valor =  mrrChart.value;
-
-                    //valor = parseFloat(valor);
-                    //valor = valor.replace(".","");
-                    //valor = valor.replace(".",",");
-                    //valor = parseFloat(valor);
-
-                    //teste = valor;
 
 
                     var mrrChartOptions = {

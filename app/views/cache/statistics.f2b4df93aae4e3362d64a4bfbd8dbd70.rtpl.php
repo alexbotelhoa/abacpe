@@ -207,7 +207,7 @@
                     </div>
                 </div>
 
-                <!-- /.MÉTRICAS SAAS POR NICHO DE MERCADO DIVIDOS POR LEGADO HISTÓRICO E PELA REFERÊNCIA DO MÊS -->
+                <!-- /.MÉTRICAS SAAS DOS TOP 5 DOS CLIENTES POR PLANOS -->
 
 
                 <!-- INDICADORES PERCENTUAIS DOS TOP 3 DE CLIENTES E REGIÕES -->
