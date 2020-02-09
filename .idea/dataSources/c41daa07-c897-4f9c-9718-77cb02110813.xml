@@ -18,7 +18,7 @@
     <table id="12" parent="2" name="tb_payments"/>
     <table id="13" parent="2" name="tb_plans"/>
     <table id="14" parent="2" name="tb_statistics"/>
-    <view id="15" parent="2" name="vw_firstpayment">
+    <view id="15" parent="2" name="vw_dtpayment_first">
       <Comment>VIEW</Comment>
     </view>
     <routine id="16" parent="2" name="sp_plans_save">
@@ -141,7 +141,7 @@
       <DataType>int(11)|0</DataType>
       <NotNull>1</NotNull>
     </column>
-    <column id="40" parent="15" name="firstdtpayment">
+    <column id="40" parent="15" name="dtpayment">
       <Position>2</Position>
       <DataType>date|0</DataType>
     </column>

@@ -13,7 +13,7 @@ class Statistic extends Model
 
         $sql = new Sql();
 
-        return $sql->select("SELECT * FROM vw_firstpayment");
+        return $sql->select("SELECT * FROM vw_dtpayment_first");
 
     }
 
@@ -26,10 +26,6 @@ class Statistic extends Model
             BETWEEN ADDDATE('" . $year . "-" . $month . "-01', INTERVAL -10 MONTH) AND '" . $year . "-" . $month . "-31' ORDER BY dtpayment DESC");
 
         $months =       ["Ago", "Set", "Out", "Nov", "Dez", "Jan", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
-        $target =       [0, 0, 0, 0, 0, 0];
-        $arpu =         [0, 0, 0, 0, 0, 0];
-        $saidas =       [0, 0, 0, 0, 0, 0];
-        $recdetails =   [0, 0, 0, 0, 0, 0];
 
         $dataYearMonth = "$year-$month-01";
 
@@ -43,9 +39,12 @@ class Statistic extends Model
 
                 $client[$_SESSION['firstPayment'][$c]['idclient']][$d] = 0;
                 $mrr[$d] = 0;
+                $mrrc[$d] = 0;
                 $new[$d] = 0;
+                $resurrected[$d] = 0;
                 $expansion[$d] = 0;
                 $contration[$d] = 0;
+                $cancelled[$d] = 0;
 
             }
 
@@ -57,9 +56,9 @@ class Statistic extends Model
 
             $vlpayment = $data[$x]['vlpayment'] / $data[$x]['vlrecurrence']; // Valor pago pelo cliente
 
-            $firstpayment = $_SESSION['firstPayment'][$data[$x]['idclient']]['firstdtpayment']; // Data do primeiro pagamento do cliente
+            $firstpayment = $_SESSION['firstPayment'][$data[$x]['idclient']]['dtpayment']; // Data do primeiro pagamento do cliente
 
-            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-0 month", strtotime($dataYearMonth)))) { //jul
+            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-0 month", strtotime($dataYearMonth)))) { // No mês pesquisado
 
                 $mrr[0] = $mrr[0] + $vlpayment;
 
@@ -69,7 +68,7 @@ class Statistic extends Model
 
             } else {
 
-                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-1 month", strtotime($dataYearMonth)))) { //jun
+                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-1 month", strtotime($dataYearMonth)))) { // 1 mes atrás
 
                     $mrr[1] = $mrr[1] + $vlpayment;
 
@@ -84,7 +83,7 @@ class Statistic extends Model
 
                 } else {
 
-                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-2 month", strtotime($dataYearMonth)))) { //maio
+                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-2 month", strtotime($dataYearMonth)))) { // 2 meses atrás
 
                         $mrr[2] = $mrr[2] + $vlpayment;
 
@@ -101,7 +100,7 @@ class Statistic extends Model
 
                     } else {
 
-                        if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-3 month", strtotime($dataYearMonth)))) { //abr
+                        if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-3 month", strtotime($dataYearMonth)))) { // 3 meses atrás
 
                             $mrr[3] = $mrr[3] + $vlpayment;
 
@@ -128,7 +127,7 @@ class Statistic extends Model
 
                         } else {
 
-                            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-4 month", strtotime($dataYearMonth)))) { //mar
+                            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-4 month", strtotime($dataYearMonth)))) { // 4 meses atrás
 
                                 $mrr[4] = $mrr[4] + $vlpayment;
 
@@ -157,7 +156,7 @@ class Statistic extends Model
 
                             } else {
 
-                                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-5 month", strtotime($dataYearMonth)))) { //fev
+                                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-5 month", strtotime($dataYearMonth)))) { // 5 meses atrás
 
                                     $mrr[5] = $mrr[5] + $vlpayment;
 
@@ -188,7 +187,9 @@ class Statistic extends Model
 
                                 } else {
 
-                                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-6 month", strtotime($dataYearMonth)))) { //jan
+                                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-6 month", strtotime($dataYearMonth)))) { // 6 meses atrás
+
+                                        $mrr[6] = $mrr[6] + $vlpayment;
 
                                         $client[$data[$x]['idclient']][6] = $vlpayment;
 
@@ -215,7 +216,7 @@ class Statistic extends Model
 
                                     } else {
 
-                                        if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-7 month", strtotime($dataYearMonth)))) { //dez
+                                        if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-7 month", strtotime($dataYearMonth)))) { // 7 meses atrás
 
                                             switch ($data[$x]['vlrecurrence']) {
                                                 case 3:
@@ -238,7 +239,7 @@ class Statistic extends Model
 
                                         } else {
 
-                                            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-8 month", strtotime($dataYearMonth)))) { //nov
+                                            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-8 month", strtotime($dataYearMonth)))) { // 8 meses atrás
 
                                                 switch ($data[$x]['vlrecurrence']) {
                                                     case 6:
@@ -253,7 +254,7 @@ class Statistic extends Model
                                                 }
                                             } else {
 
-                                                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-9 month", strtotime($dataYearMonth)))) { //out
+                                                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-9 month", strtotime($dataYearMonth)))) { // 9 meses atrás
 
                                                     switch ($data[$x]['vlrecurrence']) {
                                                         case 6:
@@ -266,7 +267,7 @@ class Statistic extends Model
                                                     }
                                                 } else {
 
-                                                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-10 month", strtotime($dataYearMonth)))) { //set
+                                                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-10 month", strtotime($dataYearMonth)))) { // 10 meses atrás
 
                                                         switch ($data[$x]['vlrecurrence']) {
                                                             case 6:
@@ -287,9 +288,6 @@ class Statistic extends Model
                 }
             }
 
-
-
-
         }
 
 
@@ -297,20 +295,28 @@ class Statistic extends Model
 
             $id = $_SESSION['firstPayment'][$c]['idclient'];
 
-            for ($d = 5; $d >= 0; $d--) {
+            $dt = $_SESSION['firstPayment'][$c]['dtpayment'];
 
-                /** @var TYPE_NAME $client */
+            for ($d = 6; $d >= 0; $d--) {
+
+                $mrrc[$d] = $mrrc[$d] + 1;
+
+                // RECEITAS VARIÁVEIS DE ENTRADAS //
+                ($client[$id][$d] != 0 && $client[$id][$d + 1] == 0 && $dt < $data[$id]['dtpayment']) ? $resurrected[$d] = $resurrected[$d] + $client[$id][$d] : '';
+
                 ($client[$id][$d + 1] != 0 && $client[$id][$d] != 0 && $client[$id][$d + 1] < $client[$id][$d]) ? $expansion[$d] = $expansion[$d] + ($client[$id][$d] - $client[$id][$d + 1]) : '';
 
+                // RECEITAS VARIÁVEIS DE SAÍDAS //
                 ($client[$id][$d + 1] != 0 && $client[$id][$d] != 0 && $client[$id][$d + 1] > $client[$id][$d]) ? $contration[$d] = $contration[$d] + ($client[$id][$d + 1] - $client[$id][$d]) : '';
 
+                ($client[$id][$d] == 0 && $client[$id][$d + 1] != 0) ? $cancelled[$d] = $cancelled[$d] + $client[$id][$d + 1] : '';
 
             }
 
         }
 
-        //[cancelled, Contration, Expansion, Resurrected, New]
-        $recdetails =   [1, 2, $contration[0], $expansion[0], 5, $new[0]];
+        //[(VAZIO = 0) , cancelled, Contration, Expansion, Resurrected, New]
+        $recdetails =   [0, $cancelled[0], $contration[0], $expansion[0], $resurrected[0], $new[0]];
 
         $datachart = [];
 
@@ -319,10 +325,10 @@ class Statistic extends Model
             array_push($datachart, [
                 "month" => $months[4 + $month - $x],
                 "mrr" => $mrr[$x],
-                "arpu" => $arpu[$x],
-                "target" => $target[$x],
-                "entradas" => $new[$x]+$expansion[$x],
-                "saidas" => $contration[$x],
+                "arpu" => round($mrr[$x]/$mrrc[$x],2),
+                "target" => round(($mrr[$x + 1]/$mrrc[$x + 1]) * 1.05,2),
+                "entradas" => $new[$x] + $resurrected[$x] + $expansion[$x],
+                "saidas" => $contration[$x] + $cancelled{$x},
                 "recdetails" => $recdetails[$x]
             ]);
 

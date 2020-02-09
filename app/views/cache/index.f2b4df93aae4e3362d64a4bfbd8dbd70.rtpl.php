@@ -212,7 +212,7 @@
                     //Boolean - If we should show the scale at all
                     showScale: true,
                     //Boolean - Whether grid lines are shown across the chart
-                    scaleShowGridLines: false,
+                    scaleShowGridLines: true,
                     //String - Colour of the grid lines
                     scaleGridLineColor: "rgba(0,0,0,.05)",
                     //Number - Width of the grid lines
@@ -323,7 +323,7 @@
 
 
                 //---------------------
-                //-  RECEITAS TOTAIS  -
+                //-  RECEITAS VARIÁVEIS  -
                 //---------------------
 
                 var recinoutChartCanvas = $("#recinoutChart").get(0).getContext("2d");
@@ -353,7 +353,7 @@
                     //Boolean - If we should show the scale at all
                     showScale: true,
                     //Boolean - Whether grid lines are shown across the chart
-                    scaleShowGridLines: false,
+                    scaleShowGridLines: true,
                     //String - Colour of the grid lines
                     scaleGridLineColor: "rgba(0,0,0,.05)",
                     //Number - Width of the grid lines
