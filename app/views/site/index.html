@@ -2,6 +2,77 @@
         <div class="maincontent-area">
             <div class="zigzag-bottom"></div>
             <section class="content">
+
+
+                <!-- MÉTRICAS SAAS POR REFERÊNCIA DO MÊS -->
+
+                <div class="row">
+                    <div class="col-sm-12 col-xs-12">
+                        <div class="box box-info">
+                            <div class="box-header">
+                                <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li>&nbsp;Métricas de crescimento dentro do mês pesquisado.</li>
+                                </ul>
+                                <i class="fa fa-bar-chart-o"></i>
+                                <h3 class="box-title">Métricas SaaS</h3>
+                                <div class="box-tools pull-right">
+                                    <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                </div>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                        <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
+                                            <div class="knob-header">MRR</div>
+                                            <label>
+                                                <input type="text" class="knob" value="{$datachart[5].saas}" data-width="170" data-height="170" data-fgColor="#39CCCC">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
+                                            <div class="knob-header">New</div>
+                                            <label>
+                                                <input type="text" class="knob" value="{$datachart[4].saas}" data-width="170" data-height="170" data-fgColor="#00a65a">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
+                                            <div class="knob-header">Expansion</div>
+                                            <label>
+                                                <input type="text" class="knob" value="{$datachart[3].saas}" data-width="170" data-height="170" data-fgColor="#8f26ae">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
+                                            <div class="knob-header">Resurrected</div>
+                                            <label>
+                                                <input type="text" class="knob" value="{$datachart[2].saas}" data-width="170" data-height="170" data-fgColor="#3c8dbc">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-lg-2 text-center">
+                                            <div class="knob-header">Contraction</div>
+                                            <label>
+                                                <input type="text" class="knob" value="{$datachart[1].saas}" data-width="170" data-height="170" data-fgColor="#f39c12">
+                                            </label>
+                                        </div>
+
+                                        <div class="col-xs-6 col-sm-6 col-lg-2 text-center">
+                                            <div class="knob-header">Cancelled</div>
+                                            <label>
+                                                <input type="text" class="knob" value="{$datachart[0].saas}" data-width="170" data-height="170" data-fgColor="#d54b39">
+                                            </label>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- /.MÉTRICAS SAAS POR REFERÊNCIA DO MÊS -->
+
+
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
 
@@ -63,7 +134,7 @@
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp;<b>Entradas:</b> Valor formado pela soma de todas as MRRs dos tipos <u>New</u>, <u>Resurrected</u> e <u>Expansion</u>.</li>
                                     <li class="divider"></li>
-                                    <li>&nbsp;<b>Saída:</b> Valor formado pela soma de todas as MRRs dos tipos <u>Contration</u> e <u>Cancelled</u>.</li>
+                                    <li>&nbsp;<b>Saída:</b> Valor formado pela soma de todas as MRRs dos tipos <u>Contraction</u> e <u>Cancelled</u>.</li>
                                 </ul>
                                 <i class="fa fa-bar-chart-o"></i>
                                 <h3 class="box-title">Receitas Variáveis</h3>
@@ -79,7 +150,7 @@
                             </div>
                         </div>
 
-                        <!-- RECEITAS DETALHADAS -->
+                        <!-- RECEITAS VARIÁVEIS FATIADAS -->
                         <div class="box box-warning">
                             <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
@@ -90,12 +161,12 @@
                                     <li class="divider"></li>
                                     <li>&nbsp;<b>Expansion:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>AUMENTO</u> de valores.</li>
                                     <li class="divider"></li>
-                                    <li>&nbsp;<b>Contration:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>DIMINUIÇÃO</u> de valores.</li>
+                                    <li>&nbsp;<b>Contraction:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>DIMINUIÇÃO</u> de valores.</li>
                                     <li class="divider"></li>
                                     <li>&nbsp;<b>Cancelled:</b> Valor formado pela soma dos <u>NÃO PAGAMENTOS</u> das mensalidades de clientes.</li>
                                 </ul>
                                 <i class="fa fa-bar-chart-o"></i>
-                                <h3 class="box-title">Receitas Fatiada</h3>
+                                <h3 class="box-title">Receitas Variáveis Fatiada</h3>
 
                                 <div class="box-tools pull-right">
                                     <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
@@ -116,7 +187,7 @@
                                                 <li><i class="fa fa-circle-o text-green"></i> New</li>
                                                 <li><i class="fa fa-circle-o text-fuchsia"></i> Resurrected</li>
                                                 <li><i class="fa fa-circle-o text-blue"></i> Expansion</li>
-                                                <li><i class="fa fa-circle-o text-yellow"></i> Contration</li>
+                                                <li><i class="fa fa-circle-o text-yellow"></i> Contraction</li>
                                                 <li><i class="fa fa-circle-o text-red"></i> Cancelled</li>
                                             </ul>
                                         </div>
@@ -130,6 +201,9 @@
             </section>
         </div>
 
+        <!-- jQuery Knob -->
+        <script src="/res/site/js/jquery.knob.js"></script>
+
         <!-- ChartJS 1.0.1 -->
         <script src="/res/site/js/Chart.min.js"></script>
 
@@ -137,40 +211,90 @@
         <script>
             $(function () {
 
+                //----------------------
+                //-  NICHO DE MERCADO  -
+                //----------------------
+
+                $(".knob").knob({
+
+                    draw: function () {
+
+                        if (this.$.data('skin') == 'tron') {
+
+                            var a = this.angle(this.cv)     // Angle
+                                , sa = this.startAngle      // Previous start angle
+                                , sat = this.startAngle     // Start angle
+                                , ea                        // Previous end angle
+                                , eat = sat + a             // End angle
+                                , r = true;
+
+                            this.g.lineWidth = this.lineWidth;
+
+                            this.o.cursor
+                            && (sat = eat - 0.3)
+                            && (eat = eat + 0.3);
+
+                            if (this.o.displayPrevious) {
+                                ea = this.startAngle + this.angle(this.value);
+                                this.o.cursor
+                                && (sa = ea - 0.3)
+                                && (ea = ea + 0.3);
+                                this.g.beginPath();
+                                this.g.strokeStyle = this.previousColor;
+                                this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sa, ea, false);
+                                this.g.stroke();
+                            }
+
+                            this.g.beginPath();
+                            this.g.strokeStyle = r ? this.o.fgColor : this.fgColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth, sat, eat, false);
+                            this.g.stroke();
+
+                            this.g.lineWidth = 2;
+                            this.g.beginPath();
+                            this.g.strokeStyle = this.o.fgColor;
+                            this.g.arc(this.xy, this.xy, this.radius - this.lineWidth + 1 + this.lineWidth * 2 / 3, 0, 2 * Math.PI, false);
+                            this.g.stroke();
+
+                            return false;
+                        }
+                    }
+                });
+
+                $(".sparkline").each(function () {
+                    var $this = $(this);
+                    $this.sparkline('html', $this.data());
+                });
+
+                drawDocSparklines();
+                drawMouseSpeedDemo();
+
+            });
+
+            $(function () {
+
                 var $month = [];
                 var $mrr = [];
+                var $recorrentes = [];
                 var $arpu = [];
-                var $target = [];
                 var $entradas = [];
                 var $saidas = [];
                 var $recdetails = [];
 
                 {loop="$datachart"}
-
-                $month.push("{$value.month}");
-                $mrr.push("{$value.mrr}");
-                $arpu.push("{$value.arpu}");
-                $target.push("{$value.target}");
-                $entradas.push("{$value.entradas}");
-                $saidas.push("{$value.saidas}");
-                $recdetails.push("{$value.recdetails}");
-
+                    $month.push("{$value.month}");
+                    $mrr.push("{$value.mrr}");
+                    $recorrentes.push("{$value.recorrentes}");
+                    $arpu.push("{$value.arpu}");
+                    $entradas.push("{$value.entradas}");
+                    $saidas.push("{$value.saidas}");
+                    $recdetails.push("{$value.recdetails}");
                 {/loop}
-
-                    var $recorrentes = [
-                        $mrr[0] - $entradas[0],
-                        $mrr[1] - $entradas[1],
-                        $mrr[2] - $entradas[2],
-                        $mrr[3] - $entradas[3],
-                        $mrr[4] - $entradas[4],
-                        $mrr[5] - $entradas[5]
-                    ]; // RECORRENTE[ Mês ] = MRR[ Mês ] - ENTRADAS[ Mês ]
 
 
                 //---------
                 //-  MRR  -
                 //---------
-
 
                 var mrrChartCanvas = $("#mrrChart").get(0).getContext("2d");
                 var mrrChart = new Chart(mrrChartCanvas);
@@ -265,16 +389,6 @@
                     labels: $month,
                     datasets: [
                         {
-                            label: "Meta",
-                            fillColor: "rgba(204, 210, 220, 0.9)",
-                            strokeColor: "rgba(204, 210, 220, 0.8)",
-                            pointColor: "#ccd2dc",
-                            pointStrokeColor: "rgba(204, 210, 220, 1)",
-                            pointHighlightFill: "#fff",
-                            pointHighlightStroke: "rgba(204, 210, 220, 1)",
-                            data: $target
-                        },
-                        {
                             label: "Médio",
                             fillColor: "rgba(0, 192, 239 , 1)",
                             strokeColor: "rgba(0, 192, 239 , 1)",
@@ -322,9 +436,9 @@
 
 
 
-                //---------------------
+                //------------------------
                 //-  RECEITAS VARIÁVEIS  -
-                //---------------------
+                //------------------------
 
                 var recinoutChartCanvas = $("#recinoutChart").get(0).getContext("2d");
                 var recinoutChart = new Chart(recinoutChartCanvas);
@@ -395,9 +509,9 @@
 
 
 
-                //-------------------------
-                //-  RECEITAS DETALHADAS  -
-                //-------------------------
+                //---------------------------------
+                //-  RECEITAS VARIÁVEIS FATIADAS  -
+                //---------------------------------
 
                 var recdetChartCanvas = $("#recdetChart").get(0).getContext("2d");
                 var recdetChart = new Chart(recdetChartCanvas);
@@ -425,7 +539,7 @@
                         value: $recdetails[3],
                         color: "#f39c12",
                         highlight: "#ffbe14",
-                        label: "Contration"
+                        label: "Contraction"
                     },
                     {
                         value: $recdetails[4],

@@ -5,18 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="877eb840-95bc-4689-ab78-81bb7a9b7a79" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.keystream" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.keystream" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.keystream.len" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.keystream.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.len" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.len" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.values.at" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.values.at" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata_i" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata_i" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_src_/schema/db_abacpe.zip" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_src_/schema/db_abacpe.zip" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813.xml" afterPath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Statistic.php" afterPath="$PROJECT_DIR$/app/Model/Statistic.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/index.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/index.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/cache/statistics.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="$PROJECT_DIR$/app/views/cache/statistics.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/index.html" afterPath="$PROJECT_DIR$/app/views/site/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/site/statistics.html" afterPath="$PROJECT_DIR$/app/views/site/statistics.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site.php" afterPath="$PROJECT_DIR$/site.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -73,8 +68,8 @@
       <file leaf-file-name="site.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/site.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+            <state relative-caret-position="476">
+              <caret line="34" column="2" lean-forward="false" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
               <folding>
                 <element signature="e#7#20#0#PHP" expanded="true" />
               </folding>
@@ -82,19 +77,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Statistic.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Statistic.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+            <state relative-caret-position="336">
+              <caret line="332" column="59" lean-forward="true" selection-start-line="332" selection-start-column="59" selection-end-line="332" selection-end-column="59" />
               <folding>
                 <element signature="e#29#43#0#PHP" expanded="true" />
-                <marker date="1581257566513" expanded="true" signature="199:231" ph="SELECT * FRO... vw_firstpayment" />
-                <marker date="1581257566513" expanded="true" signature="199:233" ph="SELECT * FRO... vw_firstpayment" />
-                <marker date="1581257566513" expanded="true" signature="377:564" ph="SELECT * FRO... tb_payments" />
-                <marker date="1581257566513" expanded="true" signature="17532:17618" ph="/***********... " />
-                <marker date="1581257566513" expanded="true" signature="17711:17797" ph="/***********... " />
-                <marker date="1581257566513" expanded="true" signature="17901:17957" ph="SELECT * FRO... tb_plans" />
+                <marker date="1581368072220" expanded="true" signature="199:231" ph="SELECT * FRO... vw_firstpayment" />
+                <marker date="1581368072220" expanded="true" signature="199:233" ph="SELECT * FRO... vw_firstpayment" />
+                <marker date="1581368072220" expanded="true" signature="451:638" ph="SELECT * FRO... tb_payments" />
+                <marker date="1581368072220" expanded="true" signature="18735:18821" ph="/***********... " />
+                <marker date="1581368072220" expanded="true" signature="18914:19000" ph="/***********... " />
+                <marker date="1581368072220" expanded="true" signature="19104:19160" ph="SELECT * FRO... tb_plans" />
               </folding>
             </state>
           </provider>
@@ -130,67 +125,50 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="funcoes.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../sistema/funcoes.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="135" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Payment.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-561">
-              <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="79" selection-end-column="9" />
-              <folding>
-                <element signature="e#29#43#0#PHP" expanded="true" />
-                <marker date="1580995625088" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
-                <marker date="1580995625088" expanded="true" signature="1870:1924" ph="SELECT * FRO... tb_payments" />
-                <marker date="1580995625088" expanded="true" signature="2159:2211" ph="DELETE FROM " />
-                <marker date="1580995625088" expanded="true" signature="2476:2948" ph="SELECT SQL_C... tb_payments" />
-                <marker date="1580995625088" expanded="true" signature="2577:2710" ph="SELECT idcli... tb_payments" />
-                <marker date="1580995625088" expanded="true" signature="3475:3642" ph="SELECT SQL_C... tb_payments" />
-                <marker date="1580995625088" expanded="true" signature="3475:3683" ph="SELECT SQL_C... tb_payments" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/site/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="628">
-              <caret line="355" column="44" lean-forward="false" selection-start-line="355" selection-start-column="44" selection-end-line="355" selection-end-column="44" />
+            <state relative-caret-position="175">
+              <caret line="28" column="100" lean-forward="false" selection-start-line="28" selection-start-column="100" selection-end-line="28" selection-end-column="100" />
               <folding>
-                <element signature="e#656#662#1" expanded="true" />
-                <element signature="e#867#873#1" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#2298#2304#1" expanded="true" />
-                <element signature="e#2488#2494#1" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#3998#4004#1" expanded="true" />
-                <element signature="e#4230#4236#1" expanded="true" />
-                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#5686#5692#1" expanded="true" />
-                <element signature="e#5893#5899#1" expanded="true" />
-                <element signature="e#6114#6120#1" expanded="true" />
-                <element signature="e#6353#6359#1" expanded="true" />
-                <element signature="e#6596#6602#1" expanded="true" />
-                <element signature="e#11747#14359#0" expanded="false" />
-                <element signature="e#14749#15906#0" expanded="false" />
-                <element signature="e#15947#17766#0" expanded="false" />
-                <element signature="e#22040#23170#0" expanded="false" />
-                <element signature="e#23214#24942#0" expanded="false" />
-                <marker date="1581257655168" expanded="true" signature="13686:13729" ph="..." />
-                <marker date="1581257655168" expanded="true" signature="17341:17384" ph="..." />
-                <marker date="1581257655168" expanded="true" signature="21006:21049" ph="..." />
-                <marker date="1581257655168" expanded="true" signature="24697:24740" ph="..." />
+                <element signature="e#681#687#0" expanded="true" />
+                <element signature="e#5158#5164#1" expanded="true" />
+                <element signature="e#5369#5375#1" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#div#1;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="false" />
+                <element signature="e#6800#6806#1" expanded="true" />
+                <element signature="e#6990#6996#1" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#8500#8506#1" expanded="true" />
+                <element signature="e#8732#8738#1" expanded="true" />
+                <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#10197#10203#1" expanded="true" />
+                <element signature="e#10404#10410#1" expanded="true" />
+                <element signature="e#10625#10631#1" expanded="true" />
+                <element signature="e#10864#10870#1" expanded="true" />
+                <element signature="e#11108#11114#1" expanded="true" />
+                <element signature="e#13770#15847#0" expanded="false" />
+                <element signature="e#18527#21139#0" expanded="false" />
+                <element signature="e#22198#24017#0" expanded="false" />
+                <element signature="e#24464#25277#0" expanded="false" />
+                <element signature="e#25323#27855#0" expanded="false" />
+                <element signature="e#28321#29452#0" expanded="false" />
+                <element signature="e#29496#31224#0" expanded="false" />
+                <marker date="1581356556813" expanded="true" signature="20466:20509" ph="..." />
+                <marker date="1581356556813" expanded="true" signature="23592:23635" ph="..." />
+                <marker date="1581356556813" expanded="true" signature="27263:27306" ph="..." />
+                <marker date="1581356556813" expanded="true" signature="30979:31022" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="payments-detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-51">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -198,20 +176,20 @@
       <file leaf-file-name="statistics.html" pinned="true" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/site/statistics.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="209" column="71" lean-forward="false" selection-start-line="209" selection-start-column="71" selection-end-line="209" selection-end-column="71" />
+            <state relative-caret-position="226">
+              <caret line="550" column="8" lean-forward="false" selection-start-line="550" selection-start-column="8" selection-end-line="551" selection-end-column="59" />
               <folding>
                 <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
                 <element signature="e#5477#5483#0" expanded="true" />
                 <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#10248#10254#0" expanded="true" />
+                <element signature="e#10249#10255#0" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#11680#11686#1" expanded="true" />
+                <element signature="e#11681#11687#1" expanded="true" />
                 <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-                <element signature="e#13461#13467#1" expanded="true" />
-                <element signature="e#13690#13696#0" expanded="true" />
+                <element signature="e#13462#13468#1" expanded="true" />
+                <element signature="e#13691#13697#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
@@ -220,8 +198,8 @@
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#18885#18891#1" expanded="true" />
-                <element signature="e#19132#19138#0" expanded="true" />
+                <element signature="e#18886#18892#1" expanded="true" />
+                <element signature="e#19133#19139#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
@@ -230,8 +208,8 @@
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#24401#24407#1" expanded="true" />
-                <element signature="e#24652#24658#0" expanded="true" />
+                <element signature="e#24402#24408#1" expanded="true" />
+                <element signature="e#24654#24660#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
@@ -240,8 +218,8 @@
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#29815#29821#1" expanded="true" />
-                <element signature="e#30034#30040#0" expanded="true" />
+                <element signature="e#29818#29824#1" expanded="true" />
+                <element signature="e#30037#30043#0" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
@@ -250,11 +228,11 @@
                 <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#35350#37427#0" expanded="false" />
-                <element signature="e#38561#40639#0" expanded="false" />
-                <element signature="e#40823#43060#0" expanded="false" />
-                <element signature="e#43313#43935#0" expanded="false" />
-                <marker date="1581174620988" expanded="true" signature="40174:40217" ph="..." />
+                <element signature="e#35353#37430#0" expanded="false" />
+                <element signature="e#38564#40642#0" expanded="false" />
+                <element signature="e#40826#43063#0" expanded="false" />
+                <element signature="e#43316#43938#0" expanded="false" />
+                <marker date="1581273027650" expanded="true" signature="40177:40220" ph="..." />
               </folding>
             </state>
           </provider>
@@ -264,26 +242,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>progress-bar-fuchsia</find>
-      <find>box-body</find>
-      <find>.box</find>
-      <find>paddin</find>
-      <find>light-blue</find>
-      <find>Top 3 por Cliente e Região.</find>
-      <find>tron</find>
-      <find>skin</find>
-      <find>col-xs-6</find>
-      <find>barChart</find>
-      <find>lineChart</find>
-      <find>datasetFill</find>
-      <find>bezierCurve</find>
-      <find>bronze</find>
-      <find>prata</find>
-      <find>label</find>
-      <find>datasetLabel</find>
-      <find>var value</find>
-      <find>var values</find>
-      <find>value</find>
       <find>value</find>
       <find>value:</find>
       <find>PointClass</find>
@@ -293,15 +251,29 @@
       <find>firstdtpayment</find>
       <find>$idclient</find>
       <find>$Tnew11</find>
+      <find>contra</find>
+      <find>contration</find>
+      <find>$datachart</find>
+      <find>$data[</find>
+      <find>$data</find>
+      <find>$client</find>
+      <find>$client[</find>
+      <find>$payment[</find>
+      <find>$_SESSION['firstPayment']</find>
+      <find>$firstpayment</find>
+      <find>$first</find>
+      <find>$payment[$p]['idclient']</find>
       <find>round</find>
+      <find>$datachart.saas</find>
+      <find>{$saas}</find>
+      <find>$matrix[$id]</find>
+      <find>[$p]</find>
+      <find>$matrix[$id][$d]['vlpayment']</find>
+      <find>$matrix[$id][$d + 1]['vlpayment']</find>
+      <find>$matrix[$id][$d + 1]</find>
+      <find>$matrix[$id][$d]</find>
     </findStrings>
     <replaceStrings>
-      <replace>javascript:void(0)</replace>
-      <replace>/res/site/</replace>
-      <replace>/res/admin/</replace>
-      <replace>/res/admin/pages/</replace>
-      <replace>/res/admin/pages</replace>
-      <replace>/res/</replace>
       <replace>src=&quot;/../../res/admin/</replace>
       <replace>src=&quot;/res/admin/</replace>
       <replace>62BFE6</replace>
@@ -315,7 +287,22 @@
       <replace>plano</replace>
       <replace>churn</replace>
       <replace>&quot;</replace>
+      <replace>contraction</replace>
+      <replace>$first[</replace>
+      <replace>$matrix</replace>
+      <replace>$payment</replace>
+      <replace>$matrix[</replace>
+      <replace>$payment[</replace>
+      <replace>$first</replace>
       <replace>$firstpayment</replace>
+      <replace>$p</replace>
+      <replace>$id</replace>
+      <replace>$saas</replace>
+      <replace>0</replace>
+      <replace>$matrix[$p][$id]</replace>
+      <replace>$m</replace>
+      <replace>[$m]</replace>
+      <replace>$agopayment</replace>
       <replace>$vlpayment</replace>
     </replaceStrings>
   </component>
@@ -325,7 +312,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/res/site/dist/css/style.css" />
         <option value="$USER_HOME$/Downloads/template_55108_CU17783OOk422Dg8ttT9/site/index.html" />
         <option value="$USER_HOME$/Downloads/template_55108_CU17783OOk422Dg8ttT9/site/css/style.css" />
         <option value="$PROJECT_DIR$/res/site/dist/js/script.js" />
@@ -340,7 +326,6 @@
         <option value="$PROJECT_DIR$/res/admin/plugins/chartjs/Chart.min.js" />
         <option value="$PROJECT_DIR$/res/site/js/Chart.min.2.9.3.js" />
         <option value="$PROJECT_DIR$/res/site/js/utils.js" />
-        <option value="$PROJECT_DIR$/app/db/Sql.php" />
         <option value="$PROJECT_DIR$/app/Model/Plans.php" />
         <option value="$PROJECT_DIR$/../abascp/app/views/site/tasks-update.html" />
         <option value="$PROJECT_DIR$/config.php" />
@@ -371,11 +356,13 @@
         <option value="$PROJECT_DIR$/res/site/css/AdminLTE.css" />
         <option value="$PROJECT_DIR$/res/site/js/Chart.js" />
         <option value="$PROJECT_DIR$/res/site/js/Chart.min.js" />
-        <option value="$PROJECT_DIR$/app/views/site/statistics.html" />
         <option value="$PROJECT_DIR$/app/Model/Plan.php" />
+        <option value="$PROJECT_DIR$/app/views/site/statistics.html" />
+        <option value="$PROJECT_DIR$/../Template-Admin/103 - Configurando Template do Admin/AdminLTE-2.3.11/pages/charts/inline.html" />
+        <option value="$PROJECT_DIR$/app/db/Sql.php" />
+        <option value="$PROJECT_DIR$/app/views/site/index.html" />
         <option value="$PROJECT_DIR$/site.php" />
         <option value="$PROJECT_DIR$/app/Model/Statistic.php" />
-        <option value="$PROJECT_DIR$/app/views/site/index.html" />
       </list>
     </option>
   </component>
@@ -434,7 +421,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
   </component>
@@ -466,7 +453,7 @@
       <workItem from="1580392564559" duration="24329000" />
       <workItem from="1580491107933" duration="21050000" />
       <workItem from="1580726475332" duration="76162000" />
-      <workItem from="1580920303195" duration="144694000" />
+      <workItem from="1580920303195" duration="194143000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste de Cabeçalho">
       <created>1580422131830</created>
@@ -531,11 +518,18 @@
       <option name="project" value="LOCAL" />
       <updated>1581248536987</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Atividades:&#10;+ Finalizado as estatísticas:&#10;   - Resurrected,&#10;   - Cancelled,&#10;   - ARPU,&#10;   - Receitas Fixas,&#10;   - Variáveis de Entrada, e&#10;   - Receitas Variáveis de Saída&#10;&#10;+ Finalizado os gráficos do Index">
+      <created>1581257867997</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1581257867997</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="307040000" />
+    <option name="totallyTimeSpent" value="356489000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1936" height="1056" extended-state="6" />
@@ -595,7 +589,8 @@
     <MESSAGE value="Atividades:&#10;- Finalizado páginas de Planos&#10;- Finalizado páginas de Pagamentos&#10;- Atualizado novas ordenações" />
     <MESSAGE value="Atividades:&#10;- Finalizado páginas de Estatísticas" />
     <MESSAGE value="Atividades:&#10;- Finalizado estatísticas New, Expansion e Contration" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atividades:&#10;- Finalizado estatísticas New, Expansion e Contration" />
+    <MESSAGE value="Atividades:&#10;+ Finalizado as estatísticas:&#10;   - Resurrected,&#10;   - Cancelled,&#10;   - ARPU,&#10;   - Receitas Fixas,&#10;   - Variáveis de Entrada, e&#10;   - Receitas Variáveis de Saída&#10;&#10;+ Finalizado os gráficos do Index" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atividades:&#10;+ Finalizado as estatísticas:&#10;   - Resurrected,&#10;   - Cancelled,&#10;   - ARPU,&#10;   - Receitas Fixas,&#10;   - Variáveis de Entrada, e&#10;   - Receitas Variáveis de Saída&#10;&#10;+ Finalizado os gráficos do Index" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -604,30 +599,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/res/admin/pages/charts/inline.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="262" column="31" lean-forward="false" selection-start-line="262" selection-start-column="28" selection-end-line="262" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/admin/dist/css/alt/AdminLTE-without-plugins.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="1595" column="19" lean-forward="false" selection-start-line="1595" selection-start-column="6" selection-end-line="1595" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/admin/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="22" column="30" lean-forward="true" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/admin/footer.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="22">
@@ -818,26 +789,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../template/res/admin/pages/charts/inline.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="651">
           <caret line="602" column="36" lean-forward="true" selection-start-line="602" selection-start-column="36" selection-end-line="602" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/site/css/AdminLTE.min.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="6" column="2235" lean-forward="false" selection-start-line="6" selection-start-column="2235" selection-end-line="6" selection-end-column="2235" />
           <folding />
         </state>
       </provider>
@@ -854,22 +809,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="2272" column="21" lean-forward="true" selection-start-line="2272" selection-start-column="21" selection-end-line="2272" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/plans.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/res/site/css/AdminLTE.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="1624" column="27" lean-forward="false" selection-start-line="1624" selection-start-column="21" selection-end-line="1624" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -904,69 +843,6 @@
           <folding>
             <element signature="n#!!doc" expanded="false" />
             <marker date="1581107801124" expanded="true" signature="41141:41186" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/statistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="209" column="71" lean-forward="false" selection-start-line="209" selection-start-column="71" selection-end-line="209" selection-end-column="71" />
-          <folding>
-            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#5477#5483#0" expanded="true" />
-            <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#10248#10254#0" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#11680#11686#1" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#13461#13467#1" expanded="true" />
-            <element signature="e#13690#13696#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#18885#18891#1" expanded="true" />
-            <element signature="e#19132#19138#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#24401#24407#1" expanded="true" />
-            <element signature="e#24652#24658#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#29815#29821#1" expanded="true" />
-            <element signature="e#30034#30040#0" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#35350#37427#0" expanded="false" />
-            <element signature="e#38561#40639#0" expanded="false" />
-            <element signature="e#40823#43060#0" expanded="false" />
-            <element signature="e#43313#43935#0" expanded="false" />
-            <marker date="1581174620988" expanded="true" signature="40174:40217" ph="..." />
           </folding>
         </state>
       </provider>
@@ -1010,14 +886,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../sistema/funcoes.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="135" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../abascp/app/Model/Task.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1053,23 +921,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-561">
-          <caret line="75" column="8" lean-forward="false" selection-start-line="75" selection-start-column="8" selection-end-line="79" selection-end-column="9" />
-          <folding>
-            <element signature="e#29#43#0#PHP" expanded="true" />
-            <marker date="1580995625088" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
-            <marker date="1580995625088" expanded="true" signature="1870:1924" ph="SELECT * FRO... tb_payments" />
-            <marker date="1580995625088" expanded="true" signature="2159:2211" ph="DELETE FROM " />
-            <marker date="1580995625088" expanded="true" signature="2476:2948" ph="SELECT SQL_C... tb_payments" />
-            <marker date="1580995625088" expanded="true" signature="2577:2710" ph="SELECT idcli... tb_payments" />
-            <marker date="1580995625088" expanded="true" signature="3475:3642" ph="SELECT SQL_C... tb_payments" />
-            <marker date="1580995625088" expanded="true" signature="3475:3683" ph="SELECT SQL_C... tb_payments" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Plan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -1083,6 +934,102 @@
             <marker date="1581180226647" expanded="true" signature="2118:2237" ph="SELECT SQL_C... tb_plans" />
             <marker date="1581180226647" expanded="true" signature="2118:2250" ph="SELECT SQL_C... tb_plans" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="75" column="14" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="14" />
+          <folding>
+            <element signature="e#29#43#0#PHP" expanded="true" />
+            <marker date="1580995625088" expanded="true" signature="206:258" ph="SELECT * FRO... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="1870:1924" ph="SELECT * FRO... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="2159:2211" ph="DELETE FROM " />
+            <marker date="1580995625088" expanded="true" signature="2476:2948" ph="SELECT SQL_C... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="2577:2710" ph="SELECT idcli... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="3475:3642" ph="SELECT SQL_C... tb_payments" />
+            <marker date="1580995625088" expanded="true" signature="3475:3683" ph="SELECT SQL_C... tb_payments" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="550" column="8" lean-forward="false" selection-start-line="550" selection-start-column="8" selection-end-line="551" selection-end-column="59" />
+          <folding>
+            <element signature="n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#5477#5483#0" expanded="true" />
+            <element signature="n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#10249#10255#0" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#11681#11687#1" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#13462#13468#1" expanded="true" />
+            <element signature="e#13691#13697#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#0;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#18886#18892#1" expanded="true" />
+            <element signature="e#19133#19139#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#0;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#24402#24408#1" expanded="true" />
+            <element signature="e#24654#24660#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#0;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#29818#29824#1" expanded="true" />
+            <element signature="e#30037#30043#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#1;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#5;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#7;n#div#2;n#div#0;n#div#1;n#div#1;n#div#3;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#35353#37430#0" expanded="false" />
+            <element signature="e#38564#40642#0" expanded="false" />
+            <element signature="e#40826#43063#0" expanded="false" />
+            <element signature="e#43316#43938#0" expanded="false" />
+            <marker date="1581273027650" expanded="true" signature="40177:40220" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../Template-Admin/103 - Configurando Template do Admin/AdminLTE-2.3.11/pages/charts/inline.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="42">
+          <caret line="531" column="12" lean-forward="true" selection-start-line="531" selection-start-column="12" selection-end-line="531" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../sistema/funcoes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="135" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1112,62 +1059,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+        <state relative-caret-position="221">
+          <caret line="13" column="12" lean-forward="true" selection-start-line="13" selection-start-column="12" selection-end-line="15" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-51">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/site/css/AdminLTE.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="4364" column="0" lean-forward="false" selection-start-line="4364" selection-start-column="0" selection-end-line="4367" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/res/site/css/AdminLTE.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="3" lean-forward="false" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="25" column="63" lean-forward="false" selection-start-line="25" selection-start-column="47" selection-end-line="25" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/db/Sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="54" column="26" lean-forward="true" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="28" column="100" lean-forward="false" selection-start-line="28" selection-start-column="100" selection-end-line="28" selection-end-column="100" />
           <folding>
-            <element signature="e#29#43#0#PHP" expanded="true" />
-            <marker date="1581257566513" expanded="true" signature="199:231" ph="SELECT * FRO... vw_firstpayment" />
-            <marker date="1581257566513" expanded="true" signature="199:233" ph="SELECT * FRO... vw_firstpayment" />
-            <marker date="1581257566513" expanded="true" signature="377:564" ph="SELECT * FRO... tb_payments" />
-            <marker date="1581257566513" expanded="true" signature="17532:17618" ph="/***********... " />
-            <marker date="1581257566513" expanded="true" signature="17711:17797" ph="/***********... " />
-            <marker date="1581257566513" expanded="true" signature="17901:17957" ph="SELECT * FRO... tb_plans" />
+            <element signature="e#681#687#0" expanded="true" />
+            <element signature="e#5158#5164#1" expanded="true" />
+            <element signature="e#5369#5375#1" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#div#1;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="false" />
+            <element signature="e#6800#6806#1" expanded="true" />
+            <element signature="e#6990#6996#1" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#8500#8506#1" expanded="true" />
+            <element signature="e#8732#8738#1" expanded="true" />
+            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#1;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#10197#10203#1" expanded="true" />
+            <element signature="e#10404#10410#1" expanded="true" />
+            <element signature="e#10625#10631#1" expanded="true" />
+            <element signature="e#10864#10870#1" expanded="true" />
+            <element signature="e#11108#11114#1" expanded="true" />
+            <element signature="e#13770#15847#0" expanded="false" />
+            <element signature="e#18527#21139#0" expanded="false" />
+            <element signature="e#22198#24017#0" expanded="false" />
+            <element signature="e#24464#25277#0" expanded="false" />
+            <element signature="e#25323#27855#0" expanded="false" />
+            <element signature="e#28321#29452#0" expanded="false" />
+            <element signature="e#29496#31224#0" expanded="false" />
+            <marker date="1581356556813" expanded="true" signature="20466:20509" ph="..." />
+            <marker date="1581356556813" expanded="true" signature="23592:23635" ph="..." />
+            <marker date="1581356556813" expanded="true" signature="27263:27306" ph="..." />
+            <marker date="1581356556813" expanded="true" signature="30979:31022" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" lean-forward="false" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        <state relative-caret-position="476">
+          <caret line="34" column="2" lean-forward="false" selection-start-line="34" selection-start-column="2" selection-end-line="34" selection-end-column="2" />
           <folding>
             <element signature="e#7#20#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/site/index.html">
+    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="628">
-          <caret line="355" column="44" lean-forward="false" selection-start-line="355" selection-start-column="44" selection-end-line="355" selection-end-column="44" />
+        <state relative-caret-position="336">
+          <caret line="332" column="59" lean-forward="true" selection-start-line="332" selection-start-column="59" selection-end-line="332" selection-end-column="59" />
           <folding>
-            <element signature="e#656#662#1" expanded="true" />
-            <element signature="e#867#873#1" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#2298#2304#1" expanded="true" />
-            <element signature="e#2488#2494#1" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#1;n#div#0;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#3998#4004#1" expanded="true" />
-            <element signature="e#4230#4236#1" expanded="true" />
-            <element signature="n#style#0;n#canvas#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#div#1;n#div#1;n#div#0;n#section#0;n#div#0;n#!!top" expanded="false" />
-            <element signature="e#5686#5692#1" expanded="true" />
-            <element signature="e#5893#5899#1" expanded="true" />
-            <element signature="e#6114#6120#1" expanded="true" />
-            <element signature="e#6353#6359#1" expanded="true" />
-            <element signature="e#6596#6602#1" expanded="true" />
-            <element signature="e#11747#14359#0" expanded="false" />
-            <element signature="e#14749#15906#0" expanded="false" />
-            <element signature="e#15947#17766#0" expanded="false" />
-            <element signature="e#22040#23170#0" expanded="false" />
-            <element signature="e#23214#24942#0" expanded="false" />
-            <marker date="1581257655168" expanded="true" signature="13686:13729" ph="..." />
-            <marker date="1581257655168" expanded="true" signature="17341:17384" ph="..." />
-            <marker date="1581257655168" expanded="true" signature="21006:21049" ph="..." />
-            <marker date="1581257655168" expanded="true" signature="24697:24740" ph="..." />
+            <element signature="e#29#43#0#PHP" expanded="true" />
+            <marker date="1581368072220" expanded="true" signature="199:231" ph="SELECT * FRO... vw_firstpayment" />
+            <marker date="1581368072220" expanded="true" signature="199:233" ph="SELECT * FRO... vw_firstpayment" />
+            <marker date="1581368072220" expanded="true" signature="451:638" ph="SELECT * FRO... tb_payments" />
+            <marker date="1581368072220" expanded="true" signature="18735:18821" ph="/***********... " />
+            <marker date="1581368072220" expanded="true" signature="18914:19000" ph="/***********... " />
+            <marker date="1581368072220" expanded="true" signature="19104:19160" ph="SELECT * FRO... tb_plans" />
           </folding>
         </state>
       </provider>

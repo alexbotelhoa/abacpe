@@ -14,11 +14,25 @@ use ABA\Model\Statistic;
 
 $app->get("/", function() {
 
+    $datachart = Statistic::indexDataChart(2019, 7);
 
-    $datachart = Statistic::intervalPayment();
+    //var_dump($datachart[6]['saas']); exit;
 
     //var_dump($datachart); exit;
 
+/*
+    $datachart = Statistic::matrixPayments(2019, 7);
+
+    //var_dump($datachart); exit;
+
+
+    echo "<p>ID -> [7] | [6] | [5] | [4] | [3] | [2] | [1] | [0] <br>";
+    for ($x=0;$x<count($datachart);$x++) {
+        echo $x . " -> " . $datachart[$x][7] . " | " . $datachart[$x][6] . " | " . $datachart[$x][5] . " | " . $datachart[$x][4] . " | " . $datachart[$x][3] . " | " . $datachart[$x][2] . " | " . $datachart[$x][1] . " | " . $datachart[$x][0] . "<br>";
+    }
+
+    exit;
+*/
 
 
 

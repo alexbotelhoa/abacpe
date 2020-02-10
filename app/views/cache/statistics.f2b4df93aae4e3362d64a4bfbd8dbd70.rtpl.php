@@ -136,7 +136,7 @@
                                     </div>
 
                                     <div class="col-xs-6 col-sm-2 text-center">
-                                        <div class="knob-header">Contration</div>
+                                        <div class="knob-header">Contraction</div>
                                         <label>
                                             <input type="text" class="knob" value="40" data-width="100" data-height="100" data-fgColor="#f39c12">
                                         </label>
@@ -381,11 +381,11 @@
                                 <div class="box-header">
                                     <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li>&nbsp;<b>Contration:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>DIMINUIÇÃO</u> de valores.</li>
+                                        <li>&nbsp;<b>Contraction:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>DIMINUIÇÃO</u> de valores.</li>
                                         <li class="divider"></li>
                                         <li>&nbsp;Os Top 3 por Cliente e Região.</li>
                                     </ul>
-                                    <h3 class="box-title">Contration</h3>
+                                    <h3 class="box-title">Contraction</h3>
                                     <div class="box-tools pull-right">
                                         <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
                                         <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>

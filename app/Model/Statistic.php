@@ -17,264 +17,232 @@ class Statistic extends Model
 
     }
 
-    public static function intervalPayment($year = 2019, $month = 07)
+    public static function matrixPayments($year, $month)
     {
+
+        // MONTANDO A DATA DA PESQUISA
+        $dataYearMonth = "$year-$month-01";
 
         $sql = new Sql();
 
-        $data = $sql->select("SELECT * FROM tb_payments WHERE dtpayment 
-            BETWEEN ADDDATE('" . $year . "-" . $month . "-01', INTERVAL -10 MONTH) AND '" . $year . "-" . $month . "-31' ORDER BY dtpayment DESC");
+        $payment = $sql->select("SELECT * FROM tb_payments WHERE dtpayment 
+            BETWEEN ADDDATE('" . $year . "-" . $month . "-01', INTERVAL -11 MONTH) AND '" . $year . "-" . $month . "-31' ORDER BY dtpayment DESC");
 
-        $months =       ["Ago", "Set", "Out", "Nov", "Dez", "Jan", "Fev", "Mar", "Abr", "Maio", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
+        // ARMAZENANDO OS CLIENTES  E SEUS PRIMEIROS PAGAMENTOS
+        $clients = Statistic::firstPayment();
 
-        $dataYearMonth = "$year-$month-01";
+        // CRIANDO UMA MATRIZ VAZIA DE PAGAMENTOS DOS CLIENTES
+        for ($c = 0; $c < count($clients); $c++) {
 
-        $_SESSION['firstPayment'] = Statistic::firstPayment();
+            for ($d = 0; $d < 8; $d++) {
 
-
-        // CRIANDO A MATRIZ DE PAGAMENTOS POR CLIENTE
-        for ($c = 0; $c < count($_SESSION['firstPayment']); $c++) {
-
-            for ($d = 0; $d < 10; $d++) {
-
-                $client[$_SESSION['firstPayment'][$c]['idclient']][$d] = 0;
-                $mrr[$d] = 0;
-                $mrrc[$d] = 0;
-                $new[$d] = 0;
-                $resurrected[$d] = 0;
-                $expansion[$d] = 0;
-                $contration[$d] = 0;
-                $cancelled[$d] = 0;
+                $matrix[$clients[$c]['idclient']][$d]['dtpayment'] = 0;
+                $matrix[$clients[$c]['idclient']][$d]['vlpayment'] = 0;
 
             }
 
         }
-        // ./CRIANDO A MATRIZ DE PAGAMENTOS POR CLIENTE
 
+        // POPULACIONANDO A MATRIZ DE PAGAMENTOS DOS CLIENTES
+        for ($p = 0; $p < count($payment); $p++) {
 
-        for ($x = 0; $x < count($data); $x++) {
+            // ID DO CLIENTE
+            $id = $payment[$p]['idclient'];
 
-            $vlpayment = $data[$x]['vlpayment'] / $data[$x]['vlrecurrence']; // Valor pago pelo cliente
+            // VALOR DO PAGAMENTO
+            $vlpayment = $payment[$p]['vlpayment'] / $payment[$p]['vlrecurrence'];
 
-            $firstpayment = $_SESSION['firstPayment'][$data[$x]['idclient']]['dtpayment']; // Data do primeiro pagamento do cliente
+            // DATA DO PAGAMENTO
+            $dtpayment = $payment[$p]['dtpayment'];
 
-            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-0 month", strtotime($dataYearMonth)))) { // No mês pesquisado
+            if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-0 month", strtotime($dataYearMonth)))) { // No mês pesquisado
 
-                $mrr[0] = $mrr[0] + $vlpayment;
-
-                $client[$data[$x]['idclient']][0] = $vlpayment;
-
-                ($data[$x]['dtpayment'] == $firstpayment) ? $new[0] = $new[0] + $vlpayment : "";
+                $matrix[$id][0]['dtpayment'] = $dtpayment;
+                $matrix[$id][0]['vlpayment'] = $vlpayment;
 
             } else {
 
-                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-1 month", strtotime($dataYearMonth)))) { // 1 mes atrás
+                if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-1 month", strtotime($dataYearMonth)))) { // 1 mes atrás
 
-                    $mrr[1] = $mrr[1] + $vlpayment;
+                    $matrix[$id][1]['dtpayment'] = $dtpayment;
+                    $matrix[$id][1]['vlpayment'] = $vlpayment;
 
-                    $client[$data[$x]['idclient']][1] = $vlpayment;
 
-                    ($data[$x]['dtpayment'] == $firstpayment) ? $new[1] = $new[1] + $vlpayment : "";
-
-                    if (in_array($data[$x]['vlrecurrence'], array(3, 6))) {
-                        $mrr[0] = $mrr[0] + $vlpayment;
-                        $client[$data[$x]['idclient']][0] = $vlpayment;
+                    if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                        $matrix[$id][0]['dtpayment'] = $dtpayment;
+                        $matrix[$id][0]['vlpayment'] = $vlpayment;
                     }
 
                 } else {
 
-                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-2 month", strtotime($dataYearMonth)))) { // 2 meses atrás
+                    if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-2 month", strtotime($dataYearMonth)))) { // 2 meses atrás
 
-                        $mrr[2] = $mrr[2] + $vlpayment;
+                        $matrix[$id][2]['dtpayment'] = $dtpayment;
+                        $matrix[$id][2]['vlpayment'] = $vlpayment;
 
-                        ($data[$x]['dtpayment'] == $firstpayment) ? $new[2] = $new[2] + $vlpayment : "";
-
-                        $client[$data[$x]['idclient']][2] = $vlpayment;
-
-                        if (in_array($data[$x]['vlrecurrence'], array(3, 6))) {
-                            $mrr[1] = $mrr[1] + $vlpayment;
-                            $mrr[0] = $mrr[0] + $vlpayment;
-                            $client[$data[$x]['idclient']][1] = $vlpayment;
-                            $client[$data[$x]['idclient']][0] = $vlpayment;
+                        if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                            $matrix[$id][1]['dtpayment'] = $dtpayment;
+                            $matrix[$id][1]['vlpayment'] = $vlpayment;
+                            $matrix[$id][0]['dtpayment'] = $dtpayment;
+                            $matrix[$id][0]['vlpayment'] = $vlpayment;
                         }
 
                     } else {
 
-                        if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-3 month", strtotime($dataYearMonth)))) { // 3 meses atrás
+                        if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-3 month", strtotime($dataYearMonth)))) { // 3 meses atrás
 
-                            $mrr[3] = $mrr[3] + $vlpayment;
+                            $matrix[$id][3]['dtpayment'] = $dtpayment;
+                            $matrix[$id][3]['vlpayment'] = $vlpayment;
 
-                            $client[$data[$x]['idclient']][3] = $vlpayment;
+                            if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                                $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                $matrix[$id][1]['dtpayment'] = $dtpayment;
+                                $matrix[$id][1]['vlpayment'] = $vlpayment;
+                            }
 
-                            ($data[$x]['dtpayment'] == $firstpayment) ? $new[3] = $new[3] + $vlpayment : "";
-
-                            switch ($data[$x]['vlrecurrence']) {
-                                case 3:
-                                    $mrr[2] = $mrr[2] + $vlpayment;
-                                    $mrr[1] = $mrr[1] + $vlpayment;
-                                    $client[$data[$x]['idclient']][2] = $vlpayment;
-                                    $client[$data[$x]['idclient']][1] = $vlpayment;
-                                    break;
-                                case 6:
-                                    $mrr[2] = $mrr[2] + $vlpayment;
-                                    $mrr[1] = $mrr[1] + $vlpayment;
-                                    $mrr[0] = $mrr[0] +$vlpayment;
-                                    $client[$data[$x]['idclient']][2] = $vlpayment;
-                                    $client[$data[$x]['idclient']][1] = $vlpayment;
-                                    $client[$data[$x]['idclient']][0] = $vlpayment;
-                                    break;
+                            if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                $matrix[$id][0]['dtpayment'] = $dtpayment;
+                                $matrix[$id][0]['vlpayment'] = $vlpayment;
                             }
 
                         } else {
 
-                            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-4 month", strtotime($dataYearMonth)))) { // 4 meses atrás
+                            if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-4 month", strtotime($dataYearMonth)))) { // 4 meses atrás
 
-                                $mrr[4] = $mrr[4] + $vlpayment;
+                                $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                $matrix[$id][4]['vlpayment'] = $vlpayment;
 
-                                $client[$data[$x]['idclient']][4] = $vlpayment;
+                                if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                                    $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                    $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                }
 
-                                ($data[$x]['dtpayment'] == $firstpayment) ? $new[4] = $new[4] + $vlpayment : "";
-
-                                switch ($data[$x]['vlrecurrence']) {
-                                    case 3:
-                                        $mrr[3] = $mrr[3] + $vlpayment;
-                                        $mrr[2] = $mrr[2] + $vlpayment;
-                                        $client[$data[$x]['idclient']][3] = $vlpayment;
-                                        $client[$data[$x]['idclient']][2] = $vlpayment;
-                                        break;
-                                    case 6:
-                                        $mrr[3] = $mrr[3] + $vlpayment;
-                                        $mrr[2] = $mrr[2] + $vlpayment;
-                                        $mrr[1] = $mrr[1] + $vlpayment;
-                                        $mrr[0] = $mrr[0] + $vlpayment;
-                                        $client[$data[$x]['idclient']][3] = $vlpayment;
-                                        $client[$data[$x]['idclient']][2] = $vlpayment;
-                                        $client[$data[$x]['idclient']][1] = $vlpayment;
-                                        $client[$data[$x]['idclient']][0] = $vlpayment;
-                                        break;
+                                if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                    $matrix[$id][1]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][1]['vlpayment'] = $vlpayment;
+                                    $matrix[$id][0]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][0]['vlpayment'] = $vlpayment;
                                 }
 
                             } else {
 
-                                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-5 month", strtotime($dataYearMonth)))) { // 5 meses atrás
+                                if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-5 month", strtotime($dataYearMonth)))) { // 5 meses atrás
 
-                                    $mrr[5] = $mrr[5] + $vlpayment;
+                                    $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][5]['vlpayment'] = $vlpayment;
 
-                                    $client[$data[$x]['idclient']][5] = $vlpayment;
+                                    if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                                        $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                        $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                    }
 
-                                    ($data[$x]['dtpayment'] == $firstpayment) ? $new[5] = $new[5] + $vlpayment : "";
-
-                                    switch ($data[$x]['vlrecurrence']) {
-                                        case 3:
-                                            $mrr[4] = $mrr[4] + $vlpayment;
-                                            $mrr[3] = $mrr[3] + $vlpayment;
-                                            $client[$data[$x]['idclient']][4] = $vlpayment;
-                                            $client[$data[$x]['idclient']][3] = $vlpayment;
-                                            break;
-                                        case 6:
-                                            $mrr[4] = $mrr[4] + $vlpayment;
-                                            $mrr[3] = $mrr[3] + $vlpayment;
-                                            $mrr[2] = $mrr[2] + $vlpayment;
-                                            $mrr[1] = $mrr[1] + $vlpayment;
-                                            $mrr[0] = $mrr[0] + $vlpayment;
-                                            $client[$data[$x]['idclient']][4] = $vlpayment;
-                                            $client[$data[$x]['idclient']][3] = $vlpayment;
-                                            $client[$data[$x]['idclient']][2] = $vlpayment;
-                                            $client[$data[$x]['idclient']][1] = $vlpayment;
-                                            $client[$data[$x]['idclient']][0] = $vlpayment;
-                                            break;
+                                    if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                        $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                        $matrix[$id][1]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][1]['vlpayment'] = $vlpayment;
+                                        $matrix[$id][0]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][0]['vlpayment'] = $vlpayment;
                                     }
 
                                 } else {
 
-                                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-6 month", strtotime($dataYearMonth)))) { // 6 meses atrás
+                                    if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-6 month", strtotime($dataYearMonth)))) { // 6 meses atrás
 
-                                        $mrr[6] = $mrr[6] + $vlpayment;
+                                        $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][6]['vlpayment'] = $vlpayment;
 
-                                        $client[$data[$x]['idclient']][6] = $vlpayment;
+                                        if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                                            $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                            $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                        }
 
-                                        switch ($data[$x]['vlrecurrence']) {
-                                            case 3:
-                                                $mrr[5] = $mrr[5] + $vlpayment;
-                                                $mrr[4] = $mrr[4] + $vlpayment;
-                                                $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                $client[$data[$x]['idclient']][4] = $vlpayment;
-                                                break;
-                                            case 6:
-                                                $mrr[5] = $mrr[5] + $vlpayment;
-                                                $mrr[4] = $mrr[4] + $vlpayment;
-                                                $mrr[3] = $mrr[3] + $vlpayment;
-                                                $mrr[2] = $mrr[2] + $vlpayment;
-                                                $mrr[1] = $mrr[1] + $vlpayment;
-                                                $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                $client[$data[$x]['idclient']][4] = $vlpayment;
-                                                $client[$data[$x]['idclient']][3] = $vlpayment;
-                                                $client[$data[$x]['idclient']][2] = $vlpayment;
-                                                $client[$data[$x]['idclient']][1] = $vlpayment;
-                                                break;
+                                        if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                            $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                            $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                            $matrix[$id][1]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][1]['vlpayment'] = $vlpayment;
                                         }
 
                                     } else {
 
-                                        if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-7 month", strtotime($dataYearMonth)))) { // 7 meses atrás
+                                        if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-7 month", strtotime($dataYearMonth)))) { // 7 meses atrás
 
-                                            switch ($data[$x]['vlrecurrence']) {
-                                                case 3:
-                                                    $mrr[5] = $mrr[5] + $vlpayment;
-                                                    $client[$data[$x]['idclient']][6] = $vlpayment;
-                                                    $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                    break;
-                                                case 6:
-                                                    $mrr[5] = $mrr[5] + $vlpayment;
-                                                    $mrr[4] = $mrr[4] + $vlpayment;
-                                                    $mrr[3] = $mrr[3] + $vlpayment;
-                                                    $mrr[2] = $mrr[2] + $vlpayment;
-                                                    $client[$data[$x]['idclient']][6] = $vlpayment;
-                                                    $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                    $client[$data[$x]['idclient']][4] = $vlpayment;
-                                                    $client[$data[$x]['idclient']][3] = $vlpayment;
-                                                    $client[$data[$x]['idclient']][2] = $vlpayment;
-                                                    break;
+                                            if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                                                $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][6]['vlpayment'] = $vlpayment;
+                                                $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                            }
+
+                                            if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                                $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                                $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                                $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][2]['vlpayment'] = $vlpayment;
                                             }
 
                                         } else {
 
-                                            if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-8 month", strtotime($dataYearMonth)))) { // 8 meses atrás
+                                            if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-8 month", strtotime($dataYearMonth)))) { // 8 meses atrás
 
-                                                switch ($data[$x]['vlrecurrence']) {
-                                                    case 6:
-                                                        $mrr[5] = $mrr[5] + $vlpayment;
-                                                        $mrr[4] = $mrr[4] + $vlpayment;
-                                                        $mrr[3] = $mrr[3] + $vlpayment;
-                                                        $client[$data[$x]['idclient']][6] = $vlpayment;
-                                                        $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                        $client[$data[$x]['idclient']][4] = $vlpayment;
-                                                        $client[$data[$x]['idclient']][3] = $vlpayment;
-                                                        break;
+                                                if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
+                                                    $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                    $matrix[$id][6]['vlpayment'] = $vlpayment;
                                                 }
+
+                                                if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                                    $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                                    $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                                    $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                                    $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                                    $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                                    $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                                }
+
                                             } else {
 
-                                                if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-9 month", strtotime($dataYearMonth)))) { // 9 meses atrás
+                                                if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-9 month", strtotime($dataYearMonth)))) { // 9 meses atrás
 
-                                                    switch ($data[$x]['vlrecurrence']) {
-                                                        case 6:
-                                                            $mrr[5] = $mrr[5] + $vlpayment;
-                                                            $mrr[4] = $mrr[4] + $vlpayment;
-                                                            $client[$data[$x]['idclient']][6] = $vlpayment;
-                                                            $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                            $client[$data[$x]['idclient']][4] = $vlpayment;
-                                                            break;
+                                                    if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                                        $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                        $matrix[$id][6]['vlpayment'] = $vlpayment;
+                                                        $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                                        $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                                        $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                                        $matrix[$id][4]['vlpayment'] = $vlpayment;
                                                     }
+
                                                 } else {
 
-                                                    if (date('Y-m', strtotime($data[$x]['dtpayment'])) == date('Y-m', strtotime("-10 month", strtotime($dataYearMonth)))) { // 10 meses atrás
+                                                    if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-10 month", strtotime($dataYearMonth)))) { // 10 meses atrás
 
-                                                        switch ($data[$x]['vlrecurrence']) {
-                                                            case 6:
-                                                                $mrr[5] = $mrr[5] + $vlpayment;
-                                                                $client[$data[$x]['idclient']][6] = $vlpayment;
-                                                                $client[$data[$x]['idclient']][5] = $vlpayment;
-                                                                break;
+                                                        if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                                            $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                            $matrix[$id][6]['vlpayment'] = $vlpayment;
+                                                            $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                                            $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                                        }
+
+                                                    } else {
+
+                                                        if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-11 month", strtotime($dataYearMonth)))) { // 11 meses atrás
+
+                                                            if (in_array($payment[$p]['vlrecurrence'], array(6))) {
+                                                                $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                                $matrix[$id][6]['vlpayment'] = $vlpayment;
+                                                            }
                                                         }
                                                     }
                                                 }
@@ -287,48 +255,138 @@ class Statistic extends Model
                     }
                 }
             }
-
         }
 
+        // CRIANDO A MATRIZ VAZIA DAS ESTATÍSTICAS SAAS
+        for ($d = 0; $d < 8; $d++) {
+            $mrr[$d] = 0;
+            $mrrc[$d] = 0;
+            $new[$d] = 0;
+            $resurrected[$d] = 0;
+            $expansion[$d] = 0;
+            $contraction[$d] = 0;
+            $cancelled[$d] = 0;
+        }
 
-        for ($c = 0; $c < count($_SESSION['firstPayment']); $c++) {
+        // CALCULANDO AS MÉTRICAS SAAS
+        for ($c = 0; $c < count($matrix); $c++) {
 
-            $id = $_SESSION['firstPayment'][$c]['idclient'];
+            // ID DO CLIENTE
+            $id = $clients[$c]['idclient'];
 
-            $dt = $_SESSION['firstPayment'][$c]['dtpayment'];
+            // PRIMEIRO PAGAMENTO
+            $firstpayment = $clients[$c]['dtpayment'];
 
-            for ($d = 6; $d >= 0; $d--) {
+            for ($d = 0; $d < 7; $d++) {
 
-                $mrrc[$d] = $mrrc[$d] + 1;
+                // DATA DO PAGAMENTO ATUAL
+                $dtpayment = $matrix[$id][$d]['dtpayment'];
 
-                // RECEITAS VARIÁVEIS DE ENTRADAS //
-                ($client[$id][$d] != 0 && $client[$id][$d + 1] == 0 && $dt < $data[$id]['dtpayment']) ? $resurrected[$d] = $resurrected[$d] + $client[$id][$d] : '';
+                // VALOR DO PAGAMENTO ATUAL
+                $vlpayment = $matrix[$id][$d]['vlpayment'];
 
-                ($client[$id][$d + 1] != 0 && $client[$id][$d] != 0 && $client[$id][$d + 1] < $client[$id][$d]) ? $expansion[$d] = $expansion[$d] + ($client[$id][$d] - $client[$id][$d + 1]) : '';
+                // VALOR DO PAGAMENTO ANTERIOR
+                $agopayment = $matrix[$id][$d + 1]['vlpayment'];
 
-                // RECEITAS VARIÁVEIS DE SAÍDAS //
-                ($client[$id][$d + 1] != 0 && $client[$id][$d] != 0 && $client[$id][$d + 1] > $client[$id][$d]) ? $contration[$d] = $contration[$d] + ($client[$id][$d + 1] - $client[$id][$d]) : '';
+                // RECEITAS VARIÁVEIS DE ENTRADAS
+                ($vlpayment != 0) ? $mrr[$d] = $mrr[$d] + $vlpayment AND $mrrc[$d] = $mrrc[$d] + 1 : '';
 
-                ($client[$id][$d] == 0 && $client[$id][$d + 1] != 0) ? $cancelled[$d] = $cancelled[$d] + $client[$id][$d + 1] : '';
+                ($vlpayment != 0 && $dtpayment == $firstpayment) ? $new[$d] = $new[$d] + $vlpayment : '';
+
+                ($vlpayment != 0 && $agopayment == 0 && $dtpayment > $firstpayment) ? $resurrected[$d] = $resurrected[$d] + $vlpayment : '';
+
+                ($vlpayment != 0 && $agopayment != 0 && $vlpayment > $agopayment) ? $expansion[$d] = $expansion[$d] + ($vlpayment - $agopayment) : '';
+
+                // RECEITAS VARIÁVEIS DE SAÍDAS
+                ($vlpayment != 0 && $agopayment != 0 && $vlpayment < $agopayment) ? $contraction[$d] = $contraction[$d] + ($agopayment - $vlpayment) : '';
+
+                ($vlpayment == 0 && $agopayment != 0) ? $cancelled[$d] = $cancelled[$d] + $agopayment : '';
 
             }
 
         }
 
-        //[(VAZIO = 0) , cancelled, Contration, Expansion, Resurrected, New]
-        $recdetails =   [0, $cancelled[0], $contration[0], $expansion[0], $resurrected[0], $new[0]];
+        $data = [];
+
+        for ($x = 0; $x < 7; $x++) {
+
+            array_push($data, [
+                "month" => date('M/y', strtotime("-$x month", strtotime($dataYearMonth))),
+                "mrr" => $mrr[$x],
+                "mrrc" => $mrrc[$x],
+                "new" => $new[$x],
+                "resurrected" => $resurrected[$x],
+                "expansion" => $expansion{$x},
+                "contraction" => $contraction{$x},
+                "cancelled" => $cancelled[$x]
+            ]);
+
+        }
+
+        return $data;
+
+    }
+
+    public static function indexDataChart($year, $month)
+    {
+
+        $matrix = Statistic::matrixPayments($year, $month);
+
+        // ORDEM DAS ESTATÍSTICAS SAAS
+        // [(VAZIO = 0) , MRR Cancelled, MRR Contraction, MRR Expansion, MRR Resurrected, MRR New]
+        $f = 0;
+        $recdetails =   [0, $matrix[$f]['cancelled'], $matrix[$f]['contraction'], $matrix[$f]['expansion'], $matrix[$f]['resurrected'], $matrix[$f]['new']];
+
+        $datachart = [];
+
+        $saas = [10, 20, 30, 40, 50, 60];
+
+        for ($x = 5; $x >= 0; $x--) {
+
+            array_push($datachart, [
+                "month" => $matrix[$x]['month'],
+                "saas" => $saas[$x],
+                "mrr" => $matrix[$x]['mrr'],
+                "recorrentes" => $matrix[$x]['mrr'] - ($matrix[$x]['new'] + $matrix[$x]['resurrected'] + $matrix[$x]['expansion']),
+                "arpu" => ($matrix[$x]['mrrc'] > 0) ? round($matrix[$x]['mrr'] / $matrix[$x]['mrrc'], 2) : $matrix[$x]['mrr'],
+                "entradas" => $matrix[$x]['new'] + $matrix[$x]['resurrected'] + $matrix[$x]['expansion'],
+                "saidas" => $matrix[$x]['contraction'] + $matrix{$x}['cancelled'],
+                "recdetails" => $recdetails[$x]
+            ]);
+
+        }
+
+/*
+        array_push($datachart, [
+            "saas" => [10, 20, 30, 40, 50, 60]
+        ]);
+*/
+
+        return $datachart;
+
+    }
+
+    /*
+    public static function indexDataChart($year, $month)
+    {
+
+        $data = Statistic::matrixPayments($year, $month);
+
+        // ORDEM DAS ESTATÍSTICAS SAAS
+        // [(VAZIO = 0) , MRR Cancelled, MRR Contraction, MRR Expansion, MRR Resurrected, MRR New]
+        $recdetails =   [0, $data[0]['cancelled'], $data[0]['contraction'], $data[0]['expansion'], $data[0]['resurrected'], $data[0]['new']];
 
         $datachart = [];
 
         for ($x = 5; $x >= 0; $x--) {
 
             array_push($datachart, [
-                "month" => $months[4 + $month - $x],
-                "mrr" => $mrr[$x],
-                "arpu" => round($mrr[$x]/$mrrc[$x],2),
-                "target" => round(($mrr[$x + 1]/$mrrc[$x + 1]) * 1.05,2),
-                "entradas" => $new[$x] + $resurrected[$x] + $expansion[$x],
-                "saidas" => $contration[$x] + $cancelled{$x},
+                "month" => $data[$x]['month'],
+                "mrr" => $data[$x]['mrr'],
+                "arpu" => round($data[$x]['mrr']/$data[$x]['mrrc'],2),
+                "target" => round(($data[$x + 1]['mrr']/$data[$x + 1]['mrrc']) * 1.05,2),
+                "entradas" => $data[$x]['new'] + $data[$x]['resurrected'] + $data[$x]['expansion'],
+                "saidas" => $data[$x]['contraction'] + $data{$x}['cancelled'],
                 "recdetails" => $recdetails[$x]
             ]);
 
@@ -337,6 +395,7 @@ class Statistic extends Model
         return $datachart;
 
     }
+    */
 
 
 
