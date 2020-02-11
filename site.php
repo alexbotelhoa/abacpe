@@ -16,26 +16,6 @@ $app->get("/", function() {
 
     $datachart = Statistic::indexDataChart(2019, 7);
 
-    //var_dump($datachart[6]['saas']); exit;
-
-    //var_dump($datachart); exit;
-
-/*
-    $datachart = Statistic::matrixPayments(2019, 7);
-
-    //var_dump($datachart); exit;
-
-
-    echo "<p>ID -> [7] | [6] | [5] | [4] | [3] | [2] | [1] | [0] <br>";
-    for ($x=0;$x<count($datachart);$x++) {
-        echo $x . " -> " . $datachart[$x][7] . " | " . $datachart[$x][6] . " | " . $datachart[$x][5] . " | " . $datachart[$x][4] . " | " . $datachart[$x][3] . " | " . $datachart[$x][2] . " | " . $datachart[$x][1] . " | " . $datachart[$x][0] . "<br>";
-    }
-
-    exit;
-*/
-
-
-
     $page = new Page();
 
     $page->setTpl("index", [
@@ -579,28 +559,7 @@ $app->get("/payments/:idpayment/delete", function($idpayment) {
 
 $app->get("/statistics", function() {
 
-
-    $month = ["Mar", "Abr", "Maio", "Jun", "Jul", "Ago"];
-    $bronzePlanoChart = [20, 35, 20, 35, 30, 20];
-    $prataPlanoChart = [35, 30, 15, 30, 20, 35];
-    $ouroPlanoChart = [15, 20, 30, 20, 15, 30];
-    $platinaPlanoChart = [20, 15, 35, 15, 35, 15];
-    $churnChart = [1.2, 1.5, 3.5, 2.4, 1.3, 0.8];
-
-    $datachart = [];
-
-    for ($x = 0; $x < 6; $x++) {
-
-        array_push($datachart, [
-            "month" => $month[$x],
-            "bronzePlanoChart" => $bronzePlanoChart[$x],
-            "prataPlanoChart" => $prataPlanoChart[$x],
-            "ouroPlanoChart" => $ouroPlanoChart[$x],
-            "platinaPlanoChart" => $platinaPlanoChart[$x],
-            "churnChart" => $churnChart[$x]
-        ]);
-
-    }
+    $datachart = Statistic::statisticsDataChart(2019, 7);
 
     //var_dump($datachart); exit;
 
