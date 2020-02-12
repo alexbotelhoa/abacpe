@@ -12,19 +12,25 @@ use ABA\Model\Statistic;
  * Páginas do Site - INICIO
  */
 
-$app->get("/", function() {
+$app->get("/", function () {
 
-    $datachart = Statistic::indexDataChart(2019, 7);
+    if (!isset($_SESSION['dtmatrix'])) $_SESSION['dtmatrix'] = (mktime() + 1000);
+
+    if ($_SESSION['dtmatrix'] < mktime()) {
+        $_SESSION['dtmatrix'] = (mktime() + 1000);
+        $_SESSION['datachart'] = Statistic::indexDataChart(2019, 7);
+    }
 
     $page = new Page();
 
     $page->setTpl("index", [
-        "datachart" => $datachart
+        "datachart" => $_SESSION['datachart'],
+        "alert" => 1
     ]);
 
 });
 
-$app->get("/order/:page/:sort", function($page, $sort) {
+$app->get("/order/:page/:sort", function ($page, $sort) {
 
     Order::getOrder($page, $sort);
 
@@ -34,7 +40,7 @@ $app->get("/order/:page/:sort", function($page, $sort) {
 
 });
 
-$app->get("/order/:page/:id/:subpage/:sort", function($page, $id, $subpage, $sort) {
+$app->get("/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $sort) {
 
     Order::getOrder($subpage, $sort);
 
@@ -45,12 +51,11 @@ $app->get("/order/:page/:id/:subpage/:sort", function($page, $id, $subpage, $sor
 });
 
 
-
 //////////////////////////////////////////////////////
- ///                     PLANOS                     ///
+///                     PLANOS                     ///
 //////////////////////////////////////////////////////
 
-$app->get("/plans", function() {
+$app->get("/plans", function () {
 
     (!isset($_SESSION['SortPlanByField'])) ? $sort_field = $_SESSION['SortPlanByField'] = "idplan" : $sort_field = $_SESSION['SortPlanByField'];
 
@@ -83,7 +88,7 @@ $app->get("/plans", function() {
 
 });
 
-$app->get("/plans/create", function() {
+$app->get("/plans/create", function () {
 
     $page = new Page();
 
@@ -93,7 +98,7 @@ $app->get("/plans/create", function() {
 
 });
 
-$app->post("/plans/create", function() {
+$app->post("/plans/create", function () {
 
     $plan = new Plan();
 
@@ -129,7 +134,7 @@ $app->post("/plans/create", function() {
 
 });
 
-$app->get("/plans/:idplan/update", function($idplan) {
+$app->get("/plans/:idplan/update", function ($idplan) {
 
     $plan = new Plan();
 
@@ -144,7 +149,7 @@ $app->get("/plans/:idplan/update", function($idplan) {
 
 });
 
-$app->post("/plans/:idplan/update", function($idplan) {
+$app->post("/plans/:idplan/update", function ($idplan) {
 
     $plan = new Plan();
 
@@ -183,7 +188,7 @@ $app->post("/plans/:idplan/update", function($idplan) {
 
 });
 
-$app->get("/plans/:idplan/delete", function($idplan) {
+$app->get("/plans/:idplan/delete", function ($idplan) {
 
     $checkplan = Plan::checkPlan($idplan);
 
@@ -212,12 +217,11 @@ $app->get("/plans/:idplan/delete", function($idplan) {
 });
 
 
-
-  //////////////////////////////////////////////////////
- ///                   PAGAMENTOS                   ///
+//////////////////////////////////////////////////////
+///                   PAGAMENTOS                   ///
 //////////////////////////////////////////////////////
 
-$app->get("/payments", function() {
+$app->get("/payments", function () {
 
     (!isset($_SESSION['SortPaymentByField'])) ? $sort_field = $_SESSION['SortPaymentByField'] = "idpayment" : $sort_field = $_SESSION['SortPaymentByField'];
 
@@ -234,33 +238,21 @@ $app->get("/payments", function() {
     $pages = [];
 
     if ($pagination['pages'] > 5) {
-
-            if ($page <= 3) {
-
-                $firstpages = 1;
-                $lastpages = 5;
-
+        if ($page <= 3) {
+            $firstpages = 1;
+            $lastpages = 5;
+        } else {
+            if ($page <= $pagination['pages'] - 2) {
+                $firstpages = $page - 2;
+                $lastpages = $page + 2;
             } else {
-
-                if ($page <= $pagination['pages'] - 2) {
-
-                    $firstpages = $page - 2;
-                    $lastpages = $page + 2;
-
-                } else {
-
-                    $firstpages = $pagination['pages'] - 4;
-                    $lastpages = $pagination['pages'];
-
-                }
-
+                $firstpages = $pagination['pages'] - 4;
+                $lastpages = $pagination['pages'];
             }
-
+        }
     } else {
-
         $firstpages = 1;
         $lastpages = $pagination['pages'];
-
     }
 
     for ($i = $firstpages; $i <= $lastpages; $i++) {
@@ -281,7 +273,7 @@ $app->get("/payments", function() {
 
 });
 
-$app->get("/payments/:idclient/detail", function($idclient) {
+$app->get("/payments/:idclient/detail", function ($idclient) {
 
     (!isset($_SESSION['SortPayDetailByField'])) ? $sort_field = $_SESSION['SortPayDetailByField'] = "idpayment" : $sort_field = $_SESSION['SortPayDetailByField'];
 
@@ -329,7 +321,7 @@ $app->get("/payments/:idclient/detail", function($idclient) {
 
     for ($i = $firstpages; $i <= $lastpages; $i++) {
         array_push($pages, [
-            'link' => '/payments/'. $idclient .'/detail?page=' . $i,
+            'link' => '/payments/' . $idclient . '/detail?page=' . $i,
             'page' => $i
         ]);
     }
@@ -347,7 +339,7 @@ $app->get("/payments/:idclient/detail", function($idclient) {
 
 });
 
-$app->get("/payments/create", function() {
+$app->get("/payments/create", function () {
 
     $page = new Page();
 
@@ -360,7 +352,7 @@ $app->get("/payments/create", function() {
 
 });
 
-$app->post("/payments/create", function() {
+$app->post("/payments/create", function () {
 
     $payment = new Payment();
 
@@ -416,7 +408,7 @@ $app->post("/payments/create", function() {
 
 });
 
-$app->get("/payments/:idclient/create", function($idclient) {
+$app->get("/payments/:idclient/create", function ($idclient) {
 
     $page = new Page();
 
@@ -429,7 +421,7 @@ $app->get("/payments/:idclient/create", function($idclient) {
 
 });
 
-$app->post("/payments/:idclient/create", function($idclient) {
+$app->post("/payments/:idclient/create", function ($idclient) {
 
     $payment = new Payment();
 
@@ -478,7 +470,7 @@ $app->post("/payments/:idclient/create", function($idclient) {
 
 });
 
-$app->get("/payments/:idpayment/update", function($idpayment) {
+$app->get("/payments/:idpayment/update", function ($idpayment) {
 
     $payment = new Payment();
 
@@ -495,7 +487,7 @@ $app->get("/payments/:idpayment/update", function($idpayment) {
 
 });
 
-$app->post("/payments/:idpayment/update", function($idpayment) {
+$app->post("/payments/:idpayment/update", function ($idpayment) {
 
     $payment = new Payment();
 
@@ -523,7 +515,7 @@ $app->post("/payments/:idpayment/update", function($idpayment) {
 
 });
 
-$app->get("/payments/:idpayment/delete", function($idpayment) {
+$app->get("/payments/:idpayment/delete", function ($idpayment) {
 
     $payment = new Payment();
 
@@ -552,12 +544,11 @@ $app->get("/payments/:idpayment/delete", function($idpayment) {
 });
 
 
-
-  //////////////////////////////////////////////////////
- ///                  ESTATISTICAS                  ///
+//////////////////////////////////////////////////////
+///                  ESTATISTICAS                  ///
 //////////////////////////////////////////////////////
 
-$app->get("/statistics", function() {
+$app->get("/statistics", function () {
 
     $datachart = Statistic::statisticsDataChart(2019, 7);
 
@@ -572,12 +563,11 @@ $app->get("/statistics", function() {
 });
 
 
-
-  //////////////////////////////////////////////////////
- ///                      SOBRE                     ///
+//////////////////////////////////////////////////////
+///                      SOBRE                     ///
 //////////////////////////////////////////////////////
 
-$app->get("/about", function() {
+$app->get("/about", function () {
 
     $page = new Page();
 

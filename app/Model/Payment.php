@@ -24,15 +24,15 @@ class Payment extends Model
 
         foreach ($list as &$row) {
 
-            $p = new Payment();
+            $payment = new Payment();
 
-            $p->setData($row);
+            $payment->setData($row);
 
-            $desclient = $_SESSION['BASECLIENTES'][$p->getidclient()]['nome'];
+            $desclient = $_SESSION['BASECLIENTES'][$payment->getidclient()]['nome'];
 
-            $p->setdesclient($desclient);
+            $payment->setdesclient($desclient);
 
-            $row = $p->getValues();
+            $row = $payment->getValues();
 
         }
 

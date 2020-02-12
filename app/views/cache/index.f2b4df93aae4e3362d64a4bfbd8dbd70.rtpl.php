@@ -409,7 +409,7 @@
                 tkmChartOptions.barStrokeWidth = 2;
                 tkmChartOptions.barValueSpacing = 5;
                 tkmChartOptions.barDatasetSpacing = 10;
-                tkmChartOptions.tooltipTemplate = "<%if (label){%><%=label%>: <%}%> R$<%= value %>";
+                tkmChartOptions.tooltipTemplate = "<%if (label){%><%=label%>: <%}%> R$ <%= value %>";
                 tkmChart.Line(tkmChartData, tkmChartOptions);
 
 

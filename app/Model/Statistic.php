@@ -81,7 +81,6 @@ class Statistic extends Model
                     $matrix[$id][1]['dtpayment'] = $dtpayment;
                     $matrix[$id][1]['vlpayment'] = $vlpayment;
 
-
                     if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
                         $matrix[$id][0]['dtpayment'] = $dtpayment;
                         $matrix[$id][0]['vlpayment'] = $vlpayment;
@@ -271,7 +270,6 @@ class Statistic extends Model
             }
         }
 
-
         // CRIANDO A MATRIZ VAZIA DAS ESTATÍSTICAS SAAS
         for ($d = 0; $d < 6; $d++) {
             $mrr[$d] = 0;
@@ -325,10 +323,10 @@ class Statistic extends Model
 
 
         // DEVOLVENDO AS MÉTRICAS PARAMETRIZADA
-        $data = [];
+        $datachart = [];
 
         for ($x = 0; $x < 6; $x++) {
-            array_push($data, [
+            array_push($datachart, [
                 "month" => date('M/y', strtotime("-$x month", strtotime($dataYearMonth))),
                 "mrr" => $mrr[$x],
                 "mrrc" => $mrrc[$x],
@@ -341,7 +339,7 @@ class Statistic extends Model
             ]);
         }
 
-        return $data;
+        return $datachart;
 
     }
 
@@ -349,7 +347,7 @@ class Statistic extends Model
     {
 
         // CHAMANDO A MATRIZ DE PAGAMENTOS
-        $matrix = Statistic::matrixPayments($year, $month);
+        $matrix = Statistic::matrixPayments(2019,07);
 
 
         // MONTANDO OS VALORES E PERCENTUAIS DAS MÉTRICAS SAAS
@@ -400,7 +398,7 @@ class Statistic extends Model
         $saleplan = Statistic::salePlan($year, $month);
 
 
-        // TOPO
+        // NICHO DE MERCADO (CONTINUA...)
         // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
         $saasnew = round(($matrix[0]['new'] * 100) / $matrix[0]['mrr'], 1);
         $saasexpansion = round(($matrix[0]['expansion'] * 100) / $matrix[0]['mrr'], 1);
@@ -410,6 +408,10 @@ class Statistic extends Model
         $saascancelled = round(($matrix[0]['cancelled'] * 100) / ($matrix[0]['contraction'] + $matrix{0}['cancelled']), 1);
         $saaschurnN = round(($matrix[0]['mrrc'] - $matrix[1]['mrrc']) * 100 / $matrix[1]['mrrc'], 2);
         $saaschurnA = round(($matrix[1]['mrrc'] - $matrix[2]['mrrc']) * 100 / $matrix[2]['mrrc'], 2);
+
+
+        // TOPO
+        // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
         $perblock[0] = ($matrix[1]['mrr'] != 0) ? round(($matrix[0]['mrr'] - $matrix[1]['mrr']) * 100 / $matrix[1]['mrr'], 2) : 0;
         $perblock[1] = ($matrix[1]['new'] != 0) ? round(($matrix[0]['new'] - $matrix[1]['new']) * 100 / $matrix[1]['new'], 2) : 0;
         $perblock[2] = ($matrix[1]['resurrected'] != 0) ? round(($matrix[0]['resurrected'] - $matrix[1]['resurrected']) * 100 / $matrix[1]['resurrected'], 2) : 0;
@@ -461,8 +463,24 @@ class Statistic extends Model
         }
 
 
+        // NICHO DE MERCADO (...CONTINUAÇÃO)
+        // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // NICHO DE MERCADO
-        // --> PREPARANDO, MONTANDO E ARMAZENANDO OS DADOS À SEREM ENVIADOS <--
+        // --> ARMAZENANDO OS DADOS À SEREM ENVIADOS <--
         array_push($datachart, [
             "saas" => [$saasrecurrent, $saasnew, $saasresurrected, $saasexpansion, $saascontraction, $saascancelled]
         ]);
