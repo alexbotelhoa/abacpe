@@ -48,7 +48,6 @@
                 </div>
 
 
-
                 <!-- MÉTRICAS SAAS POR REFERÊNCIA DO MÊS -->
 
                 <div class="row">
@@ -117,7 +116,6 @@
                 </div>
 
 
-
                 <!-- MÉTRICAS SAAS DOS TOP 5 DOS CLIENTES POR PLANOS -->
 
                 <div class="row">
@@ -165,7 +163,6 @@
                         </div>
                     </div>
                 </div>
-
 
 
                 <!-- INDICADORES PERCENTUAIS DOS TOP 3 DE CLIENTES E REGIÕES -->
@@ -496,7 +493,6 @@
 
                     </div>
                 </div>
-
 
 
             </div>

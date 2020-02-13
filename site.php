@@ -17,9 +17,9 @@ use ABA\Model\Client;
 
 $app->get("/", function () {
 
-    if (!isset($_SESSION['dtmatrix']) || $_SESSION['dtmatrix'] < mktime()) {
+    if (!isset($_SESSION['twIndex']) || $_SESSION['twIndex'] < mktime()) {
 
-        $_SESSION['dtmatrix'] = (mktime() + $_SESSION['tempo_update']);
+        $_SESSION['twIndex'] = (mktime() + $_SESSION['tw_statistics_chart']);
         $_SESSION['datachart'] = Statistic::indexDataChart(2019, 7);
         $alert = 0;
 
@@ -560,9 +560,9 @@ $app->get("/payments/:idpayment/delete", function ($idpayment) {
 
 $app->get("/statistics", function () {
 
-    if (!isset($_SESSION['dtmatrix']) || $_SESSION['dtmatrix'] < mktime()) {
+    if (!isset($_SESSION['twStatistic']) || $_SESSION['twStatistic'] < mktime()) {
 
-        $_SESSION['dtmatrix'] = (mktime() + $_SESSION['tempo_update']);
+        $_SESSION['twStatistic'] = (mktime() + $_SESSION['tw_statistics_chart']);
         $_SESSION['datachart'] = Statistic::statisticsDataChart(2019, 7);
         $alert = 0;
 
