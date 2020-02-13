@@ -48,7 +48,6 @@
                 </div>
 
 
-
                 <!-- MÉTRICAS SAAS POR REFERÊNCIA DO MÊS -->
 
                 <div class="row">
@@ -117,7 +116,6 @@
                 </div>
 
 
-
                 <!-- MÉTRICAS SAAS DOS TOP 5 DOS CLIENTES POR PLANOS -->
 
                 <div class="row">
@@ -165,7 +163,6 @@
                         </div>
                     </div>
                 </div>
-
 
 
                 <!-- INDICADORES PERCENTUAIS DOS TOP 3 DE CLIENTES E REGIÕES -->
@@ -498,7 +495,6 @@
                 </div>
 
 
-
             </div>
         </div>
     </section>
@@ -716,3 +712,19 @@
 
             });
         </script>
+
+        {if="$alert != 0"}
+        <script type="text/javascript">
+            $().ready(function() {
+
+                setTimeout(function () {
+                    $('#mensagem').show(); // "foo" é o id do elemento que seja manipular.
+                }, 0); // O valor é representado em milisegundos.
+
+                setTimeout(function () {
+                    $('#mensagem').hide(); // "foo" é o id do elemento que seja manipular.
+                }, 3000); // O valor é representado em milisegundos.
+            });
+
+        </script>
+        {/if}

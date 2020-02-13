@@ -6,6 +6,9 @@ use ABA\Model\Order;
 use ABA\Model\Plan;
 use ABA\Model\Payment;
 use ABA\Model\Statistic;
+use ABA\Model\Client;
+
+//$_SESSION = array();
 
 /*
  * ##########################################################################################
@@ -14,18 +17,23 @@ use ABA\Model\Statistic;
 
 $app->get("/", function () {
 
-    if (!isset($_SESSION['dtmatrix'])) $_SESSION['dtmatrix'] = (mktime() + 1000);
+    if (!isset($_SESSION['dtmatrix']) || $_SESSION['dtmatrix'] < mktime()) {
 
-    if ($_SESSION['dtmatrix'] < mktime()) {
-        $_SESSION['dtmatrix'] = (mktime() + 1000);
+        $_SESSION['dtmatrix'] = (mktime() + $_SESSION['tempo_update']);
         $_SESSION['datachart'] = Statistic::indexDataChart(2019, 7);
+        $alert = 0;
+
+    } else {
+
+        $alert = 1;
+
     }
 
     $page = new Page();
 
     $page->setTpl("index", [
         "datachart" => $_SESSION['datachart'],
-        "alert" => 1
+        "alert" => $alert
     ]);
 
 });
@@ -125,6 +133,8 @@ $app->post("/plans/create", function () {
     }
 
     $plan->save();
+
+    Client::updateClient();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -550,14 +560,23 @@ $app->get("/payments/:idpayment/delete", function ($idpayment) {
 
 $app->get("/statistics", function () {
 
-    $datachart = Statistic::statisticsDataChart(2019, 7);
+    if (!isset($_SESSION['dtmatrix']) || $_SESSION['dtmatrix'] < mktime()) {
 
-    //var_dump($datachart); exit;
+        $_SESSION['dtmatrix'] = (mktime() + $_SESSION['tempo_update']);
+        $_SESSION['datachart'] = Statistic::statisticsDataChart(2019, 7);
+        $alert = 0;
+
+    } else {
+
+        $alert = 1;
+
+    }
 
     $page = new Page();
 
     $page->setTpl("statistics", [
-        "datachart" => $datachart
+        "datachart" => $_SESSION['datachart'],
+        "alert" => $alert
     ]);
 
 });

@@ -22,6 +22,8 @@ class Payment extends Model
     public static function listPaymentPage($list)
     {
 
+        //$client = Client::listClient();
+
         foreach ($list as &$row) {
 
             $payment = new Payment();

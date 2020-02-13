@@ -33,26 +33,6 @@
 </head>
 <body>
 	<header class="section page-header">
-		<div class="rd-navbar-wrap">
-			<nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="170px" data-xl-stick-up-offset="170px" data-xxl-stick-up-offset="170px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
-				<div class="rd-navbar-aside-outer">
-					<div class="rd-navbar-aside">
-						<!--RD Navbar Panel-->
-						<div class="rd-navbar-panel">
-							<div class="rd-navbar-brand">
-
-
-								sdfsadfsdf
-
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</nav>
-		</div>
-	</header>
-	<header class="section page-header">
 		<!--RD Navbar-->
 		<div class="rd-navbar-wrap">
 			<nav class="rd-navbar rd-navbar-classic" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xl-device-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="170px" data-xl-stick-up-offset="170px" data-xxl-stick-up-offset="170px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
@@ -66,9 +46,9 @@
 							<div class="rd-navbar-brand">
 								<!--Brand--><a class="brand" href="/"><img class="brand-logo-dark" src="/res/site/img/logo.png" alt="" width="336" height="51"/></a>
 							</div>
-							<div class="aligncenter text-red">
+							<div class="alignright text-red">
 								<div id="mensagem" title="Título da mensagem" style="display:none;">
-									<h4>Tempo menor que 60 segundos!</h4>
+									<h4>Aguarde 60 segundos!</h4>
 								</div>
 							</div>
 						</div>

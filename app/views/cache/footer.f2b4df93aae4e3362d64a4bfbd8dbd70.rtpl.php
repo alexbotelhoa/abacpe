@@ -69,24 +69,5 @@
         <script src="/res/site/js/script.js"></script>
         <script src="/res/site/js/app.min.js"></script>
 
-<?php if( $alert != 0 ){ ?>
-<script type="text/javascript">
-    $().ready(function() {
-
-        setTimeout(function () {
-            $('#mensagem').show(); // "foo" é o id do elemento que seja manipular.
-        }, 0); // O valor é representado em milisegundos.
-
-        setTimeout(function () {
-            $('#mensagem').hide(); // "foo" é o id do elemento que seja manipular.
-        }, 3000); // O valor é representado em milisegundos.
-    });
-
-</script>
-<?php } ?>
-
-
-
-
     </body>
 </html>
