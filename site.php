@@ -360,10 +360,12 @@ $app->get("/payments/:idclient/detail", function ($idclient) {
 
 $app->get("/payments/create", function () {
 
+    $clients = Client::listClient();
+
     $page = new Page();
 
     $page->setTpl("payments-create", [
-        "clients" => $_SESSION['BASECLIENTES'],
+        "clients" => $clients,
         "error" => Message::getError(),
         "idclient" => "",
         "plans" => Plan::selectPlan()
@@ -429,10 +431,12 @@ $app->post("/payments/create", function () {
 
 $app->get("/payments/:idclient/create", function ($idclient) {
 
+    $clients = Client::listClient();
+
     $page = new Page();
 
     $page->setTpl("payments-create", [
-        "clients" => $_SESSION['BASECLIENTES'],
+        "clients" => $clients,
         "error" => Message::getError(),
         "idclient" => $idclient,
         "plans" => Plan::selectPlan()
@@ -495,11 +499,13 @@ $app->get("/payments/:idpayment/update", function ($idpayment) {
 
     $payment->get((int)$idpayment);
 
+    $clients = Client::listClient();
+
     $page = new Page();
 
     $page->setTpl("payments-update", [
         "payment" => $payment->getValues(),
-        "clients" => $_SESSION['BASECLIENTES'],
+        "clients" => $clients,
         "plans" => Plan::selectPlan(),
         "error" => Message::getError()
     ]);
