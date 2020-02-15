@@ -3,7 +3,6 @@
     <section class="content">
         <div class="row">
 
-            <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
@@ -17,13 +16,11 @@
                 <h2>Editar Pagamento</h2>
             </section>
 
-            <!-- Main content -->
             <section class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-primary">
 
-                            <!-- form start -->
                             <form role="form" action="/payments/{$payment.idpayment}/update" method="post" enctype="multipart/form-data">
                                 <div class="box-body">
                                     <div class="form-group">
@@ -67,7 +64,7 @@
                                         <label for="vlpayment">Valor do Pagamento</label>
                                         <input type="text" class="form-control" id="vlpayment" readonly name="vlpayment" step="0.01" placeholder="0.00" value="R$ {function="formatPrice($payment.vlpayment)"}">
                                     </div>
-                                </div> <!-- /.box-body -->
+                                </div>
 
                                 <div class="box-footer">
                                     <div class="col-md-8 col-xs-6">
@@ -86,8 +83,8 @@
                         </div>
                     </div>
                 </div>
-            </section> <!-- /.content -->
+            </section>
 
-        </div> <!-- /.row -->
-    </section> <!-- /.content -->
+        </div>
+    </section>
 </div>

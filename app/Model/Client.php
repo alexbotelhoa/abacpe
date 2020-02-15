@@ -19,8 +19,6 @@ class Client extends Model
         fwrite($fp, $json_file);
         
         fclose($fp);
-
-        Client::listClient();
     
     }
 
@@ -31,28 +29,7 @@ class Client extends Model
 
         $content = json_decode($json_file, true);
 
-        $_SESSION['BASECLIENTES'] = $content;
-
-    }
-
-    public static function listClientDetails($list)
-    {
-
-        foreach ($list as &$row) {
-
-            $client = new Client();
-
-            $client->setData($row);
-
-            $desclient = $_SESSION['BASECLIENTES'][$client->getidclient()]['nome'];
-
-            $client->setdesclient($desclient);
-
-            $row = $client->getValues();
-
-        }
-
-        return $list;
+        return $content;
 
     }
 

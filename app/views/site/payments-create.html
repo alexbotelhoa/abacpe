@@ -3,7 +3,6 @@
     <section class="content">
         <div class="row">
 
-            <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
@@ -21,13 +20,11 @@
                 <h2>Cadastrar Pagamento</h2>
             </section>
 
-            <!-- Main content -->
             <section class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-success">
 
-                            <!-- form start -->
                             <form role="form" action="/payments/{if="$idclient != ''"}{$idclient}/{/if}create" method="post">
                                 <div class="box-body">
                                     <div class="form-group">
@@ -73,7 +70,7 @@
                                         <label for="dtpayment">Data do Pagamento</label>
                                         <input type="date" class="form-control" id="dtpayment" name="dtpayment" step="0.01" placeholder="dd/mm/yyyy">
                                     </div>
-                                </div> <!-- /.box-body -->
+                                </div>
 
                                 <div class="box-footer">
                                     <div class="col-md-8 col-xs-6">
@@ -92,8 +89,8 @@
                         </div>
                     </div>
                 </div>
-            </section> <!-- /.content -->
+            </section>
 
-        </div> <!-- /.row -->
-    </section> <!-- /.content -->
+        </div>
+    </section>
 </div>

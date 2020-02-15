@@ -3,6 +3,7 @@
 use ABA\Model\Client;
 
 $file_client = "clients.json"; // Arquivos com a lista dos clientes
+$_SESSION['DIRECTORY_STATISTICS'] = "app" . DIRECTORY_SEPARATOR . "statistics" . DIRECTORY_SEPARATOR . "";
 $_SESSION['tw_file_client'] = 600; // Segundos
 $_SESSION['tw_statistics_chart'] = 60; // Segundos
 

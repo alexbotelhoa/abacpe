@@ -22,15 +22,15 @@ class Payment extends Model
     public static function listPaymentPage($list)
     {
 
-        //$client = Client::listClient();
-
         foreach ($list as &$row) {
 
             $payment = new Payment();
 
             $payment->setData($row);
 
-            $desclient = $_SESSION['BASECLIENTES'][$payment->getidclient()]['nome'];
+            $client = Client::listClient();
+
+            $desclient = $client[$payment->getidclient()]['nome'];
 
             $payment->setdesclient($desclient);
 

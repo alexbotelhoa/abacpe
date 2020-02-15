@@ -8,19 +8,21 @@ use ABA\Model\Payment;
 use ABA\Model\Statistic;
 use ABA\Model\Client;
 
-//$_SESSION = array();
-
 /*
  * ##########################################################################################
  * Páginas do Site - INICIO
  */
 
-$app->get("/", function () {
+$app->get("/", function ($year = 2019, $month = 07) {
 
     if (!isset($_SESSION['twIndex']) || $_SESSION['twIndex'] < mktime()) {
 
+        // ATUALIZAR O TIME DE ATUALIZAÇÃO
         $_SESSION['twIndex'] = (mktime() + $_SESSION['tw_statistics_chart']);
-        $_SESSION['datachart'] = Statistic::indexDataChart(2019, 7);
+
+        // FAZ A ATUALIZAÇÃO DO INDEX
+        Statistic::indexDataChart($year, $month);
+
         $alert = 0;
 
     } else {
@@ -29,10 +31,17 @@ $app->get("/", function () {
 
     }
 
+    // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
+    if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "index-$year-$month.json")) {Statistic::indexDataChart($year, $month);}
+
+    // CARREGA O ARQUVIO COM OS DADOS ESTATÍSTICOS
+    $json_file = file_get_contents($_SESSION['DIRECTORY_STATISTICS'] . "index-$year-$month.json");
+    $datachart = json_decode($json_file, true);
+
     $page = new Page();
 
     $page->setTpl("index", [
-        "datachart" => $_SESSION['datachart'],
+        "datachart" => $datachart,
         "alert" => $alert
     ]);
 
@@ -558,12 +567,16 @@ $app->get("/payments/:idpayment/delete", function ($idpayment) {
 ///                  ESTATISTICAS                  ///
 //////////////////////////////////////////////////////
 
-$app->get("/statistics", function () {
+$app->get("/statistics", function ($year = 2019, $month = 07) {
 
     if (!isset($_SESSION['twStatistic']) || $_SESSION['twStatistic'] < mktime()) {
 
+        // ATUALIZAR O TIME DE ATUALIZAÇÃO
         $_SESSION['twStatistic'] = (mktime() + $_SESSION['tw_statistics_chart']);
-        $_SESSION['datachart'] = Statistic::statisticsDataChart(2019, 7);
+
+        // FAZ A ATUALIZAÇÃO DO INDEX
+        Statistic::statisticsDataChart($year, $month);
+
         $alert = 0;
 
     } else {
@@ -572,10 +585,17 @@ $app->get("/statistics", function () {
 
     }
 
+    // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
+    if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "statistics-$year-$month.json")) {Statistic::statisticsDataChart($year, $month);}
+
+    // CARREGA O ARQUVIO COM OS DADOS ESTATÍSTICOS
+    $json_file = file_get_contents($_SESSION['DIRECTORY_STATISTICS'] . "statistics-$year-$month.json");
+    $datachart = json_decode($json_file, true);
+
     $page = new Page();
 
     $page->setTpl("statistics", [
-        "datachart" => $_SESSION['datachart'],
+        "datachart" => $datachart,
         "alert" => $alert
     ]);
 

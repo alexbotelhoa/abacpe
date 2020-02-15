@@ -8,6 +8,19 @@ use ABA\DB\Sql;
 class Statistic extends Model
 {
 
+    public static function registerStatistics($year, $month, $page, $content)
+    {
+
+        $file = json_encode($content);
+
+        $fp = fopen($_SESSION['DIRECTORY_STATISTICS'] . "$page-$year-$month.json", "w+");
+
+        fwrite($fp, $file);
+
+        fclose($fp);
+
+    }
+
     public static function firstPayment()
     {
 
@@ -29,33 +42,69 @@ class Statistic extends Model
 
     }
 
+    public static function nichoStatistics($metric)
+    {
+
+        $nicho = array_count_values($metric);
+
+        arsort($nicho);
+
+        $x = 0; $tv = 0;
+        foreach ($nicho as $k => &$v) {
+            if ($x < 5) {
+                $nichorec[$x][0] = $k;
+                $nichorec[$x][1] = round(($v * 100) / count($metric), 2);
+                $tv += $v;
+            } $x++;
+        }
+
+        array_push($nichorec, [
+            0 => "Outros",
+            1 => round(((count($metric) - $tv) * 100) / count($metric),2)
+        ]);
+
+        return $nichorec;
+
+    }
+
     public static function matrixPayments($year, $month)
     {
 
         // MONTANDO A DATA DA PESQUISA
         $dataYearMonth = "$year-$month-01";
 
-        $sql = new Sql();
+        // BUSCANDO AS INFORMAÇÕES DOS CLIENTES
+        $clients = Client::listClient();
 
-        $payment = $sql->select("SELECT * FROM tb_payments WHERE dtpayment 
-            BETWEEN ADDDATE('" . $year . "-" . $month . "-01', INTERVAL -11 MONTH) AND '" . $year . "-" . $month . "-31' ORDER BY dtpayment DESC");
+        // BUSCANDO OS PRIMEIROS PAGAMENTOS DOS CLIENTES
+        $firstpay = Statistic::firstPayment();
 
-        // ARMAZENANDO OS CLIENTES  E SEUS PRIMEIROS PAGAMENTOS
-        $clients = Statistic::firstPayment();
-
-
-        // CRIANDO UMA MATRIZ VAZIA DE PAGAMENTOS DOS CLIENTES
+        // CRIANDO UMA MATRIZ COM AS INFORMAÇÕES DOS CLIENTES E COM OS PAGAMENTOS ZERADOS
         for ($c = 0; $c < count($clients); $c++) {
 
             for ($d = 0; $d < 7; $d++) {
 
-                $matrix[$clients[$c]['idclient']][$d]['dtpayment'] = 0;
-                $matrix[$clients[$c]['idclient']][$d]['vlpayment'] = 0;
+                $matrix[$clients[$c]['id']][$d]['dtpayment'] = 0;
+                $matrix[$clients[$c]['id']][$d]['vlpayment'] = 0;
 
             }
 
+            $matrix[$clients[$c]['id']][7]['idclient'] = $clients[$c]['id'];
+            $matrix[$clients[$c]['id']][7]['desclient'] = $clients[$c]['nome'];
+            $matrix[$clients[$c]['id']][7]['descity'] = $clients[$c]['cidade'];
+            $matrix[$clients[$c]['id']][7]['desstate'] = $clients[$c]['estado'];
+            $matrix[$clients[$c]['id']][7]['dessegment'] = $clients[$c]['segmento'];
+            $matrix[$clients[$c]['id']][7]['firstpayment'] = $firstpay[$c]['dtpayment'];
+
         }
 
+        // BUSCANDO OS PAGAMETNOS DOS CLIENTES
+        $sql = new Sql();
+
+        $payment = $sql->select("
+            SELECT * FROM tb_payments WHERE dtpayment 
+            BETWEEN ADDDATE('" . $year . "-" . $month . "-01', INTERVAL -11 MONTH) AND '" . $year . "-" . $month . "-31' 
+            ORDER BY dtpayment DESC");
 
         // POPULACIONANDO A MATRIZ DE PAGAMENTOS DOS CLIENTES
         for ($p = 0; $p < count($payment); $p++) {
@@ -94,10 +143,10 @@ class Statistic extends Model
                         $matrix[$id][2]['vlpayment'] = $vlpayment;
 
                         if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
-                            $matrix[$id][1]['dtpayment'] = $dtpayment;
-                            $matrix[$id][1]['vlpayment'] = $vlpayment;
                             $matrix[$id][0]['dtpayment'] = $dtpayment;
                             $matrix[$id][0]['vlpayment'] = $vlpayment;
+                            $matrix[$id][1]['dtpayment'] = $dtpayment;
+                            $matrix[$id][1]['vlpayment'] = $vlpayment;
                         }
 
                     } else {
@@ -108,10 +157,10 @@ class Statistic extends Model
                             $matrix[$id][3]['vlpayment'] = $vlpayment;
 
                             if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
-                                $matrix[$id][2]['dtpayment'] = $dtpayment;
-                                $matrix[$id][2]['vlpayment'] = $vlpayment;
                                 $matrix[$id][1]['dtpayment'] = $dtpayment;
                                 $matrix[$id][1]['vlpayment'] = $vlpayment;
+                                $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                $matrix[$id][2]['vlpayment'] = $vlpayment;
                             }
 
                             if (in_array($payment[$p]['vlrecurrence'], array(6))) {
@@ -127,17 +176,17 @@ class Statistic extends Model
                                 $matrix[$id][4]['vlpayment'] = $vlpayment;
 
                                 if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
-                                    $matrix[$id][3]['dtpayment'] = $dtpayment;
-                                    $matrix[$id][3]['vlpayment'] = $vlpayment;
                                     $matrix[$id][2]['dtpayment'] = $dtpayment;
                                     $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                    $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][3]['vlpayment'] = $vlpayment;
                                 }
 
                                 if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                    $matrix[$id][1]['dtpayment'] = $dtpayment;
-                                    $matrix[$id][1]['vlpayment'] = $vlpayment;
                                     $matrix[$id][0]['dtpayment'] = $dtpayment;
                                     $matrix[$id][0]['vlpayment'] = $vlpayment;
+                                    $matrix[$id][1]['dtpayment'] = $dtpayment;
+                                    $matrix[$id][1]['vlpayment'] = $vlpayment;
                                 }
 
                             } else {
@@ -148,19 +197,19 @@ class Statistic extends Model
                                     $matrix[$id][5]['vlpayment'] = $vlpayment;
 
                                     if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
-                                        $matrix[$id][4]['dtpayment'] = $dtpayment;
-                                        $matrix[$id][4]['vlpayment'] = $vlpayment;
                                         $matrix[$id][3]['dtpayment'] = $dtpayment;
                                         $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                        $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][4]['vlpayment'] = $vlpayment;
                                     }
 
                                     if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                        $matrix[$id][2]['dtpayment'] = $dtpayment;
-                                        $matrix[$id][2]['vlpayment'] = $vlpayment;
-                                        $matrix[$id][1]['dtpayment'] = $dtpayment;
-                                        $matrix[$id][1]['vlpayment'] = $vlpayment;
                                         $matrix[$id][0]['dtpayment'] = $dtpayment;
                                         $matrix[$id][0]['vlpayment'] = $vlpayment;
+                                        $matrix[$id][1]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][1]['vlpayment'] = $vlpayment;
+                                        $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                        $matrix[$id][2]['vlpayment'] = $vlpayment;
                                     }
 
                                 } else {
@@ -171,19 +220,19 @@ class Statistic extends Model
                                         $matrix[$id][6]['vlpayment'] = $vlpayment;
 
                                         if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
-                                            $matrix[$id][5]['dtpayment'] = $dtpayment;
-                                            $matrix[$id][5]['vlpayment'] = $vlpayment;
                                             $matrix[$id][4]['dtpayment'] = $dtpayment;
                                             $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                            $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][5]['vlpayment'] = $vlpayment;
                                         }
 
                                         if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                            $matrix[$id][3]['dtpayment'] = $dtpayment;
-                                            $matrix[$id][3]['vlpayment'] = $vlpayment;
-                                            $matrix[$id][2]['dtpayment'] = $dtpayment;
-                                            $matrix[$id][2]['vlpayment'] = $vlpayment;
                                             $matrix[$id][1]['dtpayment'] = $dtpayment;
                                             $matrix[$id][1]['vlpayment'] = $vlpayment;
+                                            $matrix[$id][2]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                            $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                            $matrix[$id][3]['vlpayment'] = $vlpayment;
                                         }
 
                                     } else {
@@ -191,19 +240,19 @@ class Statistic extends Model
                                         if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-7 month", strtotime($dataYearMonth)))) { // 7 meses atrás
 
                                             if (in_array($payment[$p]['vlrecurrence'], array(3, 6))) {
-                                                $matrix[$id][6]['dtpayment'] = $dtpayment;
-                                                $matrix[$id][6]['vlpayment'] = $vlpayment;
                                                 $matrix[$id][5]['dtpayment'] = $dtpayment;
                                                 $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                                $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][6]['vlpayment'] = $vlpayment;
                                             }
 
                                             if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                                $matrix[$id][4]['dtpayment'] = $dtpayment;
-                                                $matrix[$id][4]['vlpayment'] = $vlpayment;
-                                                $matrix[$id][3]['dtpayment'] = $dtpayment;
-                                                $matrix[$id][3]['vlpayment'] = $vlpayment;
                                                 $matrix[$id][2]['dtpayment'] = $dtpayment;
                                                 $matrix[$id][2]['vlpayment'] = $vlpayment;
+                                                $matrix[$id][3]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                                $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                                $matrix[$id][4]['vlpayment'] = $vlpayment;
                                             }
 
                                         } else {
@@ -216,12 +265,12 @@ class Statistic extends Model
                                                 }
 
                                                 if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                                    $matrix[$id][5]['dtpayment'] = $dtpayment;
-                                                    $matrix[$id][5]['vlpayment'] = $vlpayment;
-                                                    $matrix[$id][4]['dtpayment'] = $dtpayment;
-                                                    $matrix[$id][4]['vlpayment'] = $vlpayment;
                                                     $matrix[$id][3]['dtpayment'] = $dtpayment;
                                                     $matrix[$id][3]['vlpayment'] = $vlpayment;
+                                                    $matrix[$id][4]['dtpayment'] = $dtpayment;
+                                                    $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                                    $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                                    $matrix[$id][5]['vlpayment'] = $vlpayment;
                                                 }
 
                                             } else {
@@ -229,12 +278,12 @@ class Statistic extends Model
                                                 if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-9 month", strtotime($dataYearMonth)))) { // 9 meses atrás
 
                                                     if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                                        $matrix[$id][6]['dtpayment'] = $dtpayment;
-                                                        $matrix[$id][6]['vlpayment'] = $vlpayment;
-                                                        $matrix[$id][5]['dtpayment'] = $dtpayment;
-                                                        $matrix[$id][5]['vlpayment'] = $vlpayment;
                                                         $matrix[$id][4]['dtpayment'] = $dtpayment;
                                                         $matrix[$id][4]['vlpayment'] = $vlpayment;
+                                                        $matrix[$id][5]['dtpayment'] = $dtpayment;
+                                                        $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                                        $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                        $matrix[$id][6]['vlpayment'] = $vlpayment;
                                                     }
 
                                                 } else {
@@ -242,10 +291,10 @@ class Statistic extends Model
                                                     if (date('Y-m', strtotime($payment[$p]['dtpayment'])) == date('Y-m', strtotime("-10 month", strtotime($dataYearMonth)))) { // 10 meses atrás
 
                                                         if (in_array($payment[$p]['vlrecurrence'], array(6))) {
-                                                            $matrix[$id][6]['dtpayment'] = $dtpayment;
-                                                            $matrix[$id][6]['vlpayment'] = $vlpayment;
                                                             $matrix[$id][5]['dtpayment'] = $dtpayment;
                                                             $matrix[$id][5]['vlpayment'] = $vlpayment;
+                                                            $matrix[$id][6]['dtpayment'] = $dtpayment;
+                                                            $matrix[$id][6]['vlpayment'] = $vlpayment;
                                                         }
 
                                                     } else {
@@ -270,10 +319,31 @@ class Statistic extends Model
             }
         }
 
+        Statistic::registerStatistics($year, $month, "matrix", $matrix);
+
+    }
+
+    public static function metricasSaas($year, $month)
+    {
+
+        // MONTANDO A DATA DA PESQUISA
+        $dataYearMonth = "$year-$month-01";
+
+        // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
+        if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "matrix-$year-$month.json")) {Statistic::matrixPayments($year, $month);}
+
+        // CHAMA O ARQUIVO COM A MATRIX DO INTERVALO CRIADA
+        $json_file = file_get_contents($_SESSION['DIRECTORY_STATISTICS'] . "matrix-$year-$month.json");
+        $matrix = json_decode($json_file, true);
+
+        // ARMAZENANDO OS CLIENTES E SEUS PRIMEIROS PAGAMENTOS
+        $clients = Statistic::firstPayment();
+
         // CRIANDO A MATRIZ VAZIA DAS ESTATÍSTICAS SAAS
         for ($d = 0; $d < 6; $d++) {
             $mrr[$d] = 0;
             $mrrc[$d] = 0;
+            $recurrent[$d] = 0;
             $new[$d] = 0;
             $resurrected[$d] = 0;
             $expansion[$d] = 0;
@@ -281,7 +351,6 @@ class Statistic extends Model
             $cancelled[$d] = 0;
             $cancelledc[$d] = 0;
         }
-
 
         // CALCULANDO AS MÉTRICAS SAAS
         for ($c = 0; $c < count($matrix); $c++) {
@@ -303,26 +372,75 @@ class Statistic extends Model
                 // VALOR DO PAGAMENTO ANTERIOR
                 $agopayment = $matrix[$id][$d + 1]['vlpayment'];
 
-                // RECEITAS VARIÁVEIS DE ENTRADAS
-                if ($vlpayment != 0) {$mrr[$d] += $vlpayment; $mrrc[$d]++;}
+                // VALOR DO SEGMENTO;
+                $desstate = $matrix[$id][7]['desstate'];
 
-                if ($vlpayment != 0 && $dtpayment == $firstpayment) $new[$d] += $vlpayment;
+                // VALOR DO SEGMENTO;
+                $dessegment = $matrix[$id][7]['dessegment'];
 
-                if ($vlpayment != 0 && $agopayment == 0 && $dtpayment > $firstpayment) $resurrected[$d] += $vlpayment;
+                // RECEITAS GERAL
+                if ($vlpayment != 0) {
+                    $mrr[$d] += $vlpayment;
+                    $mrrc[$d]++;
+                }
 
-                if ($vlpayment != 0 && $agopayment != 0 && $vlpayment > $agopayment) $expansion[$d] += ($vlpayment - $agopayment);
+                // RECEITA RECORRENTE DE ENTRADA
+                if ($vlpayment != 0 && $agopayment != 0 && $vlpayment == $agopayment) {
+                    $recurrent[$d] += $vlpayment;
+                    if ($d == 0) {
+                        $nichostt[0][$id] = $desstate;
+                        $nichoseg[0][$id] = $dessegment;
+                    }
+                }
 
-                // RECEITAS VARIÁVEIS DE SAÍDAS
-                if ($vlpayment != 0 && $agopayment != 0 && $vlpayment < $agopayment) $contraction[$d] += ($agopayment - $vlpayment);
+                // RECEITAS VARIÁVEIS DE ENTRADA
+                if ($vlpayment != 0 && $dtpayment == $firstpayment) {
+                    $new[$d] += $vlpayment;
+                    if ($d == 0) {
+                        $nichostt[1][$id] = $desstate;
+                        $nichoseg[1][$id] = $dessegment;
+                    }
+                }
 
-                if ($vlpayment == 0 && $agopayment != 0) {$cancelled[$d] += $agopayment; $cancelledc[$d]++;}
+                if ($vlpayment != 0 && $agopayment == 0 && $dtpayment > $firstpayment) {
+                    $resurrected[$d] += $vlpayment;
+                    if ($d == 0) {
+                        $nichostt[2][$id] = $desstate;
+                        $nichoseg[2][$id] = $dessegment;
+                    }
+                }
+
+                if ($vlpayment != 0 && $agopayment != 0 && $vlpayment > $agopayment) {
+                    $expansion[$d] += ($vlpayment - $agopayment);
+                    if ($d == 0) {
+                        $nichostt[3][$id] = $desstate;
+                        $nichoseg[3][$id] = $dessegment;
+                    }
+                }
+
+                // RECEITAS VARIÁVEIS DE SAÍDA
+                if ($vlpayment != 0 && $agopayment != 0 && $vlpayment < $agopayment) {
+                    $contraction[$d] += ($agopayment - $vlpayment);
+                    if ($d == 0) {
+                        $nichostt[4][$id] = $desstate;
+                        $nichoseg[4][$id] = $dessegment;
+                    }
+                }
+
+                if ($vlpayment == 0 && $agopayment != 0) {
+                    $cancelled[$d] += $agopayment;
+                    $cancelledc[$d]++;
+                    if ($d == 0) {
+                        $nichostt[5][$id] = $desstate;
+                        $nichoseg[5][$id] = $dessegment;
+                    }
+                }
 
             }
 
         }
 
-
-        // DEVOLVENDO AS MÉTRICAS PARAMETRIZADA
+        // DEVOLVENDO AS MÉTRICAS SAAS PARAMETRIZADAS
         $datachart = [];
 
         for ($x = 0; $x < 6; $x++) {
@@ -330,12 +448,15 @@ class Statistic extends Model
                 "month" => date('M/y', strtotime("-$x month", strtotime($dataYearMonth))),
                 "mrr" => $mrr[$x],
                 "mrrc" => $mrrc[$x],
+                "recurrent" => $recurrent[$x],
                 "new" => $new[$x],
                 "resurrected" => $resurrected[$x],
                 "expansion" => $expansion{$x},
                 "contraction" => $contraction{$x},
                 "cancelled" => $cancelled[$x],
-                "cancelledc" => $cancelledc[$x]
+                "cancelledc" => $cancelledc[$x],
+                "nichostt" => $nichostt[$x],
+                "nichoseg" => $nichoseg[$x]
             ]);
         }
 
@@ -346,20 +467,18 @@ class Statistic extends Model
     public static function indexDataChart($year, $month)
     {
 
-        // CHAMANDO A MATRIZ DE PAGAMENTOS
-        $matrix = Statistic::matrixPayments(2019,07);
-
+        // BUSCANDO AS MÉTRICAS SAAS JÁ PARAMETRIZADAS
+        $metricas = Statistic::metricasSaas($year,$month);
 
         // MONTANDO OS VALORES E PERCENTUAIS DAS MÉTRICAS SAAS
-        $pernew = round(($matrix[0]['new'] * 100) / $matrix[0]['mrr'], 1);
-        $perexpansion = round(($matrix[0]['expansion'] * 100) / $matrix[0]['mrr'], 1);
-        $perresurrected = round(($matrix[0]['resurrected'] * 100) / $matrix[0]['mrr'], 1);
+        $pernew = round(($metricas[0]['new'] * 100) / $metricas[0]['mrr'], 1);
+        $perexpansion = round(($metricas[0]['expansion'] * 100) / $metricas[0]['mrr'], 1);
+        $perresurrected = round(($metricas[0]['resurrected'] * 100) / $metricas[0]['mrr'], 1);
         $perrecurrent = 100 - ($pernew + $perexpansion + $perresurrected);
-        $percontraction = round(($matrix[0]['contraction'] * 100) / ($matrix[0]['contraction'] + $matrix{0}['cancelled']), 1);
-        $percancelled = round(($matrix[0]['cancelled'] * 100) / ($matrix[0]['contraction'] + $matrix{0}['cancelled']), 1);
+        $percontraction = round(($metricas[0]['contraction'] * 100) / ($metricas[0]['contraction'] + $metricas{0}['cancelled']), 1);
+        $percancelled = round(($metricas[0]['cancelled'] * 100) / ($metricas[0]['contraction'] + $metricas{0}['cancelled']), 1);
         $saas = [$perrecurrent, $pernew, $perresurrected, $perexpansion, $percontraction, $percancelled];
-        $recdetails = [0, $matrix[0]['cancelled'], $matrix[0]['contraction'], $matrix[0]['expansion'], $matrix[0]['resurrected'], $matrix[0]['new']];
-
+        $recdetails = [0, $metricas[0]['cancelled'], $metricas[0]['contraction'], $metricas[0]['expansion'], $metricas[0]['resurrected'], $metricas[0]['new']];
 
         // DEVOLVENDO AS ESTATÍSTICAS PARA OS GRÁFICOS DO INDEX
         $datachart = [];
@@ -367,69 +486,71 @@ class Statistic extends Model
         for ($x = 5; $x >= 0; $x--) {
 
             array_push($datachart, [
-                "month" => $matrix[$x]['month'],
+                "month" => $metricas[$x]['month'],
                 "saas" => $saas[$x],
-                "mrr" => $matrix[$x]['mrr'],
-                "recorrentes" => $matrix[$x]['mrr'] - ($matrix[$x]['new'] + $matrix[$x]['resurrected'] + $matrix[$x]['expansion']),
-                "arpu" => ($matrix[$x]['mrrc'] > 0) ? round($matrix[$x]['mrr'] / $matrix[$x]['mrrc'], 2) : 0,
-                "entradas" => $matrix[$x]['new'] + $matrix[$x]['resurrected'] + $matrix[$x]['expansion'],
-                "saidas" => $matrix[$x]['contraction'] + $matrix[$x]['cancelled'],
+                "mrr" => $metricas[$x]['mrr'],
+                "recorrentes" => $metricas[$x]['mrr'] - ($metricas[$x]['new'] + $metricas[$x]['resurrected'] + $metricas[$x]['expansion']),
+                "arpu" => ($metricas[$x]['mrrc'] > 0) ? round($metricas[$x]['mrr'] / $metricas[$x]['mrrc'], 2) : 0,
+                "entradas" => $metricas[$x]['new'] + $metricas[$x]['resurrected'] + $metricas[$x]['expansion'],
+                "saidas" => $metricas[$x]['contraction'] + $metricas[$x]['cancelled'],
                 "recdetails" => $recdetails[$x]
             ]);
 
         }
 
-        return $datachart;
+        Statistic::registerStatistics($year, $month, "index", $datachart);
 
     }
 
     public static function statisticsDataChart($year, $month)
     {
 
+        /*  [8] = Recurrent  |  [9] = New  |  [10] = Resurrected  |  [11] = Expansion  |  [12] = Contraction  |  [13] = Cancelled  */
+
         // MONTANDO A DATA DA PESQUISA
         $dataYearMonth = "$year-$month-01";
 
-
-        // CHAMANDO A MATRIZ DE PAGAMENTOS
-        $matrix = Statistic::matrixPayments($year, $month);
-
+        // CHAMANDO AS MÉTRICAS SAAS DA PESQUISA
+        $metricas = Statistic::metricasSaas($year, $month);
 
         // CHAMANDO OS PLANOS VENDIDOS NO PERÍODO
         $saleplan = Statistic::salePlan($year, $month);
 
+        // NICHO DE MERCADO
+        $saas[0] = round(($metricas[0]['recurrent'] * 100) / $metricas[0]['mrr'], 1);
+        $saas[1] = round(($metricas[0]['new'] * 100) / $metricas[0]['mrr'], 1);
+        $saas[2] = round(($metricas[0]['resurrected'] * 100) / $metricas[0]['mrr'], 1);
+        $saas[3] = round(($metricas[0]['expansion'] * 100) / $metricas[0]['mrr'], 1);
+        $saas[4] = round(($metricas[0]['contraction'] * 100) / ($metricas[0]['contraction'] + $metricas{0}['cancelled']), 1);
+        $saas[5] = round(($metricas[0]['cancelled'] * 100) / ($metricas[0]['contraction'] + $metricas{0}['cancelled']), 1);
+        $saaschurnN = round(($metricas[0]['mrrc'] - $metricas[1]['mrrc']) * 100 / $metricas[1]['mrrc'], 2);
+        $saaschurnA = round(($metricas[1]['mrrc'] - $metricas[2]['mrrc']) * 100 / $metricas[2]['mrrc'], 2);
 
-        // NICHO DE MERCADO (CONTINUA...)
-        // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
-        $saasnew = round(($matrix[0]['new'] * 100) / $matrix[0]['mrr'], 1);
-        $saasexpansion = round(($matrix[0]['expansion'] * 100) / $matrix[0]['mrr'], 1);
-        $saasresurrected = round(($matrix[0]['resurrected'] * 100) / $matrix[0]['mrr'], 1);
-        $saasrecurrent = 100 - ($saasnew + $saasexpansion + $saasresurrected);
-        $saascontraction = round(($matrix[0]['contraction'] * 100) / ($matrix[0]['contraction'] + $matrix{0}['cancelled']), 1);
-        $saascancelled = round(($matrix[0]['cancelled'] * 100) / ($matrix[0]['contraction'] + $matrix{0}['cancelled']), 1);
-        $saaschurnN = round(($matrix[0]['mrrc'] - $matrix[1]['mrrc']) * 100 / $matrix[1]['mrrc'], 2);
-        $saaschurnA = round(($matrix[1]['mrrc'] - $matrix[2]['mrrc']) * 100 / $matrix[2]['mrrc'], 2);
-
+        // NICHO DE MERCADO e TOP 5 DOS ESTADOS
+        for ($x = 0; $x < 6; $x++) {
+            $nichoseg[$x] = Statistic::nichoStatistics($metricas[$x]['nichoseg']);
+            $nichostt[$x] = Statistic::nichoStatistics($metricas[$x]['nichostt']);
+        }
 
         // TOPO
-        // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
-        $perblock[0] = ($matrix[1]['mrr'] != 0) ? round(($matrix[0]['mrr'] - $matrix[1]['mrr']) * 100 / $matrix[1]['mrr'], 2) : 0;
-        $perblock[1] = ($matrix[1]['new'] != 0) ? round(($matrix[0]['new'] - $matrix[1]['new']) * 100 / $matrix[1]['new'], 2) : 0;
-        $perblock[2] = ($matrix[1]['resurrected'] != 0) ? round(($matrix[0]['resurrected'] - $matrix[1]['resurrected']) * 100 / $matrix[1]['resurrected'], 2) : 0;
-        $perblock[3] = ($matrix[1]['expansion'] != 0) ? round(($matrix[0]['expansion'] - $matrix[1]['expansion']) * 100 / $matrix[1]['expansion'], 2) : 0;
-        $perblock[4] = ($matrix[1]['contraction'] != 0) ? round(($matrix[0]['contraction'] - $matrix[1]['contraction']) * 100 / $matrix[1]['contraction'], 2) : 0;
-        $perblock[5] = ($matrix[1]['cancelled'] != 0) ? round(($matrix[0]['cancelled'] - $matrix[1]['cancelled']) * 100 / $matrix[1]['cancelled'], 2) : 0;
-        $perblock[6] = ($matrix[1]['mrr'] != 0) ? round(($matrix[0]['mrr'] - $matrix[1]['mrr']) * 100 / $matrix[1]['mrr'], 2) : 0;
+        $perblock[0] = ($metricas[1]['mrr'] != 0) ? round(($metricas[0]['mrr'] - $metricas[1]['mrr']) * 100 / $metricas[1]['mrr'], 2) : 0;
+        $perblock[1] = ($metricas[1]['new'] != 0) ? round(($metricas[0]['new'] - $metricas[1]['new']) * 100 / $metricas[1]['new'], 2) : 0;
+        $perblock[2] = ($metricas[1]['resurrected'] != 0) ? round(($metricas[0]['resurrected'] - $metricas[1]['resurrected']) * 100 / $metricas[1]['resurrected'], 2) : 0;
+        $perblock[3] = ($metricas[1]['expansion'] != 0) ? round(($metricas[0]['expansion'] - $metricas[1]['expansion']) * 100 / $metricas[1]['expansion'], 2) : 0;
+        $perblock[4] = ($metricas[1]['contraction'] != 0) ? round(($metricas[0]['contraction'] - $metricas[1]['contraction']) * 100 / $metricas[1]['contraction'], 2) : 0;
+        $perblock[5] = ($metricas[1]['cancelled'] != 0) ? round(($metricas[0]['cancelled'] - $metricas[1]['cancelled']) * 100 / $metricas[1]['cancelled'], 2) : 0;
+        $perblock[6] = ($metricas[1]['mrr'] != 0) ? round(($metricas[0]['mrr'] - $metricas[1]['mrr']) * 100 / $metricas[1]['mrr'], 2) : 0;
         $perblock[7] = ($saaschurnA != 0) ? round(($saaschurnN - $saaschurnA) * 100 / $saaschurnA, 2) : 0;
         $vlblock = [
-            $matrix[0]['mrr'],
-            $matrix[0]['new'],
-            $matrix[0]['resurrected'],
-            $matrix[0]['expansion'],
-            $matrix[0]['contraction'],
-            $matrix[0]['cancelled'],
-            ($matrix[0]['mrrc'] > 0) ? round($matrix[0]['mrr'] / $matrix[0]['mrrc'], 2) : 0,
+            $metricas[0]['mrr'],
+            $metricas[0]['new'],
+            $metricas[0]['resurrected'],
+            $metricas[0]['expansion'],
+            $metricas[0]['contraction'],
+            $metricas[0]['cancelled'],
+            ($metricas[0]['mrrc'] > 0) ? round($metricas[0]['mrr'] / $metricas[0]['mrrc'], 2) : 0,
             $saaschurnN];
-        $nameblock = ['MRR', 'NEW', 'RESURRECTED', 'EXPANSION', 'CONTRACTION', 'CANCELLED', 'TICKET', 'CHURN'];
+        $nameblock = ['MRR', 'New', 'Resurrected', 'Expansion', 'Contraction', 'Cancelled', 'Ticket', 'Churn'];
 
         for ($x = 0; $x < 8; $x++) {
             if ($x == 4 || $x == 5 || $x == 7) {
@@ -446,48 +567,7 @@ class Statistic extends Model
             if ($perblock[$x] > 0) $caretblock[$x] = "up";
         }
 
-
-        // TOPO
-        // --> FINALIZANDO E ARMAZENANDO OS DADOS À SEREM ENVIADOS <--
-        $datachart = [];
-
-        for ($x = 0; $x < 8; $x++) {
-            array_push($datachart, [
-                "vsblock" => $vsblock[$x],
-                "caretblock" => $caretblock[$x],
-                "perblock" => $perblock[$x],
-                "vlblock" => $vlblock[$x],
-                "nameblock" => $nameblock[$x]
-            ]);
-
-        }
-
-
-        // NICHO DE MERCADO (...CONTINUAÇÃO)
-        // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        // NICHO DE MERCADO
-        // --> ARMAZENANDO OS DADOS À SEREM ENVIADOS <--
-        array_push($datachart, [
-            "saas" => [$saasrecurrent, $saasnew, $saasresurrected, $saasexpansion, $saascontraction, $saascancelled]
-        ]);
-
-
-        // PLANOS E CHURN
-        // --> PREPARANDO E MONTANDO AS ESTATÍSTICAS <--
+        // PLANOS VENDIDOS e RATE CHURN
         for ($s = 0; $s < count($saleplan); $s++) {
 
             // ID DO PLANO
@@ -499,7 +579,7 @@ class Statistic extends Model
             for ($q = 0; $q < 6; $q++) {
                 if (!isset($sumPlanMonth[$q])) $sumPlanMonth[$q] = 0;
 
-                $churnChart[$q] = round($matrix[$q]['cancelledc'] * 100 / ($matrix[$q]['mrrc'] + $matrix[$q]['cancelledc']), 2);
+                $churnChart[$q] = round($metricas[$q]['cancelledc'] * 100 / ($metricas[$q]['mrrc'] + $metricas[$q]['cancelledc']), 2);
 
                 if ($saleplan[$s]['YearMonth'] == date('Y-m', strtotime("-$q month", strtotime($dataYearMonth)))) {
                     switch ($id) {
@@ -524,12 +604,33 @@ class Statistic extends Model
             }
         }
 
+        // TOPO
+        $datachart = [];
 
-        // PLANOS E CHURN
-        // --> ARMAZENANDO OS DADOS À SEREM ENVIADOS <--
+        for ($x = 0; $x < 8; $x++) {
+            array_push($datachart, [
+                "vsblock" => $vsblock[$x],
+                "caretblock" => $caretblock[$x],
+                "perblock" => $perblock[$x],
+                "vlblock" => $vlblock[$x],
+                "nameblock" => $nameblock[$x]
+            ]);
+
+        }
+
+        // NICHO DE MERCADO e TOP 5 DOS ESTADOS
+        for ($x = 0; $x < 6; $x++) {
+            array_push($datachart, [
+                "saas" => $saas[$x],
+                "nichoseg" => $nichoseg[$x],
+                "nichostt" => $nichostt[$x]
+            ]);
+        }
+
+        // PLANOS VENDIDOS e RATE CHURN
         for ($x = 5; $x >= 0; $x--) {
             array_push($datachart, [
-                "month" => $matrix[$x]['month'],
+                "month" => $metricas[$x]['month'],
                 "bronzePlanoChart" => round(($bronzePlanoChart[$x] * 100) / $sumPlanMonth[$x], 0),
                 "prataPlanoChart" => round(($prataPlanoChart[$x] * 100) / $sumPlanMonth[$x], 0),
                 "ouroPlanoChart" => round(($ouroPlanoChart[$x] * 100) / $sumPlanMonth[$x], 0),
@@ -538,10 +639,9 @@ class Statistic extends Model
             ]);
         }
 
-        return $datachart;
+        Statistic::registerStatistics($year, $month, "statistics", $datachart);
 
     }
-
 
 
 
