@@ -4,7 +4,6 @@
             <div class="container">
                 <div class="row">
 
-
                     <div class="col-sm-12">
                         <div class="footer-about-us">
                             <h3 class="footer-wid-title">Alex Botelho & Ltda</h3>
@@ -21,37 +20,6 @@
                             </div>
                         </div>
                     </div>
-
-
-                    <!--
-                    <div class="col-sm-4">
-                        <div class="footer-menu">
-                            <h3 class="footer-wid-title">Navegação</h3>
-                            <ul>
-                                <li><a href="/">Home</a></li>
-                                <li><a href="/plans">Planos</a></li>
-                                <li><a href="/payments">Pagamentos</a></li>
-                                <li><a href="/statistics">Estatísticas</a></li>
-                                <li><a href="/about">Sobre</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    -->
-
-                    <!--
-                    <div class="col-sm-6">
-                        <div class="footer-newsletter">
-                            <h3 class="footer-wid-title">Newsletter</h3>
-                            <p>Cadastre-se para receber os nosso conteúdos por email e seja um membro da nossa comunidade!</p>
-                            <div class="newsletter-form">
-                                <form action="/newsletter">
-                                    <input type="email" placeholder="Seu e-mail">
-                                    <input type="submit" value="inscreva-se">
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    -->
 
                 </div>
             </div>

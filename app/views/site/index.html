@@ -15,8 +15,8 @@
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
                                     <li>&nbsp;Métricas SaaS em percentuais de crescimento dentro do mês pesquisado.</li>
-                                    <li>&nbsp;<b>Receitas de Entrada:</b> A soma da Recurrent + New + Expansion + Resurrected deve totalizar 100%.</li>
-                                    <li>&nbsp;<b>Receitas de Saída:</b> A soma da Contraction + Cancelled deve totalizar 100%.</li>
+                                    <li>&nbsp;<b>Receitas de Entrada:</b> A soma da Recurrent + New + Expansion + Resurrected, devem totalizar 100%.</li>
+                                    <li>&nbsp;<b>Receitas de Saída:</b> A soma da Contraction + Cancelled, devem totalizar 100%.</li>
                                 </ul>
                                 <i class="fa fa-bar-chart-o"></i>
                                 <h3 class="box-title">Métricas SaaS</h3>
@@ -509,17 +509,34 @@
 
 
     });
+
+
 </script>
-{if="$alert != 0"}
+{if="$alert == 1"}
 <script type="text/javascript">
     $().ready(function() {
 
         setTimeout(function () {
-            $('#mensagem').show(); // "foo" é o id do elemento que seja manipular.
+            $('#aguarde').show(); // "foo" é o id do elemento que seja manipular.
         }, 0); // O valor é representado em milisegundos.
 
         setTimeout(function () {
-            $('#mensagem').hide(); // "foo" é o id do elemento que seja manipular.
+            $('#aguarde').hide(); // "foo" é o id do elemento que seja manipular.
+        }, 3000); // O valor é representado em milisegundos.
+    });
+
+</script>
+{/if}
+{if="$alert == 2"}
+<script type="text/javascript">
+    $().ready(function() {
+
+        setTimeout(function () {
+            $('#pesquisa').show(); // "foo" é o id do elemento que seja manipular.
+        }, 0); // O valor é representado em milisegundos.
+
+        setTimeout(function () {
+            $('#pesquisa').hide(); // "foo" é o id do elemento que seja manipular.
         }, 3000); // O valor é representado em milisegundos.
     });
 

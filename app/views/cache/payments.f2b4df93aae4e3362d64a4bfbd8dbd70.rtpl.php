@@ -3,7 +3,6 @@
     <section class="content">
         <div class="row">
 
-            <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
@@ -16,11 +15,10 @@
                     <h2>Pagamentos</h2>
                 </div>
                 <div class="col-xs-5" align="right">
-                    <a href="/payments/create" class="btn btn-success">Cadastrar Pagamento</a>
+                    <a href="/payments/create" class="btn btn-success">Cadastrar</a>
                 </div>
             </section>
 
-            <!-- Main content -->
             <section class="container">
                 <div class="row">
                     <div class="col-md-12">
@@ -32,7 +30,7 @@
                                         <?php echo htmlspecialchars( $success, ENT_COMPAT, 'UTF-8', FALSE ); ?>
                                     </div>
                                 <?php } ?>
-                            </div> <!-- /.box-header -->
+                            </div>
 
                             <div class="box-body no-padding">
                                 <table class="table table-striped">
@@ -59,7 +57,7 @@
                                     <?php } ?>
                                     </tbody>
                                 </table>
-                            </div> <!-- /.box-body -->
+                            </div>
                         </div>
 
                         <div class="product-pagination text-center">
@@ -77,8 +75,8 @@
                         </div>
                     </div>
                 </div>
-            </section> <!-- /.content -->
+            </section>
 
-        </div> <!-- /.row -->
-    </section> <!-- /.content -->
+        </div>
+    </section>
 </div>

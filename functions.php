@@ -14,6 +14,11 @@ function formatDate($date)
     return date('d/m/Y', strtotime($date));
 }
 
+function checkPage()
+{
+    if ($_SESSION['PAGE'] != 'index') {return false;} else {return true;}
+}
+
 function stateBrazil($uf)
 {
     $data = "";

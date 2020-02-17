@@ -3,7 +3,6 @@
     <section class="content">
         <div class="row">
 
-            <!-- Content Header (Page header) -->
             <section class="container">
                 <ol class="breadcrumb">
                     <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
@@ -15,14 +14,13 @@
                 <h2>Planos</h2>
             </section>
 
-            <!-- Main content -->
             <section class="container">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-primary">
                             <div class="box-header">
                                 <div class="col-md-8 col-xs-6">
-                                    <a href="/plans/create" class="btn btn-success">Cadastrar Plano</a>
+                                    <a href="/plans/create" class="btn btn-success">Cadastrar</a>
                                 </div>
                                 <?php if( $success != '' ){ ?>
                                 <div class="col-md-4 col-xs-6">
@@ -31,7 +29,7 @@
                                     </div>
                                 </div>
                                 <?php } ?>
-                            </div> <!-- /.box-header -->
+                            </div>
 
                             <div class="box-body no-padding">
                                 <table class="table table-striped">
@@ -57,7 +55,7 @@
                                     <?php } ?>
                                     </tbody>
                                 </table>
-                            </div> <!-- /.box-body -->
+                            </div>
                         </div>
 
                         <div class="product-pagination text-center">
@@ -73,8 +71,8 @@
                         </div>
                     </div>
                 </div>
-            </section> <!-- /.content -->
+            </section>
 
-        </div> <!-- /.row -->
-    </section> <!-- /.content -->
+        </div>
+    </section>
 </div>

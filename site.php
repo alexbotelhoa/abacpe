@@ -13,23 +13,47 @@ use ABA\Model\Client;
  * Páginas do Site - INICIO
  */
 
-$app->get("/", function ($year = 2019, $month = 07) {
+$app->get("/", function () {
 
-    if (!isset($_SESSION['twIndex']) || $_SESSION['twIndex'] < mktime()) {
+    $year = date('Y');
+    $month = date('m');
+    $_SESSION['PAGE'] = 'index';
 
-        // ATUALIZAR O TIME DE ATUALIZAÇÃO
-        $_SESSION['twIndex'] = (mktime() + $_SESSION['tw_statistics_chart']);
+    // VERIFICA SE HÁ VALORES NAS SESSÕES GLOBAIS
+    if (!isset($_SESSION['YEAR']) || $_SESSION['YEAR'] == '') {$_SESSION['YEAR'] = $year; $_SESSION['UYEAR'] = 0;}
+    if (!isset($_SESSION['MONTH']) || $_SESSION['MONTH'] == '') {$_SESSION['MONTH'] = $month; $_SESSION['UMONTH'] = 0;}
 
-        // FAZ A ATUALIZAÇÃO DO INDEX
-        Statistic::indexDataChart($year, $month);
+    // VERIFICA AS VARIÁVEIS DA PESQUISA SOLICITADA
+    if ($_SESSION['UYEAR'] == 0000 || $_SESSION['UMONTH'] == 00) {
 
-        $alert = 0;
+        $alert = 2;
 
     } else {
 
-        $alert = 1;
+        if (!isset($_SESSION['twIndex']) || $_SESSION['twIndex'] < mktime() || $_SESSION['YEAR'] != $_SESSION['UYEAR'] || $_SESSION['MONTH'] != $_SESSION['UMONTH']) {
+
+            // FAZ A ATUALIZAÇÃO DA MATRIX DE CLIENTES E DAS MÉTRICAS SAAS DA PÁGINA INDEX
+            Statistic::indexDataChart($_SESSION['YEAR'], $_SESSION['MONTH']);
+
+            // ATUALIZAR O TIME DE ATUALIZAÇÃO
+            $_SESSION['twIndex'] = (mktime() + $_SESSION['tw_statistics_chart']);
+
+            // ARMAZENA O ANO E MES DA ÚLTIMA PESQUISA
+            $_SESSION['YEAR'] = $_SESSION['UYEAR'];
+            $_SESSION['MONTH'] = $_SESSION['UMONTH'];
+
+            $alert = 0;
+
+        } else {
+
+            $alert = 1;
+
+        }
 
     }
+
+    $year = $_SESSION['YEAR'];
+    $month = $_SESSION['MONTH'];
 
     // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
     if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "index-$year-$month.json")) {Statistic::indexDataChart($year, $month);}
@@ -42,10 +66,24 @@ $app->get("/", function ($year = 2019, $month = 07) {
 
     $page->setTpl("index", [
         "datachart" => $datachart,
+        "pesquisa" => 1,
         "alert" => $alert
     ]);
 
 });
+
+$app->post("/", function () {
+
+    $_SESSION['UYEAR'] = $_POST['year'];
+
+    $_SESSION['UMONTH'] = $_POST['month'];
+
+    header("Location: /");
+
+    exit;
+
+});
+
 
 $app->get("/order/:page/:sort", function ($page, $sort) {
 
@@ -575,21 +613,45 @@ $app->get("/payments/:idpayment/delete", function ($idpayment) {
 
 $app->get("/statistics", function ($year = 2019, $month = 07) {
 
-    if (!isset($_SESSION['twStatistic']) || $_SESSION['twStatistic'] < mktime()) {
+    $year = date('Y');
+    $month = date('m');
+    $_SESSION['PAGE'] = 'statistics';
 
-        // ATUALIZAR O TIME DE ATUALIZAÇÃO
-        $_SESSION['twStatistic'] = (mktime() + $_SESSION['tw_statistics_chart']);
+    // VERIFICA SE HÁ VALORES NAS SESSÕES GLOBAIS
+    if (!isset($_SESSION['YEAR']) || $_SESSION['YEAR'] == '') {$_SESSION['YEAR'] = $year; $_SESSION['UYEAR'] = 0;}
+    if (!isset($_SESSION['MONTH']) || $_SESSION['MONTH'] == '') {$_SESSION['MONTH'] = $month; $_SESSION['UMONTH'] = 0;}
 
-        // FAZ A ATUALIZAÇÃO DO INDEX
-        Statistic::statisticsDataChart($year, $month);
+    // VERIFICA AS VARIÁVEIS DA PESQUISA SOLICITADA
+    if ($_SESSION['UYEAR'] == 0000 || $_SESSION['UMONTH'] == 00) {
 
-        $alert = 0;
+        $alert = 2;
 
     } else {
 
-        $alert = 1;
+        if (!isset($_SESSION['twStatistic']) || $_SESSION['twStatistic'] < mktime() || $_SESSION['YEAR'] != $_SESSION['UYEAR'] || $_SESSION['MONTH'] != $_SESSION['UMONTH']) {
+
+            // FAZ A ATUALIZAÇÃO DA MATRIX DE CLIENTES E DAS MÉTRICAS SAAS DA PÁGINA ESTATISTICAS
+            Statistic::statisticsDataChart($_SESSION['YEAR'], $_SESSION['MONTH']);
+
+            // ATUALIZAR O TIME DE ATUALIZAÇÃO
+            $_SESSION['twStatistic'] = (mktime() + $_SESSION['tw_statistics_chart']);
+
+            // ARMAZENA O ANO E MES DA ÚLTIMA PESQUISA
+            $_SESSION['YEAR'] = $_SESSION['UYEAR'];
+            $_SESSION['MONTH'] = $_SESSION['UMONTH'];
+
+            $alert = 0;
+
+        } else {
+
+            $alert = 1;
+
+        }
 
     }
+
+    $year = $_SESSION['YEAR'];
+    $month = $_SESSION['MONTH'];
 
     // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
     if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "statistics-$year-$month.json")) {Statistic::statisticsDataChart($year, $month);}
@@ -607,12 +669,26 @@ $app->get("/statistics", function ($year = 2019, $month = 07) {
 
 });
 
+$app->post("/statistics", function () {
+
+    $_SESSION['UYEAR'] = $_POST['year'];
+
+    $_SESSION['UMONTH'] = $_POST['month'];
+
+    header("Location: /statistics");
+
+    exit;
+
+});
 
 //////////////////////////////////////////////////////
 ///                      SOBRE                     ///
 //////////////////////////////////////////////////////
 
 $app->get("/about", function () {
+
+    if (isset($_SESSION['YEAR'])) unset($_SESSION['YEAR']);
+    if (isset($_SESSION['MONTH'])) unset($_SESSION['MONTH']);
 
     $page = new Page();
 

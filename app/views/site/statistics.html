@@ -490,17 +490,33 @@
 
     });
 </script>
-{if="$alert != 0"}
+{if="$alert == 1"}
 <script type="text/javascript">
     $().ready(function() {
 
         setTimeout(function () {
-            $('#mensagem').show(); // "foo" é o id do elemento que seja manipular.
+            $('#aguarde').show(); // "foo" é o id do elemento que seja manipular.
         }, 0); // O valor é representado em milisegundos.
 
         setTimeout(function () {
-            $('#mensagem').hide(); // "foo" é o id do elemento que seja manipular.
+            $('#aguarde').hide(); // "foo" é o id do elemento que seja manipular.
         }, 3000); // O valor é representado em milisegundos.
     });
+
+</script>
+{/if}
+{if="$alert == 2"}
+<script type="text/javascript">
+    $().ready(function() {
+
+        setTimeout(function () {
+            $('#pesquisa').show(); // "foo" é o id do elemento que seja manipular.
+        }, 0); // O valor é representado em milisegundos.
+
+        setTimeout(function () {
+            $('#pesquisa').hide(); // "foo" é o id do elemento que seja manipular.
+        }, 3000); // O valor é representado em milisegundos.
+    });
+
 </script>
 {/if}

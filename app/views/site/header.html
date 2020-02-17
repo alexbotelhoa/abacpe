@@ -47,11 +47,17 @@
 								<!--Brand--><a class="brand" href="/"><img class="brand-logo-dark" src="/res/site/img/logo.png" alt="" width="336" height="51"/></a>
 							</div>
 							<div class="alignright text-red">
-								<div id="mensagem" title="Título da mensagem" style="display:none;">
+								<div id="aguarde" style="display:none;">
 									<h4>Aguarde 60 segundos!</h4>
 								</div>
 							</div>
+							<div class="alignright text-red">
+								<div id="pesquisa" style="display:none;">
+									<h4>Escolha um mês e um ano!</h4>
+								</div>
+							</div>
 						</div>
+
 					</div>
 				</div>
 				<div class="rd-navbar-main-outer">
@@ -60,14 +66,51 @@
 							<ul class="rd-navbar-nav">
 								<li class="rd-nav-item active"><a class="rd-nav-link" href="/">Home</a></li>
 								<li class="rd-nav-item"><a class="rd-nav-link" href="/plans">Planos</a></li>
-								<li class="rd-nav-item"><a class="rd-nav-link" href="/payments">Pagamentos</a>
-								<li class="rd-nav-item"><a class="rd-nav-link" href="/statistics">Estatísticas</a>
-								<li class="rd-nav-item"><a class="rd-nav-link" href="/about">Sobre</a>
-								</li>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/payments">Pagamentos</a></li>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/statistics">Estatísticas</a></li>
+								<li class="rd-nav-item"><a class="rd-nav-link" href="/about">Sobre</a></li>
+								{if="checkPage()"}
+									<form role="form" action="/" method="post" enctype="multipart/form-data">
+								{else}
+									<form role="form" action="/statistics" method="post" enctype="multipart/form-data">
+								{/if}
+									<div class="rd-nav-item">
+										<select class="form-control" name="month" id="month">
+											<option value="00">Mês</option>
+											<option value="01">Jan</option>
+											<option value="02">Fev</option>
+											<option value="03">Mar</option>
+											<option value="04">Abr</option>
+											<option value="05">Mai</option>
+											<option value="06">Jun</option>
+											<option value="07">Jul</option>
+											<option value="08">Ago</option>
+											<option value="09">Set</option>
+											<option value="10">Out</option>
+											<option value="11">Nov</option>
+											<option value="12">Dez</option>
+										</select>
+									</div>
+									<div class="rd-nav-item">
+										<select class="form-control" name="year" id="year">
+											<option value="0000">Ano</option>
+											<option value="2019">2019</option>
+											<option value="2018">2018</option>
+											<option value="2017">2017</option>
+											<option value="2016">2016</option>
+											<option value="2015">2015</option>
+										</select>
+									</div>
+									<div class="rd-nav-item">
+										<input type="submit" class="btn btn-success" value="ok">
+									</div>
+								</form>
+
 							</ul>
 						</div>
 					</div>
 				</div>
+
 			</nav>
 		</div>
 	</header>
