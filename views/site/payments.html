@@ -5,8 +5,8 @@
 
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li class="active"><a href="/payments">Pagamentos</a></li>
+                    <li><a href="/sitecpe/"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li class="active"><a href="/sitecpe/payments">Pagamentos</a></li>
                 </ol>
             </section>
 
@@ -15,7 +15,7 @@
                     <h2>Pagamentos</h2>
                 </div>
                 <div class="col-xs-5" align="right">
-                    <a href="/payments/create" class="btn btn-success">Cadastrar</a>
+                    <a href="/sitecpe/payments/create" class="btn btn-success">Cadastrar</a>
                 </div>
             </section>
 
@@ -36,10 +36,10 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th style="width: 10px"><a href="/order/payments/ordid">ID</a></th>
-                                        <th><a href="/order/payments/ordcli">Cliente</a></th>
-                                        <th><a href="/order/payments/ordpla">Plano</a></th>
-                                        <th><a href="/order/payments/ordqtd">Pagamentos</a></th>
+                                        <th style="width: 10px"><a href="/sitecpe/order/payments/ordid">ID</a></th>
+                                        <th><a href="/sitecpe/order/payments/ordcli">Cliente</a></th>
+                                        <th><a href="/sitecpe/order/payments/ordpla">Plano</a></th>
+                                        <th><a href="/sitecpe/order/payments/ordqtd">Pagamentos</a></th>
                                         <th style="width: 140px">&nbsp;</th>
                                     </tr>
                                     </thead>
@@ -51,7 +51,7 @@
                                         <td>{$value.desplan}</td>
                                         <td>{$value.qtdpay}</td>
                                         <td>
-                                            <a href="/payments/{$value.idclient}/detail" class="btn btn-warning btn-xs"><i class="fa fa-search"></i> Detalhes</a>
+                                            <a href="/sitecpe/payments/{$value.idclient}/detail" class="btn btn-warning btn-xs"><i class="fa fa-search"></i> Detalhes</a>
                                         </td>
                                     </tr>
                                     {/loop}
@@ -64,11 +64,11 @@
                             <nav>
                                 <ul class="pagination">
 
-                                    <li><a href="/payments?page=1"><<</a></li>
+                                    <li><a href="/sitecpe/payments?page=1"><<</a></li>
                                     {loop="$pages"}
                                     <li><a href="{$value.link}">{if="$counter == 2"}<b>{$value.page}</b>{else}{$value.page}{/if}</a></li>
                                     {/loop}
-                                    <li><a href="/payments?page={$lastpage}">>></a></li>
+                                    <li><a href="/sitecpe/payments?page={$lastpage}">>></a></li>
 
                                 </ul>
                             </nav>

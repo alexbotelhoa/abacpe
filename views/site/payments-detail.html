@@ -5,9 +5,9 @@
 
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li class="active"><a href="/payments">Pagamentos</a></li>
-                    <li class="active"><a href="/payments/{$idclient}/detail">Cliente</a></li>
+                    <li><a href="/sitecpe/"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li class="active"><a href="/sitecpe/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/sitecpe/payments/{$idclient}/detail">Cliente</a></li>
                 </ol>
             </section>
 
@@ -16,7 +16,7 @@
                     <h2>Cliente</h2>
                 </div>
                 <div class="col-xs-5" align="right">
-                    <a href="/payments/{$idclient}/create" class="btn btn-success">Cadastrar</a>
+                    <a href="/sitecpe/payments/{$idclient}/create" class="btn btn-success">Cadastrar</a>
                 </div>
             </section>
 
@@ -37,12 +37,12 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th style="width: 10px"><a href="/order/payments/{$idclient}/detail/ordid">ID</a></th>
-                                        <th><a href="/order/payments/{$idclient}/detail/ordcli">Cliente</a></th>
-                                        <th><a href="/order/payments/{$idclient}/detail/ordpla">Plano</a></th>
-                                        <th><a href="/order/payments/{$idclient}/detail/ordrec">Recor</a></th>
-                                        <th><a href="/order/payments/{$idclient}/detail/orddtp">Data</a></th>
-                                        <th><a href="/order/payments/{$idclient}/detail/ordvlp">Valor</a></th>
+                                        <th style="width: 10px"><a href="/sitecpe/order/payments/{$idclient}/detail/ordid">ID</a></th>
+                                        <th><a href="/sitecpe/order/payments/{$idclient}/detail/ordcli">Cliente</a></th>
+                                        <th><a href="/sitecpe/order/payments/{$idclient}/detail/ordpla">Plano</a></th>
+                                        <th><a href="/sitecpe/order/payments/{$idclient}/detail/ordrec">Recor</a></th>
+                                        <th><a href="/sitecpe/order/payments/{$idclient}/detail/orddtp">Data</a></th>
+                                        <th><a href="/sitecpe/order/payments/{$idclient}/detail/ordvlp">Valor</a></th>
                                         <th style="width: 140px">&nbsp;</th>
                                     </tr>
                                     </thead>
@@ -56,8 +56,8 @@
                                         <td>{function="formatDate($value.dtpayment)"}</td>
                                         <td>{function="formatPrice($value.vlpayment)"}</td>
                                         <td>
-                                            <a href="/payments/{$value.idpayment}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                                            <a href="/payments/{$value.idpayment}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                            <a href="/sitecpe/payments/{$value.idpayment}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                                            <a href="/sitecpe/payments/{$value.idpayment}/delete" onclick="return confirm('Deseja realmente excluir este registro?')" class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                                         </td>
                                     </tr>
                                     {/loop}
@@ -70,11 +70,11 @@
                             <nav>
                                 <ul class="pagination">
 
-                                    <li><a href="/payments?page=1"><<</a></li>
+                                    <li><a href="/sitecpe/payments?page=1"><<</a></li>
                                     {loop="$pages"}
                                     <li><a href="{$value.link}">{if="$counter == 2"}<b>{$value.page}</b>{else}{$value.page}{/if}</a></li>
                                     {/loop}
-                                    <li><a href="/payments?page={$lastpage}">>></a></li>
+                                    <li><a href="/sitecpe/payments?page={$lastpage}">>></a></li>
 
                                 </ul>
                             </nav>

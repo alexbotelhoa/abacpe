@@ -5,10 +5,10 @@
 
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li><a href="/payments">Pagamentos</a></li>
-                    <li class="active"><a href="/payments/{$payment.idclient}/detail">Cliente</a></li>
-                    <li class="active"><a href="/payments/{$payment.idpayment}/update">Editar</a></li>
+                    <li><a href="/sitecpe/"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li><a href="/sitecpe/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/sitecpe/payments/{$payment.idclient}/detail">Cliente</a></li>
+                    <li class="active"><a href="/sitecpe/payments/{$payment.idpayment}/update">Editar</a></li>
                 </ol>
             </section>
 
@@ -21,7 +21,7 @@
                     <div class="col-md-12">
                         <div class="box box-primary">
 
-                            <form role="form" action="/payments/{$payment.idpayment}/update" method="post" enctype="multipart/form-data">
+                            <form role="form" action="/sitecpe/payments/{$payment.idpayment}/update" method="post" enctype="multipart/form-data">
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="idpayment">ID do Pagamento</label>

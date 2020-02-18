@@ -5,13 +5,13 @@
 
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li><a href="/payments">Pagamentos</a></li>
+                    <li><a href="/sitecpe/"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li><a href="/sitecpe/payments">Pagamentos</a></li>
                     {if="$idclient != ''"}
-                        <li class="active"><a href="/payments/{$idclient}/detail">Cliente</a></li>
-                        <li class="active"><a href="/payments/{$idclient}/create">Cadastrar</a></li>
+                        <li class="active"><a href="/sitecpe/payments/{$idclient}/detail">Cliente</a></li>
+                        <li class="active"><a href="/sitecpe/payments/{$idclient}/create">Cadastrar</a></li>
                     {else}
-                        <li class="active"><a href="/payments/create">Cadastrar</a></li>
+                        <li class="active"><a href="/sitecpe/payments/create">Cadastrar</a></li>
                     {/if}
                 </ol>
             </section>
@@ -25,7 +25,7 @@
                     <div class="col-md-12">
                         <div class="box box-success">
 
-                            <form role="form" action="/payments/{if="$idclient != ''"}{$idclient}/{/if}create" method="post">
+                            <form role="form" action="/sitecpe/payments/{if="$idclient != ''"}{$idclient}/{/if}create" method="post">
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="idclient">Nome do Cliente</label>

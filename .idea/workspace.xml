@@ -2,287 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="877eb840-95bc-4689-ab78-81bb7a9b7a79" name="Default" comment="Atividades:&#10;- Corrigido a busca de cliente&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Client.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Message.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Order.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Page.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Payment.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Plan.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Model/Statistic.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/Sql.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/clients.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/index-2017-09.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/index-2019-05.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/index-2019-07.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/index-2020-02.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/matrix-2017-09.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/matrix-2019-05.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/matrix-2019-07.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/matrix-2020-02.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/statistics-2019-05.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/statistics/statistics-2020-02.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/about.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/footer.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/header.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/index.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/payments.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/plans.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/cache/statistics.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/about.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/footer.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/header.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/payments-create.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/payments-detail.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/payments-update.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/payments.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/plans-create.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/plans-update.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/plans.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/views/site/statistics.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Client.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Message.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Order.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Payment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Plan.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Model/Statistic.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/Page.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/PageAdmin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/db/Sql.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/db/db_abacpe.sql" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/statistics/index-2019-05.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/statistics/index-2020-02.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/statistics/matrix-2019-05.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/statistics/matrix-2020-02.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/statistics/statistics-2019-05.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/statistics/statistics-2020-02.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/about.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/footer.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/header.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/index.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/payments-create.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/payments-detail.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/payments-update.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/payments.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/plans-create.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/plans-update.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/plans.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/statistics.f2b4df93aae4e3362d64a4bfbd8dbd70.rtpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/about.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/payments-create.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/payments-detail.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/payments-update.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/payments.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/plans-create.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/plans-update.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/plans.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/site/statistics.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/clients.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/css/AdminLTE.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/css/AdminLTE.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/css/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/css/font-awesome.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/css/style.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/FontAwesome.otf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/fontawesome-webfont.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/fontawesome-webfont.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/fontawesome-webfont.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/fontawesome-webfont.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/glyphicons-halflings-regular.eot" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/glyphicons-halflings-regular.svg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/glyphicons-halflings-regular.ttf" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/glyphicons-halflings-regular.woff" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/fonts/glyphicons-halflings-regular.woff2" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/img/favicon.ico" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/img/logo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/img/logo.psd" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/Chart.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/Chart.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/app.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/app.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/core.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/jquery.knob.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/res/site/js/script.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/ClassLoader.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_classmap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_namespaces.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_psr4.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_real.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/autoload_static.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/composer/installed.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/README.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/composer.lock" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-all.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-draw-string.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-extend-class.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-multiple-template-directories.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-nested-loop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-plugin-compress.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-plugin-img-resize.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-simple.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-webpage-new.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/example-webpage.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/Exception.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/IPlugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/NotFoundException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/Parser.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/Plugin.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/Plugin/Compress.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/Plugin/ImageResize.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/Plugin/PathReplace.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/PluginContainer.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/Tpl/SyntaxException.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/library/Rain/autoload.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/bootstrap.min.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/hero.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-alerts.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-buttons.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-dropdown.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-modal.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-popover.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-scrollspy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-tabs.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/bootstrap-twipsy.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/js/less-1.1.5.min.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/bootstrap.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/forms.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/mixins.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/patterns.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/reset.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/scaffolding.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/tables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/type.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/bootstrap/lib/variables.less" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/compress/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/compress/test.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/compress/test_compress.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/image_resize/img/logo.jpeg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/image_resize/img/wysiwyg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/image_resize/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/image_resize/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/multiple-template-directories/base/subfolder/head.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/multiple-template-directories/base/subfolder/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/multiple-template-directories/newimplement/subfolder/gnb.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/multiple-template-directories/newimplement/subfolder/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/nested_loop/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/nested_loop/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl2/img/bottom.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl2/img/logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl2/img/top.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl2/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl2/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/css/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/bg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/bg.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/bottom.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/easy.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/easy_text.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/fast.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/fast_text.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/googlegroup.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/groups_logo_sm.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/groups_logo_sm.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/groups_logo_sm.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/home_title.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/list" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/list.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/logo.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/logo.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/pencil.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/search.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/top.gif" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/useful.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/useful_text.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/wysiwyg.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/img/wysiwyg_text.jpg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/page.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/raintpl3/subfolder/footer.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/simple/simple_template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/simple/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/test/style.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/templates/test/test.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/test/Tpl/Tests/Tpl/PluginContainerTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/test/Tpl/Tests/Tpl/PluginTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/test/Tpl/Tests/TplTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/test/Tpl/Tests/_files/template.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/rain/raintpl/test/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/.gitignore" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/.htaccess" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/.travis.yml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/CONTRIBUTING.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/LICENSE" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/README.markdown" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Environment.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Exception/Pass.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Exception/Stop.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Helper/Set.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Cookies.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Headers.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Request.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Response.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Http/Util.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Log.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/LogWriter.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Middleware.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Middleware/ContentTypes.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Middleware/Flash.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Middleware/MethodOverride.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Middleware/PrettyExceptions.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Middleware/SessionCookie.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Route.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Router.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/Slim.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/Slim/View.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/composer.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/index.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/phpunit.xml.dist" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/EnvironmentTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Foo.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Helper/SetTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Http/CookiesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Http/HeadersTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Http/RequestTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Http/ResponseTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Http/UtilTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/LogTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/LogWriterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Middleware/ContentTypesTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Middleware/FlashTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Middleware/MethodOverrideTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Middleware/PrettyExceptionsTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/Middleware/SessionCookieTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/MiddlewareTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/README" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/RouteTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/RouterTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/SlimTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/ViewTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/vendor/slim/slim/tests/templates/test.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/abacpe.iml" afterPath="$PROJECT_DIR$/.idea/abacpe.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/config.php" afterPath="$PROJECT_DIR$/config.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/site.php" afterPath="$PROJECT_DIR$/site.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/about.html" afterPath="$PROJECT_DIR$/views/site/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/footer.html" afterPath="$PROJECT_DIR$/views/site/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/header.html" afterPath="$PROJECT_DIR$/views/site/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments-create.html" afterPath="$PROJECT_DIR$/views/site/payments-create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments-detail.html" afterPath="$PROJECT_DIR$/views/site/payments-detail.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments-update.html" afterPath="$PROJECT_DIR$/views/site/payments-update.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments.html" afterPath="$PROJECT_DIR$/views/site/payments.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/plans-create.html" afterPath="$PROJECT_DIR$/views/site/plans-create.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/plans-update.html" afterPath="$PROJECT_DIR$/views/site/plans-update.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/plans.html" afterPath="$PROJECT_DIR$/views/site/plans.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -335,11 +65,10 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$saleplan</find>
       <find>$dataYearMonth</find>
       <find>$matrix</find>
       <find>BASECLIENTES</find>
@@ -369,9 +98,9 @@
       <find>href=&quot;/abacpe</find>
       <find>src=&quot;/abacpe</find>
       <find>abacpe</find>
+      <find>href=&quot;/</find>
     </findStrings>
     <replaceStrings>
-      <replace>$p</replace>
       <replace>$id</replace>
       <replace>$saas</replace>
       <replace>0</replace>
@@ -401,6 +130,7 @@
       <replace>href=&quot;/app/abacpe</replace>
       <replace>src=&quot;/app/abacpe</replace>
       <replace>cpe</replace>
+      <replace>href=&quot;/sitecpe/</replace>
     </replaceStrings>
     <dirStrings>
       <dir>C:\xampp\htdocs\abacpe\app</dir>
@@ -413,14 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/Model/Plan.php" />
-        <option value="$PROJECT_DIR$/app/Model/Order.php" />
-        <option value="$PROJECT_DIR$/app/Model/Message.php" />
-        <option value="$PROJECT_DIR$/app/Model/Payment.php" />
-        <option value="$PROJECT_DIR$/../vendor/composer/autoload_static.php" />
-        <option value="$PROJECT_DIR$/../vendor/composer/installed.json" />
-        <option value="$PROJECT_DIR$/../vendor/composer/ClassLoader.php" />
-        <option value="$PROJECT_DIR$/../vendor/composer/autoload_classmap.php" />
         <option value="$PROJECT_DIR$/../vendor/composer/autoload_namespaces.php" />
         <option value="$PROJECT_DIR$/../vendor/composer/autoload_real.php" />
         <option value="$PROJECT_DIR$/app/Model/Client.php" />
@@ -456,14 +178,22 @@
         <option value="$PROJECT_DIR$/Model/Plan.php" />
         <option value="$PROJECT_DIR$/Model/Statistic.php" />
         <option value="$PROJECT_DIR$/Model/Page.php" />
-        <option value="$PROJECT_DIR$/views/site/footer.html" />
-        <option value="$PROJECT_DIR$/views/site/header.html" />
         <option value="$PROJECT_DIR$/views/site/index.html" />
         <option value="$PROJECT_DIR$/views/site/statistics.html" />
         <option value="$PROJECT_DIR$/site.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/config.php" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/views/site/about.html" />
+        <option value="$PROJECT_DIR$/views/site/plans-update.html" />
+        <option value="$PROJECT_DIR$/views/site/plans-create.html" />
+        <option value="$PROJECT_DIR$/views/site/plans.html" />
+        <option value="$PROJECT_DIR$/views/site/payments-update.html" />
+        <option value="$PROJECT_DIR$/views/site/payments-detail.html" />
+        <option value="$PROJECT_DIR$/views/site/payments-create.html" />
+        <option value="$PROJECT_DIR$/views/site/footer.html" />
+        <option value="$PROJECT_DIR$/views/site/header.html" />
+        <option value="$PROJECT_DIR$/views/site/payments.html" />
       </list>
     </option>
   </component>
@@ -513,24 +243,24 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="cpe" type="cbb8eebc:String" user="cpe" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="cpe" type="b2602c69:ProjectViewProjectNode" />
               <item name="cpe" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="cpe" type="cbb8eebc:String" user="cpe" />
             </path>
           </expand>
           <select />
@@ -586,6 +316,8 @@
       <workItem from="1582057432751" duration="103000" />
       <workItem from="1582057578005" duration="391000" />
       <workItem from="1582058277259" duration="370000" />
+      <workItem from="1582058750506" duration="14000" />
+      <workItem from="1582058795853" duration="337000" />
     </task>
     <task id="LOCAL-00001" summary="Ajuste de Cabeçalho">
       <created>1580422131830</created>
@@ -710,12 +442,12 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="580088000" />
+    <option name="totallyTimeSpent" value="580439000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1913" y="0" width="1243" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14370245" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14765458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -786,14 +518,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/views/site/footer.html" />
-    <entry file="file://$PROJECT_DIR$/app/views/site/index.html" />
-    <entry file="file://$PROJECT_DIR$/app/views/site/header.html" />
-    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php" />
-    <entry file="file://$PROJECT_DIR$/app/Page.php" />
-    <entry file="file://$PROJECT_DIR$/../abacpe.php" />
-    <entry file="file://$PROJECT_DIR$/abacpe.php" />
-    <entry file="file://$PROJECT_DIR$/class/Order.php" />
     <entry file="file://$PROJECT_DIR$/class/Page.php" />
     <entry file="file://$PROJECT_DIR$/class/Message.php" />
     <entry file="file://$PROJECT_DIR$/class/Payment.php" />
@@ -821,10 +545,6 @@
     <entry file="file://$PROJECT_DIR$/../../composer.json" />
     <entry file="file://$PROJECT_DIR$/../../vendor/slim/slim/Slim/Slim.php" />
     <entry file="file://$PROJECT_DIR$/../../index.php" />
-    <entry file="file://$PROJECT_DIR$/views/site/statistics.html" />
-    <entry file="file://$PROJECT_DIR$/views/site/index.html" />
-    <entry file="file://$PROJECT_DIR$/views/site/header.html" />
-    <entry file="file://$PROJECT_DIR$/views/site/footer.html" />
     <entry file="file://$PROJECT_DIR$/Model/Plan.php" />
     <entry file="file://$PROJECT_DIR$/Model/Payment.php" />
     <entry file="file://$PROJECT_DIR$/Model/Sql.php" />
@@ -857,10 +577,110 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../index.php" />
+    <entry file="file://$PROJECT_DIR$/views/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
+          <folding>
+            <marker date="1582056542848" expanded="true" signature="20292:20335" ph="..." />
+            <marker date="1582056542848" expanded="true" signature="27660:27703" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="70" column="50" lean-forward="false" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/payments-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/payments-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="76" column="50" lean-forward="false" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/payments-update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/plans.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/plans-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/plans-update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" column="63" lean-forward="false" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
+          <folding>
+            <marker date="1582056542865" expanded="true" signature="23696:23739" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/site/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>
