@@ -1,19 +1,22 @@
 <?php
 
-use ABA\Page;
-use ABA\Model\Message;
-use ABA\Model\Order;
-use ABA\Model\Plan;
-use ABA\Model\Payment;
-use ABA\Model\Statistic;
-use ABA\Model\Client;
+require_once("config.php");
+require_once("functions.php");
+
+use CPE\Model\Page;
+use CPE\Model\Message;
+use CPE\Model\Order;
+use CPE\Model\Plan;
+use CPE\Model\Payment;
+use CPE\Model\Statistic;
+use CPE\Model\Client;
 
 /*
  * ##########################################################################################
  * Páginas do Site - INICIO
  */
 
-$app->get("/", function () {
+$app->get("/sitecpe", function () {
 
     $year = date('Y');
     $month = date('m');
@@ -72,7 +75,8 @@ $app->get("/", function () {
 
 });
 
-$app->post("/", function () {
+
+$app->post("/sitecpe/", function () {
 
     $_SESSION['UYEAR'] = $_POST['year'];
 
@@ -85,7 +89,7 @@ $app->post("/", function () {
 });
 
 
-$app->get("/order/:page/:sort", function ($page, $sort) {
+$app->get("/sitecpe/order/:page/:sort", function ($page, $sort) {
 
     Order::getOrder($page, $sort);
 
@@ -95,7 +99,7 @@ $app->get("/order/:page/:sort", function ($page, $sort) {
 
 });
 
-$app->get("/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $sort) {
+$app->get("/sitecpe/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $sort) {
 
     Order::getOrder($subpage, $sort);
 
@@ -110,7 +114,7 @@ $app->get("/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $so
 ///                     PLANOS                     ///
 //////////////////////////////////////////////////////
 
-$app->get("/plans", function () {
+$app->get("/sitecpe/plans", function () {
 
     (!isset($_SESSION['SortPlanByField'])) ? $sort_field = $_SESSION['SortPlanByField'] = "idplan" : $sort_field = $_SESSION['SortPlanByField'];
 
@@ -143,7 +147,7 @@ $app->get("/plans", function () {
 
 });
 
-$app->get("/plans/create", function () {
+$app->get("/sitecpe/plans/create", function () {
 
     $page = new Page();
 
@@ -153,7 +157,7 @@ $app->get("/plans/create", function () {
 
 });
 
-$app->post("/plans/create", function () {
+$app->post("/sitecpe/plans/create", function () {
 
     $plan = new Plan();
 
@@ -191,7 +195,7 @@ $app->post("/plans/create", function () {
 
 });
 
-$app->get("/plans/:idplan/update", function ($idplan) {
+$app->get("/sitecpe/plans/:idplan/update", function ($idplan) {
 
     $plan = new Plan();
 
@@ -206,7 +210,7 @@ $app->get("/plans/:idplan/update", function ($idplan) {
 
 });
 
-$app->post("/plans/:idplan/update", function ($idplan) {
+$app->post("/sitecpe/plans/:idplan/update", function ($idplan) {
 
     $plan = new Plan();
 
@@ -245,7 +249,7 @@ $app->post("/plans/:idplan/update", function ($idplan) {
 
 });
 
-$app->get("/plans/:idplan/delete", function ($idplan) {
+$app->get("/sitecpe/plans/:idplan/delete", function ($idplan) {
 
     $checkplan = Plan::checkPlan($idplan);
 
@@ -278,7 +282,7 @@ $app->get("/plans/:idplan/delete", function ($idplan) {
 ///                   PAGAMENTOS                   ///
 //////////////////////////////////////////////////////
 
-$app->get("/payments", function () {
+$app->get("/sitecpe/payments", function () {
 
     (!isset($_SESSION['SortPaymentByField'])) ? $sort_field = $_SESSION['SortPaymentByField'] = "idpayment" : $sort_field = $_SESSION['SortPaymentByField'];
 
@@ -330,7 +334,7 @@ $app->get("/payments", function () {
 
 });
 
-$app->get("/payments/:idclient/detail", function ($idclient) {
+$app->get("/sitecpe/payments/:idclient/detail", function ($idclient) {
 
     (!isset($_SESSION['SortPayDetailByField'])) ? $sort_field = $_SESSION['SortPayDetailByField'] = "idpayment" : $sort_field = $_SESSION['SortPayDetailByField'];
 
@@ -396,7 +400,7 @@ $app->get("/payments/:idclient/detail", function ($idclient) {
 
 });
 
-$app->get("/payments/create", function () {
+$app->get("/sitecpe/payments/create", function () {
 
     $clients = Client::listClient();
 
@@ -411,7 +415,7 @@ $app->get("/payments/create", function () {
 
 });
 
-$app->post("/payments/create", function () {
+$app->post("/sitecpe/payments/create", function () {
 
     $payment = new Payment();
 
@@ -467,7 +471,7 @@ $app->post("/payments/create", function () {
 
 });
 
-$app->get("/payments/:idclient/create", function ($idclient) {
+$app->get("/sitecpe/payments/:idclient/create", function ($idclient) {
 
     $clients = Client::listClient();
 
@@ -482,7 +486,7 @@ $app->get("/payments/:idclient/create", function ($idclient) {
 
 });
 
-$app->post("/payments/:idclient/create", function ($idclient) {
+$app->post("/sitecpe/payments/:idclient/create", function ($idclient) {
 
     $payment = new Payment();
 
@@ -531,7 +535,7 @@ $app->post("/payments/:idclient/create", function ($idclient) {
 
 });
 
-$app->get("/payments/:idpayment/update", function ($idpayment) {
+$app->get("/sitecpe/payments/:idpayment/update", function ($idpayment) {
 
     $payment = new Payment();
 
@@ -550,7 +554,7 @@ $app->get("/payments/:idpayment/update", function ($idpayment) {
 
 });
 
-$app->post("/payments/:idpayment/update", function ($idpayment) {
+$app->post("/sitecpe/payments/:idpayment/update", function ($idpayment) {
 
     $payment = new Payment();
 
@@ -578,7 +582,7 @@ $app->post("/payments/:idpayment/update", function ($idpayment) {
 
 });
 
-$app->get("/payments/:idpayment/delete", function ($idpayment) {
+$app->get("/sitecpe/payments/:idpayment/delete", function ($idpayment) {
 
     $payment = new Payment();
 
@@ -611,7 +615,7 @@ $app->get("/payments/:idpayment/delete", function ($idpayment) {
 ///                  ESTATISTICAS                  ///
 //////////////////////////////////////////////////////
 
-$app->get("/statistics", function ($year = 2019, $month = 07) {
+$app->get("/sitecpe/statistics", function ($year = 2019, $month = 07) {
 
     $year = date('Y');
     $month = date('m');
@@ -669,7 +673,7 @@ $app->get("/statistics", function ($year = 2019, $month = 07) {
 
 });
 
-$app->post("/statistics", function () {
+$app->post("/sitecpe/statistics", function () {
 
     $_SESSION['UYEAR'] = $_POST['year'];
 
@@ -685,7 +689,7 @@ $app->post("/statistics", function () {
 ///                      SOBRE                     ///
 //////////////////////////////////////////////////////
 
-$app->get("/about", function () {
+$app->get("/sitecpe/about", function () {
 
     if (isset($_SESSION['YEAR'])) unset($_SESSION['YEAR']);
     if (isset($_SESSION['MONTH'])) unset($_SESSION['MONTH']);
