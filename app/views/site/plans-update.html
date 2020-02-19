@@ -4,9 +4,9 @@
         <div class="row">
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/sitecpe"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li><a href="/sitecpe/plans">Planos</a></li>
-                    <li class="active"><a href="/sitecpe/plans/{$plan.idplan}/update">Editar</a></li>
+                    <li><a href="/sitesce"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li><a href="/sitesce/plans">Planos</a></li>
+                    <li class="active"><a href="/sitesce/plans/{$plan.idplan}/update">Editar</a></li>
                 </ol>
             </section>
             <section class="container">
@@ -16,9 +16,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-primary">
-
-                            <!-- form start -->
-                            <form role="form" action="/sitecpe/plans/{$plan.idplan}/update" method="post" enctype="multipart/form-data">
+                            <form role="form" action="/sitesce/plans/{$plan.idplan}/update" method="post" enctype="multipart/form-data">
                                 <div class="box-body">
                                     <div class="form-group">
                                         <label for="desplan">Nome Plano</label>
@@ -31,7 +29,6 @@
                                                placeholder="0.00" value="{$plan.vlplan}">
                                     </div>
                                 </div>
-
                                 <div class="box-footer">
                                     <div class="col-md-8 col-xs-6">
                                         <button type="submit" class="btn btn-success">Salvar</button>
@@ -45,12 +42,10 @@
                                     {/if}
                                 </div>
                             </form>
-
                         </div>
                     </div>
                 </div>
             </section>
-
         </div>
     </section>
 </div>
