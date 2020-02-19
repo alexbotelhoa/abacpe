@@ -1,18 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="877eb840-95bc-4689-ab78-81bb7a9b7a79" name="Default" comment="Atividades:&#10;- Corrigido a busca de cliente&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)">
+    <list default="true" id="345eaab2-3434-4273-ac11-c2300d3425ed" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/Site  SCE.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitattributes" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/abacpe.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.keystream" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.keystream.len" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.len" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata.values.at" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata_i" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_metadata_/metadata_i.len" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/_src_/schema/db_abacpe.zip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/dataSources/c41daa07-c897-4f9c-9718-77cb02110813/storage.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/watcherTasks.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Client.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Message.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Order.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Page.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Payment.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Plan.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Model/Statistic.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/config.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/Sql.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/functions.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/json/clients.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/site.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/index-2017-09.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/index-2019-05.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/index-2019-07.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/index-2020-02.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/matrix-2017-09.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/matrix-2019-05.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/matrix-2019-07.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/matrix-2020-02.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/statistics-2019-05.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/statistics/statistics-2020-02.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/about.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/footer.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/header.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/index.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/payments.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/plans.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/cache/statistics.389aebc9a971f785c8f4a84dccc99c4a.rtpl.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/about.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/footer.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/header.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payments-create.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payments-detail.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payments-update.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/payments.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/plans-create.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/plans-update.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/plans.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/site/statistics.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="$PROJECT_DIR$/.idea/deployment.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/about.html" afterPath="$PROJECT_DIR$/views/site/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/footer.html" afterPath="$PROJECT_DIR$/views/site/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/header.html" afterPath="$PROJECT_DIR$/views/site/header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments-create.html" afterPath="$PROJECT_DIR$/views/site/payments-create.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments-detail.html" afterPath="$PROJECT_DIR$/views/site/payments-detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments-update.html" afterPath="$PROJECT_DIR$/views/site/payments-update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/payments.html" afterPath="$PROJECT_DIR$/views/site/payments.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/plans-create.html" afterPath="$PROJECT_DIR$/views/site/plans-create.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/plans-update.html" afterPath="$PROJECT_DIR$/views/site/plans-update.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/site/plans.html" afterPath="$PROJECT_DIR$/views/site/plans.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -21,8 +77,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
-    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+  <component name="ComposerSettings">
     <executablePath>composer</executablePath>
   </component>
   <component name="DatabaseView">
@@ -36,106 +91,31 @@
     <expand>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
+        <item name="db_abacpe@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="db_abacpe@localhost" type="e3449647:DbNodeDescriptor" />
         <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="db_abacpe" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
     </expand>
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>$dataYearMonth</find>
-      <find>$matrix</find>
-      <find>BASECLIENTES</find>
-      <find>$_SESSION['matrix']</find>
-      <find>$_SESSION['MATRIX']</find>
-      <find>var_dump</find>
-      <find>$_SESS</find>
-      <find>$d</find>
-      <find>data</find>
-      <find>Donut Chart</find>
-      <find>jQuery knob diffe</find>
-      <find>$nichorecstt</find>
-      <find>BASE</find>
-      <find>$nichostt</find>
-      <find>round</find>
-      <find>nichoStatistics</find>
+      <find>src=&quot;/res/cpe</find>
       <find>$nichoseg</find>
-      <find>$sumPlanMonth</find>
-      <find>($metricas[$q]['mrrc'] + $metricas[$q]['cancelledc'])</find>
-      <find>&quot;checkLogin&quot;</find>
-      <find>checkLogin</find>
-      <find>href=&quot;/res</find>
-      <find>src=&quot;/res</find>
-      <find>{</find>
-      <find>href=&quot;/res/</find>
-      <find>src=&quot;/res/</find>
-      <find>href=&quot;/abacpe</find>
-      <find>src=&quot;/abacpe</find>
-      <find>abacpe</find>
-      <find>href=&quot;/</find>
+      <find>cpe</find>
+      <find>sitecpe</find>
     </findStrings>
     <replaceStrings>
-      <replace>$id</replace>
-      <replace>$saas</replace>
-      <replace>0</replace>
-      <replace>$matrix[$p][$id]</replace>
-      <replace>$m</replace>
-      <replace>[$m]</replace>
-      <replace>$agopayment</replace>
-      <replace>$vlpayment</replace>
-      <replace>saas</replace>
-      <replace>$datachart[0]</replace>
-      <replace>$datachart[1].saas</replace>
-      <replace>datachart[8]</replace>
-      <replace>$_SESSION['matrix']</replace>
-      <replace>$metricas</replace>
-      <replace>$_SESSION['MATRIX']</replace>
-      <replace>$clientsFullDetails</replace>
-      <replace>$matrix</replace>
-      <replace>7</replace>
-      <replace>$data</replace>
-      <replace>src=&quot;/abacpe/res</replace>
-      <replace>href=&quot;/abacpe/res</replace>
-      <replace>href=&quot;/abascp/res</replace>
-      <replace>src=&quot;/res/abacpe</replace>
-      <replace>src=&quot;/abascp/res</replace>
-      <replace>href=&quot;/abacpe/res/</replace>
-      <replace>src=&quot;/abacpe/res/</replace>
-      <replace>href=&quot;/app/abacpe</replace>
-      <replace>src=&quot;/app/abacpe</replace>
-      <replace>cpe</replace>
-      <replace>href=&quot;/sitecpe/</replace>
+      <replace>src=&quot;/cpe/res</replace>
+      <replace>abasce</replace>
+      <replace>sitesce</replace>
     </replaceStrings>
-    <dirStrings>
-      <dir>C:\xampp\htdocs\abacpe\app</dir>
-      <dir>C:\xampp\htdocs\app\cpe</dir>
-    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -143,62 +123,43 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/../vendor/composer/autoload_namespaces.php" />
-        <option value="$PROJECT_DIR$/../vendor/composer/autoload_real.php" />
-        <option value="$PROJECT_DIR$/app/Model/Client.php" />
-        <option value="$PROJECT_DIR$/../app/Page.php" />
-        <option value="$PROJECT_DIR$/../app/views/site/header.html" />
-        <option value="$PROJECT_DIR$/../app/PageCPE.php" />
-        <option value="$PROJECT_DIR$/../site.php" />
-        <option value="$PROJECT_DIR$/../ecommerce/site.php" />
-        <option value="$PROJECT_DIR$/../ABA/Page.php" />
-        <option value="$PROJECT_DIR$/../composer.json" />
-        <option value="$PROJECT_DIR$/../vendor/autoload.php" />
-        <option value="$PROJECT_DIR$/app/Page.php" />
+        <option value="$PROJECT_DIR$/app/functions.php" />
         <option value="$PROJECT_DIR$/../index.php" />
+        <option value="$PROJECT_DIR$/app/statistics/index-2019-05.json" />
+        <option value="$PROJECT_DIR$/app/statistics/index-2017-09.json" />
+        <option value="$PROJECT_DIR$/app/views/site/plans-update.html" />
+        <option value="$PROJECT_DIR$/../app/views/site/index.html" />
         <option value="$PROJECT_DIR$/app/Model/Statistic.php" />
-        <option value="$PROJECT_DIR$/../vendor/composer/autoload_psr4.php" />
-        <option value="$PROJECT_DIR$/app/views/site/header.html" />
+        <option value="$PROJECT_DIR$/app/Model/Plan.php" />
+        <option value="$PROJECT_DIR$/app/Model/Payment.php" />
+        <option value="$PROJECT_DIR$/app/Model/Page.php" />
+        <option value="$PROJECT_DIR$/app/Model/Client.php" />
+        <option value="$PROJECT_DIR$/app/Model/Order.php" />
+        <option value="$PROJECT_DIR$/app/Model/Message.php" />
+        <option value="$PROJECT_DIR$/app/db/Sql.php" />
+        <option value="$PROJECT_DIR$/app/Model.php" />
+        <option value="$PROJECT_DIR$/app/config.php" />
+        <option value="$PROJECT_DIR$/app/site.php" />
+        <option value="$PROJECT_DIR$/app/views/site/payments-detail.html" />
+        <option value="$PROJECT_DIR$/app/views/site/payments-create.html" />
         <option value="$PROJECT_DIR$/app/views/site/index.html" />
+        <option value="$PROJECT_DIR$/app/views/site/payments-update.html" />
+        <option value="$PROJECT_DIR$/app/views/site/about.html" />
+        <option value="$PROJECT_DIR$/app/views/site/payments.html" />
         <option value="$PROJECT_DIR$/app/views/site/footer.html" />
-        <option value="$PROJECT_DIR$/../abacpe.php" />
-        <option value="$PROJECT_DIR$/class/Page.php" />
-        <option value="$PROJECT_DIR$/class/Client.php" />
-        <option value="$PROJECT_DIR$/Page.php" />
-        <option value="$PROJECT_DIR$/../../vendor/composer/ClassLoader.php" />
-        <option value="$PROJECT_DIR$/../../composer.json" />
-        <option value="$PROJECT_DIR$/../../vendor/composer/autoload_psr4.php" />
-        <option value="$PROJECT_DIR$/../../index.php" />
-        <option value="$PROJECT_DIR$/Model.php" />
-        <option value="$PROJECT_DIR$/Model/Order.php" />
-        <option value="$PROJECT_DIR$/Model/Message.php" />
-        <option value="$PROJECT_DIR$/Model/Client.php" />
-        <option value="$PROJECT_DIR$/Model/Sql.php" />
-        <option value="$PROJECT_DIR$/Model/Payment.php" />
-        <option value="$PROJECT_DIR$/Model/Plan.php" />
-        <option value="$PROJECT_DIR$/Model/Statistic.php" />
-        <option value="$PROJECT_DIR$/Model/Page.php" />
-        <option value="$PROJECT_DIR$/views/site/index.html" />
-        <option value="$PROJECT_DIR$/views/site/statistics.html" />
-        <option value="$PROJECT_DIR$/site.php" />
-        <option value="$PROJECT_DIR$/index.php" />
-        <option value="$PROJECT_DIR$/config.php" />
-        <option value="$PROJECT_DIR$/composer.json" />
-        <option value="$PROJECT_DIR$/views/site/about.html" />
-        <option value="$PROJECT_DIR$/views/site/plans-update.html" />
-        <option value="$PROJECT_DIR$/views/site/plans-create.html" />
-        <option value="$PROJECT_DIR$/views/site/plans.html" />
-        <option value="$PROJECT_DIR$/views/site/payments-update.html" />
-        <option value="$PROJECT_DIR$/views/site/payments-detail.html" />
-        <option value="$PROJECT_DIR$/views/site/payments-create.html" />
-        <option value="$PROJECT_DIR$/views/site/footer.html" />
-        <option value="$PROJECT_DIR$/views/site/header.html" />
-        <option value="$PROJECT_DIR$/views/site/payments.html" />
+        <option value="$PROJECT_DIR$/app/views/site/header.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
@@ -206,7 +167,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" interpreter_name="PHP 7.3.12" />
   <component name="ProjectFrameBounds">
     <option name="x" value="1913" />
-    <option name="width" value="1243" />
+    <option name="width" value="1432" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -215,6 +176,9 @@
         <expanded-state>
           <State>
             <id />
+          </State>
+          <State>
+            <id>File Watchers</id>
           </State>
         </expanded-state>
         <selected-state>
@@ -225,11 +189,11 @@
       </profile-state>
     </entry>
   </component>
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -242,38 +206,22 @@
       <manualOrder />
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="cpe" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cpe" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="Scratches" />
-      <pane id="Scope">
-        <subPane subId="Project Files">
-          <expand>
-            <path>
-              <item name="Root" type="cbb8eebc:String" user="Root" />
-              <item name="cpe" type="cbb8eebc:String" user="cpe" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../projetos" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode" />
+    <property name="node.js.path.for.package.stylelint" value="project" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="node.js.selected.package.stylelint" value="" />
+    <property name="javascript.nodejs.core.library.configured.version" value="12.14.1" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -292,197 +240,81 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="877eb840-95bc-4689-ab78-81bb7a9b7a79" name="Default" comment="" />
-      <created>1580256834951</created>
+      <changelist id="345eaab2-3434-4273-ac11-c2300d3425ed" name="Default" comment="" />
+      <created>1582064274796</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1580256834951</updated>
-      <workItem from="1580256836147" duration="2123000" />
-      <workItem from="1580296615042" duration="9148000" />
-      <workItem from="1580315307070" duration="29534000" />
-      <workItem from="1580392564559" duration="24329000" />
-      <workItem from="1580491107933" duration="21050000" />
-      <workItem from="1580726475332" duration="76162000" />
-      <workItem from="1580920303195" duration="263406000" />
-      <workItem from="1581595181858" duration="77730000" />
-      <workItem from="1581767675472" duration="19811000" />
-      <workItem from="1581940691335" duration="23169000" />
-      <workItem from="1581967927340" duration="30000" />
-      <workItem from="1581969817881" duration="39000" />
-      <workItem from="1581969859656" duration="26245000" />
-      <workItem from="1582043374042" duration="3203000" />
-      <workItem from="1582046679793" duration="3192000" />
-      <workItem from="1582057369730" duration="53000" />
-      <workItem from="1582057432751" duration="103000" />
-      <workItem from="1582057578005" duration="391000" />
-      <workItem from="1582058277259" duration="370000" />
-      <workItem from="1582058750506" duration="14000" />
-      <workItem from="1582058795853" duration="337000" />
+      <updated>1582064274796</updated>
+      <workItem from="1582064276100" duration="1568000" />
+      <workItem from="1582070827224" duration="268000" />
+      <workItem from="1582071187200" duration="11000" />
+      <workItem from="1582071290291" duration="35000" />
+      <workItem from="1582072763330" duration="38000" />
+      <workItem from="1582140366875" duration="3322000" />
+      <workItem from="1582143785555" duration="26000" />
+      <workItem from="1582143896389" duration="522000" />
+      <workItem from="1582144524317" duration="135000" />
+      <workItem from="1582144812608" duration="522000" />
+      <workItem from="1582147701276" duration="158000" />
+      <workItem from="1582147926687" duration="202000" />
+      <workItem from="1582148150884" duration="1075000" />
+      <workItem from="1582149246111" duration="1711000" />
     </task>
-    <task id="LOCAL-00001" summary="Ajuste de Cabeçalho">
-      <created>1580422131830</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1580422131830</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Front quase pronto">
-      <created>1580503006175</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1580503006175</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Finalizado o Index">
-      <created>1580830835472</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1580830835472</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Finalizado:&#10;- Formulário Planos&#10;- Classe Planos&#10;- Classe Mensagem">
-      <created>1580845004422</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1580845004422</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Atividades:&#10;- Correções diversos&#10;- Criação dos formulários de Pagamento&#10;- Melhoria nas Mensagens de CRUD&#10;- Melhorias nas Ordenações&#10;- Melhorias nas permissões e nos bloqueios">
-      <created>1580938478029</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1580938478029</updated>
-    </task>
-    <task id="LOCAL-00006" summary="Atividades:&#10;- Feito o merge da API via JSON&#10;- Criado a seleção de &quot;usuários&quot; / Empresas">
-      <created>1580946859137</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1580946859137</updated>
-    </task>
-    <task id="LOCAL-00007" summary="Atividades:&#10;- Finalizado páginas de Planos&#10;- Finalizado páginas de Pagamentos&#10;- Atualizado novas ordenações">
-      <created>1580995763328</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1580995763328</updated>
-    </task>
-    <task id="LOCAL-00008" summary="Atividades:&#10;- Finalizado páginas de Estatísticas">
-      <created>1581108982898</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1581108982898</updated>
-    </task>
-    <task id="LOCAL-00009" summary="Atividades:&#10;- Finalizado estatísticas New, Expansion e Contration">
-      <created>1581248536987</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1581248536987</updated>
-    </task>
-    <task id="LOCAL-00010" summary="Atividades:&#10;+ Finalizado as estatísticas:&#10;   - Resurrected,&#10;   - Cancelled,&#10;   - ARPU,&#10;   - Receitas Fixas,&#10;   - Variáveis de Entrada, e&#10;   - Receitas Variáveis de Saída&#10;&#10;+ Finalizado os gráficos do Index">
-      <created>1581257867997</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1581257867997</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Atividades:&#10;- Corrigido as estatísticas SaaS">
-      <created>1581368124082</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1581368124082</updated>
-    </task>
-    <task id="LOCAL-00012" summary="Atividades:&#10;- Correções nos estatísticas do Index&#10;- Finalizado na página de Estatísticas&#10; 1. Topo&#10; 2. Nicho (Preparado para receber valores)&#10; 3. PLanos Vendidos&#10; 4. Rate Churn">
-      <created>1581460926864</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1581460926864</updated>
-    </task>
-    <task id="LOCAL-00013" summary="Atividades:&#10;- Criado o armazenamento em SESSION da matriz de pagamento">
-      <created>1581539085781</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1581539085781</updated>
-    </task>
-    <task id="LOCAL-00014" summary="Atividades:&#10;- Melhorias na leitura do JSON dos Clientes para melhor performance">
-      <created>1581611994131</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1581611994131</updated>
-    </task>
-    <task id="LOCAL-00015" summary="Atividades:&#10;- Melhorias no tempo de espera">
-      <created>1581612689575</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1581612689575</updated>
-    </task>
-    <task id="LOCAL-00016" summary="Atividades:&#10;- Finalizado a página de estatísticas&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)">
-      <created>1581792132217</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1581792132217</updated>
-    </task>
-    <task id="LOCAL-00017" summary="Atividades:&#10;- Corrigido a busca de cliente&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)">
-      <created>1581800071368</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1581800071368</updated>
-    </task>
-    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="580439000" />
+    <option name="totallyTimeSpent" value="9593000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1913" y="0" width="1243" height="1047" extended-state="0" />
+    <frame x="1913" y="0" width="1432" height="1047" extended-state="0" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14765458" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24910265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3377193" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25142857" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3377193" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24910265" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942432" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32944608" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -491,196 +323,415 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Ajuste de Cabeçalho" />
-    <MESSAGE value="Front quase pronto" />
-    <MESSAGE value="Finalizado o Index" />
-    <MESSAGE value="Finalizado:&#10;- Formulário Planos&#10;- Classe Planos&#10;- Classe Mensagem" />
-    <MESSAGE value="Atividades:&#10;- Correções diversos&#10;- Criação dos formulários de Pagamento&#10;- Melhoria nas Mensagens de CRUD&#10;- Melhorias nas Ordenações&#10;- Melhorias nas permissões e nos bloqueios" />
-    <MESSAGE value="Atividades:&#10;- Feito o merge da API via JSON&#10;- Criado a seleção de &quot;usuários&quot; / Empresas" />
-    <MESSAGE value="Atividades:&#10;- Finalizado páginas de Planos&#10;- Finalizado páginas de Pagamentos&#10;- Atualizado novas ordenações" />
-    <MESSAGE value="Atividades:&#10;- Finalizado páginas de Estatísticas" />
-    <MESSAGE value="Atividades:&#10;- Finalizado estatísticas New, Expansion e Contration" />
-    <MESSAGE value="Atividades:&#10;+ Finalizado as estatísticas:&#10;   - Resurrected,&#10;   - Cancelled,&#10;   - ARPU,&#10;   - Receitas Fixas,&#10;   - Variáveis de Entrada, e&#10;   - Receitas Variáveis de Saída&#10;&#10;+ Finalizado os gráficos do Index" />
-    <MESSAGE value="Atividades:&#10;- Corrigido as estatísticas SaaS" />
-    <MESSAGE value="Atividades:&#10;- Correções nos estatísticas do Index&#10;- Finalizado na página de Estatísticas&#10; 1. Topo&#10; 2. Nicho (Preparado para receber valores)&#10; 3. PLanos Vendidos&#10; 4. Rate Churn" />
-    <MESSAGE value="Atividades:&#10;- Criado o armazenamento em SESSION da matriz de pagamento" />
-    <MESSAGE value="Atividades:&#10;- Melhorias na leitura do JSON dos Clientes para melhor performance" />
-    <MESSAGE value="Atividades:&#10;- Melhorias no tempo de espera" />
-    <MESSAGE value="Atividades:&#10;- Finalizado a página de estatísticas&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)" />
-    <MESSAGE value="Atividades:&#10;- Corrigido a busca de cliente&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atividades:&#10;- Corrigido a busca de cliente&#10;&#10;Proximas:&#10;- Página 'About'&#10;- Seletor da Pesquisa (Index e Estatísticas)" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="6" />
+      <option name="time" value="2" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/class/Page.php" />
-    <entry file="file://$PROJECT_DIR$/class/Message.php" />
-    <entry file="file://$PROJECT_DIR$/class/Payment.php" />
-    <entry file="file://$PROJECT_DIR$/class/Plan.php" />
-    <entry file="file://$PROJECT_DIR$/class/Statistic.php" />
-    <entry file="file://$PROJECT_DIR$/class/Client.php" />
-    <entry file="file://$PROJECT_DIR$/class/Model.php" />
-    <entry file="file://$PROJECT_DIR$/db/Sql.php" />
-    <entry file="file://$PROJECT_DIR$/Page.php" />
-    <entry file="file://$PROJECT_DIR$/../../abascp - Copia/site.php" />
-    <entry file="file://$PROJECT_DIR$/../../abascp - Copia/index.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/ClassLoader.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/autoload_classmap.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/autoload_namespaces.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/autoload_static.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/installed.json" />
-    <entry file="file://$PROJECT_DIR$/functions.php">
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans-create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../../abacpe.php" />
-    <entry file="file://$PROJECT_DIR$/../../composer.json" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/slim/slim/Slim/Slim.php" />
-    <entry file="file://$PROJECT_DIR$/../../index.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Plan.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Payment.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Sql.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Statistic.php" />
-    <entry file="file://$PROJECT_DIR$/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Model.php" />
-    <entry file="file://$PROJECT_DIR$/index.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/autoload.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/autoload_real.php" />
-    <entry file="file://$PROJECT_DIR$/../../vendor/composer/autoload_psr4.php" />
-    <entry file="file://$PROJECT_DIR$/composer.json" />
-    <entry file="file://$PROJECT_DIR$/Model/Client.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Message.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Order.php" />
-    <entry file="file://$PROJECT_DIR$/Model/Page.php" />
-    <entry file="file://$PROJECT_DIR$/site.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="12" lean-forward="false" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/abacpe.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="52" lean-forward="false" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../index.php" />
-    <entry file="file://$PROJECT_DIR$/views/site/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="6" column="40" lean-forward="true" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
-          <folding>
-            <marker date="1582056542848" expanded="true" signature="20292:20335" ph="..." />
-            <marker date="1582056542848" expanded="true" signature="27660:27703" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/payments.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="70" column="50" lean-forward="false" selection-start-line="70" selection-start-column="50" selection-end-line="70" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/payments-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="34" lean-forward="false" selection-start-line="8" selection-start-column="27" selection-end-line="8" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/payments-detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="76" column="50" lean-forward="false" selection-start-line="76" selection-start-column="50" selection-end-line="76" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/payments-update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/plans.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/plans-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="34" lean-forward="false" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/plans-update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="63" lean-forward="false" selection-start-line="23" selection-start-column="63" selection-end-line="23" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/statistics.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="2" column="29" lean-forward="true" selection-start-line="2" selection-start-column="29" selection-end-line="2" selection-end-column="29" />
-          <folding>
-            <marker date="1582056542865" expanded="true" signature="23696:23739" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="49" lean-forward="false" selection-start-line="9" selection-start-column="42" selection-end-line="9" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="35" lean-forward="true" selection-start-line="3" selection-start-column="35" selection-end-line="3" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/site/header.html">
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans-update.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="28" lean-forward="false" selection-start-line="6" selection-start-column="21" selection-end-line="6" selection-end-column="28" />
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="120" lean-forward="false" selection-start-line="46" selection-start-column="120" selection-end-line="46" selection-end-column="120" />
+          <folding>
+            <marker date="1582150913582" expanded="false" signature="2821:2834" ph="..." />
+            <marker date="1582150913582" expanded="false" signature="3077:3090" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1983#1989#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4267">
+          <caret line="251" column="6" lean-forward="false" selection-start-line="251" selection-start-column="6" selection-end-line="251" selection-end-column="6" />
+          <folding>
+            <marker date="1582150341404" expanded="true" signature="20296:20339" ph="..." />
+            <marker date="1582150341404" expanded="true" signature="27664:27707" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans-update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1632">
+          <caret line="96" column="44" lean-forward="false" selection-start-line="96" selection-start-column="44" selection-end-line="96" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../scp/functions.php" />
+    <entry file="file://$PROJECT_DIR$/app/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="0">
+            <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/statistics/index-2019-05.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="59" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="784" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/statistics/index-2017-09.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="37" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="779" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/statistics/index-2019-07.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/statistics/matrix-2017-09.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6273">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="24" lean-forward="false" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/views/site/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5055bb87-8367-45f5-8061-39e17133b9aa/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/plans-update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="41" lean-forward="false" selection-start-line="6" selection-start-column="41" selection-end-line="6" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/stubs/superglobals/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="303">
+          <caret line="173" column="0" lean-forward="false" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../app/views/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="119" lean-forward="false" selection-start-line="22" selection-start-column="119" selection-end-line="22" selection-end-column="119" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="5" lean-forward="true" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/db/Sql.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="7" lean-forward="false" selection-start-line="4" selection-start-column="7" selection-end-line="4" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Page.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="7" lean-forward="false" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/functions.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="18" lean-forward="false" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/site.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-153">
+          <caret line="3" column="24" lean-forward="false" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Plan.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="83">
+          <caret line="5" column="7" lean-forward="false" selection-start-line="5" selection-start-column="7" selection-end-line="5" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="750">
+          <caret line="79" column="0" lean-forward="false" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-create.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="52" lean-forward="false" selection-start-line="31" selection-start-column="52" selection-end-line="31" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="249" column="20" lean-forward="false" selection-start-line="249" selection-start-column="20" selection-end-line="249" selection-end-column="20" />
+          <folding>
+            <marker date="1582150341404" expanded="true" signature="20296:20339" ph="..." />
+            <marker date="1582150341404" expanded="true" signature="27664:27707" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments-update.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1190">
+          <caret line="70" column="28" lean-forward="true" selection-start-line="70" selection-start-column="28" selection-end-line="70" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/payments.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="623">
+          <caret line="64" column="57" lean-forward="false" selection-start-line="64" selection-start-column="57" selection-end-line="64" selection-end-column="57" />
+          <folding>
+            <element signature="n#style#0;n#th#0;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#4;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#section#2;n#div#0;n#section#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1983#1989#1" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/site/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1904">
+          <caret line="112" column="0" lean-forward="false" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
+          <folding>
+            <marker date="1582150913582" expanded="false" signature="2821:2834" ph="..." />
+            <marker date="1582150913582" expanded="false" signature="3077:3090" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

@@ -1,0 +1,82 @@
+<div class="maincontent-area">
+    <div class="zigzag-bottom"></div>
+    <section class="content">
+        <div class="row">
+            <section class="container">
+                <ol class="breadcrumb">
+                    <li><a href="/sitesce"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li class="active"><a href="/sitesce/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/sitesce/payments/{$idclient}/detail">Cliente</a></li>
+                </ol>
+            </section>
+            <section class="container">
+                <div class="col-xs-7">
+                    <h2>Cliente</h2>
+                </div>
+                <div class="col-xs-5" align="right">
+                    <a href="/sitesce/payments/{$idclient}/create" class="btn btn-success">Cadastrar</a>
+                </div>
+            </section>
+            <section class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-primary">
+
+                            <div class="box-header">
+                                {if="$success != ''"}
+                                <div class="box-header bg-green" align="center">
+                                    {$success}
+                                </div>
+                                {/if}
+                            </div>
+                            <div class="box-body no-padding">
+                                <table class="table table-striped">
+                                    <thead>
+                                    <tr>
+                                        <th style="width: 10px"><a href="/sitesce/order/payments/{$idclient}/detail/ordid">ID</a></th>
+                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordcli">Cliente</a></th>
+                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordpla">Plano</a></th>
+                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordrec">Recor</a></th>
+                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/orddtp">Data</a></th>
+                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordvlp">Valor</a></th>
+                                        <th style="width: 140px">&nbsp;</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    {loop="$payment"}
+                                    <tr>
+                                        <td>{$value.idpayment}</td>
+                                        <td>{$value.desclient}</td>
+                                        <td>{$value.desplan}</td>
+                                        <td>{$value.vlrecurrence}</td>
+                                        <td>{function="formatDate($value.dtpayment)"}</td>
+                                        <td>{function="formatPrice($value.vlpayment)"}</td>
+                                        <td>
+                                            <a href="/sitesce/payments/{$value.idpayment}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                                            <a href="/sitesce/payments/{$value.idpayment}/delete" onclick="return confirm('Deseja realmente excluir este registro?')"
+                                               class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
+                                        </td>
+                                    </tr>
+                                    {/loop}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="product-pagination text-center">
+                            <nav>
+                                <ul class="pagination">
+
+                                    <li><a href="/sitesce/payments?page=1"><<</a></li>
+                                    {loop="$pages"}
+                                    <li><a href="{$value.link}">{if="$counter == 2"}<b>{$value.page}</b>{else}{$value.page}{/if}</a></li>
+                                    {/loop}
+                                    <li><a href="/sitesce/payments?page={$lastpage}">>></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>

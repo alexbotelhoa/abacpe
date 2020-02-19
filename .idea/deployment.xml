@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="SiteCPE">
+  <component name="PublishConfigData" serverName="Portal ABA">
     <serverData>
-      <paths name="SiteCPE">
+      <paths name="AWS">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="app/cpe" />
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+      <paths name="Portal ABA">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="Site SCE" />
           </mappings>
         </serverdata>
       </paths>
