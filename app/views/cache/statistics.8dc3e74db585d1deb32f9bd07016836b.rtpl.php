@@ -1,11 +1,9 @@
 <?php if(!class_exists('Rain\Tpl')){exit;}?><div class="maincontent-area">
     <div class="zigzag-bottom"></div>
     <section class="content">
-
         <div class="row">
             <div class="col-lg-1"></div>
             <div class="col-lg-10">
-
                 <section class="container">
                     <h2>Estatísticas</h2>
                 </section>
@@ -17,36 +15,34 @@
                             <div class="box-footer">
                                 <?php $counter1=-1;  if( isset($datachart) && ( is_array($datachart) || $datachart instanceof Traversable ) && sizeof($datachart) ) foreach( $datachart as $key1 => $value1 ){ $counter1++; ?>
                                     <?php if( $counter1 < 4 ){ ?>
-                                        <div class="col-xs-3">
-                                            <div class="description-block">
-                                                <span class="description-percentage text-<?php echo htmlspecialchars( $value1["vsblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><i class="fa fa-caret-<?php echo htmlspecialchars( $value1["caretblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"></i> <?php echo htmlspecialchars( $value1["perblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>%</span>
-                                                <h5 class="description-header"><?php echo htmlspecialchars( $value1["vlblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
-                                                <h5 class="description-text"><?php echo htmlspecialchars( $value1["nameblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
-                                            </div>
+                                    <div class="col-xs-3">
+                                        <div class="description-block">
+                                            <span class="description-percentage text-<?php echo htmlspecialchars( $value1["vsblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><i class="fa fa-caret-<?php echo htmlspecialchars( $value1["caretblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"></i> <?php echo htmlspecialchars( $value1["perblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>%</span>
+                                            <h5 class="description-header"><?php echo htmlspecialchars( $value1["vlblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
+                                            <h5 class="description-text"><?php echo htmlspecialchars( $value1["nameblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                         </div>
+                                    </div>
                                     <?php } ?>
                                 <?php } ?>
                             </div>
                         </div>
-
                         <div class="col-sm-6 col-xs-12">
                             <div class="box-footer">
                                 <?php $counter1=-1;  if( isset($datachart) && ( is_array($datachart) || $datachart instanceof Traversable ) && sizeof($datachart) ) foreach( $datachart as $key1 => $value1 ){ $counter1++; ?>
                                     <?php if( $counter1 > 3 && $counter1 < 8 ){ ?>
-                                        <div class="col-xs-3">
-                                            <div class="description-block">
-                                                <span class="description-percentage text-<?php echo htmlspecialchars( $value1["vsblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><i class="fa fa-caret-<?php echo htmlspecialchars( $value1["caretblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"></i> <?php echo htmlspecialchars( $value1["perblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>%</span>
-                                                <h5 class="description-header"><?php echo htmlspecialchars( $value1["vlblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
-                                                <h5 class="description-text"><?php echo htmlspecialchars( $value1["nameblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
-                                            </div>
+                                    <div class="col-xs-3">
+                                        <div class="description-block">
+                                            <span class="description-percentage text-<?php echo htmlspecialchars( $value1["vsblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"><i class="fa fa-caret-<?php echo htmlspecialchars( $value1["caretblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"></i> <?php echo htmlspecialchars( $value1["perblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?>%</span>
+                                            <h5 class="description-header"><?php echo htmlspecialchars( $value1["vlblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
+                                            <h5 class="description-text"><?php echo htmlspecialchars( $value1["nameblock"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                         </div>
+                                    </div>
                                     <?php } ?>
                                 <?php } ?>
                             </div>
                         </div>
                     </div>
                 </div>
-
 
                 <!-- MÉTRICAS SAAS POR REFERÊNCIA DO MÊS -->
                 <div class="row">
@@ -68,32 +64,38 @@
                                 <div class="row">
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
                                         <div class="knob-header">Recurrent</div>
-                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["8"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" data-width="170" data-height="170" data-fgColor="#39CCCC">
+                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["8"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"
+                                               data-width="170" data-height="170" data-fgColor="#39CCCC">
                                         <h5><?php echo htmlspecialchars( $datachart["8"]["nichoseg"]["0"]["0"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
                                         <div class="knob-header">New</div>
-                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["9"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" data-width="170" data-height="170" data-fgColor="#00a65a">
+                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["9"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"
+                                               data-width="170" data-height="170" data-fgColor="#00a65a">
                                         <h5><?php echo htmlspecialchars( $datachart["9"]["nichoseg"]["0"]["0"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
                                         <div class="knob-header">Resurrected</div>
-                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["10"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" data-width="170" data-height="170" data-fgColor="#8f26ae">
+                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["10"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"
+                                               data-width="170" data-height="170" data-fgColor="#8f26ae">
                                         <h5><?php echo htmlspecialchars( $datachart["10"]["nichoseg"]["0"]["0"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                     </div>
                                     <div class="col-xs-6 col-sm-3 col-lg-2 text-center">
                                         <div class="knob-header">Expansion</div>
-                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["11"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" data-width="170" data-height="170" data-fgColor="#3c8dbc">
+                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["11"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"
+                                               data-width="170" data-height="170" data-fgColor="#3c8dbc">
                                         <h5><?php echo htmlspecialchars( $datachart["11"]["nichoseg"]["0"]["0"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-lg-2 text-center">
                                         <div class="knob-header">Contraction</div>
-                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["12"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" data-width="170" data-height="170" data-fgColor="#f39c12">
+                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["12"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"
+                                               data-width="170" data-height="170" data-fgColor="#f39c12">
                                         <h5><?php echo htmlspecialchars( $datachart["12"]["nichoseg"]["0"]["0"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-lg-2 text-center">
                                         <div class="knob-header">Cancelled</div>
-                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["13"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>" data-width="170" data-height="170" data-fgColor="#d54b39">
+                                        <input type="text" class="knob" data-thickness="0.2" data-angleArc="250" data-angleOffset="-125" value="<?php echo htmlspecialchars( $datachart["13"]["nichoseg"]["0"]["1"], ENT_COMPAT, 'UTF-8', FALSE ); ?>"
+                                               data-width="170" data-height="170" data-fgColor="#d54b39">
                                         <h5><?php echo htmlspecialchars( $datachart["13"]["nichoseg"]["0"]["0"], ENT_COMPAT, 'UTF-8', FALSE ); ?></h5>
                                     </div>
                                 </div>
@@ -101,7 +103,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <!-- MÉTRICAS SAAS DOS TOP 5 DOS CLIENTES POR PLANOS -->
                 <div class="row">
@@ -126,13 +127,14 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-xs-12 col-sm-6">
                         <div class="box box-danger">
                             <div class="box-header">
                                 <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                 <ul class="dropdown-menu" role="menu">
-                                    <li>&nbsp;<b>Churn:</b> Valor formado pela soma da quantidade de clientes cancelados divido pela quantidade de clientes existente e multiplicado por 100.</li>
+                                    <li>&nbsp;<b>Churn:</b> Valor formado pela soma da quantidade de clientes cancelados divido pela quantidade de clientes existente e multiplicado
+                                        por 100.
+                                    </li>
                                 </ul>
                                 <i class="fa fa-bar-chart-o"></i>
                                 <h3 class="box-title">Rate Churn</h3>
@@ -149,7 +151,6 @@
                         </div>
                     </div>
                 </div>
-
 
                 <!-- INDICADORES PERCENTUAIS DOS TOP 3 DE CLIENTES E REGIÕES -->
                 <div class="row">
@@ -211,14 +212,14 @@
                             </div>
                         </div>
                     </div>
-
                     <div class="col-sm-6">
                         <div class="col-xs-6">
                             <div class="box box-warning">
                                 <div class="box-header">
                                     <button type="button" class="btn btn-box-tool dropdown-toggle" data-toggle="dropdown"><i class="fa fa-info-circle"></i></button>
                                     <ul class="dropdown-menu" role="menu">
-                                        <li>&nbsp;<b>Contraction:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>DIMINUIÇÃO</u> de valores.</li>
+                                        <li>&nbsp;<b>Contraction:</b> Valor formado pela soma dos pagamentos das mensalidades de clientes que sofreram <u>DIMINUIÇÃO</u> de valores.
+                                        </li>
                                         <li class="divider"></li>
                                         <li>&nbsp;Os Top 3 por Cliente e Região.</li>
                                     </ul>
@@ -271,19 +272,17 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="col-lg-1"></div>
         </div>
-
     </section>
 </div>
 
 <!-- jQuery Knob -->
-<script src="/res/cpe/site/js/jquery.knob.js"></script>
+<script src="/abasce/res/site/js/jquery.knob.js"></script>
 
 <!-- ChartJS 1.0.1 -->
-<script src="/res/cpe/site/js/Chart.min.js"></script>
+<script src="/abasce/res/site/js/Chart.min.js"></script>
 
 <!-- page script -->
 <script>
@@ -369,130 +368,130 @@
             <?php } ?>
         <?php } ?>
 
-
-        var ChartOptions = {
-            //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
-            scaleBeginAtZero: true,
-            //Boolean - Whether grid lines are shown across the chart
-            scaleShowGridLines: true,
-            //String - Colour of the grid lines
-            scaleGridLineColor: "rgba(0,0,0,.05)",
-            //Number - Width of the grid lines
-            scaleGridLineWidth: 1,
-            //Boolean - Whether to show horizontal lines (except X axis)
-            scaleShowHorizontalLines: true,
-            //Boolean - Whether to show vertical lines (except Y axis)
-            scaleShowVerticalLines: true,
-            //Boolean - If there is a stroke on each bar
-            barShowStroke: true,
-            //Boolean - Whether to show a dot for each point
-            pointDot: false,
-            //Boolean - Whether the line is curved between points
-            bezierCurve: true,
-            //Number - Pixel width of the bar stroke
-            barStrokeWidth: 2,
-            //Number - Spacing between each of the X value sets
-            barValueSpacing: 5,
-            //Number - Spacing between data sets within X values
-            barDatasetSpacing: 1,
-            //String - A legend template
-            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-            //Boolean - whether to make the chart responsive,
-            responsive: true,
-            maintainAspectRatio: true,
-            datasetFill: false
-        };
-
-
-        //---------------------
-        //-  PLANOS VENDIDOS  -
-        //---------------------
-
-        var planoChartCanvas = $("#planoChart").get(0).getContext("2d");
-        var planoChart = new Chart(planoChartCanvas);
-        var planChartOptions = ChartOptions;
-        var planoChartData = {
-            labels: $month,
-            datasets: [
-                {
-                    label: "Bronze",
-                    fillColor: "rgba(137, 66, 54, 1)",
-                    strokeColor: "rgba(137, 66, 54, 1)",
-                    pointColor: "#894218",
-                    pointStrokeColor: "rgba(137, 66, 54, 1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(137, 66, 54, 1)",
-                    data: $bronzePlanoChart
-                },
-                {
-                    label: "Prata",
-                    fillColor: "rgba(192, 192, 192, 1)",
-                    strokeColor: "rgba(192, 192, 192, 1)",
-                    pointColor: "#c0c0c0",
-                    pointStrokeColor: "rgba(192, 192, 192, 1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(192, 192, 192, 1)",
-                    data: $prataPlanoChart
-                },
-                {
-                    label: "Ouro",
-                    fillColor: "rgba(255, 215, 0, 1)",
-                    strokeColor: "rgba(255, 215, 0, 1)",
-                    pointColor: "#ffd700",
-                    pointStrokeColor: "rgba(255, 215, 0, 1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(255, 215, 0, 1)",
-                    data: $ouroPlanoChart
-                },
-                {
-                    label: "Plantina",
-                    fillColor: "rgba(160, 170, 198, 1)",
-                    strokeColor: "rgba(160, 170, 198, 1)",
-                    pointColor: "#a0b2c6",
-                    pointStrokeColor: "rgba(160, 170, 198, 1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(160, 170, 198, 1)",
-                    data: $platinaPlanoChart
-                }
-            ]
-        };
-
-        planChartOptions.scaleBeginAtZero = false;
-        planChartOptions.multiTooltipTemplate = "<%=datasetLabel %>: <%=value %>%";
-        planoChart.Line(planoChartData, planChartOptions);
+            var ChartOptions = {
+                //Boolean - Whether the scale should start at zero, or an order of magnitude down from the lowest value
+                scaleBeginAtZero: true,
+                //Boolean - Whether grid lines are shown across the chart
+                scaleShowGridLines: true,
+                //String - Colour of the grid lines
+                scaleGridLineColor: "rgba(0,0,0,.05)",
+                //Number - Width of the grid lines
+                scaleGridLineWidth: 1,
+                //Boolean - Whether to show horizontal lines (except X axis)
+                scaleShowHorizontalLines: true,
+                //Boolean - Whether to show vertical lines (except Y axis)
+                scaleShowVerticalLines: true,
+                //Boolean - If there is a stroke on each bar
+                barShowStroke: true,
+                //Boolean - Whether to show a dot for each point
+                pointDot: false,
+                //Boolean - Whether the line is curved between points
+                bezierCurve: true,
+                //Number - Pixel width of the bar stroke
+                barStrokeWidth: 2,
+                //Number - Spacing between each of the X value sets
+                barValueSpacing: 5,
+                //Number - Spacing between data sets within X values
+                barDatasetSpacing: 1,
+                //String - A legend template
+                legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+                //Boolean - whether to make the chart responsive,
+                responsive: true,
+                maintainAspectRatio: true,
+                datasetFill: false
+            };
 
 
-        //---------------
-        //-  RATE CHURN -
-        //---------------
+            //---------------------
+            //-  PLANOS VENDIDOS  -
+            //---------------------
 
-        var churnChartCanvas = $("#churnChart").get(0).getContext("2d");
-        var churnChart = new Chart(churnChartCanvas);
-        var churnChartOptions = ChartOptions;
-        var churnChartData = {
-            labels: $month,
-            datasets: [
-                {
-                    label: "Churn",
-                    fillColor: "rgba(221, 75, 57, 1)",
-                    strokeColor: "rgba(221, 75, 57, 1)",
-                    pointColor: "#dd4b39",
-                    pointStrokeColor: "rgba(221, 75, 57, 1)",
-                    pointHighlightFill: "#fff",
-                    pointHighlightStroke: "rgba(221, 75, 57, 1)",
-                    data: $churnChart
-                }
-            ]
-};
+            var planoChartCanvas = $("#planoChart").get(0).getContext("2d");
+            var planoChart = new Chart(planoChartCanvas);
+            var planChartOptions = ChartOptions;
+            var planoChartData = {
+                labels: $month,
+                datasets: [
+                    {
+                        label: "Bronze",
+                        fillColor: "rgba(137, 66, 54, 1)",
+                        strokeColor: "rgba(137, 66, 54, 1)",
+                        pointColor: "#894218",
+                        pointStrokeColor: "rgba(137, 66, 54, 1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(137, 66, 54, 1)",
+                        data: $bronzePlanoChart
+                    },
+                    {
+                        label: "Prata",
+                        fillColor: "rgba(192, 192, 192, 1)",
+                        strokeColor: "rgba(192, 192, 192, 1)",
+                        pointColor: "#c0c0c0",
+                        pointStrokeColor: "rgba(192, 192, 192, 1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(192, 192, 192, 1)",
+                        data: $prataPlanoChart
+                    },
+                    {
+                        label: "Ouro",
+                        fillColor: "rgba(255, 215, 0, 1)",
+                        strokeColor: "rgba(255, 215, 0, 1)",
+                        pointColor: "#ffd700",
+                        pointStrokeColor: "rgba(255, 215, 0, 1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(255, 215, 0, 1)",
+                        data: $ouroPlanoChart
+                    },
+                    {
+                        label: "Plantina",
+                        fillColor: "rgba(160, 170, 198, 1)",
+                        strokeColor: "rgba(160, 170, 198, 1)",
+                        pointColor: "#a0b2c6",
+                        pointStrokeColor: "rgba(160, 170, 198, 1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(160, 170, 198, 1)",
+                        data: $platinaPlanoChart
+                    }
+                ]
+            };
 
-        churnChartOptions.tooltipTemplate = "<%if (label){%><%=label%>: <%}%><%= value %>%";
-        churnChart.Line(churnChartData, churnChartOptions);
+            planChartOptions.scaleBeginAtZero = false;
+            planChartOptions.multiTooltipTemplate = "<%=datasetLabel %>: <%=value %>%";
+            planoChart.Line(planoChartData, planChartOptions);
 
-    });
+
+            //---------------
+            //-  RATE CHURN -
+            //---------------
+
+            var churnChartCanvas = $("#churnChart").get(0).getContext("2d");
+            var churnChart = new Chart(churnChartCanvas);
+            var churnChartOptions = ChartOptions;
+            var churnChartData = {
+                labels: $month,
+                datasets: [
+                    {
+                        label: "Churn",
+                        fillColor: "rgba(221, 75, 57, 1)",
+                        strokeColor: "rgba(221, 75, 57, 1)",
+                        pointColor: "#dd4b39",
+                        pointStrokeColor: "rgba(221, 75, 57, 1)",
+                        pointHighlightFill: "#fff",
+                        pointHighlightStroke: "rgba(221, 75, 57, 1)",
+                        data: $churnChart
+                    }
+                ]
+            };
+
+            churnChartOptions.tooltipTemplate = "<%if (label){%><%=label%>: <%}%><%= value %>%";
+            churnChart.Line(churnChartData, churnChartOptions);
+
+        }
+    );
 </script>
 <?php if( $alert == 1 ){ ?>
 <script type="text/javascript">
-    $().ready(function() {
+    $().ready(function () {
 
         setTimeout(function () {
             $('#aguarde').show(); // "foo" é o id do elemento que seja manipular.
@@ -507,7 +506,7 @@
 <?php } ?>
 <?php if( $alert == 2 ){ ?>
 <script type="text/javascript">
-    $().ready(function() {
+    $().ready(function () {
 
         setTimeout(function () {
             $('#pesquisa').show(); // "foo" é o id do elemento que seja manipular.

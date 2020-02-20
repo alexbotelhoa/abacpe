@@ -164,7 +164,7 @@ $app->post("/sitesce2/plans/create", function () {
         exit;
     }
 
-    $plan->save();
+    //$plan->save();
 
     Client::updateClient();
     Message::setSuccess("Registro incluído com sucesso!");
@@ -205,7 +205,7 @@ $app->post("/sitesce2/plans/:idplan/update", function ($idplan) {
         exit;
     }
 
-    $plan->save();
+    //$plan->save();
 
     Message::setSuccess("Registro alterado com sucesso!");
 
@@ -226,7 +226,7 @@ $app->get("/sitesce2/plans/:idplan/delete", function ($idplan) {
 
     $plan = new Plan();
     $plan->get((int)$idplan);
-    $plan->delete();
+    //$plan->delete();
 
     Message::setSuccess("Registro excluído com sucesso!");
 
@@ -381,7 +381,7 @@ $app->post("/sitesce2/payments/create", function () {
         exit;
     }
 
-    $payment->save();
+    //$payment->save();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -427,7 +427,7 @@ $app->post("/sitesce2/payments/:idclient/create", function ($idclient) {
         exit;
     }
 
-    $payment->save();
+    //$payment->save();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -468,7 +468,7 @@ $app->post("/sitesce2/payments/:idpayment/update", function ($idpayment) {
         exit;
     }
 
-    $payment->save();
+    //$payment->save();
 
     Message::setSuccess("Registro alterado com sucesso!");
 
@@ -482,7 +482,7 @@ $app->get("/sitesce2/payments/:idpayment/delete", function ($idpayment) {
     $payment = new Payment();
     $payment->get((int)$idpayment);
     $idclient = $payment->getidclient();
-    $payment->delete();
+    //$payment->delete();
 
     Message::setSuccess("Registro excluído com sucesso!");
 

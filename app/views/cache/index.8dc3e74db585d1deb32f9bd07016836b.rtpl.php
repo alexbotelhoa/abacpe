@@ -333,222 +333,214 @@
             $recdetails.push("<?php echo htmlspecialchars( $value1["recdetails"], ENT_COMPAT, 'UTF-8', FALSE ); ?>");
         <?php } ?>
 
-            var ChartOptions = {
-                //Boolean - If we should show the scale at all
-                showScale: true,
-                //Boolean - Whether grid lines are shown across the chart
-                scaleShowGridLines: true,
-                //String - Colour of the grid lines
-                scaleGridLineColor: "rgba(0,0,0,.05)",
-                //Number - Width of the grid lines
-                scaleGridLineWidth: 1,
-                //Boolean - Whether to show horizontal lines (except X axis)
-                scaleShowHorizontalLines: true,
-                //Boolean - Whether to show vertical lines (except Y axis)
-                scaleShowVerticalLines: true,
-                //Boolean - Whether the line is curved between points
-                bezierCurve: true,
-                //Number - Tension of the bezier curve between points
-                bezierCurveTension: 0.3,
-                //Boolean - Whether to show a dot for each point
-                pointDot: false,
-                //Number - Radius of each point dot in pixels
-                pointDotRadius: 4,
-                //Number - Pixel width of point dot stroke
-                pointDotStrokeWidth: 1,
-                //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
-                pointHitDetectionRadius: 20,
-                //Boolean - Whether to show a stroke for datasets
-                datasetStroke: true,
-                //Number - Pixel width of dataset stroke
-                datasetStrokeWidth: 2,
-                //Boolean - Whether to fill the dataset with a color
-                datasetFill: true,
-                //String - A legend template
-                legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
-                //String - A tooltip template
-                //multiTooltipTemplate: "<%=datasetLabel%>: R$ <%=value%>",
-                multiTooltipTemplate: "<%=datasetLabel %>: R$ <%= value %>",
-                //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-                maintainAspectRatio: true,
-                //Boolean - whether to make the chart responsive to window resizing
-                responsive: true
-            };
+        var ChartOptions = {
+            //Boolean - If we should show the scale at all
+            showScale: true,
+            //Boolean - Whether grid lines are shown across the chart
+            scaleShowGridLines: true,
+            //String - Colour of the grid lines
+            scaleGridLineColor: "rgba(0,0,0,.05)",
+            //Number - Width of the grid lines
+            scaleGridLineWidth: 1,
+            //Boolean - Whether to show horizontal lines (except X axis)
+            scaleShowHorizontalLines: true,
+            //Boolean - Whether to show vertical lines (except Y axis)
+            scaleShowVerticalLines: true,
+            //Boolean - Whether the line is curved between points
+            bezierCurve: true,
+            //Number - Tension of the bezier curve between points
+            bezierCurveTension: 0.3,
+            //Boolean - Whether to show a dot for each point
+            pointDot: false,
+            //Number - Radius of each point dot in pixels
+            pointDotRadius: 4,
+            //Number - Pixel width of point dot stroke
+            pointDotStrokeWidth: 1,
+            //Number - amount extra to add to the radius to cater for hit detection outside the drawn point
+            pointHitDetectionRadius: 20,
+            //Boolean - Whether to show a stroke for datasets
+            datasetStroke: true,
+            //Number - Pixel width of dataset stroke
+            datasetStrokeWidth: 2,
+            //Boolean - Whether to fill the dataset with a color
+            datasetFill: true,
+            //String - A legend template
+            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].lineColor%>\"></span><%if(datasets[i].label){%><%=datasets[i].label%><%}%></li><%}%></ul>",
+            //String - A tooltip template
+            //multiTooltipTemplate: "<%=datasetLabel%>: R$ <%=value%>",
+            multiTooltipTemplate: "<%=datasetLabel %>: R$ <%= value %>",
+            //Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+            maintainAspectRatio: true,
+            //Boolean - whether to make the chart responsive to window resizing
+            responsive: true
+        };
 
+        //---------
+        //-  MRR  -
+        //---------
 
-            //---------
-            //-  MRR  -
-            //---------
-
-            var mrrChartCanvas = $("#mrrChart").get(0).getContext("2d");
-            var mrrChart = new Chart(mrrChartCanvas);
-            var mrrChartData = {
-                labels: $month,
-                datasets: [
-                    {
-                        label: "MRR",
-                        fillColor: "rgba(204, 210, 220, 0.9)",
-                        strokeColor: "rgba(204, 210, 220, 0.8)",
-                        pointColor: "rgba(204, 210, 220, 1)",
-                        pointStrokeColor: "#ccd2dc",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(204, 210, 220, 1)",
-                        data: $mrr
-                    },
-                    {
-                        label: "Recorrente",
-                        fillColor: "rgba(57, 204, 204, 1)",
-                        strokeColor: "rgba(57, 204, 204, 1)",
-                        pointColor: "#39cccc",
-                        pointStrokeColor: "rgba(57, 204, 204, 1)",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(57, 204, 204, 1)",
-                        data: $recorrentes
-                    }
-                ]
-            };
-
-            //Create the line chart
-            mrrChart.Line(mrrChartData, ChartOptions);
-
-
-            //------------------
-            //-  TICKET MÉDIO  -
-            //------------------
-
-            var tkmChartCanvas = $("#tkmChart").get(0).getContext("2d");
-            var tkmChart = new Chart(tkmChartCanvas);
-            var tkmChartData = {
-                labels: $month,
-                datasets: [
-                    {
-                        label: "Médio",
-                        fillColor: "rgba(0, 192, 239 , 1)",
-                        strokeColor: "rgba(0, 192, 239 , 1)",
-                        pointColor: "rgba(0, 192, 239 , 1)",
-                        pointStrokeColor: "#39CCCC",
-                        pointHighlightFill: "#fff",
-                        pointHighlightStroke: "rgba(0, 192, 239 , 1)",
-                        data: $arpu
-                    }
-                ]
-            };
-            var tkmChartOptions = ChartOptions;
-
-            tkmChartOptions.datasetFill = false;
-            tkmChartOptions.scaleBeginAtZero = false;
-            tkmChartOptions.barShowStroke = true;
-            tkmChartOptions.barStrokeWidth = 2;
-            tkmChartOptions.barValueSpacing = 5;
-            tkmChartOptions.barDatasetSpacing = 10;
-            tkmChartOptions.tooltipTemplate = "<%if (label){%><%=label%>: <%}%> R$ <%= value %>";
-            tkmChart.Line(tkmChartData, tkmChartOptions);
-
-
-            //------------------------
-            //-  RECEITAS VARIÁVEIS  -
-            //------------------------
-
-            var recinoutChartCanvas = $("#recinoutChart").get(0).getContext("2d");
-            var recinoutChart = new Chart(recinoutChartCanvas);
-            var recinoutChartData = {
-                labels: $month,
-                datasets: [
-                    {
-                        label: "Entradas",
-                        fillColor: "rgba(0, 166, 90 , 1)", // Área do Gráfico
-                        strokeColor: "rgba(0, 166, 90 , 1)", // Linha do Gráfico
-                        pointColor: "#00a65a", // Caixa da Legenda
-                        data: $entradas
-                    },
-                    {
-                        label: "Saídas",
-                        fillColor: "rgba(221, 75, 57, 0.8)",
-                        strokeColor: "rgba(221, 75, 57, 0.7)",
-                        pointColor: "#dd4b39",
-                        data: $saidas
-                    }
-                ]
-            };
-            var recinoutChartOptions = ChartOptions;
-
-            recinoutChartOptions.datasetFill = false;
-            recinoutChart.Line(recinoutChartData, recinoutChartOptions);
-
-
-            //---------------------------------
-            //-  RECEITAS VARIÁVEIS FATIADAS  -
-            //---------------------------------
-
-            var recdetChartCanvas = $("#recdetChart").get(0).getContext("2d");
-            var recdetChart = new Chart(recdetChartCanvas);
-            var recdetChartData = [
+        var mrrChartCanvas = $("#mrrChart").get(0).getContext("2d");
+        var mrrChart = new Chart(mrrChartCanvas);
+        var mrrChartData = {
+            labels: $month,
+            datasets: [
                 {
-                    value: $recdetails[0],
-                    color: "#00a65a",
-                    highlight: "#00c275",
-                    label: "New"
+                    label: "MRR",
+                    fillColor: "rgba(204, 210, 220, 0.9)",
+                    strokeColor: "rgba(204, 210, 220, 0.8)",
+                    pointColor: "rgba(204, 210, 220, 1)",
+                    pointStrokeColor: "#ccd2dc",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(204, 210, 220, 1)",
+                    data: $mrr
                 },
                 {
-                    value: $recdetails[1],
-                    color: "#8f26ae",
-                    highlight: "#d627f5",
-                    label: "Expansion"
-                },
-                {
-                    value: $recdetails[2],
-                    color: "#3c8dbc",
-                    highlight: "#3fb0e1",
-                    label: "Resurrected"
-                },
-                {
-                    value: $recdetails[3],
-                    color: "#f39c12",
-                    highlight: "#ffbe14",
-                    label: "Contraction"
-                },
-                {
-                    value: $recdetails[4],
-                    color: "#d54b39",
-                    highlight: "#ff503b",
-                    label: "Cancelled"
+                    label: "Recorrente",
+                    fillColor: "rgba(57, 204, 204, 1)",
+                    strokeColor: "rgba(57, 204, 204, 1)",
+                    pointColor: "#39cccc",
+                    pointStrokeColor: "rgba(57, 204, 204, 1)",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(57, 204, 204, 1)",
+                    data: $recorrentes
                 }
-            ];
-            var recdetChartOptions = {
-                //Boolean - Whether we should show a stroke on each segment
-                segmentShowStroke: true,
-                //String - The colour of each segment stroke
-                segmentStrokeColor: "#fff",
-                //Number - The width of each segment stroke
-                segmentStrokeWidth: 2,
-                //Number - The percentage of the chart that we cut out of the middle
-                percentageInnerCutout: 50, // This is 0 for Pie charts
-                //Number - Amount of animation steps
-                animationSteps: 100,
-                //String - Animation easing effect
-                animationEasing: "easeOutBounce",
-                //Boolean - Whether we animate the rotation of the Doughnut
-                animateRotate: true,
-                //Boolean - Whether we animate scaling the Doughnut from the centre
-                animateScale: false,
-                //Boolean - whether to make the chart responsive to window resizing
-                responsive: true,
-                // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
-                maintainAspectRatio: true,
-                //String - A legend template
-                legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
-                //String - A tooltip template
-                tooltipTemplate: "R$ <%=value %>"
-            };
+            ]
+        };
 
-            //Create pie or douhnut chart
-            recdetChart.Doughnut(recdetChartData, recdetChartOptions);
+        //Create the line chart
+        mrrChart.Line(mrrChartData, ChartOptions);
 
+        //------------------
+        //-  TICKET MÉDIO  -
+        //------------------
 
-        }
-    );
+        var tkmChartCanvas = $("#tkmChart").get(0).getContext("2d");
+        var tkmChart = new Chart(tkmChartCanvas);
+        var tkmChartData = {
+            labels: $month,
+            datasets: [
+                {
+                    label: "Médio",
+                    fillColor: "rgba(0, 192, 239 , 1)",
+                    strokeColor: "rgba(0, 192, 239 , 1)",
+                    pointColor: "rgba(0, 192, 239 , 1)",
+                    pointStrokeColor: "#39CCCC",
+                    pointHighlightFill: "#fff",
+                    pointHighlightStroke: "rgba(0, 192, 239 , 1)",
+                    data: $arpu
+                }
+            ]
+        };
+        var tkmChartOptions = ChartOptions;
 
+        tkmChartOptions.datasetFill = false;
+        tkmChartOptions.scaleBeginAtZero = false;
+        tkmChartOptions.barShowStroke = true;
+        tkmChartOptions.barStrokeWidth = 2;
+        tkmChartOptions.barValueSpacing = 5;
+        tkmChartOptions.barDatasetSpacing = 10;
+        tkmChartOptions.tooltipTemplate = "<%if (label){%><%=label%>: <%}%> R$ <%= value %>";
+        tkmChart.Line(tkmChartData, tkmChartOptions);
 
+        //------------------------
+        //-  RECEITAS VARIÁVEIS  -
+        //------------------------
+
+        var recinoutChartCanvas = $("#recinoutChart").get(0).getContext("2d");
+        var recinoutChart = new Chart(recinoutChartCanvas);
+        var recinoutChartData = {
+            labels: $month,
+            datasets: [
+                {
+                    label: "Entradas",
+                    fillColor: "rgba(0, 166, 90 , 1)", // Área do Gráfico
+                    strokeColor: "rgba(0, 166, 90 , 1)", // Linha do Gráfico
+                    pointColor: "#00a65a", // Caixa da Legenda
+                    data: $entradas
+                },
+                {
+                    label: "Saídas",
+                    fillColor: "rgba(221, 75, 57, 0.8)",
+                    strokeColor: "rgba(221, 75, 57, 0.7)",
+                    pointColor: "#dd4b39",
+                    data: $saidas
+                }
+            ]
+        };
+        var recinoutChartOptions = ChartOptions;
+
+        recinoutChartOptions.datasetFill = false;
+        recinoutChart.Line(recinoutChartData, recinoutChartOptions);
+
+        //---------------------------------
+        //-  RECEITAS VARIÁVEIS FATIADAS  -
+        //---------------------------------
+
+        var recdetChartCanvas = $("#recdetChart").get(0).getContext("2d");
+        var recdetChart = new Chart(recdetChartCanvas);
+        var recdetChartData = [
+            {
+                value: $recdetails[0],
+                color: "#00a65a",
+                highlight: "#00c275",
+                label: "New"
+            },
+            {
+                value: $recdetails[1],
+                color: "#8f26ae",
+                highlight: "#d627f5",
+                label: "Expansion"
+            },
+            {
+                value: $recdetails[2],
+                color: "#3c8dbc",
+                highlight: "#3fb0e1",
+                label: "Resurrected"
+            },
+            {
+                value: $recdetails[3],
+                color: "#f39c12",
+                highlight: "#ffbe14",
+                label: "Contraction"
+            },
+            {
+                value: $recdetails[4],
+                color: "#d54b39",
+                highlight: "#ff503b",
+                label: "Cancelled"
+            }
+        ];
+        var recdetChartOptions = {
+            //Boolean - Whether we should show a stroke on each segment
+            segmentShowStroke: true,
+            //String - The colour of each segment stroke
+            segmentStrokeColor: "#fff",
+            //Number - The width of each segment stroke
+            segmentStrokeWidth: 2,
+            //Number - The percentage of the chart that we cut out of the middle
+            percentageInnerCutout: 50, // This is 0 for Pie charts
+            //Number - Amount of animation steps
+            animationSteps: 100,
+            //String - Animation easing effect
+            animationEasing: "easeOutBounce",
+            //Boolean - Whether we animate the rotation of the Doughnut
+            animateRotate: true,
+            //Boolean - Whether we animate scaling the Doughnut from the centre
+            animateScale: false,
+            //Boolean - whether to make the chart responsive to window resizing
+            responsive: true,
+            // Boolean - whether to maintain the starting aspect ratio or not when responsive, if set to false, will take up entire container
+            maintainAspectRatio: true,
+            //String - A legend template
+            legendTemplate: "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"></span><%if(segments[i].label){%><%=segments[i].label%><%}%></li><%}%></ul>",
+            //String - A tooltip template
+            tooltipTemplate: "R$ <%=value %>"
+        };
+
+        //Create pie or douhnut chart
+        recdetChart.Doughnut(recdetChartData, recdetChartOptions);
+
+    });
 </script>
 
 <?php if( $alert == 1 ){ ?>
