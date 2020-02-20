@@ -12,7 +12,7 @@
       <paths name="Portal ABA">
         <serverdata>
           <mappings>
-            <mapping local="$PROJECT_DIR$" web="Site SCE" />
+            <mapping local="$PROJECT_DIR$" web="Site SCE v2" />
           </mappings>
         </serverdata>
       </paths>

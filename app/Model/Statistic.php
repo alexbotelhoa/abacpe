@@ -3,7 +3,8 @@
 namespace SCE\Model;
 
 use SCE\Model;
-use SCE\DB\Sql;
+use SCE\Control\Sql;
+use SCE\Control\Client;
 
 class Statistic extends Model
 {

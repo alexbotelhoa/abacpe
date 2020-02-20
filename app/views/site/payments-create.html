@@ -4,13 +4,13 @@
         <div class="row">
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/sitesce"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li><a href="/sitesce/payments">Pagamentos</a></li>
+                    <li><a href="/sitesce2"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li><a href="/sitesce2/payments">Pagamentos</a></li>
                     {if="$idclient != ''"}
-                    <li class="active"><a href="/sitesce/payments/{$idclient}/detail">Cliente</a></li>
-                    <li class="active"><a href="/sitesce/payments/{$idclient}/create">Cadastrar</a></li>
+                    <li class="active"><a href="/sitesce2/payments/{$idclient}/detail">Cliente</a></li>
+                    <li class="active"><a href="/sitesce2/payments/{$idclient}/create">Cadastrar</a></li>
                     {else}
-                    <li class="active"><a href="/sitesce/payments/create">Cadastrar</a></li>
+                    <li class="active"><a href="/sitesce2/payments/create">Cadastrar</a></li>
                     {/if}
                 </ol>
             </section>
@@ -21,7 +21,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="box box-success">
-                            <form role="form" action="/sitesce/payments/{if=" $idclient !=''"}{$idclient}/{/if}create" method="post">
+                            <form role="form" action="/sitesce2/payments/{if=" $idclient !=''"}{$idclient}/{/if}create" method="post">
                             <div class="box-body">
                                 <div class="form-group">
                                     <label for="idclient">Nome do Cliente</label>

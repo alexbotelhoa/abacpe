@@ -4,9 +4,9 @@
         <div class="row">
             <section class="container">
                 <ol class="breadcrumb">
-                    <li><a href="/sitesce"><i class="fa fa-tachometer"></i> Home</a></li>
-                    <li class="active"><a href="/sitesce/payments">Pagamentos</a></li>
-                    <li class="active"><a href="/sitesce/payments/{$idclient}/detail">Cliente</a></li>
+                    <li><a href="/sitesce2"><i class="fa fa-tachometer"></i> Home</a></li>
+                    <li class="active"><a href="/sitesce2/payments">Pagamentos</a></li>
+                    <li class="active"><a href="/sitesce2/payments/{$idclient}/detail">Cliente</a></li>
                 </ol>
             </section>
             <section class="container">
@@ -14,7 +14,7 @@
                     <h2>Cliente</h2>
                 </div>
                 <div class="col-xs-5" align="right">
-                    <a href="/sitesce/payments/{$idclient}/create" class="btn btn-success">Cadastrar</a>
+                    <a href="/sitesce2/payments/{$idclient}/create" class="btn btn-success">Cadastrar</a>
                 </div>
             </section>
             <section class="container">
@@ -33,12 +33,12 @@
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-                                        <th style="width: 10px"><a href="/sitesce/order/payments/{$idclient}/detail/ordid">ID</a></th>
-                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordcli">Cliente</a></th>
-                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordpla">Plano</a></th>
-                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordrec">Recor</a></th>
-                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/orddtp">Data</a></th>
-                                        <th><a href="/sitesce/order/payments/{$idclient}/detail/ordvlp">Valor</a></th>
+                                        <th style="width: 10px"><a href="/sitesce2/order/payments/{$idclient}/detail/ordid">ID</a></th>
+                                        <th><a href="/sitesce2/order/payments/{$idclient}/detail/ordcli">Cliente</a></th>
+                                        <th><a href="/sitesce2/order/payments/{$idclient}/detail/ordpla">Plano</a></th>
+                                        <th><a href="/sitesce2/order/payments/{$idclient}/detail/ordrec">Recor</a></th>
+                                        <th><a href="/sitesce2/order/payments/{$idclient}/detail/orddtp">Data</a></th>
+                                        <th><a href="/sitesce2/order/payments/{$idclient}/detail/ordvlp">Valor</a></th>
                                         <th style="width: 140px">&nbsp;</th>
                                     </tr>
                                     </thead>
@@ -52,8 +52,8 @@
                                         <td>{function="formatDate($value.dtpayment)"}</td>
                                         <td>{function="formatPrice($value.vlpayment)"}</td>
                                         <td>
-                                            <a href="/sitesce/payments/{$value.idpayment}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
-                                            <a href="/sitesce/payments/{$value.idpayment}/delete" onclick="return confirm('Deseja realmente excluir este registro?')"
+                                            <a href="/sitesce2/payments/{$value.idpayment}/update" class="btn btn-primary btn-xs"><i class="fa fa-edit"></i> Editar</a>
+                                            <a href="/sitesce2/payments/{$value.idpayment}/delete" onclick="return confirm('Deseja realmente excluir este registro?')"
                                                class="btn btn-danger btn-xs"><i class="fa fa-trash"></i> Excluir</a>
                                         </td>
                                     </tr>
@@ -66,11 +66,11 @@
                             <nav>
                                 <ul class="pagination">
 
-                                    <li><a href="/sitesce/payments?page=1"><<</a></li>
+                                    <li><a href="/sitesce2/payments?page=1"><<</a></li>
                                     {loop="$pages"}
                                     <li><a href="{$value.link}">{if="$counter == 2"}<b>{$value.page}</b>{else}{$value.page}{/if}</a></li>
                                     {/loop}
-                                    <li><a href="/sitesce/payments?page={$lastpage}">>></a></li>
+                                    <li><a href="/sitesce2/payments?page={$lastpage}">>></a></li>
                                 </ul>
                             </nav>
                         </div>

@@ -3,7 +3,7 @@
 namespace SCE\Model;
 
 use SCE\Model;
-use SCE\DB\Sql;
+use SCE\Control\Sql;
 
 class Plan extends Model
 {
