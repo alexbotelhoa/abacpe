@@ -2,6 +2,8 @@
 
 use SCE\Control\Client;
 
+$_SESSION['DEMOSCE2'] = true;
+
 $file_client = "clients.json"; // Arquivos com a lista dos clientes
 $_SESSION['DIRECTORY_STATISTICS'] = "abasce2/res/site/statistics/";
 $_SESSION['DIRECTORY_JSON'] = "abasce2/res/site/json/";
