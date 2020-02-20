@@ -164,7 +164,7 @@ $app->post("/sitesce2/plans/create", function () {
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] === true) $plan->save();
+    if ($_SESSION['DEMOSCE2'] != true) $plan->save();
 
     Client::updateClient();
     Message::setSuccess("Registro incluído com sucesso!");
@@ -205,7 +205,7 @@ $app->post("/sitesce2/plans/:idplan/update", function ($idplan) {
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] === true) $plan->save();
+    if ($_SESSION['DEMOSCE2'] != true) $plan->save();
 
     Message::setSuccess("Registro alterado com sucesso!");
 
@@ -226,7 +226,7 @@ $app->get("/sitesce2/plans/:idplan/delete", function ($idplan) {
 
     $plan = new Plan();
     $plan->get((int)$idplan);
-    if ($_SESSION['DEMOSCE2'] === true) $plan->delete();
+    if ($_SESSION['DEMOSCE2'] != true) $plan->delete();
 
     Message::setSuccess("Registro excluído com sucesso!");
 
@@ -381,7 +381,7 @@ $app->post("/sitesce2/payments/create", function () {
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] === true) $payment->save();
+    if ($_SESSION['DEMOSCE2'] != true) $payment->save();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -427,7 +427,7 @@ $app->post("/sitesce2/payments/:idclient/create", function ($idclient) {
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] === true) $payment->save();
+    if ($_SESSION['DEMOSCE2'] != true) $payment->save();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -468,7 +468,7 @@ $app->post("/sitesce2/payments/:idpayment/update", function ($idpayment) {
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] === true) $payment->save();
+    if ($_SESSION['DEMOSCE2'] != true) $payment->save();
 
     Message::setSuccess("Registro alterado com sucesso!");
 
@@ -482,7 +482,7 @@ $app->get("/sitesce2/payments/:idpayment/delete", function ($idpayment) {
     $payment = new Payment();
     $payment->get((int)$idpayment);
     $idclient = $payment->getidclient();
-    if ($_SESSION['DEMOSCE2'] === true) $payment->delete();
+    if ($_SESSION['DEMOSCE2'] != true) $payment->delete();
 
     Message::setSuccess("Registro excluído com sucesso!");
 
