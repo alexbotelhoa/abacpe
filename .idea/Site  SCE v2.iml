@@ -3,10 +3,102 @@
   <component name="NewModuleRootManager">
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/app" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/app/Views/cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/statistics" />
-      <excludeFolder url="file://$MODULE_DIR$/app/views/cache" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="PHP" type="php">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../vendor/bootstrap/js" />
+          <root url="file://$MODULE_DIR$/../vendor/composer" />
+          <root url="file://$MODULE_DIR$/../vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/css" />
+          <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/webfonts" />
+          <root url="file://$MODULE_DIR$/../vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../vendor/phar-io/manifest" />
+          <root url="file://$MODULE_DIR$/../vendor/phar-io/version" />
+          <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/../vendor/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/../vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../vendor/rain/raintpl" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/code-unit-reverse-lookup" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/object-enumerator" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/object-reflector" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/resource-operations" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../vendor/slim/slim" />
+          <root url="file://$MODULE_DIR$/../vendor/symfony/polyfill-ctype" />
+          <root url="file://$MODULE_DIR$/../vendor/theseer/tokenizer" />
+          <root url="file://$MODULE_DIR$/../vendor/webmozart/assert" />
+        </CLASSES>
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../vendor/bootstrap/js" />
+          <root url="file://$MODULE_DIR$/../vendor/composer" />
+          <root url="file://$MODULE_DIR$/../vendor/doctrine/instantiator" />
+          <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/css" />
+          <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/webfonts" />
+          <root url="file://$MODULE_DIR$/../vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../vendor/phar-io/manifest" />
+          <root url="file://$MODULE_DIR$/../vendor/phar-io/version" />
+          <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/reflection-common" />
+          <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/reflection-docblock" />
+          <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/type-resolver" />
+          <root url="file://$MODULE_DIR$/../vendor/phpmailer/phpmailer" />
+          <root url="file://$MODULE_DIR$/../vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-code-coverage" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-file-iterator" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-text-template" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-timer" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/php-token-stream" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../vendor/rain/raintpl" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/code-unit-reverse-lookup" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/comparator" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/diff" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/environment" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/exporter" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/global-state" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/object-enumerator" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/object-reflector" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/recursion-context" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/resource-operations" />
+          <root url="file://$MODULE_DIR$/../vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../vendor/slim/slim" />
+          <root url="file://$MODULE_DIR$/../vendor/symfony/polyfill-ctype" />
+          <root url="file://$MODULE_DIR$/../vendor/theseer/tokenizer" />
+          <root url="file://$MODULE_DIR$/../vendor/webmozart/assert" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="PHARS">
+        <CLASSES>
+          <root url="phar://$MODULE_DIR$/../vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-3.0.3.phar/" />
+          <root url="phar://$MODULE_DIR$/../vendor/phar-io/manifest/tests/_fixture/test.phar/" />
+          <root url="phar://$MODULE_DIR$/../vendor/phpunit/phpunit/phpunit.phar/" />
+        </CLASSES>
+        <SOURCES>
+          <root url="phar://$MODULE_DIR$/../vendor/phpunit/phpunit/tests/_files/phpunit-example-extension/tools/phpunit.d/phpunit-example-extension-3.0.3.phar/" />
+          <root url="phar://$MODULE_DIR$/../vendor/phar-io/manifest/tests/_fixture/test.phar/" />
+          <root url="phar://$MODULE_DIR$/../vendor/phpunit/phpunit/phpunit.phar/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

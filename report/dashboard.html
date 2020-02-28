@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>Dashboard for C:\xampp\htdocs\abasce2\app</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href=".css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/nv.d3.min.css" rel="stylesheet" type="text/css">
+  <link href=".css/style.css" rel="stylesheet" type="text/css">
+  <link href=".css/custom.css" rel="stylesheet" type="text/css">
+ </head>
+ <body>
+  <header>
+   <div class="container-fluid">
+    <div class="row">
+     <div class="col-md-12">
+      <nav aria-label="breadcrumb">
+       <ol class="breadcrumb">
+         <li class="breadcrumb-item"><a href="index.html">C:\xampp\htdocs\abasce2\app</a></li>
+         <li class="breadcrumb-item active">(Dashboard)</li>
+
+       </ol>
+      </nav>
+     </div>
+    </div>
+   </div>
+  </header>
+  <div class="container-fluid">
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Classes</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="classCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="classComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Control/Message.php.html#5">SCE\Control\Message</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Order.php.html#5">SCE\Control\Order</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Page.php.html#7">SCE\Control\Page</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Sql.php.html#5">SCE\Control\Sql</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#9">SCE\Model\Payment</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#8">SCE\Model\Plan</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#9">SCE\Model\Statistic</a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Client.php.html#5">SCE\Control\Client</a></td><td class="text-right">26%</td></tr>
+       <tr><td><a href="Control/Test/ClientTest.php.html#10">SCE\Control\Test\ClientTest</a></td><td class="text-right">66%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Class</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Model/Statistic.php.html#9">SCE\Model\Statistic</a></td><td class="text-right">16002</td></tr>
+       <tr><td><a href="Control/Order.php.html#5">SCE\Control\Order</a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="Model/Payment.php.html#9">SCE\Model\Payment</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Model/Plan.php.html#8">SCE\Model\Plan</a></td><td class="text-right">132</td></tr>
+       <tr><td><a href="Control/Message.php.html#5">SCE\Control\Message</a></td><td class="text-right">110</td></tr>
+       <tr><td><a href="Control/Page.php.html#7">SCE\Control\Page</a></td><td class="text-right">56</td></tr>
+       <tr><td><a href="Control/Sql.php.html#5">SCE\Control\Sql</a></td><td class="text-right">42</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-12">
+     <h2>Methods</h2>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Coverage Distribution</h3>
+     <div id="methodCoverageDistribution" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Complexity</h3>
+     <div id="methodComplexity" style="height: 300px;">
+       <svg></svg>
+     </div>
+    </div>
+   </div>
+   <div class="row">
+    <div class="col-md-6">
+     <h3>Insufficient Coverage</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right">Coverage</th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Control/Client.php.html#21"><abbr title="SCE\Control\Client::updateClient">updateClient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#73"><abbr title="SCE\Model\Plan::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#88"><abbr title="SCE\Model\Payment::getPaymentPage">getPaymentPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#116"><abbr title="SCE\Model\Payment::getPaymentClientPage">getPaymentClientPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#11"><abbr title="SCE\Model\Plan::selectPlan">selectPlan</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#17"><abbr title="SCE\Model\Plan::checkPlan">checkPlan</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#25"><abbr title="SCE\Model\Plan::listPlanPage">listPlanPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#42"><abbr title="SCE\Model\Plan::getValues">getValues</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#47"><abbr title="SCE\Model\Plan::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#61"><abbr title="SCE\Model\Plan::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Plan.php.html#81"><abbr title="SCE\Model\Plan::getPlanPage">getPlanPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#68"><abbr title="SCE\Model\Payment::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#12"><abbr title="SCE\Model\Statistic::registerStatistics">registerStatistics</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#20"><abbr title="SCE\Model\Statistic::firstPayment">firstPayment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#26"><abbr title="SCE\Model\Statistic::salePlan">salePlan</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#35"><abbr title="SCE\Model\Statistic::nichoStatistics">nichoStatistics</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#66"><abbr title="SCE\Model\Statistic::matrixPayments">matrixPayments</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#258"><abbr title="SCE\Model\Statistic::metricasSaas">metricasSaas</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#401"><abbr title="SCE\Model\Statistic::indexDataChart">indexDataChart</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#448"><abbr title="SCE\Model\Statistic::statisticsDataChart">statisticsDataChart</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#80"><abbr title="SCE\Model\Payment::delete">delete</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#46"><abbr title="SCE\Model\Payment::save">save</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Client.php.html#36"><abbr title="SCE\Control\Client::listClient">listClient</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Page.php.html#24"><abbr title="SCE\Control\Page::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Message.php.html#11"><abbr title="SCE\Control\Message::setError">setError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Message.php.html#16"><abbr title="SCE\Control\Message::getError">getError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Message.php.html#25"><abbr title="SCE\Control\Message::clearError">clearError</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Message.php.html#30"><abbr title="SCE\Control\Message::setSuccess">setSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Message.php.html#35"><abbr title="SCE\Control\Message::getSuccess">getSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Message.php.html#44"><abbr title="SCE\Control\Message::clearSuccess">clearSuccess</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Order.php.html#8"><abbr title="SCE\Control\Order::getOrder">getOrder</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Page.php.html#17"><abbr title="SCE\Control\Page::setData">setData</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Page.php.html#44"><abbr title="SCE\Control\Page::setTpl">setTpl</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#41"><abbr title="SCE\Model\Payment::getValues">getValues</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Page.php.html#50"><abbr title="SCE\Control\Page::__destruct">__destruct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Sql.php.html#15"><abbr title="SCE\Control\Sql::__construct">__construct</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Sql.php.html#24"><abbr title="SCE\Control\Sql::setParams">setParams</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Sql.php.html#32"><abbr title="SCE\Control\Sql::bindParam">bindParam</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Sql.php.html#37"><abbr title="SCE\Control\Sql::query">query</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Sql.php.html#44"><abbr title="SCE\Control\Sql::select">select</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Control/Test/ClientTest.php.html#35"><abbr title="SCE\Control\Test\ClientTest::shoulBeTrueWhenFileClientExist">shoulBeTrueWhenFileClientExist</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#12"><abbr title="SCE\Model\Payment::checkPayment">checkPayment</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Payment.php.html#20"><abbr title="SCE\Model\Payment::listPaymentPage">listPaymentPage</abbr></a></td><td class="text-right">0%</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#635"><abbr title="SCE\Model\Statistic::get">get</abbr></a></td><td class="text-right">0%</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+    <div class="col-md-6">
+     <h3>Project Risks</h3>
+     <div class="scrollbox">
+      <table class="table">
+       <thead>
+        <tr>
+         <th>Method</th>
+         <th class="text-right"><abbr title="Change Risk Anti-Patterns (CRAP) Index">CRAP</abbr></th>
+        </tr>
+       </thead>
+       <tbody>
+       <tr><td><a href="Model/Statistic.php.html#448"><abbr title="SCE\Model\Statistic::statisticsDataChart">statisticsDataChart</abbr></a></td><td class="text-right">2352</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#66"><abbr title="SCE\Model\Statistic::matrixPayments">matrixPayments</abbr></a></td><td class="text-right">1122</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#258"><abbr title="SCE\Model\Statistic::metricasSaas">metricasSaas</abbr></a></td><td class="text-right">930</td></tr>
+       <tr><td><a href="Control/Order.php.html#8"><abbr title="SCE\Control\Order::getOrder">getOrder</abbr></a></td><td class="text-right">600</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#401"><abbr title="SCE\Model\Statistic::indexDataChart">indexDataChart</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#35"><abbr title="SCE\Model\Statistic::nichoStatistics">nichoStatistics</abbr></a></td><td class="text-right">30</td></tr>
+       <tr><td><a href="Control/Message.php.html#16"><abbr title="SCE\Control\Message::getError">getError</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Control/Message.php.html#35"><abbr title="SCE\Control\Message::getSuccess">getSuccess</abbr></a></td><td class="text-right">12</td></tr>
+       <tr><td><a href="Model/Plan.php.html#47"><abbr title="SCE\Model\Plan::save">save</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Plan.php.html#61"><abbr title="SCE\Model\Plan::get">get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Payment.php.html#68"><abbr title="SCE\Model\Payment::get">get</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Plan.php.html#25"><abbr title="SCE\Model\Plan::listPlanPage">listPlanPage</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Payment.php.html#46"><abbr title="SCE\Model\Payment::save">save</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Payment.php.html#20"><abbr title="SCE\Model\Payment::listPaymentPage">listPaymentPage</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Control/Sql.php.html#24"><abbr title="SCE\Control\Sql::setParams">setParams</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Control/Page.php.html#50"><abbr title="SCE\Control\Page::__destruct">__destruct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Control/Page.php.html#24"><abbr title="SCE\Control\Page::__construct">__construct</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Control/Page.php.html#17"><abbr title="SCE\Control\Page::setData">setData</abbr></a></td><td class="text-right">6</td></tr>
+       <tr><td><a href="Model/Statistic.php.html#635"><abbr title="SCE\Model\Statistic::get">get</abbr></a></td><td class="text-right">6</td></tr>
+
+       </tbody>
+      </table>
+     </div>
+    </div>
+   </div>
+   <footer>
+    <hr/>
+    <p>
+     <small>Generated by <a href="https://github.com/sebastianbergmann/php-code-coverage" target="_top">php-code-coverage 6.1.4</a> using <a href="https://secure.php.net/" target="_top">PHP 7.3.12</a> with <a href="https://xdebug.org/">Xdebug 2.7.0RC2</a> and <a href="https://phpunit.de/">PHPUnit 7.5.20</a> at Fri Feb 28 21:20:22 CET 2020.</small>
+    </p>
+   </footer>
+  </div>
+  <script src=".js/jquery.min.js" type="text/javascript"></script>
+  <script src=".js/d3.min.js" type="text/javascript"></script>
+  <script src=".js/nv.d3.min.js" type="text/javascript"></script>
+  <script type="text/javascript">
+$(document).ready(function() {
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#classCoverageDistribution svg')
+      .datum(getCoverageDistributionData([7,0,0,1,0,0,0,1,0,0,0,0], "Class Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.multiBarChart();
+    chart.tooltips(false)
+      .showControls(false)
+      .showLegend(false)
+      .reduceXTicks(false)
+      .staggerLabels(true)
+      .yAxis.tickFormat(d3.format('d'));
+
+    d3.select('#methodCoverageDistribution svg')
+      .datum(getCoverageDistributionData([44,0,0,0,0,0,0,0,0,0,0,4], "Method Coverage"))
+      .transition().duration(500).call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getCoverageDistributionData(data, label) {
+    var labels = [
+      '0%',
+      '0-10%',
+      '10-20%',
+      '20-30%',
+      '30-40%',
+      '40-50%',
+      '50-60%',
+      '60-70%',
+      '70-80%',
+      '80-90%',
+      '90-100%',
+      '100%'
+    ];
+    var values = [];
+    $.each(labels, function(key) {
+      values.push({x: labels[key], y: data[key]});
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Cyclomatic Complexity');
+
+    d3.select('#classComplexity svg')
+      .datum(getComplexityData([[26.666666666666668,4,"<a href=\"Control\/Client.php.html#5\">SCE\\Control\\Client<\/a>"],[0,10,"<a href=\"Control\/Message.php.html#5\">SCE\\Control\\Message<\/a>"],[0,24,"<a href=\"Control\/Order.php.html#5\">SCE\\Control\\Order<\/a>"],[0,7,"<a href=\"Control\/Page.php.html#7\">SCE\\Control\\Page<\/a>"],[0,6,"<a href=\"Control\/Sql.php.html#5\">SCE\\Control\\Sql<\/a>"],[66.66666666666666,3,"<a href=\"Control\/Test\/ClientTest.php.html#10\">SCE\\Control\\Test\\ClientTest<\/a>"],[0,11,"<a href=\"Model\/Payment.php.html#9\">SCE\\Model\\Payment<\/a>"],[0,11,"<a href=\"Model\/Plan.php.html#8\">SCE\\Model\\Plan<\/a>"],[0,126,"<a href=\"Model\/Statistic.php.html#9\">SCE\\Model\\Statistic<\/a>"]], 'Class Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  nv.addGraph(function() {
+    var chart = nv.models.scatterChart()
+      .showDistX(true)
+      .showDistY(true)
+      .showLegend(false)
+      .forceX([0, 100]);
+    chart.tooltipContent(function(graph) {
+      return '<p>' + graph.point.class + '</p>';
+    });
+
+    chart.xAxis.axisLabel('Code Coverage (in percent)');
+    chart.yAxis.axisLabel('Method Complexity');
+
+    d3.select('#methodComplexity svg')
+      .datum(getComplexityData([[100,1,"<a href=\"Control\/Client.php.html#7\">SCE\\Control\\Client::urlJsonFileClient<\/a>"],[100,1,"<a href=\"Control\/Client.php.html#14\">SCE\\Control\\Client::pathFileClient<\/a>"],[0,1,"<a href=\"Control\/Client.php.html#21\">SCE\\Control\\Client::updateClient<\/a>"],[0,1,"<a href=\"Control\/Client.php.html#36\">SCE\\Control\\Client::listClient<\/a>"],[0,1,"<a href=\"Control\/Message.php.html#11\">SCE\\Control\\Message::setError<\/a>"],[0,3,"<a href=\"Control\/Message.php.html#16\">SCE\\Control\\Message::getError<\/a>"],[0,1,"<a href=\"Control\/Message.php.html#25\">SCE\\Control\\Message::clearError<\/a>"],[0,1,"<a href=\"Control\/Message.php.html#30\">SCE\\Control\\Message::setSuccess<\/a>"],[0,3,"<a href=\"Control\/Message.php.html#35\">SCE\\Control\\Message::getSuccess<\/a>"],[0,1,"<a href=\"Control\/Message.php.html#44\">SCE\\Control\\Message::clearSuccess<\/a>"],[0,24,"<a href=\"Control\/Order.php.html#8\">SCE\\Control\\Order::getOrder<\/a>"],[0,2,"<a href=\"Control\/Page.php.html#17\">SCE\\Control\\Page::setData<\/a>"],[0,2,"<a href=\"Control\/Page.php.html#24\">SCE\\Control\\Page::__construct<\/a>"],[0,1,"<a href=\"Control\/Page.php.html#44\">SCE\\Control\\Page::setTpl<\/a>"],[0,2,"<a href=\"Control\/Page.php.html#50\">SCE\\Control\\Page::__destruct<\/a>"],[0,1,"<a href=\"Control\/Sql.php.html#15\">SCE\\Control\\Sql::__construct<\/a>"],[0,2,"<a href=\"Control\/Sql.php.html#24\">SCE\\Control\\Sql::setParams<\/a>"],[0,1,"<a href=\"Control\/Sql.php.html#32\">SCE\\Control\\Sql::bindParam<\/a>"],[0,1,"<a href=\"Control\/Sql.php.html#37\">SCE\\Control\\Sql::query<\/a>"],[0,1,"<a href=\"Control\/Sql.php.html#44\">SCE\\Control\\Sql::select<\/a>"],[100,1,"<a href=\"Control\/Test\/ClientTest.php.html#15\">SCE\\Control\\Test\\ClientTest::shoulBeTrueWhenUrlFileJsonNotEmpty<\/a>"],[100,1,"<a href=\"Control\/Test\/ClientTest.php.html#25\">SCE\\Control\\Test\\ClientTest::shoulBeTrueWhenPathFileClientEqual<\/a>"],[0,1,"<a href=\"Control\/Test\/ClientTest.php.html#35\">SCE\\Control\\Test\\ClientTest::shoulBeTrueWhenFileClientExist<\/a>"],[0,1,"<a href=\"Model\/Payment.php.html#12\">SCE\\Model\\Payment::checkPayment<\/a>"],[0,2,"<a href=\"Model\/Payment.php.html#20\">SCE\\Model\\Payment::listPaymentPage<\/a>"],[0,1,"<a href=\"Model\/Payment.php.html#41\">SCE\\Model\\Payment::getValues<\/a>"],[0,2,"<a href=\"Model\/Payment.php.html#46\">SCE\\Model\\Payment::save<\/a>"],[0,2,"<a href=\"Model\/Payment.php.html#68\">SCE\\Model\\Payment::get<\/a>"],[0,1,"<a href=\"Model\/Payment.php.html#80\">SCE\\Model\\Payment::delete<\/a>"],[0,1,"<a href=\"Model\/Payment.php.html#88\">SCE\\Model\\Payment::getPaymentPage<\/a>"],[0,1,"<a href=\"Model\/Payment.php.html#116\">SCE\\Model\\Payment::getPaymentClientPage<\/a>"],[0,1,"<a href=\"Model\/Plan.php.html#11\">SCE\\Model\\Plan::selectPlan<\/a>"],[0,1,"<a href=\"Model\/Plan.php.html#17\">SCE\\Model\\Plan::checkPlan<\/a>"],[0,2,"<a href=\"Model\/Plan.php.html#25\">SCE\\Model\\Plan::listPlanPage<\/a>"],[0,1,"<a href=\"Model\/Plan.php.html#42\">SCE\\Model\\Plan::getValues<\/a>"],[0,2,"<a href=\"Model\/Plan.php.html#47\">SCE\\Model\\Plan::save<\/a>"],[0,2,"<a href=\"Model\/Plan.php.html#61\">SCE\\Model\\Plan::get<\/a>"],[0,1,"<a href=\"Model\/Plan.php.html#73\">SCE\\Model\\Plan::delete<\/a>"],[0,1,"<a href=\"Model\/Plan.php.html#81\">SCE\\Model\\Plan::getPlanPage<\/a>"],[0,1,"<a href=\"Model\/Statistic.php.html#12\">SCE\\Model\\Statistic::registerStatistics<\/a>"],[0,1,"<a href=\"Model\/Statistic.php.html#20\">SCE\\Model\\Statistic::firstPayment<\/a>"],[0,1,"<a href=\"Model\/Statistic.php.html#26\">SCE\\Model\\Statistic::salePlan<\/a>"],[0,5,"<a href=\"Model\/Statistic.php.html#35\">SCE\\Model\\Statistic::nichoStatistics<\/a>"],[0,33,"<a href=\"Model\/Statistic.php.html#66\">SCE\\Model\\Statistic::matrixPayments<\/a>"],[0,30,"<a href=\"Model\/Statistic.php.html#258\">SCE\\Model\\Statistic::metricasSaas<\/a>"],[0,5,"<a href=\"Model\/Statistic.php.html#401\">SCE\\Model\\Statistic::indexDataChart<\/a>"],[0,48,"<a href=\"Model\/Statistic.php.html#448\">SCE\\Model\\Statistic::statisticsDataChart<\/a>"],[0,2,"<a href=\"Model\/Statistic.php.html#635\">SCE\\Model\\Statistic::get<\/a>"]], 'Method Complexity'))
+      .transition()
+      .duration(500)
+      .call(chart);
+
+    nv.utils.windowResize(chart.update);
+
+    return chart;
+  });
+
+  function getComplexityData(data, label) {
+    var values = [];
+    $.each(data, function(key) {
+      var value = Math.round(data[key][0]*100) / 100;
+      values.push({
+        x: value,
+        y: data[key][1],
+        class: data[key][2],
+        size: 0.05,
+        shape: 'diamond'
+      });
+    });
+
+    return [
+      {
+        key: label,
+        values: values,
+        color: "#4572A7"
+      }
+    ];
+  }
+});
+  </script>
+ </body>
+</html>
