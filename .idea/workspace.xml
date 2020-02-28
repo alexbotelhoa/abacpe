@@ -2,12 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345eaab2-3434-4273-ac11-c2300d3425ed" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/laravel-plugin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/Control/Test/ClientTest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Site  SCE v2.iml" afterPath="$PROJECT_DIR$/.idea/Site  SCE v2.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Control/Client.php" afterPath="$PROJECT_DIR$/app/Control/Client.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -68,8 +64,8 @@
       <file leaf-file-name="Client.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Control/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state relative-caret-position="255">
+              <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -334,24 +330,6 @@
               <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
-            <path>
-              <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Control" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Control" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Test" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -441,7 +419,7 @@
       <workItem from="1582232126692" duration="226000" />
       <workItem from="1582890872169" duration="547000" />
       <workItem from="1582891447357" duration="125000" />
-      <workItem from="1582891731756" duration="21291000" />
+      <workItem from="1582891731756" duration="21413000" />
     </task>
     <task id="LOCAL-00001" summary="Reestruturação">
       <created>1582151127311</created>
@@ -492,7 +470,14 @@
       <option name="project" value="LOCAL" />
       <updated>1582232345950</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Implementando PHPUnit">
+      <created>1582921678022</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1582921678022</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -528,7 +513,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37792000" />
+    <option name="totallyTimeSpent" value="37914000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -591,7 +576,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Reestruturação" />
-    <option name="LAST_COMMIT_MESSAGE" value="Reestruturação" />
+    <MESSAGE value="Implementando PHPUnit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implementando PHPUnit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1010,8 +996,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Control/Client.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="25" column="0" lean-forward="true" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+        <state relative-caret-position="255">
+          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
           <folding />
         </state>
       </provider>
