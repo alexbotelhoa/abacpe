@@ -2,8 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="345eaab2-3434-4273-ac11-c2300d3425ed" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Site  SCE v2.iml" afterPath="$PROJECT_DIR$/.idea/Site  SCE v2.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Control/Client.php" afterPath="$PROJECT_DIR$/app/Control/Client.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Control/Test/ClientTest.php" afterPath="$PROJECT_DIR$/app/Control/Test/ClientTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Payment.php" afterPath="$PROJECT_DIR$/app/Model/Payment.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Statistic.php" afterPath="$PROJECT_DIR$/app/Model/Statistic.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Routes/site.php" afterPath="$PROJECT_DIR$/app/Routes/site.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config.php" afterPath="$PROJECT_DIR$/app/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Client.php.html" afterPath="$PROJECT_DIR$/report/Control/Client.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Message.php.html" afterPath="$PROJECT_DIR$/report/Control/Message.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Order.php.html" afterPath="$PROJECT_DIR$/report/Control/Order.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Page.php.html" afterPath="$PROJECT_DIR$/report/Control/Page.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Sql.php.html" afterPath="$PROJECT_DIR$/report/Control/Sql.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Test/ClientTest.php.html" afterPath="$PROJECT_DIR$/report/Control/Test/ClientTest.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Test/dashboard.html" afterPath="$PROJECT_DIR$/report/Control/Test/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/Test/index.html" afterPath="$PROJECT_DIR$/report/Control/Test/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/dashboard.html" afterPath="$PROJECT_DIR$/report/Control/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Control/index.html" afterPath="$PROJECT_DIR$/report/Control/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Model/Payment.php.html" afterPath="$PROJECT_DIR$/report/Model/Payment.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Model/Plan.php.html" afterPath="$PROJECT_DIR$/report/Model/Plan.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Model/Statistic.php.html" afterPath="$PROJECT_DIR$/report/Model/Statistic.php.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Model/dashboard.html" afterPath="$PROJECT_DIR$/report/Model/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/Model/index.html" afterPath="$PROJECT_DIR$/report/Model/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/dashboard.html" afterPath="$PROJECT_DIR$/report/dashboard.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/report/index.html" afterPath="$PROJECT_DIR$/report/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -39,33 +61,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="NotEmptyValidator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/NotEmptyValidator.php">
+      <file leaf-file-name="Client.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Control/Client.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="12" lean-forward="false" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+            <state relative-caret-position="125">
+              <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="31" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="NotEmptyValidatorTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Validators/NotEmptyValidatorTest.php">
+      <file leaf-file-name="teste.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/teste.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="55" />
-              <folding>
-                <element signature="e#47#92#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Client.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/Control/Client.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+            <state relative-caret-position="170">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,51 +84,11 @@
       <file leaf-file-name="ClientTest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Control/Test/ClientTest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+            <state relative-caret-position="952">
+              <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
               <folding>
                 <element signature="e#36#67#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="teste.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/teste.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/config.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BadWordsValidator.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Service/BadWordsValidator.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="BadWordsValidatorTest.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/BadWordsValidatorTest.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -146,6 +116,7 @@
       <find>DEMOSCE2</find>
       <find>$url</find>
       <find>assertClassHasAttribute</find>
+      <find>badWordsRepository</find>
     </findStrings>
     <replaceStrings>
       <replace>src=&quot;/cpe/res</replace>
@@ -190,7 +161,6 @@
         <option value="$PROJECT_DIR$/app/Model/Order.php" />
         <option value="$PROJECT_DIR$/app/Model/Message.php" />
         <option value="$PROJECT_DIR$/app/Model/Client.php" />
-        <option value="$PROJECT_DIR$/app/Model/Statistic.php" />
         <option value="$PROJECT_DIR$/app/Views/site/header.html" />
         <option value="$PROJECT_DIR$/app/Views/site/payments.html" />
         <option value="$PROJECT_DIR$/app/Views/site/payments-update.html" />
@@ -200,14 +170,16 @@
         <option value="$PROJECT_DIR$/app/Views/site/plans.html" />
         <option value="$PROJECT_DIR$/app/Views/site/about.html" />
         <option value="$PROJECT_DIR$/app/Views/site/plans-update.html" />
-        <option value="$PROJECT_DIR$/app/Model/Payment.php" />
-        <option value="$PROJECT_DIR$/app/Routes/site.php" />
         <option value="$PROJECT_DIR$/phpunit.xml" />
         <option value="$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Entity/CustomerTest.php" />
-        <option value="$PROJECT_DIR$/app/config.php" />
+        <option value="$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/BadWordsValidatorTest.php" />
         <option value="$PROJECT_DIR$/teste.php" />
-        <option value="$PROJECT_DIR$/app/Control/Test/ClientTest.php" />
+        <option value="$PROJECT_DIR$/app/Model/Payment.php" />
+        <option value="$PROJECT_DIR$/app/config.php" />
+        <option value="$PROJECT_DIR$/app/Routes/site.php" />
+        <option value="$PROJECT_DIR$/app/Model/Statistic.php" />
         <option value="$PROJECT_DIR$/app/Control/Client.php" />
+        <option value="$PROJECT_DIR$/app/Control/Test/ClientTest.php" />
       </list>
     </option>
   </component>
@@ -330,6 +302,24 @@
               <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
+            <path>
+              <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Control" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Control" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Test" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -419,7 +409,7 @@
       <workItem from="1582232126692" duration="226000" />
       <workItem from="1582890872169" duration="547000" />
       <workItem from="1582891447357" duration="125000" />
-      <workItem from="1582891731756" duration="21413000" />
+      <workItem from="1582891731756" duration="36274000" />
     </task>
     <task id="LOCAL-00001" summary="Reestruturação">
       <created>1582151127311</created>
@@ -477,43 +467,50 @@
       <option name="project" value="LOCAL" />
       <updated>1582921678022</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Implementando PHPUnit">
+      <created>1582921758062</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1582921758062</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ClientTest - 2020.02.28 at 15h 19m 31s.xml">
+    <history-entry file="ClientTest - 2020.02.28 at 19h 19m 54s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 20m 03s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 11h 20m 08s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 20m 25s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 11h 20m 48s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 20m 34s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 11h 21m 03s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 24m 34s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 15h 50m 38s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 26m 53s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 15h 51m 13s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 31m 27s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 15h 52m 42s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 31m 42s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 16h 00m 31s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 15h 37m 24s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 16h 00m 45s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
-    <history-entry file="ClientTest - 2020.02.28 at 17h 20m 26s.xml">
+    <history-entry file="ClientTest - 2020.03.01 at 16h 02m 42s.xml">
       <configuration name="ClientTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37914000" />
+    <option name="totallyTimeSpent" value="52775000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -586,62 +583,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/Views/site/plans-create.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Views/site/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5">
-          <caret line="7" column="60" lean-forward="true" selection-start-line="7" selection-start-column="60" selection-end-line="7" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Views/site/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="31" column="0" lean-forward="true" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Views/site/plans.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="657">
-          <caret line="47" column="62" lean-forward="false" selection-start-line="47" selection-start-column="62" selection-end-line="47" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Views/site/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="7" column="57" lean-forward="false" selection-start-line="7" selection-start-column="57" selection-end-line="7" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Views/site/plans-update.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="18" column="63" lean-forward="false" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Control/Page.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="276">
-          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Plan.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="174">
@@ -680,30 +621,6 @@
           <folding>
             <element signature="e#39#96#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/NumericValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/CreditCardNumberValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/CreditCardExpirationValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -765,39 +682,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/CustomerCategoryServiceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/OrderServiceTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
-          <folding>
-            <element signature="e#44#101#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Entity/CustomerTest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="192">
           <caret line="14" column="5" lean-forward="true" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Validators/NotEmptyValidatorTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="55" lean-forward="false" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="55" />
-          <folding>
-            <element signature="e#47#92#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -873,16 +762,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Routes/site.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8194">
-          <caret line="482" column="35" lean-forward="true" selection-start-line="482" selection-start-column="35" selection-end-line="482" selection-end-column="35" />
-          <folding>
-            <element signature="e#7#26#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/functions.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -923,16 +802,146 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Controller/OrderController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-357">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/NumericValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/CreditCardNumberValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Service/CustomerCategoryService.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="159">
+          <caret line="16" column="5" lean-forward="true" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Service/CustomerCategoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Repository/BadWordsRepositoryInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="28" lean-forward="false" selection-start-line="4" selection-start-column="28" selection-end-line="4" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Service/BadWordsValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="12" column="56" lean-forward="true" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Repository/BadWordsRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Repository/CustomerRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Repository/ItemRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Repository/OrderRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Validators/NotEmptyValidatorTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="e#47#92#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Validators/CreditCardExpirationValidator.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Model/Payment.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-85">
-          <caret line="6" column="23" lean-forward="false" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
+        <state relative-caret-position="155">
+          <caret line="26" column="21" lean-forward="false" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
           <folding>
             <element signature="e#29#43#0#PHP" expanded="true" />
-            <marker date="1582221254827" expanded="true" signature="233:285" ph="SELECT * FRO... tb_payments" />
-            <marker date="1582221254827" expanded="true" signature="1944:1998" ph="SELECT * FRO... tb_payments" />
-            <marker date="1582221254827" expanded="true" signature="2228:2280" ph="DELETE FROM " />
+            <marker date="1583087553773" expanded="true" signature="233:285" ph="SELECT * FRO... tb_payments" />
+            <marker date="1583087553773" expanded="true" signature="1969:2023" ph="SELECT * FRO... tb_payments" />
+            <marker date="1583087553773" expanded="true" signature="2253:2305" ph="DELETE FROM " />
+            <marker date="1583087553773" expanded="true" signature="2567:3039" ph="SELECT SQL_C... tb_payments" />
+            <marker date="1583087553773" expanded="true" signature="2668:2801" ph="SELECT idcli... tb_payments" />
+            <marker date="1583087553773" expanded="true" signature="3564:3772" ph="SELECT SQL_C... tb_payments" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="72" column="31" lean-forward="false" selection-start-line="72" selection-start-column="31" selection-end-line="72" selection-end-column="31" />
+          <folding>
+            <marker date="1583087704267" expanded="true" signature="495:527" ph="SELECT * FRO... vw_dtpayment_first" />
+            <marker date="1583087704267" expanded="true" signature="650:970" ph="SELECT idpla... tb_payments" />
+            <marker date="1583087704267" expanded="true" signature="3144:3344" ph="SELECT * FRO... tb_payments" />
+            <marker date="1583087704267" expanded="true" signature="28754:28810" ph="SELECT * FRO... vw_firstpayment" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="22" column="3" lean-forward="false" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -944,60 +953,62 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="25" lean-forward="false" selection-start-line="8" selection-start-column="11" selection-end-line="8" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/teste.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="33" lean-forward="false" selection-start-line="9" selection-start-column="33" selection-end-line="9" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Controller/OrderController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-357">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Service/BadWordsValidator.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="67" lean-forward="false" selection-start-line="17" selection-start-column="67" selection-end-line="17" selection-end-column="67" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/BadWordsValidatorTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="66" lean-forward="false" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="66" />
+          <folding>
+            <element signature="e#44#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/OrderServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="42" column="10" lean-forward="false" selection-start-line="42" selection-start-column="10" selection-end-line="42" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Control/Client.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="8" column="31" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../phpunit/parte_2/src/OrderBundle/Test/Service/CustomerCategoryServiceTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-204">
+          <caret line="18" column="38" lean-forward="false" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Control/Test/ClientTest.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state relative-caret-position="952">
+          <caret line="56" column="0" lean-forward="false" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
           <folding>
             <element signature="e#36#67#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Control/Client.php">
+    <entry file="file://$PROJECT_DIR$/app/Routes/site.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="24" column="41" lean-forward="true" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
+        <state relative-caret-position="274">
+          <caret line="451" column="27" lean-forward="false" selection-start-line="451" selection-start-column="27" selection-end-line="451" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/teste.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
           <folding />
         </state>
       </provider>

@@ -9,6 +9,15 @@ use SCE\Control\Client;
 
 class ClientTest extends TestCase
 {
+    private $client;
+    private $clients;
+
+    public function setup()
+    {
+        $this->client = new Client();
+        $this->clients = new Client('..\..\..\res\site\json\clients.json');
+    }
+
     /**
      * @test
      */
@@ -24,9 +33,9 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueWhenPathFileClientEqual()
     {
-        $path = Client::pathFileClient();
+        $path = $this->client->pathFileClient();
 
-        $this->assertEquals("res\site\json\clients.json", $path);
+        $this->assertEquals('res\site\json\clients.json', $path);
     }
 
     /**
@@ -34,11 +43,29 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueWhenFileClientExist()
     {
+        $update = $this->clients->updateClient();
 
+        $this->assertTrue($update);
+    }
 
-        $file = Client::updateClient();
+    /**
+     * @test
+     */
+    public function shoulBeTrueWhenListClientNotEmpty()
+    {
+        $clients = $this->clients->listClient();
 
-        $this->assertTrue($file);
+        $this->assertNotEmpty($clients);
+    }
+
+    /**
+     * @test
+     */
+    public function shoulBeTrueFileExist()
+    {
+        $exist = file_exists('../../../res/site/json/clients.json');
+
+        $this->assertTrue($exist);
     }
 
 }

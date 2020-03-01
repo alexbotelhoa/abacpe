@@ -23,7 +23,8 @@ class Payment extends Model
             $payment = new Payment();
             $payment->setData($row);
 
-            $client = Client::listClient();
+            $client = new Client;
+            $client->listClient();
             $desclient = $client[$payment->getidclient()]['nome'];
 
             $payment->setdesclient($desclient);

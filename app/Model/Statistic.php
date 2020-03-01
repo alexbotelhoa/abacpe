@@ -69,7 +69,8 @@ class Statistic extends Model
         $dataYearMonth = "$year-$month-01";
 
         // BUSCANDO AS INFORMAÇÕES DOS CLIENTES
-        $clients = Client::listClient();
+        $clients = new Client;
+        $clients->listClient();
 
         // BUSCANDO OS PRIMEIROS PAGAMENTOS DOS CLIENTES
         $firstpay = Statistic::firstPayment();

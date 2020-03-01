@@ -14,13 +14,15 @@ if (
     !file_exists($file_client)
     || filemtime($file_client) < (mktime() - $_SESSION['tw_file_client'])
 ) {
-    Client::updateClient();
+    $client = new Client;
+    $client->updateClient();
 }
 if (
     !isset($_SESSION['BASECLIENTES'])
     || $_SESSION['BASECLIENTES'] == ''
 ) {
-    Client::listClient();
+    $client = new Client;
+    $client->listClient();
 }
 
 $_SESSION['ItemsPerPageGeneral'] = 20;
