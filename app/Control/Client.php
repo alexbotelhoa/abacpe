@@ -4,17 +4,6 @@ namespace SCE\Control;
 
 class Client
 {
-    public $value;
-
-    public function __construct($path = '')
-    {
-        if ($path != '') {
-            $this->value = $path;
-        } else {
-            $this->value = "res" . DIRECTORY_SEPARATOR . "site" . DIRECTORY_SEPARATOR . "json" . DIRECTORY_SEPARATOR . "clients.json";
-        }
-    }
-
     public static function urlJsonFileClient()
     {
         $url = "https://demo4417994.mockable.io/clientes/";
@@ -22,9 +11,11 @@ class Client
         return file_get_contents($url);
     }
 
-    public static function pathFileClient()
+    public static function pathFileClient($test = false)
     {
-        $path =
+        (!$test) ? $path = "abasce2" . DIRECTORY_SEPARATOR : $path = "";
+
+        $path .=
             "res" . DIRECTORY_SEPARATOR .
             "site" . DIRECTORY_SEPARATOR .
             "json" . DIRECTORY_SEPARATOR .
@@ -33,20 +24,22 @@ class Client
         return $path;
     }
 
-    public function updateClient()
+    public static function updateClient($test = false)
     {
         $file = Client::urlJsonFileClient();
+        $path = Client::pathFileClient($test);
 
-        $fp = fopen($this->value, "w+");
-
+        $fp = fopen($path, "w+");
         fwrite($fp, $file);
 
         return fclose($fp);
     }
 
-    public function listClient()
+    public static function listClient($test = false)
     {
-        $json_file = file_get_contents($this->value);
+        $path = Client::pathFileClient($test);
+
+        $json_file = file_get_contents($path);
 
         return json_decode($json_file, true);
     }

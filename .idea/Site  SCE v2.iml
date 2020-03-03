@@ -12,12 +12,20 @@
     <orderEntry type="module-library">
       <library name="PHP" type="php">
         <CLASSES>
+          <root url="file://$MODULE_DIR$/../vendor/barryvdh/laravel-ide-helper" />
+          <root url="file://$MODULE_DIR$/../vendor/barryvdh/reflection-docblock" />
           <root url="file://$MODULE_DIR$/../vendor/bootstrap/js" />
           <root url="file://$MODULE_DIR$/../vendor/composer" />
           <root url="file://$MODULE_DIR$/../vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/css" />
           <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/webfonts" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/console" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/contracts" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/filesystem" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/support" />
+          <root url="file://$MODULE_DIR$/../vendor/justinrainbow/json-schema" />
           <root url="file://$MODULE_DIR$/../vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../vendor/nesbot/carbon" />
           <root url="file://$MODULE_DIR$/../vendor/phar-io/manifest" />
           <root url="file://$MODULE_DIR$/../vendor/phar-io/version" />
           <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/reflection-common" />
@@ -25,12 +33,16 @@
           <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/type-resolver" />
           <root url="file://$MODULE_DIR$/../vendor/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/../vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/dbunit" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-code-coverage" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-file-iterator" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-text-template" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-timer" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-token-stream" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/../vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../vendor/psr/simple-cache" />
           <root url="file://$MODULE_DIR$/../vendor/rain/raintpl" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/code-unit-reverse-lookup" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/comparator" />
@@ -43,18 +55,28 @@
           <root url="file://$MODULE_DIR$/../vendor/sebastian/recursion-context" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/resource-operations" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../vendor/seld/jsonlint" />
+          <root url="file://$MODULE_DIR$/../vendor/seld/phar-utils" />
           <root url="file://$MODULE_DIR$/../vendor/slim/slim" />
           <root url="file://$MODULE_DIR$/../vendor/symfony/polyfill-ctype" />
           <root url="file://$MODULE_DIR$/../vendor/theseer/tokenizer" />
           <root url="file://$MODULE_DIR$/../vendor/webmozart/assert" />
         </CLASSES>
         <SOURCES>
+          <root url="file://$MODULE_DIR$/../vendor/barryvdh/laravel-ide-helper" />
+          <root url="file://$MODULE_DIR$/../vendor/barryvdh/reflection-docblock" />
           <root url="file://$MODULE_DIR$/../vendor/bootstrap/js" />
           <root url="file://$MODULE_DIR$/../vendor/composer" />
           <root url="file://$MODULE_DIR$/../vendor/doctrine/instantiator" />
           <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/css" />
           <root url="file://$MODULE_DIR$/../vendor/fontawesome-free/webfonts" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/console" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/contracts" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/filesystem" />
+          <root url="file://$MODULE_DIR$/../vendor/illuminate/support" />
+          <root url="file://$MODULE_DIR$/../vendor/justinrainbow/json-schema" />
           <root url="file://$MODULE_DIR$/../vendor/myclabs/deep-copy" />
+          <root url="file://$MODULE_DIR$/../vendor/nesbot/carbon" />
           <root url="file://$MODULE_DIR$/../vendor/phar-io/manifest" />
           <root url="file://$MODULE_DIR$/../vendor/phar-io/version" />
           <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/reflection-common" />
@@ -62,12 +84,16 @@
           <root url="file://$MODULE_DIR$/../vendor/phpdocumentor/type-resolver" />
           <root url="file://$MODULE_DIR$/../vendor/phpmailer/phpmailer" />
           <root url="file://$MODULE_DIR$/../vendor/phpspec/prophecy" />
+          <root url="file://$MODULE_DIR$/../vendor/phpunit/dbunit" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-code-coverage" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-file-iterator" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-text-template" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-timer" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/php-token-stream" />
           <root url="file://$MODULE_DIR$/../vendor/phpunit/phpunit" />
+          <root url="file://$MODULE_DIR$/../vendor/psr/container" />
+          <root url="file://$MODULE_DIR$/../vendor/psr/log" />
+          <root url="file://$MODULE_DIR$/../vendor/psr/simple-cache" />
           <root url="file://$MODULE_DIR$/../vendor/rain/raintpl" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/code-unit-reverse-lookup" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/comparator" />
@@ -80,6 +106,8 @@
           <root url="file://$MODULE_DIR$/../vendor/sebastian/recursion-context" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/resource-operations" />
           <root url="file://$MODULE_DIR$/../vendor/sebastian/version" />
+          <root url="file://$MODULE_DIR$/../vendor/seld/jsonlint" />
+          <root url="file://$MODULE_DIR$/../vendor/seld/phar-utils" />
           <root url="file://$MODULE_DIR$/../vendor/slim/slim" />
           <root url="file://$MODULE_DIR$/../vendor/symfony/polyfill-ctype" />
           <root url="file://$MODULE_DIR$/../vendor/theseer/tokenizer" />

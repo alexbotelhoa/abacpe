@@ -166,8 +166,7 @@ $app->post("/sitesce2/plans/create", function () {
 
     if ($_SESSION['DEMOSCE2'] != true) $plan->save();
 
-    $client = new Client;
-    $client->updateClient();
+    Client::updateClient();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
@@ -342,8 +341,7 @@ $app->get("/sitesce2/payments/:idclient/detail", function ($idclient) {
 
 $app->get("/sitesce2/payments/create", function () {
 
-    $clients = new Client;
-    $clients->listClient();
+    $clients = Client::listClient();
 
     $page = new Page();
     $page->setTpl("payments-create", [
@@ -395,8 +393,7 @@ $app->post("/sitesce2/payments/create", function () {
 
 $app->get("/sitesce2/payments/:idclient/create", function ($idclient) {
 
-    $clients = new Client;
-    $clients->listClient();
+    $clients = Client::listClient();
 
     $page = new Page();
     $page->setTpl("payments-create", [
@@ -448,8 +445,7 @@ $app->get("/sitesce2/payments/:idpayment/update", function ($idpayment) {
     $payment = new Payment();
     $payment->get((int)$idpayment);
 
-    $clients = new Client;
-    $clients->listClient();
+    $clients = Client::listClient();
 
     $page = new Page();
     $page->setTpl("payments-update", [

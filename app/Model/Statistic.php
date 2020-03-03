@@ -8,13 +8,28 @@ use SCE\Control\Client;
 
 class Statistic extends Model
 {
-
-    public static function registerStatistics($year, $month, $page, $content)
+    public static function pathFileStatistics($year, $month, $page, $test = false)
     {
+        (!$test) ? $path = "abasce2" . DIRECTORY_SEPARATOR : $path = "";
+
+        $path .=
+            "res" . DIRECTORY_SEPARATOR .
+            "site" . DIRECTORY_SEPARATOR .
+            "statistics" . DIRECTORY_SEPARATOR .
+            "$page-$year-$month.json";
+
+        return $path;
+    }
+
+    public static function registerStatistics($year, $month, $page, $content, $test = false)
+    {
+        $path = Statistic::pathFileStatistics($year, $month, $page, $test);
         $file = json_encode($content);
-        $fp = fopen($_SESSION['DIRECTORY_STATISTICS'] . "$page-$year-$month.json", "w+");
+
+        $fp = fopen($path, "w+");
         fwrite($fp, $file);
-        fclose($fp);
+
+        return fclose($fp);
     }
 
     public static function firstPayment()
@@ -69,8 +84,7 @@ class Statistic extends Model
         $dataYearMonth = "$year-$month-01";
 
         // BUSCANDO AS INFORMAÇÕES DOS CLIENTES
-        $clients = new Client;
-        $clients->listClient();
+        $clients = Client::listClient();
 
         // BUSCANDO OS PRIMEIROS PAGAMENTOS DOS CLIENTES
         $firstpay = Statistic::firstPayment();

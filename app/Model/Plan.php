@@ -56,6 +56,8 @@ class Plan extends Model
         if (count($result) > 0) {
             $this->setData($result[0]);
         }
+
+        return $result;
     }
 
     public function get($idplan)
@@ -68,6 +70,8 @@ class Plan extends Model
         if (count($result) > 0) {
             $this->setData($result[0]);
         }
+
+        return $result;
     }
 
     public function delete()

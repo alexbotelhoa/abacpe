@@ -11,6 +11,8 @@ class Message
     public static function setError($msg)
     {
         $_SESSION[Message::ERROR] = $msg;
+
+        return $msg;
     }
 
     public static function getError()
@@ -30,6 +32,8 @@ class Message
     public static function setSuccess($msg)
     {
         $_SESSION[Message::SUCCESS] = $msg;
+
+        return $msg;
     }
 
     public static function getSuccess()

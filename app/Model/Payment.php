@@ -8,7 +8,6 @@ use SCE\Control\Client;
 
 class Payment extends Model
 {
-
     public static function checkPayment($idclient)
     {
         $sql = new Sql();
@@ -17,14 +16,13 @@ class Payment extends Model
         ]);
     }
 
-    public static function listPaymentPage($list)
+    public static function listPaymentPage($list, $test = false)
     {
         foreach ($list as &$row) {
             $payment = new Payment();
             $payment->setData($row);
 
-            $client = new Client;
-            $client->listClient();
+            $client = Client::listClient($test);
             $desclient = $client[$payment->getidclient()]['nome'];
 
             $payment->setdesclient($desclient);
@@ -64,6 +62,8 @@ class Payment extends Model
         if (count($result) > 0) {
             $this->setData($result[0]);
         }
+
+        return $result;
     }
 
     public function get($idpayment)
@@ -76,6 +76,8 @@ class Payment extends Model
         if (count($result) > 0) {
             $this->setData($result[0]);
         }
+
+        return $result;
     }
 
     public function delete()
@@ -86,7 +88,7 @@ class Payment extends Model
         ]);
     }
 
-    public function getPaymentPage($sort, $page, $itemsPerPage)
+    public function getPaymentPage($sort, $page, $itemsPerPage, $test = false)
     {
         $start = ($page - 1) * $itemsPerPage;
 
@@ -108,13 +110,13 @@ class Payment extends Model
         $resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
 
         return [
-            'data' => Payment::listPaymentPage($result),
+            'data' => Payment::listPaymentPage($result, $test),
             'total' => (int)$resultTotal[0]['nrtotal'],
             'pages' => ceil($resultTotal[0]['nrtotal'] / $itemsPerPage)
         ];
     }
 
-    public function getPaymentClientPage($sort, $idclient, $page, $itemsPerPage)
+    public function getPaymentClientPage($sort, $idclient, $page, $itemsPerPage, $test = false)
     {
         $start = ($page - 1) * $itemsPerPage;
 
@@ -132,7 +134,7 @@ class Payment extends Model
         $resultTotal = $sql->select("SELECT FOUND_ROWS() AS nrtotal");
 
         return [
-            'data' => Payment::listPaymentPage($result),
+            'data' => Payment::listPaymentPage($result, $test),
             'total' => (int)$resultTotal[0]['nrtotal'],
             'pages' => ceil($resultTotal[0]['nrtotal'] / $itemsPerPage)
         ];

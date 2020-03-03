@@ -37,6 +37,20 @@
       <path value="$PROJECT_DIR$/../vendor/phpunit/php-text-template" />
       <path value="$PROJECT_DIR$/../vendor/phpunit/php-timer" />
       <path value="$PROJECT_DIR$/../vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/../vendor/justinrainbow/json-schema" />
+      <path value="$PROJECT_DIR$/../vendor/seld/jsonlint" />
+      <path value="$PROJECT_DIR$/../vendor/seld/phar-utils" />
+      <path value="$PROJECT_DIR$/../vendor/psr/log" />
+      <path value="$PROJECT_DIR$/../vendor/psr/container" />
+      <path value="$PROJECT_DIR$/../vendor/illuminate/filesystem" />
+      <path value="$PROJECT_DIR$/../vendor/illuminate/support" />
+      <path value="$PROJECT_DIR$/../vendor/illuminate/contracts" />
+      <path value="$PROJECT_DIR$/../vendor/illuminate/console" />
+      <path value="$PROJECT_DIR$/../vendor/barryvdh/laravel-ide-helper" />
+      <path value="$PROJECT_DIR$/../vendor/barryvdh/reflection-docblock" />
+      <path value="$PROJECT_DIR$/../vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/../vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/../vendor/phpunit/dbunit" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

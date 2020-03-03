@@ -5,17 +5,13 @@ namespace SCE\Control\Test;
 use PHPUnit\Framework\TestCase;
 use SCE\Control\Client;
 
-//require_once("../../config.php");
-
 class ClientTest extends TestCase
 {
     private $client;
-    private $clients;
 
     public function setup()
     {
         $this->client = new Client();
-        $this->clients = new Client('..\..\..\res\site\json\clients.json');
     }
 
     /**
@@ -33,7 +29,7 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueWhenPathFileClientEqual()
     {
-        $path = $this->client->pathFileClient();
+        $path = Client::pathFileClient(true);
 
         $this->assertEquals('res\site\json\clients.json', $path);
     }
@@ -43,7 +39,7 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueWhenFileClientExist()
     {
-        $update = $this->clients->updateClient();
+        $update = Client::updateClient(true);
 
         $this->assertTrue($update);
     }
@@ -53,7 +49,7 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueWhenListClientNotEmpty()
     {
-        $clients = $this->clients->listClient();
+        $clients = Client::listClient(true);
 
         $this->assertNotEmpty($clients);
     }
@@ -63,7 +59,7 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueFileExist()
     {
-        $exist = file_exists('../../../res/site/json/clients.json');
+        $exist = file_exists('res/site/json/clients.json');
 
         $this->assertTrue($exist);
     }
