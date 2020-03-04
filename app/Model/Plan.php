@@ -54,7 +54,8 @@ class Plan extends Model
         ]);
 
         if (count($result) > 0) {
-            return $this->setData($result[0]);
+            $this->setData($result[0]);
+            return true;
         }
 
         return false;
