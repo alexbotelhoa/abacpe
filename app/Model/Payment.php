@@ -59,17 +59,7 @@ class Payment extends Model
             ":vlpayment" => $vlpayment
         ]);
 
-        if (count($result) > 0) {
-            $this->setData($result[0]);
-        }
-
-        if (
-            boolval($plan) &&
-            boolval($sql) &&
-            $result == []
-        ) {
-            return true;
-        }
+        if (count($result) > 0) {$this->setData($result[0]); return true;}
 
         return false;
     }

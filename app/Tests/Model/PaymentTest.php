@@ -1,6 +1,6 @@
 <?php
 
-namespace SCE\Tests;
+namespace SCE\Tests\Model;
 
 use PHPUnit\Framework\TestCase;
 use SCE\Model\Payment;
@@ -59,11 +59,11 @@ class PaymentTest extends TestCase
     /**
      * @test
      */
-    public function shoulBeTrueWhenSavePaymentTrue()
+    public function shoulBeTrueWhenSavePaymentFalse()
     {
         $value = $this->payment->save();
 
-        $this->assertTrue($value);
+        $this->assertFalse($value);
     }
 
     /**

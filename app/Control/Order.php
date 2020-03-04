@@ -12,11 +12,9 @@ class Order
         if (!isset($_SESSION['SortPayDetailByOrder'])) $_SESSION['SortPayDetailByOrder'] = "ASC";
 
         if ($local == "plans") {
-            if ($_SESSION['LastField'] == $sort && $_SESSION['SortPlanByOrder'] == "ASC") {
-                $order = $_SESSION['SortPlanByOrder'] = "DESC";
-            } else {
-                $order = $_SESSION['SortPlanByOrder'] = "ASC";
-            }
+            ($_SESSION['LastField'] == $sort && $_SESSION['SortPlanByOrder'] == "ASC") ? $order = "DESC" : $order = "ASC";
+
+            $_SESSION['SortPlanByOrder'] = $order;
 
             switch ($sort) {
                 case "ordid":
@@ -34,11 +32,9 @@ class Order
         }
 
         if ($local == "payments") {
-            if ($_SESSION['LastField'] == $sort && $_SESSION['SortPaymentByOrder'] == "ASC") {
-                $order = $_SESSION['SortPaymentByOrder'] = "DESC";
-            } else {
-                $order = $_SESSION['SortPaymentByOrder'] = "ASC";
-            }
+            ($_SESSION['LastField'] == $sort && $_SESSION['SortPaymentByOrder'] == "ASC") ? $order = "DESC" : $order = "ASC";
+
+            $_SESSION['SortPaymentByOrder'] = $order;
 
             switch ($sort) {
                 case "ordid":
@@ -59,11 +55,9 @@ class Order
         }
 
         if ($local == "detail") {
-            if ($_SESSION['LastField'] == $sort && $_SESSION['SortPayDetailByOrder'] == "ASC") {
-                $order = $_SESSION['SortPayDetailByOrder'] = "DESC";
-            } else {
-                $order = $_SESSION['SortPayDetailByOrder'] = "ASC";
-            }
+            ($_SESSION['LastField'] == $sort && $_SESSION['SortPayDetailByOrder'] == "ASC") ? $order = "DESC" : $order = "ASC";
+
+            $_SESSION['SortPayDetailByOrder'] = $order;
 
             switch ($sort) {
                 case "ordid":
@@ -91,13 +85,8 @@ class Order
 
         if ($sort != false) $_SESSION['LastField'] = $sort;
 
-        if (
-            in_array($local, ['plans','payments','detail']) &&
-            $sort != false
-        ) {
-            return true;
-        }
+        (in_array($local, ['plans','payments','detail']) && $sort != false) ? $return = true : $return = false;
 
-        return false;
+        return $return;
     }
 }

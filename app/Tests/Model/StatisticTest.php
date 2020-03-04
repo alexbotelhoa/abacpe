@@ -1,6 +1,6 @@
 <?php
 
-namespace SCE\Tests;
+namespace SCE\Tests\Model;
 
 use PHPUnit\Framework\TestCase;
 use SCE\Model\Statistic;
@@ -63,7 +63,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenSalePlanTrue()
     {
-        $value = boolval(Statistic::salePlan(2017, 12));
+        $value = boolval(Statistic::salePlan(2018, 12));
 
         $this->assertTrue($value);
     }
@@ -97,7 +97,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenMatrixPaymentsTrue()
     {
-        $value = Statistic::matrixPayments(2017, 12, true);
+        $value = Statistic::matrixPayments(2018, 12, true);
 
         $this->assertTrue($value);
     }
@@ -119,7 +119,7 @@ class StatisticTest extends TestCase
     {
         $_SESSION['tw_file_client'] = 600;
 
-        $value = Statistic::metricasSaas(2017, 12, true);
+        $value = Statistic::metricasSaas(2018, 12, true);
 
         $this->assertTrue(boolval($value));
     }
@@ -129,7 +129,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenIndexDataChartTrue()
     {
-        $value = Statistic::indexDataChart(2017, 12, true);
+        $value = Statistic::indexDataChart(2018, 12, true);
 
         $this->assertTrue($value);
     }
@@ -139,7 +139,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenStatisticsDataChartTrue()
     {
-        $value = Statistic::statisticsDataChart(2017, 12, true);
+        $value = Statistic::statisticsDataChart(2018, 12, true);
 
         $this->assertTrue($value);
     }

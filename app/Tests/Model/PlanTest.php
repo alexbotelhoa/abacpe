@@ -1,6 +1,6 @@
 <?php
 
-namespace SCE\Tests;
+namespace SCE\Tests\Model;
 
 use PHPUnit\Framework\TestCase;
 use SCE\Model\Plan;

@@ -53,10 +53,7 @@ class Plan extends Model
             ":vlplan" => $this->getvlplan()
         ]);
 
-        if (count($result) > 0) {
-            $this->setData($result[0]);
-            return true;
-        }
+        if (count($result) > 0) {$this->setData($result[0]); return true;};
 
         return false;
     }

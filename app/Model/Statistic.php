@@ -291,12 +291,7 @@ class Statistic extends Model
         $path = Statistic::pathFileStatistics($test);
 
         // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE E SE OS TEMPOS DE ATUALIZAÇÃO JÁ FORAM ULTRAPASSADOS
-        if (
-            !file_exists($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json")
-            || filemtime($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json") < (mktime() - $_SESSION['tw_file_client'])
-        ) {
-            Statistic::matrixPayments($year, $month, $test);
-        }
+        if (filemtime($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json") < (mktime() - $_SESSION['tw_file_client'])) Statistic::matrixPayments($year, $month, $test);
 
         // CHAMA O ARQUIVO COM A MATRIX DO INTERVALO CRIADA
         $json_file = file_get_contents($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json");
@@ -434,26 +429,24 @@ class Statistic extends Model
         $metricas = Statistic::metricasSaas($year, $month, $test);
 
         // MONTANDO OS VALORES E PERCENTUAIS DAS MÉTRICAS SAAS
+        $pernew = 0;
+        $perexpansion = 0;
+        $perresurrected = 0;
+        $percontraction = 0;
+        $percancelled = 0;
+
         if ($metricas[0]['mrr'] > 0) {
             $pernew = round(($metricas[0]['new'] * 100) / $metricas[0]['mrr'], 1);
             $perexpansion = round(($metricas[0]['expansion'] * 100) / $metricas[0]['mrr'], 1);
             $perresurrected = round(($metricas[0]['resurrected'] * 100) / $metricas[0]['mrr'], 1);
-        } else {
-            $pernew = 0;
-            $perexpansion = 0;
-            $perresurrected = 0;
         }
-
-        $perrecurrent = 100 - ($pernew + $perexpansion + $perresurrected);
 
         if ($metricas[0]['cancelled'] > 0) {
             $percontraction = round(($metricas[0]['contraction'] * 100) / ($metricas[0]['contraction'] + $metricas{0}['cancelled']), 1);
             $percancelled = round(($metricas[0]['cancelled'] * 100) / ($metricas[0]['contraction'] + $metricas{0}['cancelled']), 1);
-        } else {
-            $percontraction = 0;
-            $percancelled = 0;
         }
 
+        $perrecurrent = 100 - ($pernew + $perexpansion + $perresurrected);
         $saas = [$perrecurrent, $pernew, $perresurrected, $perexpansion, $percontraction, $percancelled];
         $recdetails = [0, $metricas[0]['cancelled'], $metricas[0]['contraction'], $metricas[0]['expansion'], $metricas[0]['resurrected'], $metricas[0]['new']];
 
@@ -474,15 +467,9 @@ class Statistic extends Model
 
         $statistics = Statistic::registerStatistics($year, $month, "index", $datachart, $test);
 
-        if (
-            boolval($metricas) &&
-            boolval($statistics) &&
-            count($datachart) != []
-        ) {
-            return true;
-        }
+        (boolval($metricas) && boolval($statistics) && count($datachart) != []) ? $return = true : $return = false;
 
-        return false;
+        return $return;
     }
 
     public static function statisticsDataChart($year, $month, $test = false)

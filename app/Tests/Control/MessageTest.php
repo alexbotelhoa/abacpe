@@ -1,6 +1,6 @@
 <?php
 
-namespace SCE\Tests;
+namespace SCE\Tests\Control;
 
 use PHPUnit\Framework\TestCase;
 use SCE\Control\Message;
