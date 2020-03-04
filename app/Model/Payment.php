@@ -63,7 +63,15 @@ class Payment extends Model
             $this->setData($result[0]);
         }
 
-        return $result;
+        if (
+            boolval($plan) &&
+            boolval($sql) &&
+            $result == []
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
     public function get($idpayment)

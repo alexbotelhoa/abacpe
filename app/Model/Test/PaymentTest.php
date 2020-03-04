@@ -1,8 +1,9 @@
 <?php
 
-namespace SCE\Model;
+namespace SCE\Model\Test;
 
 use PHPUnit\Framework\TestCase;
+use SCE\Model\Payment;
 
 class PaymentTest extends TestCase
 {
@@ -18,7 +19,7 @@ class PaymentTest extends TestCase
      */
     public function shoulBeTrueWhenCheckPaymentNotEmpty()
     {
-        $value = $this->payment->checkPayment(0);
+        $value = Payment::checkPayment(0);
 
         $this->assertNotEmpty($value);
     }
@@ -42,7 +43,7 @@ class PaymentTest extends TestCase
             ]
         ];
 
-        $data = $this->payment->listPaymentPage($list, true);
+        $data = Payment::listPaymentPage($list, true);
 
         $this->assertEquals('Empresa 0', $data[0]['desclient']);
     }
@@ -50,11 +51,11 @@ class PaymentTest extends TestCase
     /**
      * @test
      */
-    public function shoulBeTrueWhenSavePaymentEmpty()
+    public function shoulBeTrueWhenSavePaymentTrue()
     {
         $value = $this->payment->save();
 
-        $this->assertEmpty($value);
+        $this->assertTrue($value);
     }
 
     /**

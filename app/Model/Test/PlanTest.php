@@ -1,8 +1,9 @@
 <?php
 
-namespace SCE\Model;
+namespace SCE\Model\Test;
 
 use PHPUnit\Framework\TestCase;
+use SCE\Model\Plan;
 
 class PlanTest extends TestCase
 {
@@ -18,7 +19,7 @@ class PlanTest extends TestCase
      */
     public function shoulBeTrueWhenSelectPlanCount()
     {
-        $value = $this->plan->selectPlan();
+        $value = Plan::selectPlan();
 
         $this->assertCount(4, $value);
     }
@@ -28,7 +29,7 @@ class PlanTest extends TestCase
      */
     public function shoulBeTrueWhenCheckPlanEmpty()
     {
-        $value = $this->plan->checkPlan(0);
+        $value = Plan::checkPlan(0);
 
         $this->assertEmpty($value);
     }
@@ -46,7 +47,7 @@ class PlanTest extends TestCase
             ]
         ];
 
-        $value = $this->plan->listPlanPage($content);
+        $value = Plan::listPlanPage($content);
 
         $this->assertCount(1, $value);
     }

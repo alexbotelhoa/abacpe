@@ -683,18 +683,4 @@ class Statistic extends Model
     //                                  FIM DOS STATICS                                  //
     //***********************************************************************************//
 
-    public function get($idclient)
-    {
-        $sql = new Sql();
-        $result = $sql->select("SELECT * FROM vw_dtpayment_first WHERE idclient = :IDCLIENT", [
-            ":IDCLIENT" => $idclient
-        ]);
-
-        if (count($result) > 0) {
-            $this->setData($result[0]);
-        }
-
-        return $result;
-    }
-
 }

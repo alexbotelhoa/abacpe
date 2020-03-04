@@ -1,18 +1,12 @@
 <?php
 
-namespace SCE\Model;
+namespace SCE\Model\Test;
 
 use PHPUnit\Framework\TestCase;
+use SCE\Model\Statistic;
 
 class StatisticTest extends TestCase
 {
-    private $statistic;
-
-    public function setUp()
-    {
-        $this->statistic = new Statistic();
-    }
-
     /**
      * @test
      */
@@ -51,7 +45,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenFirstPaymentTrue()
     {
-        $value = boolval($this->statistic->firstPayment());
+        $value = boolval(Statistic::firstPayment());
 
         $this->assertTrue($value);
     }
@@ -61,7 +55,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenSalePlanTrue()
     {
-        $value = boolval($this->statistic->salePlan(2017, 12));
+        $value = boolval(Statistic::salePlan(2017, 12));
 
         $this->assertTrue($value);
     }
@@ -73,7 +67,7 @@ class StatisticTest extends TestCase
     {
         $value = [1,2,3,4,5,6];
 
-        $value = $this->statistic->nichoStatistics($value);
+        $value = Statistic::nichoStatistics($value);
 
         $this->assertEquals('Outros', $value[5][0]);
     }
@@ -85,7 +79,7 @@ class StatisticTest extends TestCase
     {
         $value = [];
 
-        $value = $this->statistic->nichoStatistics($value);
+        $value = Statistic::nichoStatistics($value);
 
         $this->assertCount(6, $value);
     }
@@ -95,7 +89,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenMatrixPaymentsTrue()
     {
-        $value = $this->statistic->matrixPayments(2017, 12, true);
+        $value = Statistic::matrixPayments(2017, 12, true);
 
         $this->assertTrue($value);
     }
@@ -105,7 +99,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenMatrixPaymentsFalse()
     {
-        $value = $this->statistic->matrixPayments(9999, 99, true);
+        $value = Statistic::matrixPayments(9999, 99, true);
 
         $this->assertFalse($value);
     }
@@ -117,7 +111,7 @@ class StatisticTest extends TestCase
     {
         $_SESSION['tw_file_client'] = 600;
 
-        $value = $this->statistic->metricasSaas(2017, 12, true);
+        $value = Statistic::metricasSaas(2017, 12, true);
 
         $this->assertTrue(boolval($value));
     }
@@ -127,7 +121,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenIndexDataChartTrue()
     {
-        $value = $this->statistic->indexDataChart(2017, 12, true);
+        $value = Statistic::indexDataChart(2017, 12, true);
 
         $this->assertTrue($value);
     }
@@ -137,7 +131,7 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenStatisticsDataChartTrue()
     {
-        $value = $this->statistic->statisticsDataChart(2017, 12, true);
+        $value = Statistic::statisticsDataChart(2017, 12, true);
 
         $this->assertTrue($value);
     }
@@ -147,20 +141,8 @@ class StatisticTest extends TestCase
      */
     public function shoulBeTrueWhenStatisticsDataChartFalse()
     {
-        $value = $this->statistic->statisticsDataChart(9999, 99, true);
+        $value = Statistic::statisticsDataChart(9999, 99, true);
 
         $this->assertFalse($value);
-    }
-
-    /**
-     * @test
-     */
-    public function shoulBeTrueWhenGetStatisticsEqual()
-    {
-        $id = 0;
-
-        $value = $this->statistic->get($id);
-
-        $this->assertEquals($id, $value[0]['idclient']);
     }
 }
