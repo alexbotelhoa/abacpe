@@ -6,21 +6,10 @@ class Order
 {
     public static function getOrder($local, $sort)
     {
-        $field = $sort;
-        $order = $local;
-
-        if (!isset($_SESSION['LastField'])) {
-            $_SESSION['LastField'] = "ASC";
-        }
-        if (!isset($_SESSION['SortPlanByOrder'])) {
-            $_SESSION['SortPlanByOrder'] = "ASC";
-        }
-        if (!isset($_SESSION['SortPaymentByOrder'])) {
-            $_SESSION['SortPaymentByOrder'] = "ASC";
-        }
-        if (!isset($_SESSION['SortPayDetailByOrder'])) {
-            $_SESSION['SortPayDetailByOrder'] = "ASC";
-        }
+        if (!isset($_SESSION['LastField'])) $_SESSION['LastField'] = "ASC";
+        if (!isset($_SESSION['SortPlanByOrder'])) $_SESSION['SortPlanByOrder'] = "ASC";
+        if (!isset($_SESSION['SortPaymentByOrder'])) $_SESSION['SortPaymentByOrder'] = "ASC";
+        if (!isset($_SESSION['SortPayDetailByOrder'])) $_SESSION['SortPayDetailByOrder'] = "ASC";
 
         if ($local == "plans") {
             if ($_SESSION['LastField'] == $sort && $_SESSION['SortPlanByOrder'] == "ASC") {
@@ -31,14 +20,16 @@ class Order
 
             switch ($sort) {
                 case "ordid":
-                    $field = $_SESSION['SortPlanByField'] = "idplan";
+                    $_SESSION['SortPlanByField'] = "idplan";
                     break;
                 case "ordplan":
-                    $field = $_SESSION['SortPlanByField'] = "desplan";
+                    $_SESSION['SortPlanByField'] = "desplan";
                     break;
                 case "ordvlp":
-                    $field = $_SESSION['SortPlanByField'] = "vlplan";
+                    $_SESSION['SortPlanByField'] = "vlplan";
                     break;
+                default:
+                    $sort = false;
             }
         }
 
@@ -51,17 +42,19 @@ class Order
 
             switch ($sort) {
                 case "ordid":
-                    $field = $_SESSION['SortPaymentByField'] = "a.idclient";
+                    $_SESSION['SortPaymentByField'] = "a.idclient";
                     break;
                 case "ordcli":
-                    $field = $_SESSION['SortPaymentByField'] = "a.idclient";
+                    $_SESSION['SortPaymentByField'] = "a.idclient";
                     break;
                 case "ordpla":
-                    $field = $_SESSION['SortPaymentByField'] = "a.idplan";
+                    $_SESSION['SortPaymentByField'] = "a.idplan";
                     break;
                 case "ordqtd":
-                    $field = $_SESSION['SortPaymentByField'] = "qtdpay";
+                    $_SESSION['SortPaymentByField'] = "qtdpay";
                     break;
+                default:
+                    $sort = false;
             }
         }
 
@@ -74,28 +67,37 @@ class Order
 
             switch ($sort) {
                 case "ordid":
-                    $field = $_SESSION['SortPayDetailByField'] = "a.idpayment";
+                    $_SESSION['SortPayDetailByField'] = "a.idpayment";
                     break;
                 case "ordcli":
-                    $field = $_SESSION['SortPayDetailByField'] = "a.idclient";
+                    $_SESSION['SortPayDetailByField'] = "a.idclient";
                     break;
                 case "ordpla":
-                    $field = $_SESSION['SortPayDetailByField'] = "a.idplan";
+                    $_SESSION['SortPayDetailByField'] = "a.idplan";
                     break;
                 case "ordrec":
-                    $field = $_SESSION['SortPayDetailByField'] = "a.vlrecurrence";
+                    $_SESSION['SortPayDetailByField'] = "a.vlrecurrence";
                     break;
                 case "orddtp":
-                    $field = $_SESSION['SortPayDetailByField'] = "a.dtpayment";
+                    $_SESSION['SortPayDetailByField'] = "a.dtpayment";
                     break;
                 case "ordvlp":
-                    $field = $_SESSION['SortPayDetailByField'] = "a.vlpayment";
+                    $_SESSION['SortPayDetailByField'] = "a.vlpayment";
                     break;
+                default:
+                    $sort = false;
             }
         }
 
-        $_SESSION['LastField'] = $sort;
+        if ($sort != false) $_SESSION['LastField'] = $sort;
 
-        return $field . " " . $order;
+        if (
+            in_array($local, ['plans','payments','detail']) &&
+            $sort != false
+        ) {
+            return true;
+        }
+
+        return false;
     }
 }

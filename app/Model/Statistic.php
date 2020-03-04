@@ -8,25 +8,24 @@ use SCE\Control\Client;
 
 class Statistic extends Model
 {
-    public static function pathFileStatistics($year, $month, $page, $test = false)
+    public static function pathFileStatistics($test = false)
     {
         (!$test) ? $path = "abasce2" . DIRECTORY_SEPARATOR : $path = "";
 
         $path .=
             "res" . DIRECTORY_SEPARATOR .
             "site" . DIRECTORY_SEPARATOR .
-            "statistics" . DIRECTORY_SEPARATOR .
-            "$page-$year-$month.json";
+            "statistics";
 
         return $path;
     }
 
     public static function registerStatistics($year, $month, $page, $content, $test = false)
     {
-        $path = Statistic::pathFileStatistics($year, $month, $page, $test);
+        $path = Statistic::pathFileStatistics($test);
         $file = json_encode($content);
 
-        $fp = fopen($path, "w+");
+        $fp = fopen($path . DIRECTORY_SEPARATOR . "$page-$year-$month.json", "w+");
         fwrite($fp, $file);
 
         return fclose($fp);
@@ -78,13 +77,13 @@ class Statistic extends Model
         return $nichorec;
     }
 
-    public static function matrixPayments($year, $month)
+    public static function matrixPayments($year, $month, $test = false)
     {
         // MONTANDO A DATA DA PESQUISA
         $dataYearMonth = "$year-$month-01";
 
         // BUSCANDO AS INFORMAÇÕES DOS CLIENTES
-        $clients = Client::listClient();
+        $clients = Client::listClient($test);
 
         // BUSCANDO OS PRIMEIROS PAGAMENTOS DOS CLIENTES
         $firstpay = Statistic::firstPayment();
@@ -267,24 +266,39 @@ class Statistic extends Model
             }
         }
 
-        Statistic::registerStatistics($year, $month, "matrix", $matrix);
+        $statistics = Statistic::registerStatistics($year, $month, "matrix", $matrix, $test);
+
+        if (
+            boolval($clients) &&
+            boolval($firstpay) &&
+            boolval($payment) &&
+            boolval($statistics) &&
+            count($matrix) != 0
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
-    public static function metricasSaas($year, $month)
+    public static function metricasSaas($year, $month, $test = false)
     {
         // MONTANDO A DATA DA PESQUISA
         $dataYearMonth = "$year-$month-01";
 
+        // CAMINHO PARA O ARQUIVOS COM AS ESTATÍSTICAS
+        $path = Statistic::pathFileStatistics($test);
+
         // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE E SE OS TEMPOS DE ATUALIZAÇÃO JÁ FORAM ULTRAPASSADOS
         if (
-            !file_exists($_SESSION['DIRECTORY_STATISTICS'] . "matrix-$year-$month.json")
-            || filemtime($_SESSION['DIRECTORY_STATISTICS'] . "matrix-$year-$month.json") < (mktime() - $_SESSION['tw_file_client'])
+            !file_exists($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json")
+            || filemtime($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json") < (mktime() - $_SESSION['tw_file_client'])
         ) {
-            Statistic::matrixPayments($year, $month);
+            Statistic::matrixPayments($year, $month, $test);
         }
 
         // CHAMA O ARQUIVO COM A MATRIX DO INTERVALO CRIADA
-        $json_file = file_get_contents($_SESSION['DIRECTORY_STATISTICS'] . "matrix-$year-$month.json");
+        $json_file = file_get_contents($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json");
         $matrix = json_decode($json_file, true);
 
         // ARMAZENANDO OS CLIENTES E SEUS PRIMEIROS PAGAMENTOS
@@ -413,10 +427,10 @@ class Statistic extends Model
         return $datachart;
     }
 
-    public static function indexDataChart($year, $month)
+    public static function indexDataChart($year, $month, $test = false)
     {
         // BUSCANDO AS MÉTRICAS SAAS JÁ PARAMETRIZADAS
-        $metricas = Statistic::metricasSaas($year, $month);
+        $metricas = Statistic::metricasSaas($year, $month, $test);
 
         // MONTANDO OS VALORES E PERCENTUAIS DAS MÉTRICAS SAAS
         if ($metricas[0]['mrr'] > 0) {
@@ -457,17 +471,27 @@ class Statistic extends Model
             ]);
         }
 
-        Statistic::registerStatistics($year, $month, "index", $datachart);
+        $statistics = Statistic::registerStatistics($year, $month, "index", $datachart, $test);
+
+        if (
+            boolval($metricas) &&
+            boolval($statistics) &&
+            count($datachart) != []
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
-    public static function statisticsDataChart($year, $month)
+    public static function statisticsDataChart($year, $month, $test = false)
     {
         /*  [8] = Recurrent  |  [9] = New  |  [10] = Resurrected  |  [11] = Expansion  |  [12] = Contraction  |  [13] = Cancelled  */
         // MONTANDO A DATA DA PESQUISA
         $dataYearMonth = "$year-$month-01";
 
         // CHAMANDO AS MÉTRICAS SAAS DA PESQUISA
-        $metricas = Statistic::metricasSaas($year, $month);
+        $metricas = Statistic::metricasSaas($year, $month, $test);
 
         // CHAMANDO OS PLANOS VENDIDOS NO PERÍODO
         $saleplan = Statistic::salePlan($year, $month);
@@ -638,7 +662,19 @@ class Statistic extends Model
             ]);
         }
 
-        Statistic::registerStatistics($year, $month, "statistics", $datachart);
+        $statistics = Statistic::registerStatistics($year, $month, "statistics", $datachart, $test);
+
+        if (
+            boolval($metricas) &&
+            boolval($saleplan) &&
+            boolval($statistics) &&
+            count($nameblock) != 0 &&
+            count($datachart) != 0
+        ) {
+            return true;
+        }
+
+        return false;
     }
 
 
@@ -650,13 +686,15 @@ class Statistic extends Model
     public function get($idclient)
     {
         $sql = new Sql();
-        $result = $sql->select("SELECT * FROM vw_firstpayment WHERE idclient = :IDCLIENT", [
+        $result = $sql->select("SELECT * FROM vw_dtpayment_first WHERE idclient = :IDCLIENT", [
             ":IDCLIENT" => $idclient
         ]);
 
         if (count($result) > 0) {
             $this->setData($result[0]);
         }
+
+        return $result;
     }
 
 }

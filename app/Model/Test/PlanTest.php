@@ -36,6 +36,24 @@ class PlanTest extends TestCase
     /**
      * @test
      */
+    public function shoulBeTrueWhenListPlanPageCount()
+    {
+        $content = [
+            [
+                "foo0" => 'foo',
+                "foo1" => 'foo',
+                "foo2" => 'foo'
+            ]
+        ];
+
+        $value = $this->plan->listPlanPage($content);
+
+        $this->assertCount(1, $value);
+    }
+
+    /**
+     * @test
+     */
     public function shoulBeTrueWhenSavePlanEmpty()
     {
         $value = $this->plan->save();
