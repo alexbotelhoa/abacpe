@@ -83,7 +83,7 @@ class Statistic extends Model
         $dataYearMonth = "$year-$month-01";
 
         // BUSCANDO AS INFORMAÇÕES DOS CLIENTES
-        $clients = Client::listClient($test);
+        $clients = $_SESSION['BASECLIENTES'];
 
         // BUSCANDO OS PRIMEIROS PAGAMENTOS DOS CLIENTES
         $firstpay = Statistic::firstPayment();
@@ -282,14 +282,16 @@ class Statistic extends Model
         $path = Statistic::pathFileStatistics($test);
 
         // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE E SE OS TEMPOS DE ATUALIZAÇÃO JÁ FORAM ULTRAPASSADOS
-        if (filemtime($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json") < (mktime() - $_SESSION['tw_file_client'])) Statistic::matrixPayments($year, $month, $test);
+        $file = $path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json";
+
+        if (!file_exists($file) || filemtime($file) < (mktime() - $_SESSION['tw_file_client'])) Statistic::matrixPayments($year, $month, $test);
 
         // CHAMA O ARQUIVO COM A MATRIX DO INTERVALO CRIADA
-        $json_file = file_get_contents($path . DIRECTORY_SEPARATOR . "matrix-$year-$month.json");
+        $json_file = file_get_contents($file);
         $matrix = json_decode($json_file, true);
 
         // ARMAZENANDO OS CLIENTES E SEUS PRIMEIROS PAGAMENTOS
-        $clients = Statistic::firstPayment();
+        $firstPayment = Statistic::firstPayment();
 
         // CRIANDO A MATRIZ VAZIA DAS ESTATÍSTICAS SAAS
         for ($d = 0; $d < 6; $d++) {
@@ -310,10 +312,10 @@ class Statistic extends Model
         for ($c = 0; $c < count($matrix); $c++) {
 
             // ID DO CLIENTE
-            $id = $clients[$c]['idclient'];
+            $id = $firstPayment[$c]['idclient'];
 
             // PRIMEIRO PAGAMENTO
-            $firstpayment = $clients[$c]['dtpayment'];
+            $firstpayment = $firstPayment[$c]['dtpayment'];
 
             for ($d = 0; $d < 6; $d++) {
 
@@ -655,11 +657,4 @@ class Statistic extends Model
 
         return false;
     }
-
-
-
-    //***********************************************************************************//
-    //                                  FIM DOS STATICS                                  //
-    //***********************************************************************************//
-
 }

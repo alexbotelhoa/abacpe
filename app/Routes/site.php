@@ -24,6 +24,7 @@ $app->get("/", function () {
         $_SESSION['YEAR'] = $year;
         $_SESSION['UYEAR'] = 0;
     }
+
     if (!isset($_SESSION['MONTH']) || $_SESSION['MONTH'] == '') {
         $_SESSION['MONTH'] = $month;
         $_SESSION['UMONTH'] = 0;
@@ -54,13 +55,13 @@ $app->get("/", function () {
     $year = $_SESSION['YEAR'];
     $month = $_SESSION['MONTH'];
 
+    $path = Statistic::pathFileStatistics();
+
     // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
-    if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "index-$year-$month.json")) {
-        Statistic::indexDataChart($year, $month);
-    }
+    if (!file_exists($path . DIRECTORY_SEPARATOR . "index-$year-$month.json")) Statistic::indexDataChart($year, $month);
 
     // CARREGA O ARQUVIO COM OS DADOS ESTATÍSTICOS
-    $json_file = file_get_contents($_SESSION['DIRECTORY_STATISTICS'] . "index-$year-$month.json");
+    $json_file = file_get_contents($path . DIRECTORY_SEPARATOR . "index-$year-$month.json");
     $datachart = json_decode($json_file, true);
 
     $page = new Page();
@@ -72,23 +73,21 @@ $app->get("/", function () {
 
 });
 
-
 $app->post("/", function () {
 
     $_SESSION['UYEAR'] = $_POST['year'];
     $_SESSION['UMONTH'] = $_POST['month'];
 
-    header("Location: /");
+    header("Location: " . project() . "");
     exit;
 
 });
-
 
 $app->get("/order/:page/:sort", function ($page, $sort) {
 
     Order::getOrder($page, $sort);
 
-    header("Location: /$page");
+    header("Location: " . project() . "/$page");
     exit;
 
 });
@@ -97,7 +96,7 @@ $app->get("/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $so
 
     Order::getOrder($subpage, $sort);
 
-    header("Location: /$page/$id/$subpage");
+    header("Location:  " . project() . "/$page/$id/$subpage");
     exit;
 
 });
@@ -154,23 +153,25 @@ $app->post("/plans/create", function () {
 
     if ($_POST['desplan'] == '') {
         Message::setError("Informe o NOME do plano!");
-        header("Location: /plans/create");
+        header("Location: " . project() . "/plans/create");
         exit;
     }
 
     if ($_POST['vlplan'] == '') {
         Message::setError("Informe o VALOR do plano!");
-        header("Location: /plans/create");
+        header("Location: " . project() . "/plans/create");
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] != true) $plan->save();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $plan->save();
+    }
 
     Client::updateClient();
 
     Message::setSuccess("Registro incluído com sucesso!");
 
-    header("Location: /plans");
+    header("Location: " . project() . "/plans");
     exit;
 
 });
@@ -196,21 +197,23 @@ $app->post("/plans/:idplan/update", function ($idplan) {
 
     if ($_POST['desplan'] == '') {
         Message::setError("Informe o NOME do plano!");
-        header("Location: /plans/$idplan/update");
+        header("Location: " . project() . "/plans/$idplan/update");
         exit;
     }
 
     if ($_POST['vlplan'] == '') {
         Message::setError("Informe o VALOR do plano!");
-        header("Location: /plans/$idplan/update");
+        header("Location: " . project() . "/plans/$idplan/update");
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] != true) $plan->save();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $plan->save();
+    }
 
     Message::setSuccess("Registro alterado com sucesso!");
 
-    header("Location: /plans");
+    header("Location: " . project() . "/plans");
     exit;
 
 });
@@ -221,17 +224,19 @@ $app->get("/plans/:idplan/delete", function ($idplan) {
 
     if (count($checkplan) > 0) {
         Message::setError("Existe pagamento(s) vinculado(s) a esse plano!");
-        header("Location: /plans");
+        header("Location: " . project() . "/plans");
         exit;
     }
 
     $plan = new Plan();
     $plan->get((int)$idplan);
-    if ($_SESSION['DEMOSCE2'] != true) $plan->delete();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $plan->delete();
+    }
 
     Message::setSuccess("Registro excluído com sucesso!");
 
-    header("Location: /plans");
+    header("Location: " . project() . "/plans");
     exit;
 
 });
@@ -341,11 +346,9 @@ $app->get("/payments/:idclient/detail", function ($idclient) {
 
 $app->get("/payments/create", function () {
 
-    $clients = Client::listClient();
-
     $page = new Page();
     $page->setTpl("payments-create", [
-        "clients" => $clients,
+        "clients" => $_SESSION['BASECLIENTES'],
         "error" => Message::getError(),
         "idclient" => "",
         "plans" => Plan::selectPlan()
@@ -360,44 +363,44 @@ $app->post("/payments/create", function () {
 
     if ($_POST['idclient'] == '') {
         Message::setError("Selecione o CLIENTE do pagamento!");
-        header("Location: /payments/create");
+        header("Location: " . project() . "/payments/create");
         exit;
     }
 
     if ($_POST['idplan'] == '') {
         Message::setError("Selecione o PLANO do pagamento!");
-        header("Location: /payments/create");
+        header("Location: " . project() . "/payments/create");
         exit;
     }
 
     if ($_POST['vlrecurrence'] == '') {
         Message::setError("Selecione a RECORRÊNCIA do pagamento!");
-        header("Location: /payments/create");
+        header("Location: " . project() . "/payments/create");
         exit;
     }
 
     if ($_POST['dtpayment'] == '') {
         Message::setError("Informe a DATA do pagamento!");
-        header("Location: /payments/create");
+        header("Location: " . project() . "/payments/create");
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] != true) $payment->save();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $payment->save();
+    }
 
     Message::setSuccess("Registro incluído com sucesso!");
 
-    header("Location: /payments/create");
+    header("Location: " . project() . "/payments/create");
     exit;
 
 });
 
 $app->get("/payments/:idclient/create", function ($idclient) {
 
-    $clients = Client::listClient();
-
     $page = new Page();
     $page->setTpl("payments-create", [
-        "clients" => $clients,
+        "clients" => $_SESSION['BASECLIENTES'],
         "error" => Message::getError(),
         "idclient" => $idclient,
         "plans" => Plan::selectPlan()
@@ -412,30 +415,32 @@ $app->post("/payments/:idclient/create", function ($idclient) {
 
     if ($_POST['idplan'] == '') {
         Message::setError("Selecione o PLANO do pagamento!");
-        header("Location: /payments/$idclient/create");
+        header("Location: " . project() . "/payments/$idclient/create");
         exit;
     }
 
     if ($_POST['vlrecurrence'] == '') {
         Message::setError("Selecione a RECORRÊNCIA do pagamento!");
-        header("Location: /payments/$idclient/create");
+        header("Location: " . project() . "/payments/$idclient/create");
         exit;
     }
 
     if ($_POST['dtpayment'] == '') {
         Message::setError("Informe a DATA do pagamento!");
-        header("Location: /payments/$idclient/create");
+        header("Location: " . project() . "/payments/$idclient/create");
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] != true) $payment->save();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $payment->save();
+    }
 
     Message::setSuccess("Registro incluído com sucesso!");
 
     $_SESSION['SortPayDetailByOrder'] = "DESC";
     $_SESSION['SortPayDetailByField'] = "a.idpayment";
 
-    header("Location: /payments/$idclient/detail");
+    header("Location: " . project() . "/payments/$idclient/detail");
     exit;
 
 });
@@ -445,12 +450,10 @@ $app->get("/payments/:idpayment/update", function ($idpayment) {
     $payment = new Payment();
     $payment->get((int)$idpayment);
 
-    $clients = Client::listClient();
-
     $page = new Page();
     $page->setTpl("payments-update", [
         "payment" => $payment->getValues(),
-        "clients" => $clients,
+        "clients" => $_SESSION['BASECLIENTES'],
         "plans" => Plan::selectPlan(),
         "error" => Message::getError()
     ]);
@@ -465,15 +468,17 @@ $app->post("/payments/:idpayment/update", function ($idpayment) {
 
     if ($_POST['dtpayment'] == '') {
         Message::setError("Informe a DATA do pagamento!");
-        header("Location: /payments/$idpayment/update");
+        header("Location: " . project() . "/payments/$idpayment/update");
         exit;
     }
 
-    if ($_SESSION['DEMOSCE2'] != true) $payment->save();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $payment->save();
+    }
 
     Message::setSuccess("Registro alterado com sucesso!");
 
-    header("Location: /payments/$_POST[idclient]/detail");
+    header("Location: " . project() . "/payments/$_POST[idclient]/detail");
     exit;
 
 });
@@ -483,15 +488,17 @@ $app->get("/payments/:idpayment/delete", function ($idpayment) {
     $payment = new Payment();
     $payment->get((int)$idpayment);
     $idclient = $payment->getidclient();
-    if ($_SESSION['DEMOSCE2'] != true) $payment->delete();
+    if ($_SESSION['DEMOSCE2'] != true) {
+        $payment->delete();
+    }
 
     Message::setSuccess("Registro excluído com sucesso!");
 
     $checkpayment = Payment::checkPayment($idclient);
     if (count($checkpayment) > 0) {
-        header("Location: /payments/$idclient/detail");
+        header("Location: " . project() . "/payments/$idclient/detail");
     } else {
-        header("Location: /payments");
+        header("Location: " . project() . "/payments");
     }
 
     exit;
@@ -542,13 +549,15 @@ $app->get("/statistics", function ($year = 2019, $month = 07) {
     $year = $_SESSION['YEAR'];
     $month = $_SESSION['MONTH'];
 
+    $path = Statistic::pathFileStatistics();
+
     // VERIFICA SE O ARQUIVO MATRIX DO INTERVALO JÁ EXISTE
-    if (!file_exists($_SESSION['DIRECTORY_STATISTICS'] . "statistics-$year-$month.json")) {
+    if (!file_exists($path . DIRECTORY_SEPARATOR . "statistics-$year-$month.json")) {
         Statistic::statisticsDataChart($year, $month);
     }
 
     // CARREGA O ARQUVIO COM OS DADOS ESTATÍSTICOS
-    $json_file = file_get_contents($_SESSION['DIRECTORY_STATISTICS'] . "statistics-$year-$month.json");
+    $json_file = file_get_contents($path . DIRECTORY_SEPARATOR . "statistics-$year-$month.json");
     $datachart = json_decode($json_file, true);
 
     $page = new Page();
@@ -564,10 +573,11 @@ $app->post("/statistics", function () {
     $_SESSION['UYEAR'] = $_POST['year'];
     $_SESSION['UMONTH'] = $_POST['month'];
 
-    header("Location: /statistics");
+    header("Location: " . project() . "/statistics");
     exit;
 
 });
+
 
 //////////////////////////////////////////////////////
 ///                      SOBRE                     ///

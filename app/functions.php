@@ -1,5 +1,10 @@
 <?php
 
+function project()
+{
+    return "/abasce2";
+}
+
 function formatPrice($vlprice)
 {
     if (!$vlprice > 0) {
@@ -16,11 +21,9 @@ function formatDate($date)
 
 function checkPage()
 {
-    if ($_SESSION['PAGE'] != 'index') {
-        return false;
-    } else {
-        return true;
-    }
+    ($_SESSION['PAGE'] != 'index') ? $return = false : $return = true;
+
+    return $return;
 }
 
 function stateBrazil($uf)

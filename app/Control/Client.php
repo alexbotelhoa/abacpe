@@ -11,7 +11,7 @@ class Client
         return file_get_contents($url);
     }
 
-    public static function pathFileClient($test = false)
+    public static function pathAndFileClient($test = false)
     {
         ($test) ? $path = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR : $path = "";
 
@@ -27,7 +27,7 @@ class Client
     public static function updateClient($test = false)
     {
         $file = Client::urlJsonFileClient();
-        $path = Client::pathFileClient($test);
+        $path = Client::pathAndFileClient($test);
 
         $fp = fopen($path, "w+");
         fwrite($fp, $file);
@@ -37,7 +37,7 @@ class Client
 
     public static function listClient($test = false)
     {
-        $path = Client::pathFileClient($test);
+        $path = Client::pathAndFileClient($test);
 
         $json_file = file_get_contents($path);
 
