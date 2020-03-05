@@ -5,8 +5,8 @@ use SCE\Control\Client;
 $_SESSION['DEMOSCE2'] = true;
 
 $file_client = "clients.json"; // Arquivos com a lista dos clientes
-$_SESSION['DIRECTORY_STATISTICS'] = "abasce2/res/site/statistics/";
-$_SESSION['DIRECTORY_JSON'] = "abasce2/res/site/json/";
+$_SESSION['DIRECTORY_STATISTICS'] = "res/site/statistics/";
+$_SESSION['DIRECTORY_JSON'] = "res/site/json/";
 $_SESSION['tw_file_client'] = 600; // Tempo em segundos de espera para atualizar o Catálogo de Clientes
 $_SESSION['tw_statistics_chart'] = 60; // Tempo em segundos de espera para dar refresh nas páginas de pesquisas
 

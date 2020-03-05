@@ -31,7 +31,7 @@ class StatisticTest extends TestCase
     {
         $path = Statistic::pathFileStatistics();
 
-        $this->assertEquals('abasce2\res\site\statistics', $path);
+        $this->assertEquals('res\site\statistics', $path);
     }
 
     /**

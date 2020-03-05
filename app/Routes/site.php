@@ -13,7 +13,7 @@ use SCE\Control\Message;
  * Páginas do Site - INICIO
  */
 
-$app->get("/sitesce2", function () {
+$app->get("/", function () {
 
     $year = date('Y');
     $month = date('m');
@@ -73,31 +73,31 @@ $app->get("/sitesce2", function () {
 });
 
 
-$app->post("/sitesce2", function () {
+$app->post("/", function () {
 
     $_SESSION['UYEAR'] = $_POST['year'];
     $_SESSION['UMONTH'] = $_POST['month'];
 
-    header("Location: /sitesce2");
+    header("Location: /");
     exit;
 
 });
 
 
-$app->get("/sitesce2/order/:page/:sort", function ($page, $sort) {
+$app->get("/order/:page/:sort", function ($page, $sort) {
 
     Order::getOrder($page, $sort);
 
-    header("Location: /sitesce2/$page");
+    header("Location: /$page");
     exit;
 
 });
 
-$app->get("/sitesce2/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $sort) {
+$app->get("/order/:page/:id/:subpage/:sort", function ($page, $id, $subpage, $sort) {
 
     Order::getOrder($subpage, $sort);
 
-    header("Location: /sitesce2/$page/$id/$subpage");
+    header("Location: /$page/$id/$subpage");
     exit;
 
 });
@@ -107,7 +107,7 @@ $app->get("/sitesce2/order/:page/:id/:subpage/:sort", function ($page, $id, $sub
 ///                     PLANOS                     ///
 //////////////////////////////////////////////////////
 
-$app->get("/sitesce2/plans", function () {
+$app->get("/plans", function () {
 
     (!isset($_SESSION['SortPlanByField'])) ? $sort_field = $_SESSION['SortPlanByField'] = "idplan" : $sort_field = $_SESSION['SortPlanByField'];
     (!isset($_SESSION['SortPlanByOrder'])) ? $sort_order = $_SESSION['SortPlanByOrder'] = "ASC" : $sort_order = $_SESSION['SortPlanByOrder'];
@@ -138,7 +138,7 @@ $app->get("/sitesce2/plans", function () {
 
 });
 
-$app->get("/sitesce2/plans/create", function () {
+$app->get("/plans/create", function () {
 
     $page = new Page();
     $page->setTpl("plans-create", [
@@ -147,20 +147,20 @@ $app->get("/sitesce2/plans/create", function () {
 
 });
 
-$app->post("/sitesce2/plans/create", function () {
+$app->post("/plans/create", function () {
 
     $plan = new Plan();
     $plan->setData($_POST);
 
     if ($_POST['desplan'] == '') {
         Message::setError("Informe o NOME do plano!");
-        header("Location: /sitesce2/plans/create");
+        header("Location: /plans/create");
         exit;
     }
 
     if ($_POST['vlplan'] == '') {
         Message::setError("Informe o VALOR do plano!");
-        header("Location: /sitesce2/plans/create");
+        header("Location: /plans/create");
         exit;
     }
 
@@ -170,12 +170,12 @@ $app->post("/sitesce2/plans/create", function () {
 
     Message::setSuccess("Registro incluído com sucesso!");
 
-    header("Location: /sitesce2/plans");
+    header("Location: /plans");
     exit;
 
 });
 
-$app->get("/sitesce2/plans/:idplan/update", function ($idplan) {
+$app->get("/plans/:idplan/update", function ($idplan) {
 
     $plan = new Plan();
     $plan->get((int)$idplan);
@@ -188,7 +188,7 @@ $app->get("/sitesce2/plans/:idplan/update", function ($idplan) {
 
 });
 
-$app->post("/sitesce2/plans/:idplan/update", function ($idplan) {
+$app->post("/plans/:idplan/update", function ($idplan) {
 
     $plan = new Plan();
     $plan->get((int)$idplan);
@@ -196,13 +196,13 @@ $app->post("/sitesce2/plans/:idplan/update", function ($idplan) {
 
     if ($_POST['desplan'] == '') {
         Message::setError("Informe o NOME do plano!");
-        header("Location: /sitesce2/plans/$idplan/update");
+        header("Location: /plans/$idplan/update");
         exit;
     }
 
     if ($_POST['vlplan'] == '') {
         Message::setError("Informe o VALOR do plano!");
-        header("Location: /sitesce2/plans/$idplan/update");
+        header("Location: /plans/$idplan/update");
         exit;
     }
 
@@ -210,18 +210,18 @@ $app->post("/sitesce2/plans/:idplan/update", function ($idplan) {
 
     Message::setSuccess("Registro alterado com sucesso!");
 
-    header("Location: /sitesce2/plans");
+    header("Location: /plans");
     exit;
 
 });
 
-$app->get("/sitesce2/plans/:idplan/delete", function ($idplan) {
+$app->get("/plans/:idplan/delete", function ($idplan) {
 
     $checkplan = Plan::checkPlan($idplan);
 
     if (count($checkplan) > 0) {
         Message::setError("Existe pagamento(s) vinculado(s) a esse plano!");
-        header("Location: /sitesce2/plans");
+        header("Location: /plans");
         exit;
     }
 
@@ -231,7 +231,7 @@ $app->get("/sitesce2/plans/:idplan/delete", function ($idplan) {
 
     Message::setSuccess("Registro excluído com sucesso!");
 
-    header("Location: /sitesce2/plans");
+    header("Location: /plans");
     exit;
 
 });
@@ -241,7 +241,7 @@ $app->get("/sitesce2/plans/:idplan/delete", function ($idplan) {
 ///                   PAGAMENTOS                   ///
 //////////////////////////////////////////////////////
 
-$app->get("/sitesce2/payments", function () {
+$app->get("/payments", function () {
 
     (!isset($_SESSION['SortPaymentByField'])) ? $sort_field = $_SESSION['SortPaymentByField'] = "idpayment" : $sort_field = $_SESSION['SortPaymentByField'];
     (!isset($_SESSION['SortPaymentByOrder'])) ? $sort_order = $_SESSION['SortPaymentByOrder'] = "ASC" : $sort_order = $_SESSION['SortPaymentByOrder'];
@@ -289,7 +289,7 @@ $app->get("/sitesce2/payments", function () {
 
 });
 
-$app->get("/sitesce2/payments/:idclient/detail", function ($idclient) {
+$app->get("/payments/:idclient/detail", function ($idclient) {
 
     (!isset($_SESSION['SortPayDetailByField'])) ? $sort_field = $_SESSION['SortPayDetailByField'] = "idpayment" : $sort_field = $_SESSION['SortPayDetailByField'];
     (!isset($_SESSION['SortPayDetailByOrder'])) ? $sort_order = $_SESSION['SortPayDetailByOrder'] = "ASC" : $sort_order = $_SESSION['SortPayDetailByOrder'];
@@ -339,7 +339,7 @@ $app->get("/sitesce2/payments/:idclient/detail", function ($idclient) {
 
 });
 
-$app->get("/sitesce2/payments/create", function () {
+$app->get("/payments/create", function () {
 
     $clients = Client::listClient();
 
@@ -353,32 +353,32 @@ $app->get("/sitesce2/payments/create", function () {
 
 });
 
-$app->post("/sitesce2/payments/create", function () {
+$app->post("/payments/create", function () {
 
     $payment = new Payment();
     $payment->setData($_POST);
 
     if ($_POST['idclient'] == '') {
         Message::setError("Selecione o CLIENTE do pagamento!");
-        header("Location: /sitesce2/payments/create");
+        header("Location: /payments/create");
         exit;
     }
 
     if ($_POST['idplan'] == '') {
         Message::setError("Selecione o PLANO do pagamento!");
-        header("Location: /sitesce2/payments/create");
+        header("Location: /payments/create");
         exit;
     }
 
     if ($_POST['vlrecurrence'] == '') {
         Message::setError("Selecione a RECORRÊNCIA do pagamento!");
-        header("Location: /sitesce2/payments/create");
+        header("Location: /payments/create");
         exit;
     }
 
     if ($_POST['dtpayment'] == '') {
         Message::setError("Informe a DATA do pagamento!");
-        header("Location: /sitesce2/payments/create");
+        header("Location: /payments/create");
         exit;
     }
 
@@ -386,12 +386,12 @@ $app->post("/sitesce2/payments/create", function () {
 
     Message::setSuccess("Registro incluído com sucesso!");
 
-    header("Location: /sitesce2/payments/create");
+    header("Location: /payments/create");
     exit;
 
 });
 
-$app->get("/sitesce2/payments/:idclient/create", function ($idclient) {
+$app->get("/payments/:idclient/create", function ($idclient) {
 
     $clients = Client::listClient();
 
@@ -405,26 +405,26 @@ $app->get("/sitesce2/payments/:idclient/create", function ($idclient) {
 
 });
 
-$app->post("/sitesce2/payments/:idclient/create", function ($idclient) {
+$app->post("/payments/:idclient/create", function ($idclient) {
 
     $payment = new Payment();
     $payment->setData($_POST);
 
     if ($_POST['idplan'] == '') {
         Message::setError("Selecione o PLANO do pagamento!");
-        header("Location: /sitesce2/payments/$idclient/create");
+        header("Location: /payments/$idclient/create");
         exit;
     }
 
     if ($_POST['vlrecurrence'] == '') {
         Message::setError("Selecione a RECORRÊNCIA do pagamento!");
-        header("Location: /sitesce2/payments/$idclient/create");
+        header("Location: /payments/$idclient/create");
         exit;
     }
 
     if ($_POST['dtpayment'] == '') {
         Message::setError("Informe a DATA do pagamento!");
-        header("Location: /sitesce2/payments/$idclient/create");
+        header("Location: /payments/$idclient/create");
         exit;
     }
 
@@ -435,12 +435,12 @@ $app->post("/sitesce2/payments/:idclient/create", function ($idclient) {
     $_SESSION['SortPayDetailByOrder'] = "DESC";
     $_SESSION['SortPayDetailByField'] = "a.idpayment";
 
-    header("Location: /sitesce2/payments/$idclient/detail");
+    header("Location: /payments/$idclient/detail");
     exit;
 
 });
 
-$app->get("/sitesce2/payments/:idpayment/update", function ($idpayment) {
+$app->get("/payments/:idpayment/update", function ($idpayment) {
 
     $payment = new Payment();
     $payment->get((int)$idpayment);
@@ -457,7 +457,7 @@ $app->get("/sitesce2/payments/:idpayment/update", function ($idpayment) {
 
 });
 
-$app->post("/sitesce2/payments/:idpayment/update", function ($idpayment) {
+$app->post("/payments/:idpayment/update", function ($idpayment) {
 
     $payment = new Payment();
     $payment->get((int)$idpayment);
@@ -465,7 +465,7 @@ $app->post("/sitesce2/payments/:idpayment/update", function ($idpayment) {
 
     if ($_POST['dtpayment'] == '') {
         Message::setError("Informe a DATA do pagamento!");
-        header("Location: /sitesce2/payments/$idpayment/update");
+        header("Location: /payments/$idpayment/update");
         exit;
     }
 
@@ -473,12 +473,12 @@ $app->post("/sitesce2/payments/:idpayment/update", function ($idpayment) {
 
     Message::setSuccess("Registro alterado com sucesso!");
 
-    header("Location: /sitesce2/payments/$_POST[idclient]/detail");
+    header("Location: /payments/$_POST[idclient]/detail");
     exit;
 
 });
 
-$app->get("/sitesce2/payments/:idpayment/delete", function ($idpayment) {
+$app->get("/payments/:idpayment/delete", function ($idpayment) {
 
     $payment = new Payment();
     $payment->get((int)$idpayment);
@@ -489,9 +489,9 @@ $app->get("/sitesce2/payments/:idpayment/delete", function ($idpayment) {
 
     $checkpayment = Payment::checkPayment($idclient);
     if (count($checkpayment) > 0) {
-        header("Location: /sitesce2/payments/$idclient/detail");
+        header("Location: /payments/$idclient/detail");
     } else {
-        header("Location: /sitesce2/payments");
+        header("Location: /payments");
     }
 
     exit;
@@ -503,7 +503,7 @@ $app->get("/sitesce2/payments/:idpayment/delete", function ($idpayment) {
 ///                  ESTATISTICAS                  ///
 //////////////////////////////////////////////////////
 
-$app->get("/sitesce2/statistics", function ($year = 2019, $month = 07) {
+$app->get("/statistics", function ($year = 2019, $month = 07) {
 
     $year = date('Y');
     $month = date('m');
@@ -559,12 +559,12 @@ $app->get("/sitesce2/statistics", function ($year = 2019, $month = 07) {
 
 });
 
-$app->post("/sitesce2/statistics", function () {
+$app->post("/statistics", function () {
 
     $_SESSION['UYEAR'] = $_POST['year'];
     $_SESSION['UMONTH'] = $_POST['month'];
 
-    header("Location: /sitesce2/statistics");
+    header("Location: /statistics");
     exit;
 
 });
@@ -573,7 +573,7 @@ $app->post("/sitesce2/statistics", function () {
 ///                      SOBRE                     ///
 //////////////////////////////////////////////////////
 
-$app->get("/sitesce2/about", function () {
+$app->get("/about", function () {
 
     if (isset($_SESSION['YEAR'])) {
         unset($_SESSION['YEAR']);

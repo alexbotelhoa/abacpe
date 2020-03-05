@@ -13,7 +13,6 @@ class Statistic extends Model
         ($test) ? $path = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR : $path = "";
 
         $path .=
-            "abasce2" . DIRECTORY_SEPARATOR .
             "res" . DIRECTORY_SEPARATOR .
             "site" . DIRECTORY_SEPARATOR .
             "statistics";
