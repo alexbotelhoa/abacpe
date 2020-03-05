@@ -103,7 +103,7 @@ class Statistic extends Model
             $matrix[$clients[$c]['id']][7]['firstpayment'] = $firstpay[$c]['dtpayment'];
         }
 
-        // BUSCANDO OS PAGAMETNOS DOS CLIENTES
+        // BUSCANDO OS PAGAMENTOS DOS CLIENTES
         $sql = new Sql();
         $payment = $sql->select("
             SELECT * FROM tb_payments WHERE dtpayment 
@@ -269,17 +269,9 @@ class Statistic extends Model
 
         $statistics = Statistic::registerStatistics($year, $month, "matrix", $matrix, $test);
 
-        if (
-            boolval($clients) &&
-            boolval($firstpay) &&
-            boolval($payment) &&
-            boolval($statistics) &&
-            count($matrix) != 0
-        ) {
-            return true;
-        }
+        (boolval($clients) && boolval($firstpay) && boolval($payment) && boolval($statistics) && count($matrix) != 0) ? $return = true : $return = false;
 
-        return false;
+        return $return;
     }
 
     public static function metricasSaas($year, $month, $test = false)

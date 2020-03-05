@@ -9,9 +9,8 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/index.23a5540d1a1ab19f0d7d8094c74901cf.rtpl.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/index.8dc3e74db585d1deb32f9bd07016836b.rtpl.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/app/views/cache/statistics.8dc3e74db585d1deb32f9bd07016836b.rtpl.php" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/php.xml" afterPath="$PROJECT_DIR$/.idea/php.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Control/Page.php" afterPath="$PROJECT_DIR$/app/Control/Page.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Model/Statistic.php" afterPath="$PROJECT_DIR$/app/Model/Statistic.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report/Control/Client.php.html" afterPath="$PROJECT_DIR$/app/Report/Control/Client.php.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report/Control/Message.php.html" afterPath="$PROJECT_DIR$/app/Report/Control/Message.php.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report/Control/Order.php.html" afterPath="$PROJECT_DIR$/app/Report/Control/Order.php.html" />
@@ -26,7 +25,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report/Model/index.html" afterPath="$PROJECT_DIR$/app/Report/Model/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report/dashboard.html" afterPath="$PROJECT_DIR$/app/Report/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Report/index.html" afterPath="$PROJECT_DIR$/app/Report/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Tests/Control/PageTest.php" afterPath="$PROJECT_DIR$/app/Tests/Control/PageTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Tests/Model/StatisticTest.php" afterPath="$PROJECT_DIR$/app/Tests/Model/StatisticTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -65,7 +64,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="teste.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="teste.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/teste.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-143">
@@ -73,6 +72,40 @@
               <folding>
                 <element signature="e#101#125#0#PHP" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Statistic.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="374">
+              <caret line="276" column="69" lean-forward="false" selection-start-line="276" selection-start-column="69" selection-end-line="276" selection-end-column="69" />
+              <folding>
+                <element signature="e#29#43#0#PHP" expanded="true" />
+                <element signature="e#126#488#0#PHP" expanded="false" />
+                <element signature="e#494#829#0#PHP" expanded="false" />
+                <element signature="e#835#975#0#PHP" expanded="false" />
+                <element signature="e#981#1418#0#PHP" expanded="false" />
+                <element signature="e#1424#2267#0#PHP" expanded="false" />
+                <element signature="e#2273#13168#0#PHP" expanded="false" />
+                <element signature="e#13174#18413#0#PHP" expanded="false" />
+                <element signature="e#18419#20880#0#PHP" expanded="false" />
+                <element signature="e#20886#29429#0#PHP" expanded="false" />
+                <marker date="1583414066060" expanded="true" signature="934:966" ph="SELECT * FRO... vw_dtpayment_first" />
+                <marker date="1583414066060" expanded="true" signature="1089:1409" ph="SELECT idpla... tb_payments" />
+                <marker date="1583414066060" expanded="true" signature="3581:3781" ph="SELECT * FRO... tb_payments" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StatisticTest.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Tests/Model/StatisticTest.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2533">
+              <caret line="150" column="70" lean-forward="false" selection-start-line="150" selection-start-column="70" selection-end-line="150" selection-end-column="70" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -165,9 +198,7 @@
         <option value="$PROJECT_DIR$/app/phpunit.xml" />
         <option value="$PROJECT_DIR$/app/Model/Plan.php" />
         <option value="$PROJECT_DIR$/app/Model/Payment.php" />
-        <option value="$PROJECT_DIR$/app/Model/Statistic.php" />
         <option value="$PROJECT_DIR$/app/Control/Order.php" />
-        <option value="$PROJECT_DIR$/app/Tests/Model/StatisticTest.php" />
         <option value="$PROJECT_DIR$/app/Tests/Model/PlanTest.php" />
         <option value="$PROJECT_DIR$/app/Tests/Model/PaymentTest.php" />
         <option value="$PROJECT_DIR$/app/Tests/Control/ClientTest.php" />
@@ -179,6 +210,8 @@
         <option value="$PROJECT_DIR$/app/Control/Page.php" />
         <option value="$PROJECT_DIR$/app/Tests/Control/PageTest.php" />
         <option value="$PROJECT_DIR$/app/Views/site/test.html" />
+        <option value="$PROJECT_DIR$/app/Model/Statistic.php" />
+        <option value="$PROJECT_DIR$/app/Tests/Model/StatisticTest.php" />
       </list>
     </option>
   </component>
@@ -323,7 +356,7 @@
               <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
               <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Control" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
             <path>
               <item name="Site  SCE v2" type="b2602c69:ProjectViewProjectNode" />
@@ -336,7 +369,7 @@
               <item name="abasce2" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="app" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="Tests" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="Control" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="Model" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -388,13 +421,18 @@
     <configuration name="SCE v2" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner configuration_file="$PROJECT_DIR$/app/phpunit.xml" directory="$PROJECT_DIR$/app" use_alternative_configuration_file="true" />
     </configuration>
-    <list size="2">
+    <configuration name="StatisticTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="SCE\Tests\Model\StatisticTest" file="$PROJECT_DIR$/app/Tests/Model/StatisticTest.php" scope="Class" />
+    </configuration>
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="PHPUnit.SCE v2" />
       <item index="1" class="java.lang.String" itemvalue="PHPUnit.PageTest" />
+      <item index="2" class="java.lang.String" itemvalue="PHPUnit.StatisticTest" />
     </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="PHPUnit.PageTest" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="PHPUnit.StatisticTest" />
+        <item index="1" class="java.lang.String" itemvalue="PHPUnit.PageTest" />
       </list>
     </recent_temporary>
   </component>
@@ -438,7 +476,7 @@
       <workItem from="1582890872169" duration="547000" />
       <workItem from="1582891447357" duration="125000" />
       <workItem from="1582891731756" duration="53635000" />
-      <workItem from="1583178307857" duration="79392000" />
+      <workItem from="1583178307857" duration="80434000" />
     </task>
     <task id="LOCAL-00001" summary="Reestruturação">
       <created>1582151127311</created>
@@ -545,19 +583,17 @@
       <option name="project" value="LOCAL" />
       <updated>1583365555357</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Implementando PHPUnit">
+      <created>1583413656684</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1583413656684</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="PageTest - 2020.03.05 at 09h 57m 45s.xml">
-      <configuration name="PageTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PageTest - 2020.03.05 at 09h 58m 00s.xml">
-      <configuration name="PageTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
-    <history-entry file="PageTest - 2020.03.05 at 09h 59m 04s.xml">
-      <configuration name="PageTest" configurationId="PHPUnitRunConfigurationType" />
-    </history-entry>
     <history-entry file="PageTest - 2020.03.05 at 09h 59m 22s.xml">
       <configuration name="PageTest" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
@@ -579,9 +615,18 @@
     <history-entry file="SCE_v2 - 2020.03.05 at 10h 06m 04s.xml">
       <configuration name="SCE v2" configurationId="PHPUnitRunConfigurationType" />
     </history-entry>
+    <history-entry file="SCE_v2 - 2020.03.05 at 10h 19m 21s.xml">
+      <configuration name="SCE v2" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="SCE_v2 - 2020.03.05 at 10h 19m 59s.xml">
+      <configuration name="SCE v2" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
+    <history-entry file="StatisticTest - 2020.03.05 at 10h 18m 59s.xml">
+      <configuration name="StatisticTest" configurationId="PHPUnitRunConfigurationType" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="149528000" />
+    <option name="totallyTimeSpent" value="150570000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -597,7 +642,7 @@
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32950467" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15437302" sideWeight="0.49628845" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12539515" sideWeight="0.49628845" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1128097" sideWeight="0.5037116" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3287868" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -607,7 +652,7 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3377193" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40108696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40108696" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -924,27 +969,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="213">
-          <caret line="359" column="69" lean-forward="true" selection-start-line="359" selection-start-column="69" selection-end-line="359" selection-end-column="69" />
-          <folding>
-            <element signature="e#29#43#0#PHP" expanded="true" />
-            <element signature="e#126#488#0#PHP" expanded="false" />
-            <element signature="e#494#829#0#PHP" expanded="false" />
-            <element signature="e#835#975#0#PHP" expanded="false" />
-            <element signature="e#981#1418#0#PHP" expanded="false" />
-            <element signature="e#1424#2267#0#PHP" expanded="false" />
-            <element signature="e#2273#13240#0#PHP" expanded="false" />
-            <element signature="e#18491#20952#0#PHP" expanded="false" />
-            <element signature="e#20958#29501#0#PHP" expanded="false" />
-            <marker date="1583364750836" expanded="true" signature="934:966" ph="SELECT * FRO... vw_dtpayment_first" />
-            <marker date="1583364750836" expanded="true" signature="1089:1409" ph="SELECT idpla... tb_payments" />
-            <marker date="1583364750836" expanded="true" signature="3581:3781" ph="SELECT * FRO... tb_payments" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Control/Order.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-119">
@@ -967,16 +991,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding>
-            <element signature="e#35#66#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Tests/Model/StatisticTest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="26" lean-forward="true" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
           <folding>
             <element signature="e#35#66#0#PHP" expanded="false" />
           </folding>
@@ -1037,7 +1051,7 @@
         <state relative-caret-position="238">
           <caret line="14" column="8" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="59" />
           <folding>
-            <element signature="e#37#68#0#PHP" expanded="true" />
+            <element signature="e#37#68#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1079,7 +1093,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="6" lean-forward="true" selection-start-line="0" selection-start-column="6" selection-end-line="0" selection-end-column="6" />
           <folding>
-            <element signature="e#0#6#2" expanded="true" />
+            <element signature="e#0#6#2" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1108,6 +1122,36 @@
           <caret line="25" column="6" lean-forward="false" selection-start-line="25" selection-start-column="6" selection-end-line="25" selection-end-column="6" />
           <folding>
             <element signature="e#101#125#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Tests/Model/StatisticTest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2533">
+          <caret line="150" column="70" lean-forward="false" selection-start-line="150" selection-start-column="70" selection-end-line="150" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Model/Statistic.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="276" column="69" lean-forward="false" selection-start-line="276" selection-start-column="69" selection-end-line="276" selection-end-column="69" />
+          <folding>
+            <element signature="e#29#43#0#PHP" expanded="true" />
+            <element signature="e#126#488#0#PHP" expanded="false" />
+            <element signature="e#494#829#0#PHP" expanded="false" />
+            <element signature="e#835#975#0#PHP" expanded="false" />
+            <element signature="e#981#1418#0#PHP" expanded="false" />
+            <element signature="e#1424#2267#0#PHP" expanded="false" />
+            <element signature="e#2273#13168#0#PHP" expanded="false" />
+            <element signature="e#13174#18413#0#PHP" expanded="false" />
+            <element signature="e#18419#20880#0#PHP" expanded="false" />
+            <element signature="e#20886#29429#0#PHP" expanded="false" />
+            <marker date="1583414066060" expanded="true" signature="934:966" ph="SELECT * FRO... vw_dtpayment_first" />
+            <marker date="1583414066060" expanded="true" signature="1089:1409" ph="SELECT idpla... tb_payments" />
+            <marker date="1583414066060" expanded="true" signature="3581:3781" ph="SELECT * FRO... tb_payments" />
           </folding>
         </state>
       </provider>
