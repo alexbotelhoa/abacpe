@@ -10,7 +10,7 @@ class Statistic extends Model
 {
     public static function pathFileStatistics($test = false)
     {
-        ($test) ? $path = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR : $path = "";
+        ($test) ? $path = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "abasce2" . DIRECTORY_SEPARATOR : $path = "";
 
         $path .=
             "res" . DIRECTORY_SEPARATOR .

@@ -22,6 +22,8 @@ class Payment extends Model
             $payment = new Payment();
             $payment->setData($row);
 
+            if ($test) $_SESSION['BASECLIENTES'] = Client::listClient(true);
+
             $desclient = $_SESSION['BASECLIENTES'][$payment->getidclient()]['nome'];
             $payment->setdesclient($desclient);
 

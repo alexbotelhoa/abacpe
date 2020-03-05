@@ -13,7 +13,7 @@ class Client
 
     public static function pathAndFileClient($test = false)
     {
-        ($test) ? $path = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR : $path = "";
+        ($test) ? $path = ".." . DIRECTORY_SEPARATOR . ".." . DIRECTORY_SEPARATOR . "abasce2" . DIRECTORY_SEPARATOR : $path = "";
 
         $path .=
             "res" . DIRECTORY_SEPARATOR .

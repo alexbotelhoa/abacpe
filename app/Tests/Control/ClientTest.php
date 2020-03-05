@@ -37,9 +37,9 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueWhenPathFileClientEqual()
     {
-        $path = Client::pathFileClient();
+        $path = Client::pathAndFileClient(true);
 
-        $this->assertEquals('res\site\json\clients.json', $path);
+        $this->assertEquals('..\..\abasce2\res\site\json\clients.json', $path);
     }
 
     /**
@@ -67,7 +67,7 @@ class ClientTest extends TestCase
      */
     public function shoulBeTrueFileExist()
     {
-        $this->assertFileExists('../../res/site/json/clients.json');
+        $this->assertFileExists('../../abasce2/res/site/json/clients.json');
     }
 
 }
