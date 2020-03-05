@@ -14,20 +14,20 @@ class Page
         "data" => []
     ];
 
-    private function setData($data = array())
+    private function setData($data = [])
     {
         foreach ($data as $key => $value) {
             $this->tpl->assign($key, $value);
         }
     }
 
-    public function __construct($opts = array(), $tlp_dir = "/abasce2/app/Views/site/")
+    public function __construct($opts = [], $path = "/abasce2/app/Views")
     {
         $this->options = array_merge($this->default, $opts);
 
         $config = array(
-            "tpl_dir" => $_SERVER["DOCUMENT_ROOT"] . $tlp_dir,
-            "cache_dir" => $_SERVER["DOCUMENT_ROOT"] . "/abasce2/app/Views/cache/",
+            "tpl_dir" => $_SERVER["DOCUMENT_ROOT"] . $path . "/site/",
+            "cache_dir" => $_SERVER["DOCUMENT_ROOT"] . $path . "/cache/",
             "debug" => false
         );
 
@@ -36,22 +36,18 @@ class Page
         $this->tpl = new Tpl();
         $this->setData($this->options["data"]);
 
-        if ($this->options["header"] === true) {
-            $this->tpl->draw("header");
-        }
+        if ($this->options["header"] === true) $this->tpl->draw("header");
     }
 
-    public function setTpl($name, $data = array(), $returnHTML = false)
+    public function setTpl($name, $data = [], $returnHTML = false)
     {
         $this->setData($data);
-        return $this->tpl->draw($name, $returnHTML);
+        $this->tpl->draw($name, $returnHTML);
     }
 
     public function __destruct()
     {
-        if ($this->options["footer"] === true) {
-            $this->tpl->draw("footer");
-        }
+        if ($this->options["footer"] === true) $this->tpl->draw("footer");
     }
 
 }
