@@ -32,7 +32,6 @@ class Page
         );
 
         Tpl::configure($config);
-
         $this->tpl = new Tpl();
         $this->setData($this->options["data"]);
 
@@ -49,5 +48,4 @@ class Page
     {
         if ($this->options["footer"] === true) $this->tpl->draw("footer");
     }
-
 }

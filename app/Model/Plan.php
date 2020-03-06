@@ -44,18 +44,20 @@ class Plan extends Model
         return parent::getValues();
     }
 
-    public function save()
+    public function save($idplan = '')
     {
+        if ($idplan == '') $idplan = $this->getidplan();
+
         $sql = new Sql();
         $result = $sql->select("CALL sp_plans_save(:idplan, :desplan, :vlplan)", [
-            ":idplan" => $this->getidplan(),
+            ":idplan" => $idplan,
             ":desplan" => $this->getdesplan(),
             ":vlplan" => $this->getvlplan()
         ]);
 
-        if (count($result) > 0) {$this->setData($result[0]); return true;};
+        if (count($result) > 0) $this->setData($result[0]);
 
-        return false;
+        return $result;
     }
 
     public function get($idplan)
@@ -65,9 +67,7 @@ class Plan extends Model
             ":IDPLAN" => $idplan
         ]);
 
-        if (count($result) > 0) {
-            $this->setData($result[0]);
-        }
+        if (count($result) > 0) $this->setData($result[0]);
 
         return $result;
     }
@@ -75,9 +75,11 @@ class Plan extends Model
     public function delete()
     {
         $sql = new Sql();
-        $sql->query("DELETE FROM tb_plans WHERE idplan = :IDPLAN", [
+        $result = $sql->query("DELETE FROM tb_plans WHERE idplan = :IDPLAN", [
             ":IDPLAN" => $this->getidplan()
         ]);
+
+        return $result;
     }
 
     public function getPlanPage($sort, $page, $itemsPerPage)

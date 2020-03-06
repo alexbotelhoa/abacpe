@@ -35,13 +35,20 @@ class SqlTest extends TestCase
     /**
      * @test
      */
-    public function shoulBeTrueWhenSelectConnectDB()
+    public function shoulBeTrueWhenSelectConnectDBTrue()
     {
         $result = $this->sql->select("SELECT * FROM tb_plans");
 
-        $this->assertCount(4, $result);
-
-        $this->assertEquals('Platina', $result[3]['desplan']);
+        $this->assertTrue(boolval($result));
     }
 
+    /**
+     * @test
+     */
+    public function shoulBeTrueWhenSelectConnectDBCount()
+    {
+        $result = $this->sql->select("SELECT * FROM tb_plans");
+
+        $this->assertCount(3, $result[0]);
+    }
 }

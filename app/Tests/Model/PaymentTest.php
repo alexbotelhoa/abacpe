@@ -59,31 +59,31 @@ class PaymentTest extends TestCase
     /**
      * @test
      */
-    public function shoulBeTrueWhenSavePaymentFalse()
+    public function shoulBeTrueWhenSavePaymentCount()
     {
-        $value = $this->payment->save();
+        $value = $this->payment->save(0);
 
-        $this->assertFalse($value);
+        $this->assertCount(6, $value[0]);
     }
 
     /**
      * @test
      */
-    public function shoulBeTrueWhenGetPaymentEqual()
+    public function shoulBeTrueWhenGetPaymentCount()
     {
         $value = $this->payment->get(1);
 
-        $this->assertEquals(6, count($value[0]));
+        $this->assertCount(6, $value[0]);
     }
 
     /**
      * @test
      */
-    public function shoulBeTrueWhenDeletePaymentNull()
+    public function shoulBeTrueWhenDeletePaymentTrue()
     {
         $value = $this->payment->delete();
 
-        $this->assertNull($value);
+        $this->assertTrue($value);
     }
 
     /**

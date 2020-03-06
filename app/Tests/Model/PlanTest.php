@@ -57,46 +57,47 @@ class PlanTest extends TestCase
 
         $value = Plan::listPlanPage($content);
 
-        $this->assertCount(1, $value);
+        $this->assertCount(3, $value[0]);
     }
 
     /**
      * @test
      */
-    public function shoulBeTrueWhenSavePlanFalse()
+    public function shoulBeTrueWhenSavePlanCount()
     {
-        $value = $this->plan->save();
+        $value = $this->plan->save(0);
 
-        $this->assertFalse($value);
+        $this->assertCount(3, $value[0]);
     }
 
     /**
      * @test
      */
-    public function shoulBeTrueWhenGetPlanEqual()
+    public function shoulBeTrueWhenGetPlanCount()
     {
         $value = $this->plan->get(1);
 
-        $this->assertEquals(3, count($value[0]));
+        $this->assertCount(3, $value[0]);
     }
 
     /**
      * @test
      */
-    public function shoulBeTrueWhenDeletePlanNull()
+    public function shoulBeTrueWhenDeletePlanTrue()
     {
         $value = $this->plan->delete();
 
-        $this->assertNull($value);
+        $this->assertTrue($value);
     }
 
     /**
      * @test
      */
-    public function shoulBeTrueWhenGetPlanPageCount()
+    public function shoulBeTrueWhenGetPlanPage()
     {
         $value = $this->plan->getPlanPage("a.idplan ASC", 1, 1);
 
+        $this->assertEmpty($value['data']);
         $this->assertCount(3, $value);
     }
 }

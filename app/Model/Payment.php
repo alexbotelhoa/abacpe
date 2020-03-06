@@ -43,8 +43,10 @@ class Payment extends Model
         return parent::getValues();
     }
 
-    public function save()
+    public function save($idpayment = '')
     {
+        if ($idpayment == '') $idpayment = $this->getidpayment();
+
         $plan = New Plan();
         $plan->get((int)$this->getidplan());
 
@@ -52,7 +54,7 @@ class Payment extends Model
 
         $sql = new Sql();
         $result = $sql->select("CALL sp_payments_save(:idpayment, :idclient, :dtpayment, :idplan, :vlrecurrence, :vlpayment)", [
-            ":idpayment" => $this->getidpayment(),
+            ":idpayment" => $idpayment,
             ":idclient" => $this->getidclient(),
             ":dtpayment" => $this->getdtpayment(),
             ":idplan" => $this->getidplan(),
@@ -60,9 +62,9 @@ class Payment extends Model
             ":vlpayment" => $vlpayment
         ]);
 
-        if (count($result) > 0) {$this->setData($result[0]); return true;}
+        if (count($result) > 0) $this->setData($result[0]);
 
-        return false;
+        return $result;
     }
 
     public function get($idpayment)
@@ -72,9 +74,7 @@ class Payment extends Model
             ":IDPAYMENT" => $idpayment
         ]);
 
-        if (count($result) > 0) {
-            $this->setData($result[0]);
-        }
+        if (count($result) > 0) $this->setData($result[0]);
 
         return $result;
     }
@@ -82,9 +82,11 @@ class Payment extends Model
     public function delete()
     {
         $sql = new Sql();
-        $sql->query("DELETE FROM tb_payments WHERE idpayment = :IDPAYMENT", [
+        $result = $sql->query("DELETE FROM tb_payments WHERE idpayment = :IDPAYMENT", [
             ":IDPAYMENT" => $this->getidpayment()
         ]);
+
+        return $result;
     }
 
     public function getPaymentPage($sort, $page, $itemsPerPage, $test = false)
@@ -138,5 +140,4 @@ class Payment extends Model
             'pages' => ceil($resultTotal[0]['nrtotal'] / $itemsPerPage)
         ];
     }
-
 }

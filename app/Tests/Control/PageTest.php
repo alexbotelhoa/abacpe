@@ -4,7 +4,6 @@ namespace SCE\Tests\Control;
 
 use PHPUnit\Framework\TestCase;
 use SCE\Control\Page;
-use Rain\Tpl;
 
 class PageTest extends TestCase
 {
