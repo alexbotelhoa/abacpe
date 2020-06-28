@@ -1,48 +1,73 @@
-<h2>Sistema de Controle Empresarial</h2>
-<p><b>Versão 1.0.0 - Documentação</b></p>
+<h1 align="center">
+    Sistema de Controle Empresarial
+</h1>
+
+<h4 align="center">
+  🚀 Sistema de Controle Empresarial
+</h4>
+
+<p align="center">
+  <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/alexbotelhoa/abacpe?color=ff0000"> 
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/alexbotelhoa/abacpe?color=%23F7DF1E">
+  <img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/alexbotelhoa/abacpe">
+  
+  <a href="https://github.com/alexbotelhoa/abacpe/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/alexbotelhoa/abacpe">
+  </a>
+
+  <a href="https://github.com/alexbotelhoa/abacpe/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/alexbotelhoa/abacpe">
+  </a>
+
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-brightgreen">
+</p>
+
 <p><b>Geral</b> - O sistema foi batizado geréricamente de Sistema de Controle Empresarial.
     Todo o sistema foi trabalhado para ser responsivo à todas as plataformas de visualização, Monitores, Tablets e Celulares.
     O sistema está publicado na web utilizando o recurso Lightsail da Amazon, para haver visualização do sistema em funcionamento.
     O código fonte do sistema encontra-se publicado no meu GitHub (https://github.com/alexbotelhoa) para visualizações.
 </p>
-<p>
-    <b>Cabeçalho</b> - Foi criado um logotipo para melhor aparência do sistema.
-    Logo a baixo encontra-se o menu com cinco opções: Home, Planos, Pagamentos, Estatísticas, Sobre e Campos (Mês e Ano) para Pesquisa de Dados.
+
+<p align="center">
+    <a href="#computer-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#computer_mouse-backend">Backend</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="#memo-licença">Licença</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="https://www.linkedin.com/in/alex-botelho-almeida/">
+      <img src="https://img.icons8.com/color/24/000000/linkedin.png"/>
+    </a>
+    <a href="https://www.youtube.com/channel/UC6N_L0nZWRjcym8bnChKppw/">
+      <img src="https://img.icons8.com/color/24/000000/youtube-play.png"/>
+    </a>
 </p>
-<p>
-    <b>Rodapé</b> - Existe um quadros informativos da 'Empresa Hallyz Cia & Ltda' (fake).
-</p>
-<p>
-    <b>&#8226; Página Home</b> - Utilizada apenas para visualização do andamento dos estatísticas macro da empresa.
-    Nessa página constam os gráficos 'Métricas SaaS','MRR', 'Receitas Variáveis', 'Ticket Médio (ARPU)' e 'Receitas Variáveis Fatiada'.
-    No canto superior direito de cada gráfico, existem opções de minimizar o quadro e de fechá-lo. Retornando quando a página for atualizada.
-    No canto superior esquerdo, há um botão para maiores informações sobre cada gráfico.
-</p>
-<p>
-    <b>&#8226; Página Planos</b> - Utilizada para visualização, criação, edição e exclusão dos Planos.
-    Clicando nos títulos de cada coluna da tabela, automáticamente toda a tabela será ordenado em ordem crescente de acordo com a coluna escolhida.
-    Abaixo da tabela tem a opção de paginação, pois foi configurado para apresenar apenas 20 Planos por página.
-    Para realizar um cadastro, basta clicar em 'Cadastrar', informar o nome do plano, o valor do plano e depois clicar em 'Cadastrar'.
-    Para realiar uma alteração, basta clicar em 'Editar' e alterar as informações desejadas e depois clicar em 'Salvar'.
-    Para excluir um registro, basta clicar em 'Excluir' e confirmar a exclusão para finalizar o processo.
-    Importante: Existe uma restrição criada no sistema, para não ser possível excluir um plano que tenha pagamentos vinculados.
-</p>
-<p>
-    <b>&#8226; Página Pagamentos</b> - Utilizada para visualização, criação, edição e exclusão de Pagamentos.
-    Clicando nos títulos de cada coluna da tabela, automáticamente toda a tabela será ordenado em ordem crescente de acordo com a coluna escolhida.
-    Abaixo da tabela tem a opção de paginação, pois foi configurado para apresenar apenas 20 Pagamentos por página.
-    Entrando no página aparecerá uma lista de Clientes, mostrando o último plano vgente desse Cliente e a quantidade de pagamentos efetuados por ele.
-    Para visualizar os Pagamentos de um cliente basta clicar no botão 'Detalhes'.
-    Para realizar com cadastro, basta clicar em 'Cadastrar', selecionar o nome do Cliente, o nome do Plano, definir a recorrência desse pagamento, definir a data do pagamento e depois clicar em 'Cadastrar'.
-    Para realiar uma alteração, basta clicar em 'Editar' e alterar as informações desejadas e depois clicar em 'Salvar'.
-    Para excluir um registro, basta clicar em 'Excluir' e confirmar a exclusão para finalizar o processo.
-</p>
-<p>
-    <b>&#8226; Página Estatísticas</b> - Utilizada apenas para visualização do andamento das estatísticas analíticas da empresa.
-    Nessa página constam os gráficos 'Métricas SaaS', 'Nicho de Mercado', 'Planos Vendidos', 'Rate Churn' e 'Top 5 das Região'.
-    No canto superior direito de cada gráfico, existem opções de minimizar o quadro e de fechá-lo. Retornando quando a página for atualizada.
-    No canto superior esquerdo, há um botão para maiores informações sobre cada gráfico.
-</p>
-<p>
-    <b>&#8226; Página Sobre</b> - Página utilizada para registro das informações do sistema, tanto quanto os recursos utilizados para o seu desenvolvimento.
-</p>
+
+## :computer: Projeto
+
+Sistema de Controle de Empresarial - SCE foi um projeto desenvolvido como desafio para à uma empresa de Joinville/SC em PHP e MYSQL, com objetivo de metrificar na metodologia SaaS todos os pagamentos realizados em um período.
+
+## :rocket: Tecnologias
+
+:point_down: Esse projeto foi desenvolvido com as seguintes tecnologias: :point_down:
+
+-  (Em processo de atualiazação...)
+
+## :information_source: Desenvolvimento
+
+### :computer_mouse: Backend: 
+
+```bash
+# Clone o Repositório
+$  git clone https://github.com/alexbotelhoa/lobbysys-laravel-react.git
+# Va até o diretório do backend, e instale suas dependências
+$ cd backend
+# Instale as dependências
+$ composer install && npm install && npm run dev
+# Rode o backend 
+$ php artisan serve
+```
+
+## :memo: Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes.
+
+---
