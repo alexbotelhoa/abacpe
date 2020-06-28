@@ -1,5 +1,5 @@
 <h1 align="center">
-    Sistema de Controle Empresarial
+    <img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400">
 </h1>
 
 <h4 align="center">
